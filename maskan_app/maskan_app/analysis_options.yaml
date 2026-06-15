@@ -1,0 +1,10 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  errors:
+    unnecessary_non_null_assertion: ignore
+    curly_braces_in_flow_control_structures: ignore
+
+linter:
+  rules:
+    avoid_print: false

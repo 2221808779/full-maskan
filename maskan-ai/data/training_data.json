@@ -1,0 +1,6002 @@
+[
+  {
+    "text": "انقطاع الكهرباء بعد المطر",
+    "category": "electricity"
+  },
+  {
+    "text": "البلاط في غرفة النوم مكسور",
+    "category": "other"
+  },
+  {
+    "text": "تكييف غرفة النوم ضعيف جداً",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الطلاء الخارجي للمبنى متقشر",
+    "category": "painting"
+  },
+  {
+    "text": "جهاز التكييف يقطع ويشتغل بنفسه",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "قاطع الغرفة لا يشتغل",
+    "category": "electricity"
+  },
+  {
+    "text": "تكييف غرفة المكتب المعلق لا يعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "بقع سوداء على جدار غرفة النوم",
+    "category": "painting"
+  },
+  {
+    "text": "الشباك لا يفتح من المقبض",
+    "category": "carpentry"
+  },
+  {
+    "text": "ريموت المكيف محتاج تغيير بطاريات",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "السبليت في الصالة لا يعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تسريب مياه من السقف في المطبخ",
+    "category": "plumbing"
+  },
+  {
+    "text": "صنبور المطبخ الحار لا يشتغل",
+    "category": "plumbing"
+  },
+  {
+    "text": "سخان الماء لا يشغل",
+    "category": "plumbing"
+  },
+  {
+    "text": "السقف في غرفة الأطفال فيه تشقق في الدهان",
+    "category": "painting"
+  },
+  {
+    "text": "الجدار فيه فقاعات تحت الطلاء",
+    "category": "painting"
+  },
+  {
+    "text": "شق طولي في جدار غرفة الأطفال",
+    "category": "painting"
+  },
+  {
+    "text": "السقف في الصالة يحتاج طلاء ديكور",
+    "category": "painting"
+  },
+  {
+    "text": "جدار غرفة الخادمة متسخ ويحتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "شباك غرفة النوم محتاج مقبض",
+    "category": "carpentry"
+  },
+  {
+    "text": "صنبور الدوش ما يعطي ماي بارد",
+    "category": "plumbing"
+  },
+  {
+    "text": "رف الخزانة في غرفة النوم سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "أسلاك النحاس ظاهرة",
+    "category": "electricity"
+  },
+  {
+    "text": "توصيلة الكهرباء مقطوعة في الشرفة",
+    "category": "electricity"
+  },
+  {
+    "text": "وحدة التكييف الخارجية تهتز كثير",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الكهرباء في غرفة المكتب مقطوعة",
+    "category": "electricity"
+  },
+  {
+    "text": "طلاء الجدار الداخلي تقشر من الرطوبة",
+    "category": "painting"
+  },
+  {
+    "text": "أرضية المخزن الخشبية مكسورة",
+    "category": "other"
+  },
+  {
+    "text": "التوصيلة الكهربائية للفرن لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "السقف فيه بقع رطوبة محتاجة إصلاح",
+    "category": "painting"
+  },
+  {
+    "text": "سلك الإنارة في السقف مقطوع",
+    "category": "electricity"
+  },
+  {
+    "text": "الطلاء على الجدار الخارجي يحتاج تجديد",
+    "category": "painting"
+  },
+  {
+    "text": "المكيف يعمل على التسخين فقط",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "التيار يقطع في ساعات الذروة",
+    "category": "electricity"
+  },
+  {
+    "text": "قاطع الكهرباء في غرفة النوم يفصل",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يبرد ببطء شديد في الصيف",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المكيف يشتغل فقط على speed 1",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الطرمبة الأرضية ما تشتغل",
+    "category": "plumbing"
+  },
+  {
+    "text": "مشكلة في التأريض الكهربائي",
+    "category": "electricity"
+  },
+  {
+    "text": "أسلاك الكهرباء في السقف مكشوفة وخطيرة",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يطلع صوت طحن",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "باب دولاب المطبخ سقط من المفصل",
+    "category": "carpentry"
+  },
+  {
+    "text": "تلف في عازل الصوت",
+    "category": "other"
+  },
+  {
+    "text": "تسريب مياه من الماسورة الرئيسية",
+    "category": "plumbing"
+  },
+  {
+    "text": "مشكلة في شبكة الصرف الخارجية",
+    "category": "other"
+  },
+  {
+    "text": "وحدة التكييف الداخلية تسرب ماء",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تكييف الغرفة الخلفية بايظ",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "صنبور المطبخ الثاني مقطوع",
+    "category": "plumbing"
+  },
+  {
+    "text": "شبكة الحماية حول المسبح مقطوعة",
+    "category": "other"
+  },
+  {
+    "text": "مقبض باب المطبخ مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "فيشة المكيف لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "جهاز التبريد لا يشتغل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تكييف غرفة النوم يحتاج صيانة عاجلة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "دارة الكهرباء في غرفة النوم تحتاج تبديل",
+    "category": "electricity"
+  },
+  {
+    "text": "صنبور الحديقة الخلفي مكسور",
+    "category": "plumbing"
+  },
+  {
+    "text": "المصباح محترق ولا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "الجدار الخلفي للمطبخ محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "تسريب مياه من الجدار خلف المرحاض",
+    "category": "plumbing"
+  },
+  {
+    "text": "شقوق رأسية في جدار الغرفة الكبيرة",
+    "category": "painting"
+  },
+  {
+    "text": "السقف المستعار يتهدل",
+    "category": "other"
+  },
+  {
+    "text": "شبكة الإنترنت لا تعمل",
+    "category": "other"
+  },
+  {
+    "text": "شباك غرفة المعيشة يحتاج تصليح",
+    "category": "carpentry"
+  },
+  {
+    "text": "شبكة الأمان على البلكونة قديمة",
+    "category": "other"
+  },
+  {
+    "text": "جهاز التكييف المركزي يحتاج فلتر",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تسريب في بلف تصريف المغسلة",
+    "category": "plumbing"
+  },
+  {
+    "text": "وجود دخان من الطابق الأسفل",
+    "category": "other"
+  },
+  {
+    "text": "لوحة توزيع الكهرباء تصدر حرارة",
+    "category": "electricity"
+  },
+  {
+    "text": "المفتاح الرئيسي للشقة طافح",
+    "category": "electricity"
+  },
+  {
+    "text": "الأرضية الرخامية متشققة",
+    "category": "other"
+  },
+  {
+    "text": "جهاز التكييف يحتاج غاز فريون",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "السباكة في غرفة الخادمة مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "تكييف غرفة النوم المعلق بايظ",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "ريموت المكيف يشتغل بس ما يتحكم",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "وحدة التكييف الداخلية متسخة وتحتاج تنظيف",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تكييف الصالة لا يوقف الفريون",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المقبس في غرفة النوم لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "ضاغط المكيف فصل التيار",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "شباك الصالة الخشبي متآكل",
+    "category": "carpentry"
+  },
+  {
+    "text": "خزانة التلفزيون خشبها مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "دولاب الملابس بابها لا يغلق",
+    "category": "carpentry"
+  },
+  {
+    "text": "تشققات في السقف تحتاج معالجة وطلاء",
+    "category": "painting"
+  },
+  {
+    "text": "وحدة التكييف الخارجية تصدر ضوضاء",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المواسير في المطبخ تسرب مياه",
+    "category": "plumbing"
+  },
+  {
+    "text": "الطلاء في المدخل تلف وحاجة إصلاح",
+    "category": "painting"
+  },
+  {
+    "text": "شباك الغرفة الصغيرة ما يفتح",
+    "category": "carpentry"
+  },
+  {
+    "text": "المصراع الخشبي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "الدهان في غرفة المكتب يحتاج تجديد",
+    "category": "painting"
+  },
+  {
+    "text": "مصيدة الحشرات تحتاج تغيير",
+    "category": "other"
+  },
+  {
+    "text": "طرمبة الصرف الصحي عطلانة",
+    "category": "plumbing"
+  },
+  {
+    "text": "الجدار في الصالة عليه بصمات وتحتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "تسريب من المرحاض في الحمام الصغير",
+    "category": "plumbing"
+  },
+  {
+    "text": "شباك غرفة النوم يحتاج تعديل",
+    "category": "carpentry"
+  },
+  {
+    "text": "السقف في غرفة المكتب فيه تشققات",
+    "category": "painting"
+  },
+  {
+    "text": "درج السلم الخشبي فيه كسر",
+    "category": "carpentry"
+  },
+  {
+    "text": "المرحاض لا يملأ بالماء",
+    "category": "plumbing"
+  },
+  {
+    "text": "الطلاء في الصالة قدم من سنين",
+    "category": "painting"
+  },
+  {
+    "text": "الجدار في غرفة النوم مقشر",
+    "category": "painting"
+  },
+  {
+    "text": "تكييف غرفة الخادمة لا يشتغل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "شباك المطبخ بايظ",
+    "category": "carpentry"
+  },
+  {
+    "text": "تكييف غرفة المعيشة يحتاج شحن فريون",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "دولاب غرفة النوم رفوفه مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "تلف في المفاتيح الكهربائية",
+    "category": "electricity"
+  },
+  {
+    "text": "نظام التحكم بالبوابة الأمنية لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "وحدة التكييف الداخلية تهتز بشدة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المكيف يتوقف عند درجة حرارة معينة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "شباك المطبخ الزجاجي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "مقبس الميكروويف لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "خرطوم الغسالة الخلفي يسرب ماء",
+    "category": "plumbing"
+  },
+  {
+    "text": "تكييف الممر لا يعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الموقف المظلل يحتاج صيانة",
+    "category": "other"
+  },
+  {
+    "text": "تسريب مياه من ماسورة تحت الأرض",
+    "category": "plumbing"
+  },
+  {
+    "text": "السقف في غرفة النوم الرئيسية محتاج طلاء جديد",
+    "category": "painting"
+  },
+  {
+    "text": "ماسورة السباكة في الجدار مكسورة",
+    "category": "plumbing"
+  },
+  {
+    "text": "المواقف الخارجية تحتاج صيانة",
+    "category": "other"
+  },
+  {
+    "text": "دولاب المطبخ يحتاج رف جديد",
+    "category": "carpentry"
+  },
+  {
+    "text": "ضاغط المكيف حار جداً",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المكيف يشتغل على المروحة فقط",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "شباك الحمام الزجاجي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "المكيف يشتغل بصوت عالي جداً",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الدهان على الجدار الزائد صار يتساقط",
+    "category": "painting"
+  },
+  {
+    "text": "الدهان في الحمام يتقشر بعد الاستحمام",
+    "category": "painting"
+  },
+  {
+    "text": "باب الشرفة الخلفي خشبه متآكل",
+    "category": "carpentry"
+  },
+  {
+    "text": "مياه الحمام تنزل بصعوبة",
+    "category": "plumbing"
+  },
+  {
+    "text": "تكييف صالة الطعام لا يعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المكيف يعمل لكنه يشرب كهرباء كثيرة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "باب الكراج الزجاجي متصدع",
+    "category": "other"
+  },
+  {
+    "text": "الدهان الداخلي تلف من كثرة التنظيف",
+    "category": "painting"
+  },
+  {
+    "text": "شباك المطبخ مكسور ولا يغلق",
+    "category": "carpentry"
+  },
+  {
+    "text": "تسريب مياه في الصالة بجانب الحمام",
+    "category": "plumbing"
+  },
+  {
+    "text": "السقف في غرفة الضيوف محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "جدار غرفة النوم الرئيسية متسخ",
+    "category": "painting"
+  },
+  {
+    "text": "أرضيات الممر الخارجي متشققة",
+    "category": "other"
+  },
+  {
+    "text": "تلف في المفتاح الدوار للمروحة",
+    "category": "electricity"
+  },
+  {
+    "text": "السقف في المطبخ محتاج طلاء أبيض",
+    "category": "painting"
+  },
+  {
+    "text": "اللمبة في غرفة الضيوف محروقة",
+    "category": "electricity"
+  },
+  {
+    "text": "مشكلة في نظام الإنذار",
+    "category": "other"
+  },
+  {
+    "text": "جهاز التكييف يطلع صوت دقات",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "شاشة المكيف تظهر خطأ E2",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الباب الخارجي للمبنى مكسور",
+    "category": "other"
+  },
+  {
+    "text": "مقبض باب المبنى الخارجي مكسور",
+    "category": "other"
+  },
+  {
+    "text": "خزانة التلفاز بابها سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "ريموت المكيف ما يشغل الجهاز",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "قاطع الكهرباء تحتاج تبديل",
+    "category": "electricity"
+  },
+  {
+    "text": "تلف في مضخة الحريق",
+    "category": "other"
+  },
+  {
+    "text": "مقبس الشاحن لا يعطي تيار",
+    "category": "electricity"
+  },
+  {
+    "text": "بوب كاربونات السطح مسدودة",
+    "category": "other"
+  },
+  {
+    "text": "صنبور الشرب مقطوع من القاعدة",
+    "category": "plumbing"
+  },
+  {
+    "text": "الدهان في الحمام يتقشر من الاستحمام",
+    "category": "painting"
+  },
+  {
+    "text": "الحديقة الأمامية تحتاج تشجير",
+    "category": "other"
+  },
+  {
+    "text": "مقبس التكييف لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "جهاز التكييف المركزي في المبنى عطلان",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يفصل الكهرباء عند التشغيل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المواسير في الحمام قديمة وتحتاج تغيير",
+    "category": "plumbing"
+  },
+  {
+    "text": "ماسورة الصرف الرئيسية انسدت",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب غرفة الخادمة لا يفتح",
+    "category": "carpentry"
+  },
+  {
+    "text": "السلالم الخارجية تحتاج تصليح",
+    "category": "other"
+  },
+  {
+    "text": "الجدار الخارجي متآكل من الأمطار",
+    "category": "painting"
+  },
+  {
+    "text": "سخان الماء الكهربائي لا يشتغل",
+    "category": "plumbing"
+  },
+  {
+    "text": "تسريب مياه من ماسورة أسفل الخزانة",
+    "category": "plumbing"
+  },
+  {
+    "text": "ماسورة المجاري مسدودة في الشارع",
+    "category": "plumbing"
+  },
+  {
+    "text": "السور الخارجي للشرفة مكسور",
+    "category": "other"
+  },
+  {
+    "text": "صنبور المغسلة في الحمام لا يعطي ماء بارد",
+    "category": "plumbing"
+  },
+  {
+    "text": "الكهرباء تنقطع بشكل متكرر",
+    "category": "electricity"
+  },
+  {
+    "text": "الدهان في غرفة النوم صاريتغير لونه",
+    "category": "painting"
+  },
+  {
+    "text": "الدهان القديم يتقشر ويسقط",
+    "category": "painting"
+  },
+  {
+    "text": "طاولة خشبية محتاجة إصلاح",
+    "category": "carpentry"
+  },
+  {
+    "text": "الدهان الزيتي في المطبخ محتاج تغيير",
+    "category": "painting"
+  },
+  {
+    "text": "تكييف غرفة المعيشة يحتاج تصليح",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "مشكلة في أنبوب الغاز الرئيسي",
+    "category": "other"
+  },
+  {
+    "text": "جدار الشرفة محتاج طلاء عازل مائي",
+    "category": "painting"
+  },
+  {
+    "text": "الأرضية في الصالة متساوية",
+    "category": "other"
+  },
+  {
+    "text": "خزانة غرفة النوم بابها سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "بانيو الحمام لا يصرف",
+    "category": "plumbing"
+  },
+  {
+    "text": "نظام الري في الحديقة عطلان",
+    "category": "other"
+  },
+  {
+    "text": "السقف المعلق محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "تلف في مظلة المدخل",
+    "category": "other"
+  },
+  {
+    "text": "مشكلة في غلاية الماء المركزية",
+    "category": "other"
+  },
+  {
+    "text": "السباكة في الصالة تحتاج إصلاح",
+    "category": "plumbing"
+  },
+  {
+    "text": "تكييف الحمام لا يعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "مفصل باب غرفة المعيشة مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "السقف محتاج طلاء عازل للماء",
+    "category": "painting"
+  },
+  {
+    "text": "الجدار في غرفة الخدمة محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "الدهان في غرفة التلفاز مقشر",
+    "category": "painting"
+  },
+  {
+    "text": "باب غرفة المعيشة لا يقفل",
+    "category": "carpentry"
+  },
+  {
+    "text": "لمبة الطوارئ لا تشتغل",
+    "category": "electricity"
+  },
+  {
+    "text": "أرضية الخشب تصدر صوتاً عند المشي",
+    "category": "carpentry"
+  },
+  {
+    "text": "المروحة في المكيف توقف فجأة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الجدار الداخلي للمطبخ أصفر من البخار",
+    "category": "painting"
+  },
+  {
+    "text": "صنبور الحمام الساخن لا يعمل",
+    "category": "plumbing"
+  },
+  {
+    "text": "جدار الحديقة الأمامية محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "المكيف يشتغل لكن الغرفة لا تبرد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "غطاء فتحة التفتيش في السقف مكسور",
+    "category": "other"
+  },
+  {
+    "text": "الكهرباء مقطوعة عن نصف الشقة",
+    "category": "electricity"
+  },
+  {
+    "text": "المقبس محترق ورائحته كريهة",
+    "category": "electricity"
+  },
+  {
+    "text": "طلاء الباب الخشبي الخارجي تقشر",
+    "category": "painting"
+  },
+  {
+    "text": "خزان الصرف الصحي يحتاج تفريغ",
+    "category": "other"
+  },
+  {
+    "text": "تسريب مياه من خزان السطح",
+    "category": "plumbing"
+  },
+  {
+    "text": "المياه لا تنزل من بلاعة المطبخ",
+    "category": "plumbing"
+  },
+  {
+    "text": "تلف في عازل السقف",
+    "category": "other"
+  },
+  {
+    "text": "الأسقف المعلقة تحتاج استبدالاً",
+    "category": "other"
+  },
+  {
+    "text": "تماس في أسلاك المكيف",
+    "category": "electricity"
+  },
+  {
+    "text": "بلاعة المطبخ تطفح مياه وسخة",
+    "category": "plumbing"
+  },
+  {
+    "text": "رائحة غريبة في الشقة",
+    "category": "other"
+  },
+  {
+    "text": "جدار قديم محتاج معالجة قبل الطلاء",
+    "category": "painting"
+  },
+  {
+    "text": "تلف في الأسلاك الداخلية للثلاجة",
+    "category": "electricity"
+  },
+  {
+    "text": "الأسلاك عارية في السقف",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يسخن بدل ما يبرد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "دهان غرفة النوم محتاج تجديد كامل",
+    "category": "painting"
+  },
+  {
+    "text": "القاطع الرئيسي لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "سخونة في مقبس الكهرباء",
+    "category": "electricity"
+  },
+  {
+    "text": "صالة الطعام محتاجة طلاء جديد",
+    "category": "painting"
+  },
+  {
+    "text": "تشققات عميقة في جدار المطبخ",
+    "category": "painting"
+  },
+  {
+    "text": "تآكل في مقابس الكهرباء",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يصدر صوتاً عالياً",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المكيف يشتغل بدون توقف",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الجدار في غرفة التخزين محتاج طلاء جديد",
+    "category": "painting"
+  },
+  {
+    "text": "تكييف غرفة الطعام لا يعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "شبك الحماية للشبابيك مقطوع",
+    "category": "other"
+  },
+  {
+    "text": "خزانة المطبخ الخشبية رفها مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "مقبض باب الشرفة مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "خزانة غرفة النوم مكسورة من الداخل",
+    "category": "carpentry"
+  },
+  {
+    "text": "وحدة المكيف الداخلية مسدودة الفتحات",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "باب الصالة الداخلي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "حشرات طائرة في الشقة",
+    "category": "other"
+  },
+  {
+    "text": "رفوف الحائط في المطبخ سقطت",
+    "category": "carpentry"
+  },
+  {
+    "text": "الأسلاك ظاهرية تحتاج عزل",
+    "category": "electricity"
+  },
+  {
+    "text": "دولاب المطبخ الخشبي متآكل",
+    "category": "carpentry"
+  },
+  {
+    "text": "باب المدخل الخشبي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "صوت صفير من الأسلاك",
+    "category": "electricity"
+  },
+  {
+    "text": "تلف في جسر المبنى",
+    "category": "other"
+  },
+  {
+    "text": "جدار السطح الداخلي محتاج دهان",
+    "category": "painting"
+  },
+  {
+    "text": "السقف مرتفع ومحتاج طلاء بالرشاش",
+    "category": "painting"
+  },
+  {
+    "text": "الدهان تلف في منطقة التكييف",
+    "category": "painting"
+  },
+  {
+    "text": "الكهرباء تصعق عند لمس المفتاح",
+    "category": "electricity"
+  },
+  {
+    "text": "بانيو الحمام متشقق",
+    "category": "plumbing"
+  },
+  {
+    "text": "الجدار المتضرر من الرطوبة يحتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "دولاب المطبخ بابها يحتاج ضبط",
+    "category": "carpentry"
+  },
+  {
+    "text": "نظام التهوية المركزية لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "وحدة التحكم في المكيف معطلة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تسريب مياه من ماسورة تغذية السخان",
+    "category": "plumbing"
+  },
+  {
+    "text": "المكيف يطلع صوت خربشة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "السلالم الداخلية فيها كسر",
+    "category": "carpentry"
+  },
+  {
+    "text": "تسريب مياه في الحمام من السقف",
+    "category": "plumbing"
+  },
+  {
+    "text": "صنبور المطبخ البارد لا يغلق بالكامل",
+    "category": "plumbing"
+  },
+  {
+    "text": "مروحة المكيف الداخلية لا تعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المصابيح تحترق بسرعة",
+    "category": "electricity"
+  },
+  {
+    "text": "المواسير في السطح محتاجة استبدال",
+    "category": "plumbing"
+  },
+  {
+    "text": "الطلاء يتأثر من الشمس ويتقشر",
+    "category": "painting"
+  },
+  {
+    "text": "شباك الصالة لا يفتح",
+    "category": "carpentry"
+  },
+  {
+    "text": "مقبس التلفزيون لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "تكييف غرفة الأطفال يبرد بطيء جدا",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المرحاض لا يتوقف عن الصوت",
+    "category": "plumbing"
+  },
+  {
+    "text": "المكيف يطلع صوت مواء",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تكييف الحمام يطلع هواء حار",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "قفل باب الشرفة لا يعمل",
+    "category": "carpentry"
+  },
+  {
+    "text": "رفوف الدولاب سقطت",
+    "category": "carpentry"
+  },
+  {
+    "text": "بلاعة المطبخ مسدودة وبطيئة جداً",
+    "category": "plumbing"
+  },
+  {
+    "text": "أنبوب الصرف الرئيسي مسدود",
+    "category": "plumbing"
+  },
+  {
+    "text": "الكهرباء تقطع كل 10 دقائق",
+    "category": "electricity"
+  },
+  {
+    "text": "بقع تلف في الطلاء بسبب الماء",
+    "category": "painting"
+  },
+  {
+    "text": "جدار الحديقة الخلفي محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "الماء لا يجي للدور الثاني",
+    "category": "plumbing"
+  },
+  {
+    "text": "دهان السقف محتاج تغيير كامل",
+    "category": "painting"
+  },
+  {
+    "text": "الطلاء العازل في السطح تلف",
+    "category": "painting"
+  },
+  {
+    "text": "جدار الممر الخارجي محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "سخان الغاز لا يشتغل",
+    "category": "other"
+  },
+  {
+    "text": "باب المدخل الخشبي متصدع",
+    "category": "carpentry"
+  },
+  {
+    "text": "المكيف لا يبرد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تكييف البيت المركزي يحتاج صيانة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "دهان السطح الخارجي محتاج صيانة",
+    "category": "painting"
+  },
+  {
+    "text": "دولاب المطبخ العلوي بابها نازل",
+    "category": "carpentry"
+  },
+  {
+    "text": "طاولة الكومبيوتر خشبها مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "تسريب مياه في الممر قرب الحمام",
+    "category": "plumbing"
+  },
+  {
+    "text": "الشرفة تحتاج إصلاح شامل",
+    "category": "other"
+  },
+  {
+    "text": "الطلاء في غرفة التخزين مقشر",
+    "category": "painting"
+  },
+  {
+    "text": "رف المكتب الخشبي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "الكهرباء في غرفة الخادمة مقطوعة",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يصدر صوت طقطقة أثناء التشغيل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "جدار الممر محتاج طلاء جديد",
+    "category": "painting"
+  },
+  {
+    "text": "المكيف يطلع ريحة عود احتراق",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "السقف المستعار في الصالة محتاج دهان",
+    "category": "painting"
+  },
+  {
+    "text": "البلاط في الشرفة مكسور",
+    "category": "other"
+  },
+  {
+    "text": "خزانة المطبخ بابها متعلق",
+    "category": "carpentry"
+  },
+  {
+    "text": "الحديقة الخلفية تحتاج صيانة",
+    "category": "other"
+  },
+  {
+    "text": "الطلاء قديم ويحتاج تجديد شامل",
+    "category": "painting"
+  },
+  {
+    "text": "المقبس المزدوج لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "وحدة التكييف الخارجية فيها عطل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الأرضية فيها كسر وتحتاج إصلاح",
+    "category": "other"
+  },
+  {
+    "text": "دهان الحمام كله تقشر من البخار",
+    "category": "painting"
+  },
+  {
+    "text": "درابزين السلم الخارجي مكسور",
+    "category": "other"
+  },
+  {
+    "text": "الدش لا يخرج منه ماء",
+    "category": "plumbing"
+  },
+  {
+    "text": "نظام الري الأوتوماتيكي لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "التوصيلات الكهربائية للبوابة لا تعمل",
+    "category": "other"
+  },
+  {
+    "text": "دهان الحمام تلف بسبب الرطوبة",
+    "category": "painting"
+  },
+  {
+    "text": "سرير خشبي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "الخزان الأرضي يحتاج تنظيف",
+    "category": "other"
+  },
+  {
+    "text": "وحدة التكييف الخارجية تصدر دخان",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "السقف في غرفة التخزين محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "مفصلة الباب مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "جهاز التكييف يستهلك كهرباء كثيرة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الفيش لا يدخل في المقبس",
+    "category": "electricity"
+  },
+  {
+    "text": "السقف المعلق يتهدل ومتحرك",
+    "category": "other"
+  },
+  {
+    "text": "مشكلة في توصيل الغاز للمطبخ",
+    "category": "other"
+  },
+  {
+    "text": "مشكلة في مقبس الكهرباء الأرضي",
+    "category": "electricity"
+  },
+  {
+    "text": "خزانة الملابس بابها لا يفتح",
+    "category": "carpentry"
+  },
+  {
+    "text": "شفاط المطبخ لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "تلف في مفتاح الكهرباء",
+    "category": "electricity"
+  },
+  {
+    "text": "فتحات المكيف مسدودة بالغبار",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الدرابزين الخشبي مكسور ومتشعب",
+    "category": "carpentry"
+  },
+  {
+    "text": "لوحة التوزيع تحتاج صيانة",
+    "category": "electricity"
+  },
+  {
+    "text": "نظام البصمة الإلكترونية لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "تلف في سور الشرفة",
+    "category": "other"
+  },
+  {
+    "text": "شبكة الحماية على النوافذ قديمة",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يطلع صوت صرير عند التشغيل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "مواسير الحمام متجمعة عليها صدا",
+    "category": "plumbing"
+  },
+  {
+    "text": "صنبور الدش مكسور ولا يغلق",
+    "category": "plumbing"
+  },
+  {
+    "text": "تلف في عازل الأرضية",
+    "category": "other"
+  },
+  {
+    "text": "باب الحمام الخشبي منتفخ",
+    "category": "carpentry"
+  },
+  {
+    "text": "الإنارة الخارجية لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "الأسلاك في الجدار محترقة",
+    "category": "electricity"
+  },
+  {
+    "text": "باب المبنى الرئيسي الزجاجي مكسور",
+    "category": "other"
+  },
+  {
+    "text": "باب غرفة النوم يحتاج إطار",
+    "category": "carpentry"
+  },
+  {
+    "text": "شباك المطبخ خشبته متآكلة",
+    "category": "carpentry"
+  },
+  {
+    "text": "باب الشرفة الخشبي متآكل من الشمس",
+    "category": "carpentry"
+  },
+  {
+    "text": "صنبور الحديقة مكسور ويسرب",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب غرفة السطح مكسور",
+    "category": "other"
+  },
+  {
+    "text": "الخزانة مكسورة ولا تفتح",
+    "category": "carpentry"
+  },
+  {
+    "text": "باب الحديقة الخلفي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "الجدار الداخلي محتاج طلاء عازل",
+    "category": "painting"
+  },
+  {
+    "text": "باب غرفة النوم الداخلي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "مقبس الشرفة تلف ويحتاج تغيير",
+    "category": "electricity"
+  },
+  {
+    "text": "الكهرباء تنقطع عند تشغيل الغسالة",
+    "category": "electricity"
+  },
+  {
+    "text": "تلف في عازل الصوت في الجدار",
+    "category": "other"
+  },
+  {
+    "text": "الباب الزجاجي إطاره الخشبي تلف",
+    "category": "carpentry"
+  },
+  {
+    "text": "السلم يحتاج إصلاح",
+    "category": "other"
+  },
+  {
+    "text": "باب الحمام مقبضه ضايع",
+    "category": "carpentry"
+  },
+  {
+    "text": "المواسير تحت المجلى تسرب مياه",
+    "category": "plumbing"
+  },
+  {
+    "text": "تسريب من خزان المياه على السطح",
+    "category": "plumbing"
+  },
+  {
+    "text": "الجدار في الصالة فيه بقع طلاء غير متساوية",
+    "category": "painting"
+  },
+  {
+    "text": "تلف في أضواء الحديقة",
+    "category": "other"
+  },
+  {
+    "text": "جهاز استشعار الحركة لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "الطلاء في غرفة النوم يتقشر من الزوايا",
+    "category": "painting"
+  },
+  {
+    "text": "شاشة المكيف لا تضيء",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "خزانة الحمام الخشبية متورمة من الماء",
+    "category": "carpentry"
+  },
+  {
+    "text": "مقبس الحمام يعطي صعقة",
+    "category": "electricity"
+  },
+  {
+    "text": "المصباح فوق المدخل لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "قاطع الكهرباء يطلع شرارة",
+    "category": "electricity"
+  },
+  {
+    "text": "ريموت المكيف لا يضبط الحرارة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "باب الحديقة الخشبي يحتاج إصلاح",
+    "category": "carpentry"
+  },
+  {
+    "text": "صنبور الماء الساخن في المطبخ عطلان",
+    "category": "plumbing"
+  },
+  {
+    "text": "دهان الجدار القديم لونه أصفر",
+    "category": "painting"
+  },
+  {
+    "text": "الدهان الزيتي في المطبخ تقشر",
+    "category": "painting"
+  },
+  {
+    "text": "إنارة السلم الداخلي لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "فيشة التلفزيون لا تعطي تيار",
+    "category": "electricity"
+  },
+  {
+    "text": "مفتاح الإضاءة الخارجية لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "الباب الخشبي انتفخ بسبب الرطوبة",
+    "category": "carpentry"
+  },
+  {
+    "text": "مفصلات الخزانة تحتاج تشحيم",
+    "category": "carpentry"
+  },
+  {
+    "text": "بقع دهان على الأرضية بعد التلوين",
+    "category": "painting"
+  },
+  {
+    "text": "السقف بقع صفراء من التسريب السابق",
+    "category": "painting"
+  },
+  {
+    "text": "بلف تصريف المجلى مكسور",
+    "category": "plumbing"
+  },
+  {
+    "text": "سور المبنى الخلفي متآكل",
+    "category": "other"
+  },
+  {
+    "text": "بقع صدأ على الجدار من الحديد",
+    "category": "painting"
+  },
+  {
+    "text": "باب الحديقة الرئيسي لا يغلق",
+    "category": "other"
+  },
+  {
+    "text": "سلم الطوارئ الخارجي متآكل",
+    "category": "other"
+  },
+  {
+    "text": "البلاط مكسور في الحمام",
+    "category": "other"
+  },
+  {
+    "text": "تكييف البيت المركزي يبرد غرفة فقط",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "خزانة التلفاز رفها سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "مقبس الكهرباء في الجدار دايب",
+    "category": "electricity"
+  },
+  {
+    "text": "السقف في الممر محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "السقف الجبسي محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "تسريب من المرحاض في الحمام الكبير",
+    "category": "plumbing"
+  },
+  {
+    "text": "مكيف الصيف والشتاء يشتغل على تسخين فقط",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "مشكلة في نظام مكافحة الحريق",
+    "category": "other"
+  },
+  {
+    "text": "جدار الحمام الداخلي محتاج طلاء مضاد للرطوبة",
+    "category": "painting"
+  },
+  {
+    "text": "رف الحائط في الصالة مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "خزانة غرفة الأطفال مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "باب الحمام خشبه متآكل",
+    "category": "carpentry"
+  },
+  {
+    "text": "الأسلاك في المطبخ مكشوفة",
+    "category": "electricity"
+  },
+  {
+    "text": "تكييف المطبخ لا يبرد جيداً",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الكهرباء لا تصل للشقة",
+    "category": "electricity"
+  },
+  {
+    "text": "الدهان في الجدار تقشر بسبب الرطوبة",
+    "category": "painting"
+  },
+  {
+    "text": "ضاغط المكيف يصدر صوت غريب",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "مكيف الغرفة لا يشتغل على الريموت",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الفريون في المكيف يحتاج شحن",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تسريب مياه من خزان السخان الشمسي",
+    "category": "plumbing"
+  },
+  {
+    "text": "صنبور البيديه مكسور",
+    "category": "plumbing"
+  },
+  {
+    "text": "صنبور الشرب في الصالة لا يعمل",
+    "category": "plumbing"
+  },
+  {
+    "text": "خزانة الملابس رفها مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "سيفون المرحاض بايظ",
+    "category": "plumbing"
+  },
+  {
+    "text": "السقف فيه علامات رطوبة وتحتاج إصلاح",
+    "category": "painting"
+  },
+  {
+    "text": "باب المدخل يحتاج مقبض جديد",
+    "category": "carpentry"
+  },
+  {
+    "text": "شباك الممر الزجاجي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "المكيف يطلع ريحة عفن",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المكيف قديم ويحتاج استبدال",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "البلاعة في الشقة تطفح بشكل مفاجئ",
+    "category": "plumbing"
+  },
+  {
+    "text": "ماسورة التصريف في الحمام بطيئة",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب الحديقة الخشبي بابها سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "الشقة بأكملها محتاجة طلاء جديد",
+    "category": "painting"
+  },
+  {
+    "text": "صنبور المطبخ الحار بارد لا يعمل",
+    "category": "plumbing"
+  },
+  {
+    "text": "صنبور الشقة الرئيسي لا يفتح بالكامل",
+    "category": "plumbing"
+  },
+  {
+    "text": "المقبس الأرضي يعطي شرارة",
+    "category": "electricity"
+  },
+  {
+    "text": "جدار الخزانة محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "المكيف الشباك يطلع دخان",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "جدار المحل محتاج طلاء جديد",
+    "category": "painting"
+  },
+  {
+    "text": "جدار المدخل محتاج لون جديد",
+    "category": "painting"
+  },
+  {
+    "text": "تكييف الصالة لا يوقف الفريون عند درجة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "باب الحديقة الخشبي متآكل",
+    "category": "carpentry"
+  },
+  {
+    "text": "صنبور الحمام ما يوقف الماء",
+    "category": "plumbing"
+  },
+  {
+    "text": "ريموت المكيف ما يضبط السرعة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "باب غرفة النوم لا يفتح من الداخل",
+    "category": "carpentry"
+  },
+  {
+    "text": "الشباك القديم يحتاج تغيير كامل",
+    "category": "carpentry"
+  },
+  {
+    "text": "المواسير تهتز عند تشغيل الماء",
+    "category": "plumbing"
+  },
+  {
+    "text": "طرمبة الصرف الصحي لا تعمل",
+    "category": "plumbing"
+  },
+  {
+    "text": "جدار المطبخ محتاج طلاء بعد التعديلات",
+    "category": "painting"
+  },
+  {
+    "text": "الكهرباء ضعيفة في الشقة كلها",
+    "category": "electricity"
+  },
+  {
+    "text": "السطح يحتاج عزلاً",
+    "category": "other"
+  },
+  {
+    "text": "تكييف المطبخ المعلق لا يعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "غطاء فتحة التفتيش مكسور",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يطلع هواء بارد لكن مو كافي",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "ماسورة الغاز المنزلي تسرب",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب الشقة الداخلي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "مشكلة في فيشة الكهرباء",
+    "category": "electricity"
+  },
+  {
+    "text": "شباك غرفة النوم لا يفتح بالكامل",
+    "category": "carpentry"
+  },
+  {
+    "text": "المكيف يطلع صوت فرقعة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "ريموت المكيف لا يعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تشويش في شاشة التلفاز من الكهرباء",
+    "category": "electricity"
+  },
+  {
+    "text": "باب الكراج الخشبي مكسور",
+    "category": "other"
+  },
+  {
+    "text": "الإنترنت يقطع كل ساعة",
+    "category": "other"
+  },
+  {
+    "text": "الصالة مظلمة والمصابيح لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "باب الشقة الخلفي يحتاج تعديل",
+    "category": "carpentry"
+  },
+  {
+    "text": "بلاعة المجلى في المطبخ مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "صنبور الحديقة لا يغلق",
+    "category": "plumbing"
+  },
+  {
+    "text": "سلك كهربائي مكشوف في الجدار",
+    "category": "electricity"
+  },
+  {
+    "text": "تسريب في خزان الماء في الحمام",
+    "category": "plumbing"
+  },
+  {
+    "text": "انقطاع الكهرباء في المطبخ",
+    "category": "electricity"
+  },
+  {
+    "text": "الدهان في حافة الشباك متقشر",
+    "category": "painting"
+  },
+  {
+    "text": "مقبس المدفأة لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "خزانة الملابس الكبيرة مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "طرمبة رفع المياه للسطح عطلانة",
+    "category": "plumbing"
+  },
+  {
+    "text": "بلف تخفيف الضغط في السخان عطلان",
+    "category": "plumbing"
+  },
+  {
+    "text": "مكيف الغرفة مو متجاوب مع الريموت",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "ضغط الماء في الدش ضعيف جداً",
+    "category": "plumbing"
+  },
+  {
+    "text": "صنبور المطبخ لا يغلق تماماً",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب المخزن الخشبي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "صوت أزيز من المقبس",
+    "category": "electricity"
+  },
+  {
+    "text": "الممرات الخارجية تحتاج رصف",
+    "category": "other"
+  },
+  {
+    "text": "وحدة التكييف الخارجية تصدر صوت صفير",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "رف الحائط في الصالة سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "شاشة اللمس في المكيف لا تستجيب",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المكيف في الصالة لا يشتغل أبداً",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "شباك الصالة يحتاج إطار جديد",
+    "category": "carpentry"
+  },
+  {
+    "text": "وجود ثعابين في الحديقة",
+    "category": "other"
+  },
+  {
+    "text": "الريموت كنترول للمكيف ضاع",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "جدار الحديقة يحتاج طلاء خارجي",
+    "category": "painting"
+  },
+  {
+    "text": "المواسير في المطبخ تحت المجلى بايظة",
+    "category": "plumbing"
+  },
+  {
+    "text": "شاشة المكيف لا تظهر شي",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "سطل النفايات الكبير مكسور",
+    "category": "other"
+  },
+  {
+    "text": "الأسلاك لمسها خطر",
+    "category": "electricity"
+  },
+  {
+    "text": "ماسورة صرف المطبخ باين فيها كسر",
+    "category": "plumbing"
+  },
+  {
+    "text": "التكييف في غرفة الأطفال لا يبرد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "شاشة المكيف لا تستجيب للمس",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "أنابيب المياه تصدر أصواتاً",
+    "category": "plumbing"
+  },
+  {
+    "text": "درج السلم الحديدي متآكل",
+    "category": "other"
+  },
+  {
+    "text": "تسريب مياه من الماسورة في السطح",
+    "category": "plumbing"
+  },
+  {
+    "text": "غطاء الصرف الصحي في الشارع مكسور",
+    "category": "other"
+  },
+  {
+    "text": "شباك غرفة التخزين مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "خزانة المطبخ العلوية لا تغلق",
+    "category": "carpentry"
+  },
+  {
+    "text": "خزانة الأحذية مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "رائحة غاز في الشقة",
+    "category": "other"
+  },
+  {
+    "text": "المواسير في الشرفة تتجمد في الشتاء",
+    "category": "plumbing"
+  },
+  {
+    "text": "مفصل باب غرفة النوم بايظ",
+    "category": "carpentry"
+  },
+  {
+    "text": "المفتاح لا يستجيب عند الضغط عليه",
+    "category": "electricity"
+  },
+  {
+    "text": "مشكلة في التأريض وصعقات كهربائية",
+    "category": "electricity"
+  },
+  {
+    "text": "وحدة التكييف الخارجية تطلع حرارة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "جهاز التكييف يطلع حرارة بدل برد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "لمبة الحمام لا تضيء",
+    "category": "electricity"
+  },
+  {
+    "text": "جدار الشرفة الداخلي محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "الكهرباء تشترك مع الماء في الموصلات",
+    "category": "electricity"
+  },
+  {
+    "text": "شبكة الأمان للشرفة مقطوعة",
+    "category": "other"
+  },
+  {
+    "text": "لوحة الكهرباء محتاجة تصليح",
+    "category": "electricity"
+  },
+  {
+    "text": "تلف في عازل الصوت في الممر",
+    "category": "other"
+  },
+  {
+    "text": "شباك الحمام لا يقفل",
+    "category": "carpentry"
+  },
+  {
+    "text": "بقع سوداء على الجدار من العفن",
+    "category": "painting"
+  },
+  {
+    "text": "بقع صفراء على السقف بسبب التسريب",
+    "category": "painting"
+  },
+  {
+    "text": "جهاز التكييف يقطر ماء من الوحدة الخارجية",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الضوء ينقطع ويشتغل بدون سبب",
+    "category": "electricity"
+  },
+  {
+    "text": "مفصلة الخزانة سقطت",
+    "category": "carpentry"
+  },
+  {
+    "text": "جهاز التكييف يطلع صوت مثل الصراخ",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الكهرباء في الشقة تفصل وتشتغل",
+    "category": "electricity"
+  },
+  {
+    "text": "جهاز إنذار الحريق لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "سلك التوصيل للغسالة مقطوع",
+    "category": "electricity"
+  },
+  {
+    "text": "خزانة المطبخ تحتاج تصليح",
+    "category": "carpentry"
+  },
+  {
+    "text": "جدار السطح الداخلي محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "طلاء الحمام تقشر من البخار",
+    "category": "painting"
+  },
+  {
+    "text": "القاطع الحراري يفصل بدون حمل",
+    "category": "electricity"
+  },
+  {
+    "text": "فيشة الغسالة لا تشتغل",
+    "category": "electricity"
+  },
+  {
+    "text": "كابل الألياف البصرية مقطوع من السطح",
+    "category": "other"
+  },
+  {
+    "text": "مقبض الباب سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "الشاور لا يوزع الماء بشكل متساوٍ",
+    "category": "plumbing"
+  },
+  {
+    "text": "جهاز كشف أول أكسيد الكربون لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "بلاعة المطبخ تسرب ماء أسفل الخزانة",
+    "category": "plumbing"
+  },
+  {
+    "text": "تسريب مياه من الماسورة في الخزانة",
+    "category": "plumbing"
+  },
+  {
+    "text": "بقع رطوبة على جدار المطبخ",
+    "category": "painting"
+  },
+  {
+    "text": "الكهرباء في المطبخ مقطوعة",
+    "category": "electricity"
+  },
+  {
+    "text": "تسريب ماء من تحت الحوض",
+    "category": "plumbing"
+  },
+  {
+    "text": "السقف الجبس في الصالة محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "جهاز الإنذار يعطي إنذارات كاذبة",
+    "category": "other"
+  },
+  {
+    "text": "الطلاء من الداخل تقشر من الحرارة",
+    "category": "painting"
+  },
+  {
+    "text": "صوت تشقق من مفتاح الكهرباء",
+    "category": "electricity"
+  },
+  {
+    "text": "شباك الممر ما يسكر",
+    "category": "carpentry"
+  },
+  {
+    "text": "الكاميرات الأمنية لا تعمل",
+    "category": "other"
+  },
+  {
+    "text": "الطلاء الخارجي تقشر من الرطوبة",
+    "category": "painting"
+  },
+  {
+    "text": "جدار غرفة الضيوف محتاج معجونة",
+    "category": "painting"
+  },
+  {
+    "text": "شباك الحمام محتاج كالون",
+    "category": "carpentry"
+  },
+  {
+    "text": "حساسات الدخان في السقف لا تعمل",
+    "category": "other"
+  },
+  {
+    "text": "الطلاء على الجدار الخارجي احترق من الشمس",
+    "category": "painting"
+  },
+  {
+    "text": "المكيف الأسبليت يقطر زيت",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "مشكلة في نظام التدفئة تحت الأرضية",
+    "category": "other"
+  },
+  {
+    "text": "الجدار في غرفة الخدمة متسخ ويحتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "المواسير تصدر صوت دق عند فتح الماء",
+    "category": "plumbing"
+  },
+  {
+    "text": "مقبس الحمام لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "خزانة التلفزيون الخشبية مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "السباكة في غرفة النوم تحتاج تصليح",
+    "category": "plumbing"
+  },
+  {
+    "text": "الأسلاك ظاهرة في الجدار",
+    "category": "electricity"
+  },
+  {
+    "text": "الإنارة في الغرفة الخلفية لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "انقطاع مفاجئ للتيار في غرفة النوم",
+    "category": "electricity"
+  },
+  {
+    "text": "المقبس الرئيسي محترق",
+    "category": "electricity"
+  },
+  {
+    "text": "الفيشة الكهربائية في الحمام محترقة",
+    "category": "electricity"
+  },
+  {
+    "text": "المواسير في السقف تسرب مياه",
+    "category": "plumbing"
+  },
+  {
+    "text": "مشكلة في توصيلات الغاز",
+    "category": "other"
+  },
+  {
+    "text": "باب غرفة الصيانة لا يغلق",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يطلع هواء دافي بالصيف",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الأسلاك الكهربائية قديمة وتحتاج تغيير",
+    "category": "electricity"
+  },
+  {
+    "text": "الدهان في الصالة الداخلية تقشر من الأرض",
+    "category": "painting"
+  },
+  {
+    "text": "خزانة الأحذية بابها سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "الجدار الخارجي للروف محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "باب غرفة المعيشة يعلق",
+    "category": "carpentry"
+  },
+  {
+    "text": "مقبس التلفاز لا يعطي تيار",
+    "category": "electricity"
+  },
+  {
+    "text": "تكييف الشرفة لا يعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "لمبة إنارة الموقف محترقة",
+    "category": "other"
+  },
+  {
+    "text": "الهواء من المكيف ملوث وغير نظيف",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "فريون المكيف ينفذ بسرعة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "السلم الخارجي متآكل",
+    "category": "other"
+  },
+  {
+    "text": "طاولة السفرة خشبها متصدع",
+    "category": "carpentry"
+  },
+  {
+    "text": "وحدة المكيف الداخلية تقطر ماء باستمرار",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "ضغط الماء ضعيف جداً",
+    "category": "plumbing"
+  },
+  {
+    "text": "الضاغط في المكيف لا يعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "إنارة الموقف الداخلي لا تعمل",
+    "category": "other"
+  },
+  {
+    "text": "السقف في غرفة الضيوف محتاج طلاء جديد",
+    "category": "painting"
+  },
+  {
+    "text": "لوحة الكهرباء ساخنة جدا",
+    "category": "electricity"
+  },
+  {
+    "text": "شباك الحمام الخشبي متآكل",
+    "category": "carpentry"
+  },
+  {
+    "text": "خزانة المطبخ السفلية مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "أسلاك الكهرباء متآكلة",
+    "category": "electricity"
+  },
+  {
+    "text": "خزان المياه من الحديد صدئ",
+    "category": "other"
+  },
+  {
+    "text": "دولاب الملابس بابها لا يقفل",
+    "category": "carpentry"
+  },
+  {
+    "text": "السباكة في الممر ضعيفة وتحتاج تصليح",
+    "category": "plumbing"
+  },
+  {
+    "text": "مياه الحمام الساخن تبرد بسرعة",
+    "category": "plumbing"
+  },
+  {
+    "text": "المكيف يطلع صوت زنة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "طاولة المكتب الخشبية مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "باب الحمام يحتاج مفصل جديد",
+    "category": "carpentry"
+  },
+  {
+    "text": "القاطع الكهربائي يقفل باستمرار",
+    "category": "electricity"
+  },
+  {
+    "text": "وحدة التكييف الداخلية تطلع هواء دافئ",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تسريب مياه من ماسورة في السطح",
+    "category": "plumbing"
+  },
+  {
+    "text": "التيار يقطع عند تشغيل المكيف",
+    "category": "electricity"
+  },
+  {
+    "text": "الممرات الخارجية محتاجة رصف",
+    "category": "other"
+  },
+  {
+    "text": "دهان السقف يتقطر عند وجود تسريب",
+    "category": "painting"
+  },
+  {
+    "text": "الكاميرات الأمنية في المبنى لا تعمل",
+    "category": "other"
+  },
+  {
+    "text": "شباك غرفة النوم لا يغلق بالكامل",
+    "category": "carpentry"
+  },
+  {
+    "text": "فيشة المكنسة لا تشتغل",
+    "category": "electricity"
+  },
+  {
+    "text": "درفة النافذة سقطت من المفصلة",
+    "category": "carpentry"
+  },
+  {
+    "text": "الدهان في غرفة الأطفال مقشر من اللعب",
+    "category": "painting"
+  },
+  {
+    "text": "الجدار في الصالة عليه خدوش عميقة",
+    "category": "painting"
+  },
+  {
+    "text": "لمبة الطوارئ في الدرج محترقة",
+    "category": "other"
+  },
+  {
+    "text": "مضخة الماء في الخزان لا تعمل",
+    "category": "plumbing"
+  },
+  {
+    "text": "جدار المدخل محتاج معجون وطلاء",
+    "category": "painting"
+  },
+  {
+    "text": "جدار السلم الداخلي محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "شباك المطبخ خشبه متآكل من الرطوبة",
+    "category": "carpentry"
+  },
+  {
+    "text": "سور المسبح الزجاجي مكسور",
+    "category": "other"
+  },
+  {
+    "text": "جدار الروف محتاج طلاء خارجي",
+    "category": "painting"
+  },
+  {
+    "text": "لوحة المفاتيح في غرفة النوم لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "مشكلة في نظام إطفاء الحريق",
+    "category": "other"
+  },
+  {
+    "text": "المياه لا تصرف من بلاعة الحمام",
+    "category": "plumbing"
+  },
+  {
+    "text": "السقف محتاج طلاء أبيض عادي",
+    "category": "painting"
+  },
+  {
+    "text": "فلتر المكيف متسخ ويحتاج تنظيف",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "شقوق في الطلاء بسبب تحرك الجدار",
+    "category": "painting"
+  },
+  {
+    "text": "باب الشرفة الزجاجي خشبه مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "مياه الحمام تطفح عند الاستحمام",
+    "category": "plumbing"
+  },
+  {
+    "text": "فيشة غرفة الأطفال لا تشتغل",
+    "category": "electricity"
+  },
+  {
+    "text": "الإضاءة الخارجية لا تشتغل",
+    "category": "electricity"
+  },
+  {
+    "text": "السقف محتاج دهان جديد",
+    "category": "painting"
+  },
+  {
+    "text": "مكيف الصالة يبرد لكنه يقطر ماء",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تلف الطلاء في زاوية الغرفة",
+    "category": "painting"
+  },
+  {
+    "text": "السقف في البلكونة محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "تلف في قاطع الدورة",
+    "category": "electricity"
+  },
+  {
+    "text": "لوحة التوزيع الرئيسية تحتاج صيانة",
+    "category": "electricity"
+  },
+  {
+    "text": "تسريب مياه في جدار المطبخ",
+    "category": "plumbing"
+  },
+  {
+    "text": "صوت المكيف عالٍ جداً أثناء الليل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "السقف يحتاج طلاء الأكريليك",
+    "category": "painting"
+  },
+  {
+    "text": "مفتاح الكهرباء في الحمام محترق",
+    "category": "electricity"
+  },
+  {
+    "text": "تلف في مضخة الخزان الأرضي",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يطلع ريحة بلاستيك محترق",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "باب غرفة الأمن مكسور",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يشتغل على سرعة واحدة فقط",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "ماسورة الصرف من الحمام مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "خزانة المطبخ محتاج تقوية",
+    "category": "carpentry"
+  },
+  {
+    "text": "مكيف الغرفة يشتغل لكن المروحة بطيئة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "خزانة العرض الخشبية مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "باب الشرفة لا يفتح",
+    "category": "carpentry"
+  },
+  {
+    "text": "جدار غرفة النوم فيه خطوط تشقق",
+    "category": "painting"
+  },
+  {
+    "text": "الماء الساخن يبرد بسرعة كبيرة",
+    "category": "plumbing"
+  },
+  {
+    "text": "التوصيلات الأرضية للعبة الحديقة مقطوعة",
+    "category": "other"
+  },
+  {
+    "text": "مضخة مياه الخزان لا ترفع",
+    "category": "other"
+  },
+  {
+    "text": "باب المطبخ يحتاج مفصل",
+    "category": "carpentry"
+  },
+  {
+    "text": "إطار الشباك مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "تكييف دور الضيوف لا يعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الجدار الخارجي للشقة محتاج طلاء عازل",
+    "category": "painting"
+  },
+  {
+    "text": "الأرضيات الخشبية منتفخة",
+    "category": "other"
+  },
+  {
+    "text": "قفل الباب لا يعمل",
+    "category": "carpentry"
+  },
+  {
+    "text": "غطاء خزان المياه في السطح مكسور",
+    "category": "other"
+  },
+  {
+    "text": "نظام الري بالرش لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "الجدار الرئيسي محتاج طلاء فاتح",
+    "category": "painting"
+  },
+  {
+    "text": "جهاز التكييف يبرد في الليل فقط",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "مشكلة في نظام التدفئة المركزية",
+    "category": "other"
+  },
+  {
+    "text": "بلاعة صرف الغسالة تطفح",
+    "category": "plumbing"
+  },
+  {
+    "text": "الأنابيب تجمدت وتوقف الماء",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب الشرفة ما يغلق بالكامل",
+    "category": "carpentry"
+  },
+  {
+    "text": "شباك غرفة النوم الصغير مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "المكيف لا يستجيب للريموت",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "دهان غرفة الطعام لونه باهت",
+    "category": "painting"
+  },
+  {
+    "text": "الكهرباء في الغرفة الثانية ضعيفة",
+    "category": "electricity"
+  },
+  {
+    "text": "سور المبنى الخارجي متآكل",
+    "category": "other"
+  },
+  {
+    "text": "غرفة المولد تحتاج صيانة",
+    "category": "other"
+  },
+  {
+    "text": "ماسورة المجاري انفجرت تحت الشقة",
+    "category": "plumbing"
+  },
+  {
+    "text": "المكيف يقطر ماء في الغرفة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تآكل في أسلاك التمديدات",
+    "category": "electricity"
+  },
+  {
+    "text": "السطح يحتاج عزل مائي",
+    "category": "other"
+  },
+  {
+    "text": "الإضاءة في الحمام خافتة جداً",
+    "category": "electricity"
+  },
+  {
+    "text": "الدهان على الجدار في غرفة المعيشة قديم",
+    "category": "painting"
+  },
+  {
+    "text": "بلاعة المطبخ مسدودة بالدهون",
+    "category": "plumbing"
+  },
+  {
+    "text": "السقف في الصالة بقع صفراء",
+    "category": "painting"
+  },
+  {
+    "text": "الإنارة في الشرفة لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "جهاز قياس الغاز لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يصدر رائحة كريهة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "وحدة المكيف الخارجية تصدر دخاناً",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "وحدة التكييف الداخلية تسرب ماء على الأرض",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "مروحة المكيف الداخلية بطيئة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "رف الحائط في المطبخ مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "باب غرفة المحولات الخشبي مكسور",
+    "category": "other"
+  },
+  {
+    "text": "بلاعة الشرفة تسرب مياه للأسفل",
+    "category": "plumbing"
+  },
+  {
+    "text": "جدار به بقع حبر ويحتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "تأريض الكهرباء ضعيف",
+    "category": "electricity"
+  },
+  {
+    "text": "دولاب المطبخ رف الزجاج مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "الجدار فيه تشقق طولي محتاج معجون",
+    "category": "painting"
+  },
+  {
+    "text": "جهاز التكييف يشتغل ساعتين ويطفي",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "باب الدرج مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "حساسات الحريق بحاجة استبدال",
+    "category": "other"
+  },
+  {
+    "text": "جهاز التكييف يطلع ريحة زبل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "توصيلات الكهرباء غير آمنة",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يطلع صوت بكاء",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "القاطع التفاضلي يفصل كل يوم",
+    "category": "electricity"
+  },
+  {
+    "text": "الدهان في غرفة الأطفال متسخ ويحتاج طلاء جديد",
+    "category": "painting"
+  },
+  {
+    "text": "تلف في المفتاح الخارجي",
+    "category": "electricity"
+  },
+  {
+    "text": "تكييف المخزن لا يشتغل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "شفرات المكيف متوقفة عن الدوران",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "لوحة الكهرباء تصدر صوتاً غريباً",
+    "category": "electricity"
+  },
+  {
+    "text": "تسريب من خزان التعويم",
+    "category": "plumbing"
+  },
+  {
+    "text": "الجدار تشقق ويحتاج إعادة طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "دولاب غرفة النوم سحبه مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "تسريب من خزان المياه على السطح",
+    "category": "plumbing"
+  },
+  {
+    "text": "القاطع يطير عند تشغيل المكيف",
+    "category": "electricity"
+  },
+  {
+    "text": "مدخنة الغاز مسدودة",
+    "category": "other"
+  },
+  {
+    "text": "الماء يخرج بلون بني من الصنبور",
+    "category": "plumbing"
+  },
+  {
+    "text": "اللمبة في صالة الضيوف محترقة",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف ما يعطي هواء",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المواسير في الحمام تحتاج تغيير",
+    "category": "plumbing"
+  },
+  {
+    "text": "دولاب الحمام بابها سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "المكيف يبرد لكن ما يكفي للغرفة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "انقطاع الكهرباء عند تشغيل المكيف",
+    "category": "electricity"
+  },
+  {
+    "text": "درابزين الشرفة الحديدي متآكل",
+    "category": "other"
+  },
+  {
+    "text": "مقبس الحاسوب لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "دولاب غرفة النوم الخشبي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "باب غرفة الغسيل لا يقفل",
+    "category": "carpentry"
+  },
+  {
+    "text": "تسريب في ماسورة المكيف المركزي",
+    "category": "plumbing"
+  },
+  {
+    "text": "الوحدة الداخلية تصدر صوت طقطقة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "وحدة التكييف الخارجية تطلع ريحة غاز",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المواسير تحت المجلى مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "السقف في الحمام محتاج طلاء مقاوم للرطوبة",
+    "category": "painting"
+  },
+  {
+    "text": "الجدار الخارجي محتاج طلاء جديد",
+    "category": "painting"
+  },
+  {
+    "text": "طاولة الطعام خشبها مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "خزانة المطبخ مكسورة والباب سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "المقبس في المخزن لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يبرد بعد ساعتين من التشغيل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "أسلاك الكهرباء مفصولة في الصندوق",
+    "category": "electricity"
+  },
+  {
+    "text": "السقف في غرفة المكتب محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "لوحة الكهرباء تغلق لوحدها",
+    "category": "electricity"
+  },
+  {
+    "text": "سخونة في القاطع الرئيسي",
+    "category": "electricity"
+  },
+  {
+    "text": "قطع التيار أثناء تشغيل الميكرويف",
+    "category": "electricity"
+  },
+  {
+    "text": "مشكلة في نظام التكييف المركزي للمبنى",
+    "category": "other"
+  },
+  {
+    "text": "الدهان في الصالة بهت من الشمس",
+    "category": "painting"
+  },
+  {
+    "text": "المكيف يبرد جانب واحد من الغرفة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تسريب غاز من السخان",
+    "category": "other"
+  },
+  {
+    "text": "الجرس الكهربائي لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "الدش يخرج ماء بضغط منخفض جداً",
+    "category": "plumbing"
+  },
+  {
+    "text": "ريموت المكيف انكسر",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المواسير في الشقة كلها قديمة وتحتاج تقييم",
+    "category": "plumbing"
+  },
+  {
+    "text": "شقوق في جدار الصالة تحتاج معالجة",
+    "category": "painting"
+  },
+  {
+    "text": "بلاعة الصالة مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "الحوائط في الشقة كلها محتاجة طلاء جديد",
+    "category": "painting"
+  },
+  {
+    "text": "فتحة الصرف في الشرفة مسدودة",
+    "category": "other"
+  },
+  {
+    "text": "قاطع الكهرباء صار يفصل كثيراً",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يشتغل لمدة دقيقة ويطفي",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "طرمبة رفع المياه عطلانة",
+    "category": "plumbing"
+  },
+  {
+    "text": "رف الحائط في الصالة سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "شباك الصالة الخشبي محتاج إطار",
+    "category": "carpentry"
+  },
+  {
+    "text": "الكهرباء ضعيفة في جميع الغرف",
+    "category": "electricity"
+  },
+  {
+    "text": "فريون المكيف خلص وما يبرد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الشبابيك تحتاج سواتر",
+    "category": "other"
+  },
+  {
+    "text": "الطلاء الخارجي للمبنى بهت من الشمس",
+    "category": "painting"
+  },
+  {
+    "text": "دهان غرفة الضيوف تقشر من الجدار",
+    "category": "painting"
+  },
+  {
+    "text": "شباك المطبخ ما يسكر",
+    "category": "carpentry"
+  },
+  {
+    "text": "ريموت المكيف يحتاج برمجة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "السباكة في المطبخ تحتاج تصليح",
+    "category": "plumbing"
+  },
+  {
+    "text": "مياه الأمطار تتسرب من السقف",
+    "category": "other"
+  },
+  {
+    "text": "الدهان في الصالة قدم وما عاد لونه زين",
+    "category": "painting"
+  },
+  {
+    "text": "السقف في غرفة النوم فيه بقع مياه",
+    "category": "painting"
+  },
+  {
+    "text": "الطلاء في غرفة النوم الرئيسية قديم جداً",
+    "category": "painting"
+  },
+  {
+    "text": "جهاز التكييف طفى وما اشتغل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الطلاء في غرفة الخادمة تعبان",
+    "category": "painting"
+  },
+  {
+    "text": "الأسلاك المعلقة في السقف خطيرة",
+    "category": "electricity"
+  },
+  {
+    "text": "قفل الباب الرئيسي تلف",
+    "category": "carpentry"
+  },
+  {
+    "text": "سخان الماء لا يسخن الماء",
+    "category": "plumbing"
+  },
+  {
+    "text": "صنبور الشطف لا يعمل",
+    "category": "plumbing"
+  },
+  {
+    "text": "قاطع الدورة الكهربائية مكسور",
+    "category": "electricity"
+  },
+  {
+    "text": "الكهرباء لا تصل إلى غرفة المعيشة",
+    "category": "electricity"
+  },
+  {
+    "text": "بقع تسريب على سقف الحمام",
+    "category": "painting"
+  },
+  {
+    "text": "ماسورة الصرف الرئيسية بطيئة جداً",
+    "category": "plumbing"
+  },
+  {
+    "text": "دهان الشقة كلها محتاج تجديد",
+    "category": "painting"
+  },
+  {
+    "text": "تسريب في أنبوب المياه تحت المطبخ",
+    "category": "plumbing"
+  },
+  {
+    "text": "تكييف الاستقبال يحتاج صيانة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الجدار في المطبخ محتاج طلاء زيتي",
+    "category": "painting"
+  },
+  {
+    "text": "صوت طنين في الأسلاك",
+    "category": "electricity"
+  },
+  {
+    "text": "خزانة الكتب رفها سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "الخزانة تحت الحوض مبللة دائماً",
+    "category": "plumbing"
+  },
+  {
+    "text": "صنبور الدش لا يتحكم بدرجة الحرارة",
+    "category": "plumbing"
+  },
+  {
+    "text": "نظام البصمة لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "بلاعة غرفة النوم مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "المكيف يبرد الغرفة بعد ساعة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "بلاعة الحمام مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "تسريب مياه في غرفة الغسيل",
+    "category": "plumbing"
+  },
+  {
+    "text": "انقطع الغاز من المكيف ويحتاج شحن",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تماس في الأسلاك الداخلية",
+    "category": "electricity"
+  },
+  {
+    "text": "صنبور الحمام يقطر أثناء الليل",
+    "category": "plumbing"
+  },
+  {
+    "text": "جدار الحديقة الاستنادي متآكل",
+    "category": "other"
+  },
+  {
+    "text": "رائحة غاز في المطبخ",
+    "category": "other"
+  },
+  {
+    "text": "دهان الجدار طلع على الأثاث",
+    "category": "painting"
+  },
+  {
+    "text": "السقف في الحمام محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "المقبس مذاب بسبب الحرارة",
+    "category": "electricity"
+  },
+  {
+    "text": "مروحة المكيف توقف بعد ساعة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الدهان الداخلي حك وتقشر",
+    "category": "painting"
+  },
+  {
+    "text": "الأرضية الخشبية فيها تلف وبروز",
+    "category": "carpentry"
+  },
+  {
+    "text": "صنبور البانيو لا يعمل بالكامل",
+    "category": "plumbing"
+  },
+  {
+    "text": "جدار المطبخ محتاج طلاء زيتي غسيل",
+    "category": "painting"
+  },
+  {
+    "text": "الطلاء المقاوم للحريق محتاج تجديد",
+    "category": "painting"
+  },
+  {
+    "text": "الدهان يتساقط من السقف",
+    "category": "painting"
+  },
+  {
+    "text": "جهاز إنذار السرقة لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "الجدار في الروف متآكل من الشمس",
+    "category": "painting"
+  },
+  {
+    "text": "صنبور المطبخ الرئيسي يقطر",
+    "category": "plumbing"
+  },
+  {
+    "text": "تسريب في الأنبوب الرئيسي للمبنى",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب المطبخ الخلفي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "مقاعد الحديقة الخشبية مكسورة",
+    "category": "other"
+  },
+  {
+    "text": "شاشة عرض معلومات المبنى لا تعمل",
+    "category": "other"
+  },
+  {
+    "text": "تسريب مياه من الصنبور",
+    "category": "plumbing"
+  },
+  {
+    "text": "المكيف ينفخ هوا لكن مو بارد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الشباك لا يغلق ويدخل هواء",
+    "category": "carpentry"
+  },
+  {
+    "text": "غطاء فتحة التكييف في السقف مكسور",
+    "category": "other"
+  },
+  {
+    "text": "باب الغرفة الرئيسية مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "المكيف يطلع صوت انفجار صغير",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "السلم الحلزوني الخشبي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "باب غرفة المعيشة لا يفتح بالكامل",
+    "category": "carpentry"
+  },
+  {
+    "text": "المصعد الكهربائي عطلان",
+    "category": "other"
+  },
+  {
+    "text": "الخزان فوق السطح يسرب",
+    "category": "plumbing"
+  },
+  {
+    "text": "دولاب المطبخ الخشبي متآكل من الموية",
+    "category": "carpentry"
+  },
+  {
+    "text": "الأسلاك في العلية مكشوفة",
+    "category": "electricity"
+  },
+  {
+    "text": "تشقق كبير في جدار الصالة الرئيسي",
+    "category": "painting"
+  },
+  {
+    "text": "الإنارة في الموقف تحت الأرض لا تعمل",
+    "category": "other"
+  },
+  {
+    "text": "غطاء خزان المياه مكسور",
+    "category": "other"
+  },
+  {
+    "text": "الجرس لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "بلاط السطح مكسور",
+    "category": "other"
+  },
+  {
+    "text": "تلف في مضخة المسبح الرئيسية",
+    "category": "other"
+  },
+  {
+    "text": "السقف في الروشن محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "لمبة السلم لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "مكيف الضيوف لا يبرد جيداً",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الدهان في غرفة الأطفال مقشر من الألعاب",
+    "category": "painting"
+  },
+  {
+    "text": "رفوف المكتبة الخشبية كلها سقطت",
+    "category": "carpentry"
+  },
+  {
+    "text": "خزانة العرض الزجاجية مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "المكيف يطلع صوت مثل الصفير",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "رف الحمام الخشبي سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "قفل باب غرفة الخدمة عطلان",
+    "category": "carpentry"
+  },
+  {
+    "text": "نظام الصوت في الصالة لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "التيار الكهربائي غير مستقر في كل الغرف",
+    "category": "electricity"
+  },
+  {
+    "text": "الدرج الخشبي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "شباك غرفة التخزين لا يغلق",
+    "category": "carpentry"
+  },
+  {
+    "text": "السباكة في غرفة الغسيل مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب الكراج الآلي لا يستجيب للريموت",
+    "category": "other"
+  },
+  {
+    "text": "تكييف الغرفة الرئيسية لا يعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "صوت مروحة المكيف مزعج",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الضوء في المطبخ يخفت فجأة",
+    "category": "electricity"
+  },
+  {
+    "text": "شباك المطبخ يحتاج زجاج",
+    "category": "carpentry"
+  },
+  {
+    "text": "المكيف ما يوزع الهواء بشكل جيد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "جهاز التكييف ما يشتغل على البارد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الدهان في زوايا الغرفة متآكل",
+    "category": "painting"
+  },
+  {
+    "text": "لا يوجد كهرباء في الشقة كلها",
+    "category": "electricity"
+  },
+  {
+    "text": "وحدة التكييف تحتاج غاز",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "خرطوم تصريف المكيف مسدود ويسرب",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "بقع زيت على جدار المطبخ",
+    "category": "painting"
+  },
+  {
+    "text": "قفل الباب الخلفي عطلان",
+    "category": "carpentry"
+  },
+  {
+    "text": "شفرات المكيف لا تتحرك",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "مشكلة في المفتاح الذكي للكهرباء",
+    "category": "electricity"
+  },
+  {
+    "text": "مضخة مياه الأمطار لا تشتغل",
+    "category": "other"
+  },
+  {
+    "text": "النمل في الغرفة",
+    "category": "other"
+  },
+  {
+    "text": "تلف في كابل الإنترنت",
+    "category": "other"
+  },
+  {
+    "text": "الطلاء في غرفة الطعام تشقق",
+    "category": "painting"
+  },
+  {
+    "text": "ريموت المكيف ما يتحكم بدرجة الحرارة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "بلف تصريف مياه الحمام عطلان",
+    "category": "plumbing"
+  },
+  {
+    "text": "قاعدة المرحاض متصدعة",
+    "category": "plumbing"
+  },
+  {
+    "text": "الكهرباء تقطع وتوصل بشكل مفاجئ",
+    "category": "electricity"
+  },
+  {
+    "text": "تلف في الأسلاك بسبب الرطوبة",
+    "category": "electricity"
+  },
+  {
+    "text": "الجدار فيه بقع سوداء من العفن وتحتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "شباك الممر لا يقفل بالكامل",
+    "category": "carpentry"
+  },
+  {
+    "text": "نظام التحكم بالدخول لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "بلف تصريف الحمام عطلان",
+    "category": "plumbing"
+  },
+  {
+    "text": "الباب الداخلي ينكسر عند الإغلاق",
+    "category": "carpentry"
+  },
+  {
+    "text": "نظام التكييف المركزي للمبنى عطلان",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يتعرق ويقطر على الأرض",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "فتحة التهوية في الحمام مسدودة",
+    "category": "other"
+  },
+  {
+    "text": "المكيف لا يبلغ درجة الحرارة المطلوبة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "لوحة التوزيع تصدر أزيزاً",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يبرد لكنه يتعرق ويقطر",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "قفل النافذة مكسور لا يمسك",
+    "category": "carpentry"
+  },
+  {
+    "text": "وحدة التكييف الداخلية تسرب فريون",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "دولاب المطبخ الخشبي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "صنبور المخزن لا يعمل",
+    "category": "plumbing"
+  },
+  {
+    "text": "تشويش في الإضاءة عند تشغيل المروحة",
+    "category": "electricity"
+  },
+  {
+    "text": "قطع في سلك الكهرباء الرئيسي",
+    "category": "electricity"
+  },
+  {
+    "text": "قفل الدرج الخشبي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "السور الزجاجي للشرفة مكسور",
+    "category": "other"
+  },
+  {
+    "text": "نظام الإنذار المركزي لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "بلاعة الممر مسدودة بالشعر",
+    "category": "plumbing"
+  },
+  {
+    "text": "رائحة حرق من لوحة الكهرباء",
+    "category": "electricity"
+  },
+  {
+    "text": "جهاز كشف الدخان يحتاج بطارية",
+    "category": "other"
+  },
+  {
+    "text": "انقطاع كامل للتيار في الشقة",
+    "category": "electricity"
+  },
+  {
+    "text": "باب غرفة الخدمة مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "الجدار في الممر الطويل محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "ماسورة تصريف المكيف المركزي مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "المكيف في الحمام لا يشتغل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "ماسورة الصرف من المطبخ مسدودة بالدهون",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب الحديقة معدني لكن إطاره الخشبي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "الفيشة لا تشتغل في غرفة النوم",
+    "category": "electricity"
+  },
+  {
+    "text": "المرحاض يحتاج ضغطاً قوياً للتشغيل",
+    "category": "plumbing"
+  },
+  {
+    "text": "رفوف المخزن الخشبية مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "شباك الممر لا يغلق",
+    "category": "carpentry"
+  },
+  {
+    "text": "إضاءة الحمام ضعيفة جدا",
+    "category": "electricity"
+  },
+  {
+    "text": "الأرضية الخشبية في الصالة منتفخة",
+    "category": "other"
+  },
+  {
+    "text": "جدار الممر الخارجي للغرف محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "دولاب الحمام الخشبي متآكل",
+    "category": "carpentry"
+  },
+  {
+    "text": "جهاز التحكم بالبوابة عن بعد لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "باب المدخل الزجاجي متشقق",
+    "category": "other"
+  },
+  {
+    "text": "المصعد يحتاج صيانة دورية",
+    "category": "other"
+  },
+  {
+    "text": "الكهرباء في الشقة غير مستقرة",
+    "category": "electricity"
+  },
+  {
+    "text": "بانيو الاستحمام مسدود",
+    "category": "plumbing"
+  },
+  {
+    "text": "المكيف لا يشتغل من الأساس",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "شباك غرفة الأطفال مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "البلاعة تطفح مياه مجاري",
+    "category": "plumbing"
+  },
+  {
+    "text": "المصعد لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "مشكلة في توصيلة أنبوب الغاز للفرن",
+    "category": "other"
+  },
+  {
+    "text": "شقوق في جدار المطبخ تحتاج معالجة",
+    "category": "painting"
+  },
+  {
+    "text": "صنبور المطبخ مكسور ومتصدع",
+    "category": "plumbing"
+  },
+  {
+    "text": "الطلاء في الصالة بدأ يتشقق",
+    "category": "painting"
+  },
+  {
+    "text": "مقبض باب الصالة سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "الرف الخشبي سقط من الجدار",
+    "category": "carpentry"
+  },
+  {
+    "text": "المكيف لا يستطيع تبريد الغرفة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "باب المطبخ يعلق عند الإغلاق",
+    "category": "carpentry"
+  },
+  {
+    "text": "ضغط الماي في المطبخ صار ضعيفاً",
+    "category": "plumbing"
+  },
+  {
+    "text": "خزان المياه فارغ دائماً",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب غرفة التخزين لا يغلق",
+    "category": "carpentry"
+  },
+  {
+    "text": "تسريب من اتصال الأنبوب بالجدار",
+    "category": "plumbing"
+  },
+  {
+    "text": "السقف في المدخل محتاج طلاء جديد",
+    "category": "painting"
+  },
+  {
+    "text": "لمبة الشرفة لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "دهان الجدار الداخلي في المطبخ أصفر",
+    "category": "painting"
+  },
+  {
+    "text": "السباكة في الشرفة تحتاج إصلاح",
+    "category": "plumbing"
+  },
+  {
+    "text": "رائحة دخان من الجيران",
+    "category": "other"
+  },
+  {
+    "text": "مشكلة في شفاط المطبخ",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يشتغل لمدة ساعة ثم يطفى",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "صنبور الماء في المدخل مكسور",
+    "category": "plumbing"
+  },
+  {
+    "text": "البلاعة في المطبخ تطفح ماء",
+    "category": "plumbing"
+  },
+  {
+    "text": "الحديقة تحتاج صيانة",
+    "category": "other"
+  },
+  {
+    "text": "انقطاع التيار عن الشقة بشكل مفاجئ",
+    "category": "electricity"
+  },
+  {
+    "text": "تسريب مياه في ماسورة الغاز",
+    "category": "plumbing"
+  },
+  {
+    "text": "الدهان تآكل من جدار المطبخ",
+    "category": "painting"
+  },
+  {
+    "text": "الدهان في البلكونة الخلفية متقشر",
+    "category": "painting"
+  },
+  {
+    "text": "بانيو الحمام الصغير متصدع",
+    "category": "plumbing"
+  },
+  {
+    "text": "الطلاء الخارجي محتاج إعادة كاملة",
+    "category": "painting"
+  },
+  {
+    "text": "باب السطح الحديدي مكسور",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يشتغل لكن على البارد فقط",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الماء الساخن لا يصل للحمام",
+    "category": "plumbing"
+  },
+  {
+    "text": "طلاء الجدار الخارجي يبهت بسرعة",
+    "category": "painting"
+  },
+  {
+    "text": "فيشة المدفأة لا تشتغل",
+    "category": "electricity"
+  },
+  {
+    "text": "صنبور الدش مقلوب ويسرب",
+    "category": "plumbing"
+  },
+  {
+    "text": "الطلاء الداخلي في غرفة النوم صار يطيح",
+    "category": "painting"
+  },
+  {
+    "text": "باب غرفة الخدمات مكسور",
+    "category": "other"
+  },
+  {
+    "text": "شيوع رائحة الصرف في الشقة كلها",
+    "category": "plumbing"
+  },
+  {
+    "text": "غرفة المحولات تحتاج تهوية",
+    "category": "other"
+  },
+  {
+    "text": "تسريب في ماسورة التصريف الرئيسية",
+    "category": "plumbing"
+  },
+  {
+    "text": "الكهرباء لا توصل لغرفة الضيوف",
+    "category": "electricity"
+  },
+  {
+    "text": "خزان الصرف الصحي ممتلئ",
+    "category": "other"
+  },
+  {
+    "text": "الطلاء في الشرفة تقشر من الشمس",
+    "category": "painting"
+  },
+  {
+    "text": "شبكة الحماية على السطح مقطوعة",
+    "category": "other"
+  },
+  {
+    "text": "بقع حبر على جدار غرفة الأطفال",
+    "category": "painting"
+  },
+  {
+    "text": "السقف في الحمام محتاج دهان عازل",
+    "category": "painting"
+  },
+  {
+    "text": "تسريب في الخزان الأرضي",
+    "category": "plumbing"
+  },
+  {
+    "text": "تكييف الصالة لا يوزع الهواء جيداً",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المقبس الأرضي لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "الطلاء في غرفة الطعام تشقق من الزوايا",
+    "category": "painting"
+  },
+  {
+    "text": "باب الغرفة الخارجي سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "تسريب في ماسورة التغذية للغسالة",
+    "category": "plumbing"
+  },
+  {
+    "text": "اللمبة الموفرة لا تشتغل في الصالة",
+    "category": "electricity"
+  },
+  {
+    "text": "ماسورة التصريف من الغسالة مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "جدار المدخل فيه خدوش وتحتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "فصل كامل للتيار في المطبخ",
+    "category": "electricity"
+  },
+  {
+    "text": "حشرات في المطبخ",
+    "category": "other"
+  },
+  {
+    "text": "خزانة الكهرباء في الشارع مفتوحة",
+    "category": "other"
+  },
+  {
+    "text": "صبغ الجدار الخارجي يتقشر",
+    "category": "other"
+  },
+  {
+    "text": "المواسير في الجدار باين فيها تسريب",
+    "category": "plumbing"
+  },
+  {
+    "text": "تسريب مياه من ماسورة السخان الشمسي",
+    "category": "plumbing"
+  },
+  {
+    "text": "المفتاح الذكي لا يتصل بالتطبيق",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يشتغل ليلاً ويطفي نهاراً",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "باب الكراج اليدوي مكسور",
+    "category": "other"
+  },
+  {
+    "text": "البلاط الأرضي مكسور وخطير",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يطلع صوت طنين مزعج",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "ماسورة المطبخ تحت المغسلة مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "فتحة الهواء في الحمام مسدودة",
+    "category": "other"
+  },
+  {
+    "text": "صوت فرقعة من المفتاح",
+    "category": "electricity"
+  },
+  {
+    "text": "وصلة الكهرباء في غرفة المعيشة لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "تسريب في ماسورة التصريف من الطابق العلوي",
+    "category": "plumbing"
+  },
+  {
+    "text": "الليد المعلق في الصالة لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "المياه راكدة تحت المغسلة",
+    "category": "plumbing"
+  },
+  {
+    "text": "صوت في لوحة الكهرباء",
+    "category": "electricity"
+  },
+  {
+    "text": "شباك غرفة النوم يحتاج تغيير",
+    "category": "carpentry"
+  },
+  {
+    "text": "إنارة الممرات الخارجية لا تعمل",
+    "category": "other"
+  },
+  {
+    "text": "رفوف المكتبة الخشبية مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "الكاونتر الخشبي في المطبخ مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "تسريب غاز من الفرن",
+    "category": "other"
+  },
+  {
+    "text": "باب غرفة التخزين لا يغلق بالمفتاح",
+    "category": "carpentry"
+  },
+  {
+    "text": "الطلاء في غرفة الأطفال قديم",
+    "category": "painting"
+  },
+  {
+    "text": "تسريب في خزان المياه الرئيسي",
+    "category": "plumbing"
+  },
+  {
+    "text": "المكيف يقطع الكهربا عن البيت كله",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "إطار الشباك تلف وصار يدخل منه برد",
+    "category": "carpentry"
+  },
+  {
+    "text": "بوابة المبنى الرئيسية مكسورة",
+    "category": "other"
+  },
+  {
+    "text": "شباك غرفة النوم يحتاج مفصل",
+    "category": "carpentry"
+  },
+  {
+    "text": "الوحدة الخارجية للمكيف تصدر اهتزازاً",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الدهان على الجدار يمسح بسهولة",
+    "category": "painting"
+  },
+  {
+    "text": "صنبور المطبخ يقطر باستمرار",
+    "category": "plumbing"
+  },
+  {
+    "text": "الحمام يفوح منه رائحة مجاري",
+    "category": "plumbing"
+  },
+  {
+    "text": "صدمة كهربائية من مقبس المطبخ",
+    "category": "electricity"
+  },
+  {
+    "text": "دهان المطبخ محتاج تغيير بسبب الدهون",
+    "category": "painting"
+  },
+  {
+    "text": "انقطاع متكرر للتيار كل ساعة",
+    "category": "electricity"
+  },
+  {
+    "text": "الباب الرئيسي يحتاج تبديل قفل",
+    "category": "carpentry"
+  },
+  {
+    "text": "مقبض باب الحمام مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "المكيف الشباك لا يبرد كما يجب",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المفتاح الثنائي في الصالة لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "دولاب المطبخ بابها سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "الموقف المخصص للزوار يحتاج صيانة",
+    "category": "other"
+  },
+  {
+    "text": "تسريب مياه خلف الثلاجة",
+    "category": "plumbing"
+  },
+  {
+    "text": "المكيف يصدر رائحة عفن عند التشغيل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "غطاء فتحة التهوية مكسور",
+    "category": "other"
+  },
+  {
+    "text": "مكيف المطبخ توقف عن العمل فجأة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المكيف ما يوقف بعد ما يوصل درجة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "شقوق في طلاء الجدار الخارجي",
+    "category": "painting"
+  },
+  {
+    "text": "جدران الشقة كلها تحتاج دهان جديد",
+    "category": "painting"
+  },
+  {
+    "text": "السقف محتاج طلاء ضد الرطوبة",
+    "category": "painting"
+  },
+  {
+    "text": "رف الحائط في المطبخ وقع",
+    "category": "carpentry"
+  },
+  {
+    "text": "الجدار يحتاج معجون وطلاء كامل",
+    "category": "painting"
+  },
+  {
+    "text": "المكيف يطلع ريحة حرق",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "مفصل باب الشرفة مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "الإضاءة لا تشتغل في الحمام",
+    "category": "electricity"
+  },
+  {
+    "text": "باب الحمام مكسور المفصل",
+    "category": "carpentry"
+  },
+  {
+    "text": "غطاء خزان المياه البلاستيكي مكسور",
+    "category": "other"
+  },
+  {
+    "text": "الإضاءة في الحمام لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "تشققات في زوايا الجدار",
+    "category": "painting"
+  },
+  {
+    "text": "مشكلة في لوحة التوزيع الكهربائي",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يسرب ماء من الوحدة الداخلية",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "شق كبير في الجدار محتاج سد وطلاء",
+    "category": "painting"
+  },
+  {
+    "text": "باب غرفة النوم يحتاج مفصل جديد",
+    "category": "carpentry"
+  },
+  {
+    "text": "التهوية في المخزن ضعيفة",
+    "category": "other"
+  },
+  {
+    "text": "السقف يحتاج طلاء ضد التسريب",
+    "category": "painting"
+  },
+  {
+    "text": "المكيف يطلع صوت أزيز",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "أسلاك الكهرباء في الأرضية مكشوفة",
+    "category": "electricity"
+  },
+  {
+    "text": "الإنارة في المطبخ لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "الجدار الخارجي للشرفة محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "جهاز التكييف يهتز بشدة عند التشغيل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الأسلاك في السقف مهترئة",
+    "category": "electricity"
+  },
+  {
+    "text": "أرضية غرفة المحولات تحتاج إصلاح",
+    "category": "other"
+  },
+  {
+    "text": "وحدة التكييف الخارجية مسدودة بالغبار",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "باب غرفة النوم يحتاج مقبض",
+    "category": "carpentry"
+  },
+  {
+    "text": "باب غرفة الغسيل الخشبي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "سلة المهملات الكبيرة مكسورة",
+    "category": "other"
+  },
+  {
+    "text": "المرحاض يفيض عند السيفون",
+    "category": "plumbing"
+  },
+  {
+    "text": "شباك المطبخ الخشبي يحتاج استبدال",
+    "category": "carpentry"
+  },
+  {
+    "text": "سور الحديقة الخشبي متآكل",
+    "category": "other"
+  },
+  {
+    "text": "السقف المستعار محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "التيار الكهربائي يقطع كل ساعة",
+    "category": "electricity"
+  },
+  {
+    "text": "الدهان في المطبخ تقشر من البخار",
+    "category": "painting"
+  },
+  {
+    "text": "الجدار المتشقق يحتاج معجون ودهان",
+    "category": "painting"
+  },
+  {
+    "text": "تكييف الصالة يعمل ساعة ويوقف",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "منظم ضغط الماء في البيت عطلان",
+    "category": "plumbing"
+  },
+  {
+    "text": "الطلاء يتساقط من الجدران",
+    "category": "painting"
+  },
+  {
+    "text": "باب الكراج الكهربائي لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "فلتر المكيف مسدود ويحتاج تنظيف",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الطلاء تقشر بعد التسريب القديم",
+    "category": "painting"
+  },
+  {
+    "text": "لمبة الإنارة المنخفضة محترقة",
+    "category": "electricity"
+  },
+  {
+    "text": "المواسير تحت الحوض بتقطر",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب المدخل الرئيسي للمبنى مكسور",
+    "category": "other"
+  },
+  {
+    "text": "مقبض باب غرفة النوم مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "ماسورة المياه الرئيسية مكسورة",
+    "category": "plumbing"
+  },
+  {
+    "text": "الأسلاك مكشوفة في السقف",
+    "category": "electricity"
+  },
+  {
+    "text": "صوت صفير من أنبوب الغاز",
+    "category": "other"
+  },
+  {
+    "text": "أنبوب الصرف مسدود في الحمام",
+    "category": "plumbing"
+  },
+  {
+    "text": "شاشة المكيف تظهر خطأ F1",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "سلك التوصيل في المدفأة محترق",
+    "category": "electricity"
+  },
+  {
+    "text": "بقع مياه على سقف المطبخ",
+    "category": "painting"
+  },
+  {
+    "text": "السقف في غرفة التلفاز محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "التيار الكهربائي يقطع عند المطر",
+    "category": "electricity"
+  },
+  {
+    "text": "شباك المطبخ محتاج إطار جديد",
+    "category": "carpentry"
+  },
+  {
+    "text": "المكيف يشتغل على المروحة فقط ولا يبرد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "ماسورة التصريف تحت الحوض بايظة",
+    "category": "plumbing"
+  },
+  {
+    "text": "لوحة الكهرباء قديمة وتحتاج تغيير",
+    "category": "electricity"
+  },
+  {
+    "text": "الطلاء الداخلي تقشر من الجدار الخشن",
+    "category": "painting"
+  },
+  {
+    "text": "تكييف غرفة النوم مضبوط على 30 ولا يبرد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "مكيف الصالة يبرد سطحي فقط",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "جدار البلكونة محتاج طلاء خارجي",
+    "category": "painting"
+  },
+  {
+    "text": "تيار الكهرباء غير مستقر",
+    "category": "electricity"
+  },
+  {
+    "text": "باب غرفة السطح الحديدي مكسور",
+    "category": "other"
+  },
+  {
+    "text": "السقف في الشرفة محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "تسريب في ماسورة السخان",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب الشرفة الخشبي متآكل",
+    "category": "carpentry"
+  },
+  {
+    "text": "الأرضية في الحمام تالفة",
+    "category": "other"
+  },
+  {
+    "text": "صوت مزعج من الأنابيب ليلاً",
+    "category": "other"
+  },
+  {
+    "text": "فلتر المكيف بحاجة تبديل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الطلاء الخارجي تلف من الأمطار الشتوية",
+    "category": "painting"
+  },
+  {
+    "text": "مشكلة في نظام الصوت في الصالة",
+    "category": "other"
+  },
+  {
+    "text": "جدار الشرفة يتقشر ويحتاج دهان",
+    "category": "painting"
+  },
+  {
+    "text": "تسريب من طرمبة الماء في البدروم",
+    "category": "plumbing"
+  },
+  {
+    "text": "تسريب وصلات السخان",
+    "category": "plumbing"
+  },
+  {
+    "text": "رفوف المطبخ الخشبية سقطت",
+    "category": "carpentry"
+  },
+  {
+    "text": "الجدار يحتاج معالجة من الرطوبة قبل الدهان",
+    "category": "painting"
+  },
+  {
+    "text": "الكهرباء ضعيفة في المقابس كلها",
+    "category": "electricity"
+  },
+  {
+    "text": "الأسلاك بحاجة عازل جديد",
+    "category": "electricity"
+  },
+  {
+    "text": "الطلاء على الجدار الخارجي عند المدخل متقشر",
+    "category": "painting"
+  },
+  {
+    "text": "تسريب مياه في خزانة المطبخ",
+    "category": "plumbing"
+  },
+  {
+    "text": "مشكلة في سخان الغاز",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يطلع صوت عالي عند الإطفاء",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "سور السطح الخارجي متآكل",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يطلع ريحة كيمياويات",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "حصل حريق صغير في المقبس",
+    "category": "electricity"
+  },
+  {
+    "text": "شبك النوافذ الأمني مقطوع",
+    "category": "other"
+  },
+  {
+    "text": "جهاز التكييف يشتغل لكن الفريون خلص",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تسريب مياه في ماسورة التغذية الرئيسية",
+    "category": "plumbing"
+  },
+  {
+    "text": "نظام التحكم في البوابة لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "دهان الجدار الداخلي في غرفة النوم متسخ",
+    "category": "painting"
+  },
+  {
+    "text": "شباك غرفة الضيوف لا يسكر",
+    "category": "carpentry"
+  },
+  {
+    "text": "رف الحائط في الحمام سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "المصعد يتوقف بين الأدوار",
+    "category": "other"
+  },
+  {
+    "text": "أرضية غرفة الكهرباء محتاجة صيانة",
+    "category": "other"
+  },
+  {
+    "text": "المواسير تحت الأرض متآكلة",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب غرفة النوم الثاني لا يغلق",
+    "category": "carpentry"
+  },
+  {
+    "text": "الطلاء على الحائط في الممر صار يتقشر",
+    "category": "painting"
+  },
+  {
+    "text": "الطلاء الخارجي تلف من الشمس",
+    "category": "painting"
+  },
+  {
+    "text": "رفوف المكتبة مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "باب الشرفة الخلفي لا يفتح",
+    "category": "carpentry"
+  },
+  {
+    "text": "الماء البارد لا يعمل في الحمام",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب غرفة المولدات الخشبي مكسور",
+    "category": "other"
+  },
+  {
+    "text": "بلاعة الشرفة مسدودة بأوراق",
+    "category": "plumbing"
+  },
+  {
+    "text": "الجدار في غرفة الغسيل محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "الإضاءة في المطبخ لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "مياه المطبخ لا تنزل من البلاعة",
+    "category": "plumbing"
+  },
+  {
+    "text": "درج السلم صار يصوت",
+    "category": "carpentry"
+  },
+  {
+    "text": "باب غرفة المكينة مكسور",
+    "category": "other"
+  },
+  {
+    "text": "السقف المعلق في الصالة محتاج طلاء جديد",
+    "category": "painting"
+  },
+  {
+    "text": "فلتر المكيف محتاج تنظيف",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "نظام الصرف في المسبح لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "تلف في نظام الطاقة الشمسية",
+    "category": "other"
+  },
+  {
+    "text": "شباك غرفة الضيوف ما يفتح",
+    "category": "carpentry"
+  },
+  {
+    "text": "صنبور الحمام لا يعطي ماء بارد",
+    "category": "plumbing"
+  },
+  {
+    "text": "خزانة غرفة التخزين مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "صوت طرق من الجيران في الليل",
+    "category": "other"
+  },
+  {
+    "text": "الكهرباء تفصل عند تشغيل المكواة",
+    "category": "electricity"
+  },
+  {
+    "text": "الدرابزين الحديدي متآكل",
+    "category": "other"
+  },
+  {
+    "text": "جدار السطح محتاج طلاء أبيض عازل",
+    "category": "painting"
+  },
+  {
+    "text": "المواسير في الجدار تسرب مياه",
+    "category": "plumbing"
+  },
+  {
+    "text": "تسريب في خزان الماء البلاستيكي",
+    "category": "plumbing"
+  },
+  {
+    "text": "الدهان في البيت بأكمله قديم",
+    "category": "painting"
+  },
+  {
+    "text": "الإنارة في غرفة التخزين لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "بقع الرطوبة على الحائط تحتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "ريموت المكيف ما يغير درجة الحرارة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "صنبور المطبخ يقطر ماء بعد الإغلاق",
+    "category": "plumbing"
+  },
+  {
+    "text": "خزان المياه فوق السطح يتسرب",
+    "category": "plumbing"
+  },
+  {
+    "text": "طرمبة رفع الماء إلى السطح لا تعمل",
+    "category": "plumbing"
+  },
+  {
+    "text": "مشكلة لم أجد لها تصنيف مناسب",
+    "category": "other"
+  },
+  {
+    "text": "خزانة المطبخ مكسورة من الرف",
+    "category": "carpentry"
+  },
+  {
+    "text": "تلف في كابل الكهرباء الرئيسي",
+    "category": "electricity"
+  },
+  {
+    "text": "الباب يحتك بالأرضية عند الفتح",
+    "category": "carpentry"
+  },
+  {
+    "text": "وجود عفن في سقف الغرفة",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يبرد بعد 3 ساعات",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "رف الحائط فوق السرير سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "المفتاح الكهربائي مكسور",
+    "category": "electricity"
+  },
+  {
+    "text": "المرحاض يصدر صوتاً عند كل استخدام",
+    "category": "plumbing"
+  },
+  {
+    "text": "فلتر المكيف محترق ويحتاج تغيير",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تسريب من المرحاض في غرفة الغسيل",
+    "category": "plumbing"
+  },
+  {
+    "text": "مشكلة في مقبس الشاحن",
+    "category": "electricity"
+  },
+  {
+    "text": "دهان الشقة كلها قشران",
+    "category": "painting"
+  },
+  {
+    "text": "باب غرفة الخدمة لا يفتح",
+    "category": "carpentry"
+  },
+  {
+    "text": "الجدار الرئيسي للصالة محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "خزانة المطبخ الخشبية تحتاج تبديل",
+    "category": "carpentry"
+  },
+  {
+    "text": "المواسير في المطبخ تصدر صوت رنة",
+    "category": "plumbing"
+  },
+  {
+    "text": "الجدار محتاج دهان وطلاء",
+    "category": "painting"
+  },
+  {
+    "text": "المكيف يشتغل ويوقف بسرعة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المكيف يعمل لكنه يطلع دخان",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "مقبس المطبخ لا يعمل من فترة",
+    "category": "electricity"
+  },
+  {
+    "text": "الكهرباء ضعيفة في الأفياش",
+    "category": "electricity"
+  },
+  {
+    "text": "جهاز التكييف يفصل الكهربا",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "ماسورة المياه في الحمام محتاجة تغيير",
+    "category": "plumbing"
+  },
+  {
+    "text": "مروحة المكيف الخارجية لا تشتغل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "خرطوم تصريف المكيف مسدود",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "كرسي خشبي مكسور القاعدة",
+    "category": "carpentry"
+  },
+  {
+    "text": "مكيف الشباك يهتز كثيراً",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "وجود نمل أبيض في الجدار",
+    "category": "other"
+  },
+  {
+    "text": "باب الصالة الزجاجي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "الطلاء في الصالة الكبيرة قدم جداً",
+    "category": "painting"
+  },
+  {
+    "text": "طاولة السفرة مكسورة الرجل",
+    "category": "carpentry"
+  },
+  {
+    "text": "الطلاء القديم لونه اصفر ومتسخ",
+    "category": "painting"
+  },
+  {
+    "text": "أنبوب الصرف الصحي مسدود",
+    "category": "plumbing"
+  },
+  {
+    "text": "المقبس في غرفة الأطفال خطير ويحرق",
+    "category": "electricity"
+  },
+  {
+    "text": "شباك غرفة المعيشة ما يفتح",
+    "category": "carpentry"
+  },
+  {
+    "text": "الوحدة الخارجية للمكيف تطلع حرارة كبيرة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "باب الخزانة الرئيسية مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "الكهرباء مقطوعة في نصف البيت",
+    "category": "electricity"
+  },
+  {
+    "text": "ريموت المكيف ضاعت البطارية",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تلف في الأسلاك تحت الأرض",
+    "category": "electricity"
+  },
+  {
+    "text": "لوحة التوزيع فيها شرارة",
+    "category": "electricity"
+  },
+  {
+    "text": "ضاغط المكيف لا يعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "كسر في إطار الباب",
+    "category": "carpentry"
+  },
+  {
+    "text": "بقع سوداء على جدار الحمام",
+    "category": "painting"
+  },
+  {
+    "text": "المكيف يشتغل لكن المروحة ما تدور",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "كابل الإنترنت في الشقة مقطوع",
+    "category": "other"
+  },
+  {
+    "text": "بقع دهان قديم على الجدار",
+    "category": "painting"
+  },
+  {
+    "text": "ضغط الماي ضعيف في الدش",
+    "category": "plumbing"
+  },
+  {
+    "text": "ريموت المكيف ظهرت علامة خطأ",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "بلاعة الأرض في الحمام مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "تسريب مياه من ماسورة تحت المجلى",
+    "category": "plumbing"
+  },
+  {
+    "text": "مشكلة في شاحن السيارة الكهربائية",
+    "category": "other"
+  },
+  {
+    "text": "فصل كامل للتيار الكهربائي",
+    "category": "electricity"
+  },
+  {
+    "text": "الإنارة في البلكونة لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "المرحاض لا يسحب المياه بشكل كافٍ",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب المبنى الخلفي الحديدي متآكل",
+    "category": "other"
+  },
+  {
+    "text": "فلتر المكيف محتاج تغيير من زمان",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "كابل التلفزيون مقطوع",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يقطع وينقطع",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الفيوز ينفجر كل مرة",
+    "category": "electricity"
+  },
+  {
+    "text": "دهان جدار الحمام بايظ",
+    "category": "painting"
+  },
+  {
+    "text": "باب دولاب المطبخ سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "طاولة السفرة القدم مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "تكييف الصيف لا يعمل في الحر",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الدهان في الممر مقشر بالكامل",
+    "category": "painting"
+  },
+  {
+    "text": "سخان الماء يقطر من الأسفل",
+    "category": "plumbing"
+  },
+  {
+    "text": "كرسي الحديقة الخشبي مكسور",
+    "category": "other"
+  },
+  {
+    "text": "الطلاء القديم لونه تغير مع الزمن",
+    "category": "painting"
+  },
+  {
+    "text": "صنبور المطبخ انكسر من القاعدة",
+    "category": "plumbing"
+  },
+  {
+    "text": "مشكلة في أنظمة الإنذار بالحريق",
+    "category": "other"
+  },
+  {
+    "text": "قفل باب الدولاب عطلان",
+    "category": "carpentry"
+  },
+  {
+    "text": "المقبس لا يعمل في الصالة",
+    "category": "electricity"
+  },
+  {
+    "text": "مشكلة في مفتاح الضوء",
+    "category": "electricity"
+  },
+  {
+    "text": "تكييف المجلس لا يبرد جيداً",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "حوض السباحة يحتاج صيانة",
+    "category": "other"
+  },
+  {
+    "text": "ضاغط المكيف يشتغل بصعوبة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الجدار الداخلي للبلكونة محتاج دهان",
+    "category": "painting"
+  },
+  {
+    "text": "فتحة الصرف في الشرفة مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "منظم ضغط الماي عطلان",
+    "category": "plumbing"
+  },
+  {
+    "text": "تسريب من صمام الأمان للسخان",
+    "category": "plumbing"
+  },
+  {
+    "text": "شبكة الحماية على الدرج مقطوعة",
+    "category": "other"
+  },
+  {
+    "text": "صنبور الغسيل الخارجي مكسور",
+    "category": "plumbing"
+  },
+  {
+    "text": "تكييف غرفة المكتب لا يبرد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المصعد يتوقف بين الطوابق",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يحتاج صيانة دورية",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "خزانة الأحذية الخشبية مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "اللمبة في غرفة النوم لا تضيء",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يطلع صوت عالي في الليل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "طرمبة الخزان الأرضي لا ترفع الماء",
+    "category": "plumbing"
+  },
+  {
+    "text": "جدار الحديقة الخلفية محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "باب الحمام الداخلي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "الكهرباء مقطوعة في الغرفة",
+    "category": "electricity"
+  },
+  {
+    "text": "خرطوم المرحاض مقطوع",
+    "category": "plumbing"
+  },
+  {
+    "text": "خرطوم الدش مقطوع",
+    "category": "plumbing"
+  },
+  {
+    "text": "المكيف يشتغل على البارد بس ما يبرد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "أرضية المخزن مبللة دائماً",
+    "category": "other"
+  },
+  {
+    "text": "مقبض باب المبنى الرئيسي مكسور",
+    "category": "other"
+  },
+  {
+    "text": "لمبة السراج محترقة",
+    "category": "electricity"
+  },
+  {
+    "text": "صنبور غسيل الأطباق مقطوع",
+    "category": "plumbing"
+  },
+  {
+    "text": "خزانة غرفة النوم بابها لا يغلق",
+    "category": "carpentry"
+  },
+  {
+    "text": "فيوز الكهرباء يحترق باستمرار",
+    "category": "electricity"
+  },
+  {
+    "text": "شبكة الحماية للنافذة مقطوعة",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يبرد لكنه يشرب كهرباء",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "خرطوم توصيل الغسالة قديم",
+    "category": "plumbing"
+  },
+  {
+    "text": "شباك الصالة الخشبي بحاجة تغيير",
+    "category": "carpentry"
+  },
+  {
+    "text": "خزانة الغاز تحتاج فحصاً",
+    "category": "other"
+  },
+  {
+    "text": "المكيف المركزي يوزع هوا ضعيف",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الكهرباء تفصل بشكل مفاجئ",
+    "category": "electricity"
+  },
+  {
+    "text": "صنبور ماء الشرب لا يعطي ماء",
+    "category": "plumbing"
+  },
+  {
+    "text": "رف الحمام سقط من الجدار",
+    "category": "carpentry"
+  },
+  {
+    "text": "قفل خزانة الأحذية مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "رائحة صرف كريهة في الشقة",
+    "category": "other"
+  },
+  {
+    "text": "باب المطبخ يحتاج تعديل",
+    "category": "carpentry"
+  },
+  {
+    "text": "ماء الحمام لا ينزل في البلاعة",
+    "category": "plumbing"
+  },
+  {
+    "text": "خزانة الأحذية رفها سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "الإنارة في الممر لا تشتغل",
+    "category": "electricity"
+  },
+  {
+    "text": "تسريب في وصلة المرحاض",
+    "category": "plumbing"
+  },
+  {
+    "text": "تماس في أسلاك المطبخ",
+    "category": "electricity"
+  },
+  {
+    "text": "طرمبة المياه فوق السطح عطلانة",
+    "category": "plumbing"
+  },
+  {
+    "text": "فلتر المكيف متسخ جداً",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "وحدة التكييف الخارجية تحتاج تنظيف",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "فريون المكيف نفذ",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تسريب ماء من السقف",
+    "category": "plumbing"
+  },
+  {
+    "text": "تكييف الشقة بالكامل ضعيف",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المروحة الداخلية للمكيف محترقة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "فريون المكيف تسرب",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المفتاح في الصالة لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يبعد الهوا لكن ما يبرد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "شباك المطبخ الخشبي متآكل",
+    "category": "carpentry"
+  },
+  {
+    "text": "جدار غرفة النوم محتاج طلاء جديد",
+    "category": "painting"
+  },
+  {
+    "text": "انقطاع الكهرباء عن غرفة الأطفال",
+    "category": "electricity"
+  },
+  {
+    "text": "الدهان على الجدار الداخلي مقشر",
+    "category": "painting"
+  },
+  {
+    "text": "صنبور الحديقة لا يفتح",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب غرفة المعيشة الخشبي متآكل",
+    "category": "carpentry"
+  },
+  {
+    "text": "الجيران يحدثون ضجيجاً كبيراً",
+    "category": "other"
+  },
+  {
+    "text": "جهاز التكييف يضعف كهرباء البيت",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "مضخة مياه الأمطار لا تعمل",
+    "category": "other"
+  },
+  {
+    "text": "فصل متكرر للتيار",
+    "category": "electricity"
+  },
+  {
+    "text": "صنبور المطبخ الثالث لا يغلق",
+    "category": "plumbing"
+  },
+  {
+    "text": "بقع طلاء قديم على الجدار وتحتاج تنعيم",
+    "category": "painting"
+  },
+  {
+    "text": "الطلاء في المخزن قديم",
+    "category": "painting"
+  },
+  {
+    "text": "خزانة التلفاز مكسورة الرف",
+    "category": "carpentry"
+  },
+  {
+    "text": "بلاعة الحمام الكبير مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "تماس كهربائي في المدفأة",
+    "category": "electricity"
+  },
+  {
+    "text": "باب الشقة الرئيسي مكسور من الإطار",
+    "category": "carpentry"
+  },
+  {
+    "text": "باب الغرفة لا يستقر في مكانه",
+    "category": "carpentry"
+  },
+  {
+    "text": "سلك الكهرباء في المطبخ مقطوع",
+    "category": "electricity"
+  },
+  {
+    "text": "الطلاء يتقشر من السقف",
+    "category": "painting"
+  },
+  {
+    "text": "تماس كهربائي في أسلاك الإنارة",
+    "category": "electricity"
+  },
+  {
+    "text": "صنبور البانيو لا يعطي ماء ساخن",
+    "category": "plumbing"
+  },
+  {
+    "text": "مشكلة في أنبوب الغاز الرئيسي",
+    "category": "other"
+  },
+  {
+    "text": "الشباك مكسور ولا يفتح",
+    "category": "carpentry"
+  },
+  {
+    "text": "تسريب من الماسورة المغذية للغسالة",
+    "category": "plumbing"
+  },
+  {
+    "text": "رفوف الحائط سقطت من الجدار",
+    "category": "carpentry"
+  },
+  {
+    "text": "المصباح الخارجي لا يضيء",
+    "category": "electricity"
+  },
+  {
+    "text": "الباب لا يغلق بشكل صحيح",
+    "category": "carpentry"
+  },
+  {
+    "text": "الدهان في المطبخ أصفر من البخار",
+    "category": "painting"
+  },
+  {
+    "text": "الطلاء في الصالة فيه تعرجات",
+    "category": "painting"
+  },
+  {
+    "text": "جدار غرفة الغسيل محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "المواسير في الحمام تصدر صوت صفير",
+    "category": "plumbing"
+  },
+  {
+    "text": "المواسير تحت المجلى متآكلة",
+    "category": "plumbing"
+  },
+  {
+    "text": "الجدار خلف المكيف متسخ ويحتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "باب غرفة المعيشة لا يفتح من الداخل",
+    "category": "carpentry"
+  },
+  {
+    "text": "الطلاء في غرفة المكتب باهت",
+    "category": "painting"
+  },
+  {
+    "text": "جهاز التكييف يحتاج فريون",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "دهان جدار المدخل مقشر بالكامل",
+    "category": "painting"
+  },
+  {
+    "text": "شرارة تخرج من المقبس",
+    "category": "electricity"
+  },
+  {
+    "text": "دولاب الحمام خشبه متورم",
+    "category": "carpentry"
+  },
+  {
+    "text": "انقطاع تام للكهرباء في الشقة",
+    "category": "electricity"
+  },
+  {
+    "text": "خزانة التلفاز تحتاج تصليح",
+    "category": "carpentry"
+  },
+  {
+    "text": "لمبة الطوارئ في الممر لا تشتغل",
+    "category": "electricity"
+  },
+  {
+    "text": "تكييف غرفة الضيوف يشتغل لكن ما يبرد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المكيف الشباك يطلع هواء سخن",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "السور الخارجي للحديقة متآكل",
+    "category": "other"
+  },
+  {
+    "text": "وجود فئران في الشقة",
+    "category": "other"
+  },
+  {
+    "text": "دولاب الأحذية بابها سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "ريموت المكيف مفقود",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "باب الحمام لا يقفل",
+    "category": "carpentry"
+  },
+  {
+    "text": "تماس في مقبس المطبخ",
+    "category": "electricity"
+  },
+  {
+    "text": "جهاز قياس الرطوبة في المسبح لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "مقبض باب المطبخ مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "شباك غرفة المعيشة لا يغلق",
+    "category": "carpentry"
+  },
+  {
+    "text": "التوصيلات في لوحة الكهرباء فضفاضة",
+    "category": "electricity"
+  },
+  {
+    "text": "باب المدخل الرئيسي محتاج مفصل جديد",
+    "category": "carpentry"
+  },
+  {
+    "text": "مياه الصرف ترجع من البلاعة",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب الشقة الخشبي محتاج صيانة",
+    "category": "carpentry"
+  },
+  {
+    "text": "السباكة في الممر تحتاج إصلاح",
+    "category": "plumbing"
+  },
+  {
+    "text": "الأفياش في الجدار قديمة",
+    "category": "electricity"
+  },
+  {
+    "text": "تلف في عازل السقف الحراري",
+    "category": "other"
+  },
+  {
+    "text": "قفل باب المطبخ عطلان",
+    "category": "carpentry"
+  },
+  {
+    "text": "تمدد حراري في الأسلاك يسبب قصر",
+    "category": "electricity"
+  },
+  {
+    "text": "سخان الماء يطفى بعد دقائق",
+    "category": "plumbing"
+  },
+  {
+    "text": "مشكلة في الفولتية",
+    "category": "electricity"
+  },
+  {
+    "text": "تكييف الشقة بالكامل لا يعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تسريب مياه في السطح من الخزان",
+    "category": "plumbing"
+  },
+  {
+    "text": "خزانة غرفة الضيوف مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "الجدار في الروشن محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "جهاز التكييف يشتغل بصعوبة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "قفل باب غرفة التخزين مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "خزانة الملابس مكسورة ولا تغلق",
+    "category": "carpentry"
+  },
+  {
+    "text": "لمبة السقف لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "تسريب في الماسورة الموصلة للسخان",
+    "category": "plumbing"
+  },
+  {
+    "text": "جدار غرفة المعيشة محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "لمبة الضوء في المدخل لا تشتغل",
+    "category": "electricity"
+  },
+  {
+    "text": "قفل باب الشقة عطلان",
+    "category": "carpentry"
+  },
+  {
+    "text": "الطلاء على السور الخارجي للشرفة تقشر",
+    "category": "painting"
+  },
+  {
+    "text": "الفيشة في الصالة لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "الطرمبة ما تشتغل والماء ما يطلع",
+    "category": "plumbing"
+  },
+  {
+    "text": "المرحاض يفيض ولا يصرف",
+    "category": "plumbing"
+  },
+  {
+    "text": "السور الحديدي للشرفة متآكل",
+    "category": "other"
+  },
+  {
+    "text": "مقبس غرفة الأطفال ساخن",
+    "category": "electricity"
+  },
+  {
+    "text": "مضخة رفع الماء لا تشتغل",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب السطح الخشبي مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "سلك مكشوف خلف الثلاجة",
+    "category": "electricity"
+  },
+  {
+    "text": "دهان السقف صار يتقشر في الصالة",
+    "category": "painting"
+  },
+  {
+    "text": "شباك الحمام ما يفتح",
+    "category": "carpentry"
+  },
+  {
+    "text": "تسريب مياه من ماسورة تحت البلاط",
+    "category": "plumbing"
+  },
+  {
+    "text": "شباك غرفة الضيوف متصدع",
+    "category": "carpentry"
+  },
+  {
+    "text": "الإضاءة الخافتة لا تعمل في الليل",
+    "category": "electricity"
+  },
+  {
+    "text": "شباك الممر لا يفتح بسهولة",
+    "category": "carpentry"
+  },
+  {
+    "text": "الكهرباء تنقطع بعد أمطار",
+    "category": "electricity"
+  },
+  {
+    "text": "بقع حمراء على الجدار بسبب الصدأ",
+    "category": "painting"
+  },
+  {
+    "text": "البالوعة في غرفة النوم تطفح",
+    "category": "plumbing"
+  },
+  {
+    "text": "بقع زيت على جدار المطبخ تحتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "تماس في قاطع الكهرباء الرئيسي",
+    "category": "electricity"
+  },
+  {
+    "text": "الأسلاك متآكلة بسبب الرطوبة",
+    "category": "electricity"
+  },
+  {
+    "text": "تسريب في أنبوب خلف المرحاض",
+    "category": "plumbing"
+  },
+  {
+    "text": "تماس في أسلاك المدفأة",
+    "category": "electricity"
+  },
+  {
+    "text": "رطوبة وتلف في الدهان",
+    "category": "painting"
+  },
+  {
+    "text": "الإنارة في المخزن لا تشتغل",
+    "category": "electricity"
+  },
+  {
+    "text": "مقبس الكهرباء في الممر لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "الجدار بجانب الشباك محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "ماسورة التصريف تحت البانيو مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "تكييف غرفة الضيوف يبرد ببطء",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "لوحة المفاتيح الكهربائية لا تستجيب",
+    "category": "electricity"
+  },
+  {
+    "text": "نظام ال CCTV لا يسجل",
+    "category": "other"
+  },
+  {
+    "text": "رائحة كريهة من المصرف",
+    "category": "plumbing"
+  },
+  {
+    "text": "فيشة الكهرباء في الحمام لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يوزع هواء غير متساوٍ",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "غطاء البلاعة مكسور",
+    "category": "other"
+  },
+  {
+    "text": "الجرس الخارجي لا يعمل",
+    "category": "other"
+  },
+  {
+    "text": "رفوف المطبخ الخشبية مكسورة",
+    "category": "carpentry"
+  },
+  {
+    "text": "المفتاح لا يشتغل من أول مرة",
+    "category": "electricity"
+  },
+  {
+    "text": "الشباك يدخل منه مطر",
+    "category": "carpentry"
+  },
+  {
+    "text": "باب الحمام الصغير متعلق",
+    "category": "carpentry"
+  },
+  {
+    "text": "الهواء الخارج من المكيف دافئ",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "باب غرفة المحولات مكسور",
+    "category": "other"
+  },
+  {
+    "text": "صوت طقطقة من القاطع الكهربائي",
+    "category": "electricity"
+  },
+  {
+    "text": "مياه الغسالة تطلع من البلاعة",
+    "category": "plumbing"
+  },
+  {
+    "text": "خزانة الحمام محتاجة إصلاح",
+    "category": "carpentry"
+  },
+  {
+    "text": "باب غرفة الكهرباء لا يقفل",
+    "category": "other"
+  },
+  {
+    "text": "الطلاء المائي على الجدار تقشر",
+    "category": "painting"
+  },
+  {
+    "text": "مظلة مدخل المبنى مكسورة",
+    "category": "other"
+  },
+  {
+    "text": "مفصلة باب الشرفة صدئة",
+    "category": "carpentry"
+  },
+  {
+    "text": "بلاعة غرفة النوم تطفح مياه",
+    "category": "plumbing"
+  },
+  {
+    "text": "السقف محتاج طلاء كامل",
+    "category": "painting"
+  },
+  {
+    "text": "الطلاء في البلكونة تقشر من المطر",
+    "category": "painting"
+  },
+  {
+    "text": "نظام الري التلقائي لا يبرمج",
+    "category": "other"
+  },
+  {
+    "text": "باب الشرفة الخشبي متآكل",
+    "category": "carpentry"
+  },
+  {
+    "text": "صنبور البانيو لا يعطي ماء",
+    "category": "plumbing"
+  },
+  {
+    "text": "المكيف لا يرد على أي أمر",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "جدار المطبخ بحاجة طلاء مقاوم للرطوبة",
+    "category": "painting"
+  },
+  {
+    "text": "ثرموستات المكيف لا يعمل بشكل صحيح",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "ماسورة التصريف في السطح مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "جدار الحمام فيه عفن بسبب الرطوبة",
+    "category": "painting"
+  },
+  {
+    "text": "الجدار في المطبخ محتاج طلاء مقاوم للدهون",
+    "category": "painting"
+  },
+  {
+    "text": "الحوض مسدود ولا يصرف",
+    "category": "plumbing"
+  },
+  {
+    "text": "شاشة المكيف تظهر خطأ E1",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الماء لا يصل للطابق الثاني",
+    "category": "plumbing"
+  },
+  {
+    "text": "تلف في نظام الأقمار الصناعية",
+    "category": "other"
+  },
+  {
+    "text": "مقبس الغرفة يعطي صدمة كهربائية",
+    "category": "electricity"
+  },
+  {
+    "text": "صوت المكيف مزعج في الليل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "دولاب المطبخ رفوفه بايظة",
+    "category": "carpentry"
+  },
+  {
+    "text": "السباكة في الحمام تسرب الماء",
+    "category": "plumbing"
+  },
+  {
+    "text": "مقاعد الانتظار في المدخل مكسورة",
+    "category": "other"
+  },
+  {
+    "text": "وجود صراصير بكثرة",
+    "category": "other"
+  },
+  {
+    "text": "صنبور الماء الخارجي مقطوع",
+    "category": "plumbing"
+  },
+  {
+    "text": "وجود تشقق في الجدار الخارجي للمبنى",
+    "category": "other"
+  },
+  {
+    "text": "المكيف ما يوقف عن العمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "بلاعة الغسالة تطفح",
+    "category": "plumbing"
+  },
+  {
+    "text": "الباب الخارجي لا يغلق بالمفتاح",
+    "category": "carpentry"
+  },
+  {
+    "text": "وحدة التحكم في المكيف لا تعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "بقع مياه على الجدار بعد التسريب",
+    "category": "painting"
+  },
+  {
+    "text": "الجدار خلف الثلاجة متسخ ويحتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "جهاز التكييف يشتغل لمدة ثم يوقف لوحده",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "رف الحائط في المدخل سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "شباك الحمام لا يغلق بالكامل",
+    "category": "carpentry"
+  },
+  {
+    "text": "مشكلة في الانترنت",
+    "category": "other"
+  },
+  {
+    "text": "تسريب مياه في الحمام الصغير",
+    "category": "plumbing"
+  },
+  {
+    "text": "تماس في مقبس المدفأة",
+    "category": "electricity"
+  },
+  {
+    "text": "جهاز التكييف يشتغل ساعة ويطفي",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "نظام الصرف في السطح مسدود",
+    "category": "other"
+  },
+  {
+    "text": "التسريب يسبب رطوبة في الجدار",
+    "category": "plumbing"
+  },
+  {
+    "text": "صوت من القاطع عند التشغيل",
+    "category": "electricity"
+  },
+  {
+    "text": "قاطع الكهرباء يسخن كثيراً",
+    "category": "electricity"
+  },
+  {
+    "text": "دهان الباب الخشبي تقشر",
+    "category": "painting"
+  },
+  {
+    "text": "الكهرباء توصف بالصعقات الخفيفة",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يشتغل على وضع التهوية فقط",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الجدار في غرفة التلفزيون محتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "باب غرفة النوم الرئيسية يحتاج تغيير",
+    "category": "carpentry"
+  },
+  {
+    "text": "ماسورة التصريف في المطبخ مكسورة",
+    "category": "plumbing"
+  },
+  {
+    "text": "المكيف يشتغل لكن ما فيه هواء",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "رف الحائط في غرفة النوم سقط",
+    "category": "carpentry"
+  },
+  {
+    "text": "المكيف يعمل لمدة ثم يتوقف فجأة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "لمبة إنارة الحديقة محترقة",
+    "category": "other"
+  },
+  {
+    "text": "ماسورة السباكة في الحمام يتكون عليها صدا",
+    "category": "plumbing"
+  },
+  {
+    "text": "مكيف الشقة المركزي لا يعمل كلياً",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "شبكة الانترنت الخاصة بالشقة لا تعمل",
+    "category": "other"
+  },
+  {
+    "text": "رفوف المكتبة سقطت",
+    "category": "carpentry"
+  },
+  {
+    "text": "بوابة المبنى الرئيسية مكسورة",
+    "category": "other"
+  },
+  {
+    "text": "المكيف يطلع هواء دافئ في وضع الكول",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "ماسورة السباكة في الجدار اتكسرت",
+    "category": "plumbing"
+  },
+  {
+    "text": "الإنارة في غرفة النوم لا تشتغل",
+    "category": "electricity"
+  },
+  {
+    "text": "باب دولاب الملابس سقط من المفصلات",
+    "category": "carpentry"
+  },
+  {
+    "text": "تلف في مضخة المسبح",
+    "category": "other"
+  },
+  {
+    "text": "المكيف الداكت يوزع هوا ضعيف",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "جدار المطبخ محتاج طلاء قابل للغسيل",
+    "category": "painting"
+  },
+  {
+    "text": "مشكلة في توصيلات التلفزيون",
+    "category": "other"
+  },
+  {
+    "text": "الطلاء في غرفة المعيشة باهت",
+    "category": "painting"
+  },
+  {
+    "text": "لمبة الممر محترقة ومحتاجة تغيير",
+    "category": "electricity"
+  },
+  {
+    "text": "مروحة المكيف الخارجية لا تدور",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المكيف يبرد الغرفة بشكل غير متساوٍ",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "قاطع التسريب الأرضي يفصل",
+    "category": "electricity"
+  },
+  {
+    "text": "تسريب تحت المجلى في المطبخ",
+    "category": "plumbing"
+  },
+  {
+    "text": "باب غرفة المولدات لا يغلق",
+    "category": "other"
+  },
+  {
+    "text": "الأسلاك مقطوعة في عمود الكهرباء",
+    "category": "electricity"
+  },
+  {
+    "text": "مفصل باب الصالة مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "تلف في مظلة الموقف",
+    "category": "other"
+  },
+  {
+    "text": "المكيف لا يحتفظ بدرجة الحرارة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "باب غرفة الأطفال مكسور مفصل",
+    "category": "carpentry"
+  },
+  {
+    "text": "الماء يتسرب من تحت باب الحمام",
+    "category": "plumbing"
+  },
+  {
+    "text": "فيشة الكهرباء في المطبخ دايب",
+    "category": "electricity"
+  },
+  {
+    "text": "تشقق في مفتاح الكهرباء",
+    "category": "electricity"
+  },
+  {
+    "text": "خزان المياه البلاستيكي متشقق",
+    "category": "other"
+  },
+  {
+    "text": "الطلاء في الشرفة تبقع من الأمطار",
+    "category": "painting"
+  },
+  {
+    "text": "الجدار فيه فجوة من الطلاء القديم",
+    "category": "painting"
+  },
+  {
+    "text": "مواسير الصرف تحتاج تنظيف",
+    "category": "plumbing"
+  },
+  {
+    "text": "السطح يسرب مياه الأمطار",
+    "category": "other"
+  },
+  {
+    "text": "إضاءة الكوة في السقف لا تشتغل",
+    "category": "electricity"
+  },
+  {
+    "text": "الدهان في الممر كله مقشر",
+    "category": "painting"
+  },
+  {
+    "text": "صراصير في المطبخ",
+    "category": "other"
+  },
+  {
+    "text": "انقطاع التيار في الشقة بالكامل",
+    "category": "electricity"
+  },
+  {
+    "text": "ريموت التكييف المعلق لا يعمل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "جدار المدخل عليه بصمات وتحتاج طلاء",
+    "category": "painting"
+  },
+  {
+    "text": "اتصال الإنترنت يقطع باستمرار",
+    "category": "other"
+  },
+  {
+    "text": "تسريب مياه في الجدار بجانب الحمام",
+    "category": "plumbing"
+  },
+  {
+    "text": "تكييف الصالة يحتاج غاز فريون",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "صنبور المياه في غرفة الخدمة مكسور",
+    "category": "plumbing"
+  },
+  {
+    "text": "مشكلة في الغاز المنزلي",
+    "category": "other"
+  },
+  {
+    "text": "شباك الحديقة مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "بلاط الشرفة مزلق وخطير",
+    "category": "other"
+  },
+  {
+    "text": "الجدار بجانب الشباك فيه تشقق",
+    "category": "painting"
+  },
+  {
+    "text": "الدهان القديم يطلع غبار",
+    "category": "painting"
+  },
+  {
+    "text": "شباك المطبخ يحتاج مقبض جديد",
+    "category": "carpentry"
+  },
+  {
+    "text": "جهاز التكييف يطلع ريحة كيمياوي",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تسريب في أنبوب التدفئة",
+    "category": "plumbing"
+  },
+  {
+    "text": "الليدات في السقف لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "باب غرفة الكهرباء لا يغلق",
+    "category": "other"
+  },
+  {
+    "text": "الخرطوم الموصل بالغسالة يسرب",
+    "category": "plumbing"
+  },
+  {
+    "text": "الكهرباء تفصل بشكل عشوائي",
+    "category": "electricity"
+  },
+  {
+    "text": "انقطاع التيار في المطبخ",
+    "category": "electricity"
+  },
+  {
+    "text": "تكييف المطبخ توقف عن التبريد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "تلف في مضخة الصرف الصحي",
+    "category": "other"
+  },
+  {
+    "text": "لمبات الإنارة في السطح محترقة",
+    "category": "other"
+  },
+  {
+    "text": "تكييف المطبخ أطفى وما اشتغل مرة ثانية",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "التيار ينقطع عند تشغيل السخان",
+    "category": "electricity"
+  },
+  {
+    "text": "المكيف يبرد لكن ببطء شديد",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "السقف العالي في الصالة محتاج طلاء بالرش",
+    "category": "painting"
+  },
+  {
+    "text": "الطلاء في غرفة الضيوف قديم ومتشقق",
+    "category": "painting"
+  },
+  {
+    "text": "تسريب في خزان الماء تحت الدرج",
+    "category": "plumbing"
+  },
+  {
+    "text": "الدهان على الجدار الخارجي يتقشر بسرعة",
+    "category": "painting"
+  },
+  {
+    "text": "المكيف لا يستجيب للأوامر من الأيفون",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "الكهرباء لا تصل إلى غرفة الخدم",
+    "category": "electricity"
+  },
+  {
+    "text": "مشكلة في كابل الألياف البصرية",
+    "category": "other"
+  },
+  {
+    "text": "مقبس غرفة المعيشة لا يعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "الإضاءة تومض ولا تستقر",
+    "category": "electricity"
+  },
+  {
+    "text": "الجدار مبقع بسبب التسريب القديم",
+    "category": "painting"
+  },
+  {
+    "text": "المكيف يهتز بشكل غير طبيعي",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "حوض السباحة يحتاج تنظيف عاجل",
+    "category": "other"
+  },
+  {
+    "text": "ضاغط المكيف يشتغل ويطفى بسرعة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "بلاعة الصرف في السطح مسدودة",
+    "category": "plumbing"
+  },
+  {
+    "text": "الأرضية الرخامية تحتاج صيانة وتلميعاً",
+    "category": "other"
+  },
+  {
+    "text": "اللمبة في المدخل محترقة",
+    "category": "electricity"
+  },
+  {
+    "text": "جهاز التكييف يفصل الكتاوت",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "مفصل باب المطبخ مكسور",
+    "category": "carpentry"
+  },
+  {
+    "text": "الأرضية في الموقف تحتاج صيانة",
+    "category": "other"
+  },
+  {
+    "text": "المكيف المركزي يحتاج تنظيف مجاري",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "ماء المجاري يظهر في الحوض",
+    "category": "plumbing"
+  },
+  {
+    "text": "تكييف البيت يحتاج صيانة شاملة",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "المكيف في غرفة النوم متعطل",
+    "category": "air_conditioning"
+  },
+  {
+    "text": "لمبة الإضاءة في الممر لا تعمل",
+    "category": "electricity"
+  },
+  {
+    "text": "منظومة الري بالتنقيط عطلانة",
+    "category": "other"
+  }
+]
