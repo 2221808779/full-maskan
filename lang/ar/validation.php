@@ -124,5 +124,8 @@ return [
     'uploaded' => 'فشل في تحميل :attribute.',
     'url' => ':attribute يجب أن يكون عنوان URL صالحاً.',
     'uuid' => ':attribute يجب أن يكون UUID صالحاً.',
-    'attributes' => [],
+    'attributes' => [
+        'phone' => 'رقم الهاتف',
+        'phone_number' => 'رقم الهاتف',
+    ],
 ];

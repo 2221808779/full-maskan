@@ -577,6 +577,7 @@
     "Phone Number": "رقم الهاتف",
     "Phone Verification - Maskan": "تأكيد رقم الهاتف - مسكن",
     "Phone not verified. OTP sent.": "رقم الهاتف غير مؤكد. تم إرسال رمز التحقق.",
+    "Phone not verified. Please verify your phone number.": "رقم الهاتف غير مؤكد. يرجى تأكيد رقم هاتفك.",
     "Phone number": "رقم الهاتف",
     "Phone verified successfully": "تم تأكيد رقم الهاتف بنجاح",
     "Please enter a ban reason": "يرجى إدخال سبب الحظر",
@@ -997,6 +998,7 @@
     "Your Rating": "تقييمك",
     "Your Review": "تقييمك",
     "Rate this Property": "قيم هذا العقار",
+    "Verify now": "تأكيد الآن",
     "Update Review": "تحديث التقييم",
     "Submit Review": "إرسال التقييم"
 }

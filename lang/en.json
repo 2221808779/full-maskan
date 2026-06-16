@@ -529,6 +529,7 @@
     "Phone": "Phone",
     "Phone Number": "Phone Number",
     "Phone not verified. OTP sent.": "Phone not verified. OTP sent.",
+    "Phone not verified. Please verify your phone number.": "Phone not verified. Please verify your phone number.",
     "Phone number": "Phone number",
     "Phone verified successfully": "Phone verified successfully",
     "Please enter a ban reason": "Please enter a ban reason",
@@ -880,6 +881,7 @@
     "local_bank_cards": "Local Bank Cards",
     "Your Review": "Your Review",
     "Rate this Property": "Rate this Property",
+    "Verify now": "Verify now",
     "Update Review": "Update Review",
     "Submit Review": "Submit Review"
 }
