@@ -268,8 +268,13 @@ class WebMaintenanceController extends Controller
             app(MaintenanceAIService::class)->predictNextMaintenance($maintenanceRequest->property_id, $maintenanceRequest->ai_category ?? 'other');
         }
 
-        if ($validated['status'] === 'cancelled' && $maintenanceRequest->status === 'assigned') {
-            $data['technician_id'] = null;
+        if ($validated['status'] === 'cancelled') {
+            if ($user->user_type === 'owner') {
+                return back()->with('error', __('Only the technician can cancel the request'));
+            }
+            if ($maintenanceRequest->status === 'assigned') {
+                $data['technician_id'] = null;
+            }
         }
 
         if (isset($validated['technician_notes'])) {
@@ -324,7 +329,7 @@ class WebMaintenanceController extends Controller
     }
 
     /**
-     * Rate a completed maintenance request (tenant only).
+     * Rate a completed maintenance request (tenant or owner).
      * POST /maintenance/{maintenanceRequest}/rate
      *
      * @param  \Illuminate\Http\Request  $request

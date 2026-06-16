@@ -13,8 +13,14 @@
 
 <div class="maskan-card">
     <div class="card-body">
-        <form action="{{ route('properties.store') }}" method="POST" class="form-maskan" enctype="multipart/form-data">
+        <form action="{{ route('properties.store') }}" method="POST" class="form-maskan needs-validation" enctype="multipart/form-data" novalidate>
             @csrf
+
+            {{-- رسالة الخطأ العامة عند إرسال الحقول الفارغة --}}
+            <div id="validationAlert" class="alert alert-danger d-none" role="alert">
+                <i class="fas fa-exclamation-triangle ms-1"></i>
+                {{ __('Please fill in all required fields before submitting.') }}
+            </div>
 
             <div class="row">
                 <div class="col-md-8 mb-3">
@@ -68,6 +74,37 @@
 
             @push('scripts')
             <script>
+                // التحقق من الحقول الإجبارية قبل الإرسال
+                (function() {
+                    var form = document.querySelector('.form-maskan');
+                    var alertEl = document.getElementById('validationAlert');
+                    if (!form) return;
+
+                    form.addEventListener('submit', function(e) {
+                        var required = form.querySelectorAll('[required]');
+                        var empty = [];
+                        for (var i = 0; i < required.length; i++) {
+                            var field = required[i];
+                            if (!field.value.trim()) {
+                                empty.push(field);
+                            }
+                        }
+                        if (empty.length > 0) {
+                            e.preventDefault();
+                            alertEl.classList.remove('d-none');
+                            empty[0].focus();
+                            empty[0].scrollIntoView({behavior: 'smooth', block: 'center'});
+                        } else {
+                            alertEl.classList.add('d-none');
+                        }
+                    });
+
+                    // إخفاء التنبيه عند البدء بالكتابة
+                    form.querySelectorAll('input, select, textarea').forEach(function(el) {
+                        el.addEventListener('input', function() { alertEl.classList.add('d-none'); });
+                    });
+                })();
+
                 var currentLat = document.getElementById('latitude').value || '32.8872';
                 var currentLng = document.getElementById('longitude').value || '13.1913';
 

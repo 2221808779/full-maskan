@@ -190,6 +190,11 @@ $statusLabels = [
                         <div><small class="text-muted">{{ number_format($techProfile->avg_rating, 1) }} ({{ $techProfile->reviews_count }} {{ __('reviews') }})</small></div>
                     </div>
                 @endif
+                <div class="mt-3">
+                    <a href="{{ route('messages.show', $maintenanceRequest->technician_id) }}" class="btn btn-outline-primary btn-sm w-100">
+                        <i class="fas fa-comment ms-1"></i> {{ __('Message') }}
+                    </a>
+                </div>
             @endif
             </div>
         </div>
@@ -198,7 +203,7 @@ $statusLabels = [
         @if(auth()->user()->user_type === 'owner' && isset($review) && $review)
         <div class="maskan-card mb-4">
             <div class="card-header-custom d-flex align-items-center px-4 py-3" style="border-bottom:1px solid var(--gray-100);">
-                <h5 class="mb-0">{{ __('Technician Rating') }}</h5>
+                <h5 class="mb-0">{{ __('Technician Rating') }} — {{ __($maintenanceRequest->ai_category) }}</h5>
             </div>
             <div class="card-body text-center">
                 <div class="mb-2" style="font-size:1.8rem;">
@@ -259,23 +264,6 @@ $statusLabels = [
         </div>
         @endif
 
-        @if(auth()->user()->user_type === 'owner' && $maintenanceRequest->status === 'assigned')
-        <div class="maskan-card mb-4">
-            <div class="card-header-custom d-flex align-items-center px-4 py-3" style="border-bottom:1px solid var(--gray-100);">
-                <h5 class="mb-0">{{ __('Cancel Request') }}</h5>
-            </div>
-            <div class="card-body">
-                <form action="{{ route('maintenance.status', $maintenanceRequest) }}" method="POST" onsubmit="return confirm('{{ __('Are you sure you want to cancel this request?') }}')">
-                    @csrf
-                    <input type="hidden" name="status" value="cancelled">
-                    <button type="submit" class="btn btn-outline-danger w-100">
-                        <i class="fas fa-ban ms-1"></i> {{ __('Cancel Request') }}
-                    </button>
-                </form>
-            </div>
-        </div>
-        @endif
-
         {{-- Reject Modal --}}
         <div class="modal fade" id="rejectModal" tabindex="-1" aria-labelledby="rejectModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -306,7 +294,7 @@ $statusLabels = [
         @if(auth()->user()->user_type === 'tenant' && $maintenanceRequest->status === 'completed' && $maintenanceRequest->tenant_id === auth()->id())
         <div class="maskan-card mb-4">
             <div class="card-header-custom d-flex align-items-center px-4 py-3" style="border-bottom:1px solid var(--gray-100);">
-                <h5 class="mb-0">{{ __('Rate Technician') }}</h5>
+                <h5 class="mb-0">{{ __('Rate Technician') }} — {{ __($maintenanceRequest->ai_category) }}</h5>
             </div>
             <div class="card-body">
                 <form action="{{ route('maintenance.rate', $maintenanceRequest) }}" method="POST">

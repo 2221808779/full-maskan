@@ -12,7 +12,8 @@ class AppConstants {
   static const String appName = 'مسكن';
 
   /// رابط API الخلفي (Laravel) — يستخدمه Dio لجميع الطلبات
-  static const String baseUrl = 'http://192.168.1.111:8000/api/';
+  static String get baseUrl =>
+      kIsWeb ? 'http://127.0.0.1:8000/api/' : 'http://192.168.1.111:8000/api/';
 
   /// رابط تخزين الصور (Storage) — لتحميل صور العقارات والملفات الشخصية
   static String get imageBaseUrl =>
@@ -33,8 +34,7 @@ class AppConstants {
   static const String reverbAppKey = 'zcl7catxuajlvjbringa';
 
   /// مضيف WebSocket Reverb — يجب أن يكون نفس IP الخادم للاتصال من الجهاز
-  static String get reverbHost =>
-      kIsWeb ? '127.0.0.1' : '192.168.1.111';
+  static String get reverbHost => kIsWeb ? '127.0.0.1' : '192.168.1.111';
 
   /// منفذ WebSocket Reverb
   static const int reverbPort = 8080;

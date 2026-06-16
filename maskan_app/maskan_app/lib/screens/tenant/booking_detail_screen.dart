@@ -1,4 +1,5 @@
 /// شاشة تفاصيل الحجز — تعرض معلومات العقار وتفاصيل التواريخ والدفع والجدول الزمني للحالة وأزرار الإجراءات
+library;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:go_router/go_router.dart';
@@ -505,30 +506,52 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
                 ),
               ],
             ),
-            if (canRate)
+            if (r.technicianId != null)
               Padding(
                 padding: const EdgeInsets.only(top: 8),
-                child: SizedBox(
-                  width: double.infinity,
-                  child: OutlinedButton.icon(
-                    onPressed: () => context.push(
-                      AppRoutes.reviewForm
-                        .replaceAll(':targetType', 'technician')
-                        .replaceAll(':targetId', '${r.technicianId}'),
-                      extra: {'propertyId': _booking?.propertyId},
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: OutlinedButton.icon(
+                        onPressed: () => context.push(AppRoutes.chat.replaceFirst(':conversationId', '${r.technicianId}')),
+                        icon: const Icon(Icons.chat_bubble_outline, size: 16),
+                        label: Text(AppLocalizations.of(context)!.message,
+                          style: const TextStyle(fontSize: 12, fontFamily: 'Cairo'),
+                        ),
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor: MaskanColors.kBlue,
+                          side: BorderSide(color: MaskanColors.kBlue.withValues(alpha: 0.3)),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                          padding: const EdgeInsets.symmetric(vertical: 8),
+                          visualDensity: VisualDensity.compact,
+                        ),
+                      ),
                     ),
-                    icon: const Icon(Icons.star_rounded, size: 16),
-                    label: Text('${AppLocalizations.of(context)!.rate}${AppLocalizations.of(context)!.technicianTarget}',
-                      style: const TextStyle(fontSize: 12, fontFamily: 'Cairo'),
-                    ),
-                    style: OutlinedButton.styleFrom(
-                      foregroundColor: MaskanColors.kGold,
-                      side: BorderSide(color: MaskanColors.kGold.withValues(alpha: 0.3)),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                      padding: const EdgeInsets.symmetric(vertical: 8),
-                      visualDensity: VisualDensity.compact,
-                    ),
-                  ),
+                    if (canRate) ...[
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: OutlinedButton.icon(
+                          onPressed: () => context.push(
+                            AppRoutes.reviewForm
+                              .replaceAll(':targetType', 'technician')
+                              .replaceAll(':targetId', '${r.technicianId}'),
+                            extra: {'propertyId': _booking?.propertyId},
+                          ),
+                          icon: const Icon(Icons.star_rounded, size: 16),
+                          label: Text('${AppLocalizations.of(context)!.rate}${AppLocalizations.of(context)!.technicianTarget}',
+                            style: const TextStyle(fontSize: 12, fontFamily: 'Cairo'),
+                          ),
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: MaskanColors.kGold,
+                            side: BorderSide(color: MaskanColors.kGold.withValues(alpha: 0.3)),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                            padding: const EdgeInsets.symmetric(vertical: 8),
+                            visualDensity: VisualDensity.compact,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ],
                 ),
               ),
           ],

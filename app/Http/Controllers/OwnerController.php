@@ -38,7 +38,7 @@ class OwnerController extends Controller
         $bookingQuery = Booking::whereHas('property', fn($q) => $q->where('owner_id', $user->id));
         $stats['bookings_count'] = (clone $bookingQuery)->count();
         $stats['bookings_pending'] = (clone $bookingQuery)->where('status', 'pending')->count();
-        $stats['bookings_active'] = (clone $bookingQuery)->whereIn('status', ['confirmed', 'completed'])->count();
+        $stats['bookings_active'] = (clone $bookingQuery)->whereIn('status', ['confirmed', 'in_progress', 'completed'])->count();
         $stats['total_revenue'] = (clone $bookingQuery)->where('status', 'completed')->sum('total_price');
 
         $stats['maintenance_pending'] = MaintenanceRequest::whereHas('property', fn($q) => $q->where('owner_id', $user->id))
@@ -184,7 +184,7 @@ class OwnerController extends Controller
         $closedDates = $property->unavailable_dates ?? [];
         $upcomingBookings = Booking::with('user')
             ->where('property_id', $property->id)
-            ->whereIn('status', ['confirmed', 'completed'])
+            ->whereIn('status', ['confirmed', 'in_progress', 'completed'])
             ->where('start_date', '>=', now()->subDays(1))
             ->orderBy('start_date')
             ->get();

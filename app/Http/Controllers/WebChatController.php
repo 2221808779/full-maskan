@@ -78,9 +78,11 @@ class WebChatController extends Controller
             ->update(['read_at' => now()]);
 
         $messages = Message::where(function ($q) use ($userId2, $userId) {
-            $q->where('sender_id', $userId2)->where('receiver_id', $userId);
-        })->orWhere(function ($q) use ($userId2, $userId) {
-            $q->where('sender_id', $userId)->where('receiver_id', $userId2);
+            $q->where(function ($sub) use ($userId2, $userId) {
+                $sub->where('sender_id', $userId2)->where('receiver_id', $userId);
+            })->orWhere(function ($sub) use ($userId2, $userId) {
+                $sub->where('sender_id', $userId)->where('receiver_id', $userId2);
+            });
         })->where(function ($q) use ($userId2) {
             $q->whereNull('deleted_for')
               ->orWhereRaw('JSON_CONTAINS(deleted_for, ?) = 0', [json_encode($userId2)]);
@@ -167,9 +169,7 @@ class WebChatController extends Controller
         })->get();
 
         foreach ($messages as $message) {
-            $existing = $message->deleted_for ?? [];
-            $existing[] = $authId;
-            $message->update(['deleted_for' => array_unique($existing)]);
+            $message->update(['deleted_for' => [$authId, $userId]]);
         }
 
         return redirect()->route('messages.index')
@@ -192,15 +192,7 @@ class WebChatController extends Controller
             abort(403);
         }
 
-        $forEveryone = $request->boolean('for_everyone');
-
-        if ($forEveryone && $message->sender_id === $userId) {
-            $message->update(['deleted_for' => [$message->sender_id, $message->receiver_id]]);
-        } else {
-            $existing = $message->deleted_for ?? [];
-            $existing[] = $userId;
-            $message->update(['deleted_for' => array_unique($existing)]);
-        }
+        $message->update(['deleted_for' => [$message->sender_id, $message->receiver_id]]);
 
         $redirectId = $message->sender_id === $userId ? $message->receiver_id : $message->sender_id;
 

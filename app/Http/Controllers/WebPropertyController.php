@@ -35,23 +35,23 @@ class WebPropertyController extends Controller
 
         if ($request->filled('search')) {
             $search = $request->search;
-            $type = $this->matchPropertyType($search);
 
-            if ($type) {
-                $query->where('property_type', $type);
-            } else {
-                $city = $this->matchCity($search);
-                $query->where(function ($q) use ($search, $city) {
-                    $q->where('title', 'like', "%{$search}%")
-                      ->orWhere('description', 'like', "%{$search}%");
-                    if ($city) {
-                        $q->orWhere('location', 'like', "%{$city}%");
-                    }
-                });
+            $words = preg_split('/[\s,]+/', trim($search));
+            $stopWords = ['في', 'من', 'إلى', 'الى', 'على', 'عن', 'مع', 'و', 'او', 'أو', 'لل', 'ال', 'بـ', 'ب'];
+            $matched = false;
+            foreach ($words as $word) {
+                $word = trim($word);
+                if (mb_strlen($word) < 2 || in_array($word, $stopWords)) continue;
+                $query->where('title', 'like', "%{$word}%");
+                $matched = true;
+            }
+            if (!$matched) {
+                $query->where('title', 'like', "%{$search}%");
             }
         }
-        if ($request->filled('property_type')) {
-            $query->where('property_type', $request->property_type);
+        $propertyType = $request->filled('property_type') ? $request->property_type : $request->type;
+        if ($propertyType) {
+            $query->where('property_type', $propertyType);
         }
         if ($user && $request->filled('status')) {
             $query->where('status', $request->status);

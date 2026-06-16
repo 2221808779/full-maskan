@@ -92,6 +92,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/{booking}/checkin', 'checkin')->name('checkin');
         Route::get('/{booking}/complete', 'complete')->name('complete');
         Route::match(['GET', 'POST'], '/{booking}/cancel', 'cancel')->name('cancel');
+        Route::post('/{booking}/review', 'storeReview')->name('review');
     });
 
     // Plutu payment

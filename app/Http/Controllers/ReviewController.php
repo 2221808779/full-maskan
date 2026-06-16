@@ -87,19 +87,30 @@ class ReviewController extends Controller
         }
         unset($validated['rating']);
 
-        if (isset($validated['owner_id'])) {
+        if (isset($validated['owner_id']) && !isset($validated['technician_id'])) {
             $existing = Review::where('user_id', $request->user()->id)
                 ->where('owner_id', $validated['owner_id'])
                 ->first();
             if ($existing) {
                 return response()->json(['message' => __('You already reviewed this owner')], 409);
             }
-        } elseif (isset($validated['property_id'])) {
+        }
+
+        if (isset($validated['property_id']) && !isset($validated['technician_id'])) {
             $existing = Review::where('user_id', $request->user()->id)
                 ->where('property_id', $validated['property_id'])
                 ->first();
             if ($existing) {
                 return response()->json(['message' => __('You already reviewed this property')], 409);
+            }
+        }
+
+        if (isset($validated['technician_id'])) {
+            $existing = Review::where('user_id', $request->user()->id)
+                ->where('technician_id', $validated['technician_id'])
+                ->first();
+            if ($existing) {
+                return response()->json(['message' => __('You already reviewed this technician')], 409);
             }
         }
 

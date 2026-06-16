@@ -16,6 +16,7 @@ class MaintenanceAIService
 {
     protected string $url;
 
+    // ربط أسماء التصنيفات بأرقامها في قاعدة البيانات
     protected array $categoryIds = [
         'electricity' => 1,
         'plumbing' => 2,
@@ -25,6 +26,7 @@ class MaintenanceAIService
         'other' => 6,
     ];
 
+    // كلمات مفتاحية للتصنيف اليدوي (احتياطي) عند تعطل خدمة AI
     protected array $keywords = [
         'electricity' => [
             'كهرباء', 'لمبة', 'فيش', 'مفتاح', 'قاطع', 'أسلاك', 'تماس', 'انقطاع', 'تيار', 'فيوز', 'لمبات', 'كهربا',
@@ -58,12 +60,14 @@ class MaintenanceAIService
 
     /**
      * Classify a maintenance description text into a category.
+     * يستخدم API خارجي للتصنيف، مع احتياطي بالكلمات المفتاحية
      *
      * @param  string  $text
      * @return array
      */
     public function classify(string $text): array
     {
+        // محاولة الاتصال بخدمة AI للتصنيف
         try {
             $response = Http::timeout(5)
                 ->post($this->url . '/classify', ['text' => $text]);
@@ -87,6 +91,7 @@ class MaintenanceAIService
             Log::warning('AI maintenance service unavailable: ' . $e->getMessage());
         }
 
+        // الاحتياطي: تصنيف يدوي بالكلمات المفتاحية
         return $this->keywordFallback($text);
     }
 

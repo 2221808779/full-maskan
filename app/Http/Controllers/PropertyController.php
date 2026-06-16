@@ -31,8 +31,6 @@ class PropertyController extends Controller
 
         if ($request->filled('status')) {
             $query->where('status', $request->status);
-        } else {
-            $query->where('status', 'available');
         }
 
         if ($request->filled('property_type')) {
@@ -50,22 +48,36 @@ class PropertyController extends Controller
         if ($request->filled('location')) {
             $query->where('location', 'like', "%{$request->location}%");
         }
+        // البحث النصي — يقسم كلمات البحث ويتجاهل حروف الجر، يبحث في العنوان فقط
         if ($request->filled('search')) {
             $search = $request->search;
-            $type = $this->matchPropertyType($search);
 
-            if ($type) {
-                $query->where('property_type', $type);
-            } else {
-                $city = $this->matchCity($search);
-                $query->where(function ($q) use ($search, $city) {
-                    $q->where('title', 'like', "%{$search}%")
-                      ->orWhere('description', 'like', "%{$search}%");
-                    if ($city) {
-                        $q->orWhere('location', 'like', "%{$city}%");
-                    }
-                });
+            // تقسيم النص إلى كلمات فردية والبحث بها جميعاً في العنوان
+            $words = preg_split('/[\s,]+/', trim($search));
+            $stopWords = ['في', 'من', 'إلى', 'الى', 'على', 'عن', 'مع', 'و', 'او', 'أو', 'لل', 'ال', 'بـ', 'ب'];
+            $matched = false;
+            foreach ($words as $word) {
+                $word = trim($word);
+                if (mb_strlen($word) < 2 || in_array($word, $stopWords)) continue;
+                $query->where('title', 'like', "%{$word}%");
+                $matched = true;
             }
+            if (!$matched) {
+                $query->where('title', 'like', "%{$search}%");
+            }
+            // ملاحظة: لا نضيف فلتر نوع أو مدينة تلقائياً — المستخدم يستخدم
+            // property_type و location كبارامترات منفصلة للتصفية الإضافية
+        }
+
+        // التصفية حسب الموقع الجغرافي باستخدام معادلة Haversine
+        if ($request->filled('latitude') && $request->filled('longitude')) {
+            $latitude = (float) $request->latitude;
+            $longitude = (float) $request->longitude;
+            $radius = (float) ($request->radius ?? 50); // نصف القطر الافتراضي 50 كم
+
+            // معادلة حساب المسافة بين نقطتين على الكرة الأرضية
+            $haversine = "(6371 * acos(cos(radians($latitude)) * cos(radians(latitude)) * cos(radians(longitude) - radians($longitude)) + sin(radians($latitude)) * sin(radians(latitude))))";
+            $query->whereRaw("{$haversine} <= ?", [$radius]);
         }
 
         return response()->json($query->latest('id')->paginate(20));
@@ -243,7 +255,7 @@ class PropertyController extends Controller
     public function availability(Property $property): JsonResponse
     {
         $bookedDates = Booking::where('property_id', $property->id)
-            ->whereIn('status', ['confirmed', 'completed'])
+            ->whereIn('status', ['confirmed', 'in_progress', 'completed'])
             ->get(['start_date', 'end_date']);
 
         $blackoutDates = BlackoutDate::where('property_id', $property->id)

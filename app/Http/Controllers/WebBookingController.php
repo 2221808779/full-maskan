@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Booking;
 use App\Models\Notification;
 use App\Models\Property;
+use App\Models\Review;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -106,6 +107,10 @@ class WebBookingController extends Controller
             return back()->with('error', __('Only confirmed bookings can start stay'));
         }
 
+        if (now()->startOfDay()->lt(\Carbon\Carbon::parse($booking->start_date)->startOfDay())) {
+            return back()->with('error', __('Check-in date has not arrived yet'));
+        }
+
         $booking->update(['status' => 'in_progress']);
 
         Notification::create([
@@ -182,5 +187,54 @@ class WebBookingController extends Controller
         ]);
 
         return back()->with('success', __('Booking cancelled successfully'));
+    }
+
+    /**
+     * Store or update a review for the booked property (tenant only).
+     * يستخدم updateOrCreate لربط تقييم واحد لكل مستخدم لكل عقار
+     * POST /bookings/{booking}/review
+     */
+    public function storeReview(Request $request, Booking $booking): RedirectResponse
+    {
+        // التأكد أن المستخدم هو صاحب الحجز
+        if ($booking->user_id !== $request->user()->id) {
+            return back()->with('error', __('Unauthorized action'));
+        }
+
+        // التقييم فقط للحجوزات المكتملة
+        if ($booking->status !== 'completed') {
+            return back()->with('error', __('You can only review completed bookings'));
+        }
+
+        $validated = $request->validate([
+            'stars' => 'required|integer|min:1|max:5',
+            'comment' => 'nullable|string|max:1000',
+        ]);
+
+        // إنشاء أو تحديث التقييم — مستخدم واحد لكل عقار
+        $review = Review::updateOrCreate(
+            [
+                'user_id' => $booking->user_id,
+                'property_id' => $booking->property_id,
+            ],
+            [
+                'stars' => $validated['stars'],
+                'comment' => $validated['comment'] ?? null,
+                'booking_id' => $booking->id,
+            ]
+        );
+
+        // إعادة حساب متوسط التقييمات للعقار
+        $property = Property::find($booking->property_id);
+        if ($property) {
+            $avg = Review::where('property_id', $property->id)->avg('stars');
+            $count = Review::where('property_id', $property->id)->count();
+            $property->updateQuietly([
+                'rating' => round($avg ?? 0, 1),
+                'review_count' => $count,
+            ]);
+        }
+
+        return back()->with('success', $review->wasRecentlyCreated ? __('Review created successfully') : __('Review updated successfully'));
     }
 }

@@ -237,8 +237,14 @@ class WebAuthController extends Controller
             Log::info('Password reset OTP for ' . $validated['phone'] . ': ' . $otp);
         }
 
-        return redirect()->route('password.reset', ['phone' => $validated['phone']])
+        $redirect = redirect()->route('password.reset', ['phone' => $validated['phone']])
             ->with('success', __('OTP sent successfully'));
+
+        if (config('app.env') !== 'production') {
+            $redirect->with('dev_otp', $otp);
+        }
+
+        return $redirect;
     }
 
     /**

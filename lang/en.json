@@ -173,6 +173,8 @@
     "Change Password": "Change Password",
     "Change Password Button": "Change Password",
     "Chat": "Chat",
+    "Check-in date has not arrived yet": "Check-in date has not arrived yet",
+    "Check-in available from": "Check-in available from",
     "Check-in": "Check-in",
     "Check-out": "Check-out",
     "Cities": "Cities",
@@ -704,6 +706,7 @@
     "Technician Actions": "Technician Actions",
     "Technician Notes": "Technician Notes",
     "Technician Specialization": "Technician Specialization",
+    "Technician Rating": "Technician Rating",
     "Technician assigned": "Technician assigned",
     "Technician assigned successfully": "Technician assigned successfully",
     "Technicians": "Technicians",
@@ -874,5 +877,9 @@
     "Other (manual)": "Other (manual)",
     "cash": "Cash",
     "electronic": "Electronic",
-    "local_bank_cards": "Local Bank Cards"
+    "local_bank_cards": "Local Bank Cards",
+    "Your Review": "Your Review",
+    "Rate this Property": "Rate this Property",
+    "Update Review": "Update Review",
+    "Submit Review": "Submit Review"
 }

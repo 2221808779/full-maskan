@@ -70,10 +70,17 @@
                         </form>
                     @endif
                     @if($booking->status === 'confirmed')
-                        <a href="{{ route('bookings.checkin', $booking) }}" class="action-btn"
-                           onclick="return confirm('{{ __('Confirm check-in') }}')" title="{{ __('Confirm Check-in') }}">
-                            <i class="fas fa-door-open"></i>
-                        </a>
+                        @if(\Carbon\Carbon::now()->startOfDay()->gte(\Carbon\Carbon::parse($booking->start_date)->startOfDay()))
+                            <a href="{{ route('bookings.checkin', $booking) }}" class="action-btn"
+                               onclick="return confirm('{{ __('Confirm check-in') }}')" title="{{ __('Confirm Check-in') }}">
+                                <i class="fas fa-door-open"></i>
+                            </a>
+                        @else
+                            <span class="action-btn disabled" style="opacity:0.3; pointer-events:none; cursor:not-allowed;"
+                                  title="{{ __('Check-in available from') }} {{ \Carbon\Carbon::parse($booking->start_date)->format('Y-m-d') }}">
+                                <i class="fas fa-door-open"></i>
+                            </span>
+                        @endif
                     @endif
                     @if($booking->status === 'in_progress')
                         <a href="{{ route('bookings.complete', $booking) }}" class="action-btn success"

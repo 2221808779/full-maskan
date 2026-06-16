@@ -1,4 +1,5 @@
 ﻿/// شاشة إنشاء حساب جديد — تدعم تسجيل المستأجرين والفنيين مع إدخال الاسم والهاتف وكلمة المرور والتخصصات
+library;
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter_svg/flutter_svg.dart';

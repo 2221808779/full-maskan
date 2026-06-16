@@ -61,6 +61,10 @@ class _TechnicianHomeScreenState extends State<TechnicianHomeScreen> {
                     fontSize: 18, fontWeight: FontWeight.bold, color: accentColor,
                   )),
                   const Spacer(),
+                  IconButton(
+                    icon: const Icon(Icons.chat_bubble_outline, color: MaskanColors.kBlue),
+                    onPressed: () => context.push(AppRoutes.conversations),
+                  ),
                   NotificationBell(iconSize: 22),
                 ],
               ),

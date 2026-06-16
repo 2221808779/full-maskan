@@ -39,10 +39,16 @@
             </a>
         @endif
         @if($booking->status === 'confirmed' && auth()->user()->user_type === 'owner')
-            <a href="{{ route('bookings.checkin', $booking) }}" class="btn btn-maskan btn-sm"
-               onclick="return confirm('{{ __('Confirm check-in') }}')">
-                <i class="fas fa-door-open ms-1"></i> {{ __('Confirm Check-in') }}
-            </a>
+            @if(\Carbon\Carbon::now()->startOfDay()->gte(\Carbon\Carbon::parse($booking->start_date)->startOfDay()))
+                <a href="{{ route('bookings.checkin', $booking) }}" class="btn btn-maskan btn-sm"
+                   onclick="return confirm('{{ __('Confirm check-in') }}')">
+                    <i class="fas fa-door-open ms-1"></i> {{ __('Confirm Check-in') }}
+                </a>
+            @else
+                <span class="btn btn-maskan btn-sm disabled" style="opacity:0.5; pointer-events:none;" title="{{ __('Check-in available from') }} {{ \Carbon\Carbon::parse($booking->start_date)->translatedFormat('d F Y') }}">
+                    <i class="fas fa-door-open ms-1"></i> {{ __('Confirm Check-in') }}
+                </span>
+            @endif
         @endif
         @if($booking->status === 'in_progress' && auth()->user()->user_type === 'owner')
             <a href="{{ route('bookings.complete', $booking) }}" class="btn btn-maskan btn-sm"
@@ -161,30 +167,113 @@
     </div>
 </div>
 
-@if($review)
+@if($booking->status === 'completed' && auth()->id() === $booking->user_id)
 <div class="maskan-card mt-3">
     <div class="card-body">
-        <h5 class="mb-2" style="color:var(--gold); font-size:15px;">
-            {{ __('Tenant Rating') }}
+        <h5 class="mb-3" style="color:var(--gold); font-size:15px;">
+            <i class="fas fa-star ms-1"></i> {{ $review ? __('Your Review') : __('Rate this Property') }}
         </h5>
-        <div class="d-flex align-items-center gap-2 mb-1">
-            <div style="font-size:1.2rem;">
-                @for($i = 1; $i <= 5; $i++)
-                    @if($i <= $review->stars)
-                        <i class="fas fa-star" style="color:var(--gold);"></i>
-                    @else
-                        <i class="far fa-star" style="color:var(--gray-400);"></i>
-                    @endif
-                @endfor
+
+        @if($review && !session('editing_review'))
+            <div class="d-flex align-items-center gap-2 mb-1">
+                <div style="font-size:1.2rem;">
+                    @for($i = 1; $i <= 5; $i++)
+                        @if($i <= $review->stars)
+                            <i class="fas fa-star" style="color:var(--gold);"></i>
+                        @else
+                            <i class="far fa-star" style="color:var(--gray-400);"></i>
+                        @endif
+                    @endfor
+                </div>
+                <span style="font-weight:700; font-size:1.1rem; color:var(--gold);">{{ $review->stars }}/5</span>
+                <button type="button" class="btn btn-sm btn-outline-gold ms-auto" onclick="toggleReviewForm()">
+                    <i class="fas fa-edit ms-1"></i> {{ __('Edit') }}
+                </button>
             </div>
-            <span style="font-weight:700; font-size:1.1rem; color:var(--gold);">{{ $review->stars }}/5</span>
-        </div>
-        @if($review->comment)
-            <p style="background:var(--gray-50); padding:10px 14px; border-radius:10px; margin:0; font-size:13px; color:var(--gray-700);">
-                {{ $review->comment }}
-            </p>
+            @if($review->comment)
+                <p style="background:var(--gray-50); padding:10px 14px; border-radius:10px; margin:0; font-size:13px; color:var(--gray-700);">
+                    {{ $review->comment }}
+                </p>
+            @endif
         @endif
+
+        <div id="reviewForm" style="{{ $review && !session('editing_review') ? 'display:none;' : '' }}">
+            <form action="{{ route('bookings.review', $booking) }}" method="POST">
+                @csrf
+                <div class="mb-3">
+                    <label class="form-label" style="font-size:13px; color:var(--gray-600);">{{ __('Rating') }}</label>
+                    <div class="star-rating" id="starRating">
+                        @for($i = 1; $i <= 5; $i++)
+                            <i class="far fa-star star-select" data-value="{{ $i }}" style="font-size:1.8rem; cursor:pointer; color:var(--gray-300); transition:color 0.15s;"></i>
+                        @endfor
+                        <input type="hidden" name="stars" id="starsInput" value="{{ $review->stars ?? 0 }}">
+                    </div>
+                    @error('stars') <small style="color:var(--danger);">{{ $message }}</small> @enderror
+                </div>
+                <div class="mb-3">
+                    <label for="comment" class="form-label" style="font-size:13px; color:var(--gray-600);">{{ __('Comment') }} ({{ __('optional') }})</label>
+                    <textarea name="comment" id="comment" rows="3" class="form-control" style="border-radius:10px; resize:vertical;">{{ old('comment', $review->comment ?? '') }}</textarea>
+                    @error('comment') <small style="color:var(--danger);">{{ $message }}</small> @enderror
+                </div>
+                <button type="submit" class="btn btn-maskan">
+                    <i class="fas fa-paper-plane ms-1"></i> {{ $review ? __('Update Review') : __('Submit Review') }}
+                </button>
+            </form>
+        </div>
     </div>
 </div>
+
+@push('scripts')
+<script>
+    document.querySelectorAll('.star-select').forEach(function(star) {
+        star.addEventListener('mouseenter', function() {
+            var val = parseInt(this.dataset.value);
+            document.querySelectorAll('.star-select').forEach(function(s) {
+                if (parseInt(s.dataset.value) <= val) {
+                    s.className = 'fas fa-star star-select';
+                    s.style.color = 'var(--gold)';
+                } else {
+                    s.className = 'far fa-star star-select';
+                    s.style.color = 'var(--gray-300)';
+                }
+            });
+        });
+        star.addEventListener('mouseleave', function() {
+            var selected = parseInt(document.getElementById('starsInput').value);
+            document.querySelectorAll('.star-select').forEach(function(s) {
+                if (parseInt(s.dataset.value) <= selected) {
+                    s.className = 'fas fa-star star-select';
+                    s.style.color = 'var(--gold)';
+                } else {
+                    s.className = 'far fa-star star-select';
+                    s.style.color = 'var(--gray-300)';
+                }
+            });
+        });
+        star.addEventListener('click', function() {
+            document.getElementById('starsInput').value = this.dataset.value;
+            var val = parseInt(this.dataset.value);
+            document.querySelectorAll('.star-select').forEach(function(s) {
+                if (parseInt(s.dataset.value) <= val) {
+                    s.className = 'fas fa-star star-select';
+                    s.style.color = 'var(--gold)';
+                } else {
+                    s.className = 'far fa-star star-select';
+                    s.style.color = 'var(--gray-300)';
+                }
+            });
+        });
+    });
+
+    function toggleReviewForm() {
+        var form = document.getElementById('reviewForm');
+        if (form.style.display === 'none') {
+            form.style.display = 'block';
+        } else {
+            form.style.display = 'none';
+        }
+    }
+</script>
+@endpush
 @endif
 @endsection

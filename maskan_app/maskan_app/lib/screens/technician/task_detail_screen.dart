@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:go_router/go_router.dart';
+import '../../config/routes.dart';
 import '../../config/colors.dart';
 import '../../core/utils/helpers.dart';
 import '../../core/widgets/glass_card.dart';
@@ -47,10 +48,14 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
   Future<void> _claimTask() async {
     setState(() => _isProcessing = true);
     final success = await context.read<MaintenanceProvider>().claimRequest(widget.taskId);
-    if (mounted) {
+    if (!mounted) return;
+    final loc = AppLocalizations.of(context)!;
+    if (success) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(loc.taskAccepted)));
+      context.pop();
+    } else {
       setState(() => _isProcessing = false);
-      Helpers.showSnackBar(context, success ? AppLocalizations.of(context)!.taskAccepted : AppLocalizations.of(context)!.taskAcceptFailed, isError: !success);
-      if (success) context.pop();
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(loc.taskAcceptFailed), backgroundColor: Colors.red));
     }
   }
 
@@ -59,10 +64,54 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
     final provider = context.read<MaintenanceProvider>();
     setState(() => _isProcessing = true);
     final success = await provider.updateStatus(widget.taskId, status);
-    if (mounted) {
+    if (!mounted) return;
+    final loc = AppLocalizations.of(context)!;
+    if (success) {
       setState(() => _isProcessing = false);
-      final msg = status == 'in_progress' ? AppLocalizations.of(context)!.executionStarted : AppLocalizations.of(context)!.statusUpdated;
-      Helpers.showSnackBar(context, success ? msg : AppLocalizations.of(context)!.statusUpdateFailed, isError: !success);
+      final msg = status == 'in_progress' ? loc.executionStarted : loc.statusUpdated;
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
+    } else {
+      setState(() => _isProcessing = false);
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(loc.statusUpdateFailed), backgroundColor: Colors.red));
+    }
+  }
+
+  /// Rejects the assigned task with an optional reason.
+  Future<void> _rejectTask() async {
+    final ctl = TextEditingController();
+    final reason = await showDialog<String>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Text(AppLocalizations.of(ctx)!.rejectTask),
+        content: TextField(
+          controller: ctl,
+          maxLines: 3,
+          decoration: InputDecoration(
+            hintText: AppLocalizations.of(ctx)!.reasonOptional,
+          ),
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx), child: Text(AppLocalizations.of(ctx)!.cancel)),
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, ctl.text),
+            style: TextButton.styleFrom(foregroundColor: Colors.red),
+            child: Text(AppLocalizations.of(ctx)!.reject),
+          ),
+        ],
+      ),
+    );
+    ctl.dispose();
+    if (reason == null) return;
+    setState(() => _isProcessing = true);
+    final success = await context.read<MaintenanceProvider>().rejectRequest(widget.taskId, reason: reason.isEmpty ? null : reason);
+    if (!mounted) return;
+    final loc = AppLocalizations.of(context)!;
+    if (success) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(loc.taskRejected)));
+      context.pop();
+    } else {
+      setState(() => _isProcessing = false);
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(loc.rejectFailed), backgroundColor: Colors.red));
     }
   }
 
@@ -77,10 +126,14 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
       widget.taskId,
       notes: _notesController.text.trim(),
     );
-    if (mounted) {
+    if (!mounted) return;
+    final loc = AppLocalizations.of(context)!;
+    if (success) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(loc.taskClosed)));
+      context.pop();
+    } else {
       setState(() => _isProcessing = false);
-      Helpers.showSnackBar(context, success ? AppLocalizations.of(context)!.taskClosed : AppLocalizations.of(context)!.taskCloseFailed, isError: !success);
-      if (success) context.pop();
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(loc.taskCloseFailed), backgroundColor: Colors.red));
     }
   }
 
@@ -166,9 +219,30 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
                         _infoRow(AppLocalizations.of(context)!.createdDate, task.createdAt?.substring(0, 10) ?? '---'),
                         if (task.updatedAt != null)
                           _infoRow(AppLocalizations.of(context)!.lastUpdate, task.updatedAt!.substring(0, 10)),
+                        if (task.tenantName != null)
+                          _infoRow(AppLocalizations.of(context)!.tenant, task.tenantName!),
                       ],
                     ),
                   ),
+                  if (task.tenantId != null) ...[
+                    const SizedBox(height: 12),
+                    SizedBox(
+                      width: double.infinity,
+                      child: OutlinedButton.icon(
+                        onPressed: () => context.push(AppRoutes.chat.replaceFirst(':conversationId', '${task.tenantId}')),
+                        icon: const Icon(Icons.chat_bubble_outline, size: 18),
+                        label: Text(AppLocalizations.of(context)!.message,
+                          style: const TextStyle(fontFamily: 'Cairo'),
+                        ),
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor: MaskanColors.kBlue,
+                          side: BorderSide(color: MaskanColors.kBlue.withValues(alpha: 0.3)),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                        ),
+                      ),
+                    ),
+                  ],
                   if (task.status == 'assigned' || task.status == 'in_progress') ...[
                     const SizedBox(height: 16),
                     TextField(
@@ -192,9 +266,24 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
                     ),
                   ],
                   if (task.status == 'assigned') ...[
-                    ElevatedButton(
-                      onPressed: _isProcessing ? null : () => _updateStatus('in_progress'),
-                      child: Text(AppLocalizations.of(context)!.startExecution),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: ElevatedButton(
+                            onPressed: _isProcessing ? null : () => _updateStatus('in_progress'),
+                            style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+                            child: Text(AppLocalizations.of(context)!.startExecution),
+                          ),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: ElevatedButton(
+                            onPressed: _isProcessing ? null : _rejectTask,
+                            style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+                            child: Text(AppLocalizations.of(context)!.rejectTask),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                   if (task.status == 'in_progress') ...[

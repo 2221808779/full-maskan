@@ -87,34 +87,7 @@
             </div>
         </div>
 
-        <div class="maskan-card">
-            <div class="table-toolbar" style="border-bottom-color: var(--blue-soft);">
-                <span class="table-title"><i class="fas fa-star gold-text ms-1"></i> {{ __('Reviews') }} ({{ $property->review_count }})</span>
-            </div>
-            <div style="padding: 24px 28px;">
-                @forelse($property->reviews as $review)
-                    <div style="padding: 14px 0; {{ !$loop->first ? 'border-top:1px solid var(--gray-100);' : '' }}">
-                        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-                            <div style="width:36px;height:36px;border-radius:50%;background:var(--gold);color:white;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:14px;flex-shrink:0;">
-                                {{ mb_substr($review->user->full_name ?? 'م', 0, 1) }}
-                            </div>
-                            <strong style="color:var(--gray-800); font-size:14px;">{{ $review->user->full_name ?? __('Anonymous') }}</strong>
-                            <div style="margin-{{ app()->getLocale() === 'ar' ? 'left' : 'right' }}:auto;">
-                                @for($i = 1; $i <= 5; $i++)
-                                    <i class="fas fa-star" style="font-size:0.85rem;color:{{ $i <= $review->stars ? 'var(--gold)' : 'var(--gray-200)' }};"></i>
-                                @endfor
-                            </div>
-                            <small style="color:var(--gray-400); font-size:11px;">{{ $review->created_at->diffForHumans() }}</small>
-                        </div>
-                        @if($review->comment)
-                            <p style="color:var(--gray-600);margin:8px 0 0;font-size:14px;line-height:1.6;padding:10px 12px;background:var(--gray-50);border-radius:8px;">{{ $review->comment }}</p>
-                        @endif
-                    </div>
-                @empty
-                    <p style="color:var(--gray-400);text-align:center;padding:24px 0;margin:0;">{{ __('No reviews yet') }}</p>
-                @endforelse
-            </div>
-        </div>
+
     </div>
 
     <div class="col-lg-4">

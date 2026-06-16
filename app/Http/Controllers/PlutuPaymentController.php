@@ -53,6 +53,7 @@ class PlutuPaymentController extends Controller
         $payment = Payment::firstOrCreate(
             ['booking_id' => $booking->id, 'status' => 'pending'],
             [
+                'user_id' => $booking->user_id,
                 'amount' => $booking->total_price,
                 'status' => 'pending',
                 'payment_type' => 'local_bank_cards',
@@ -64,7 +65,7 @@ class PlutuPaymentController extends Controller
         }
 
         $invoiceNo = 'INV-' . str_pad($booking->id, 5, '0', STR_PAD_LEFT);
-        $returnUrl = route('plutu.callback', ['booking' => $booking->id]);
+        $returnUrl = route('plutu.callback', ['booking' => $booking->id, 'lang' => app()->getLocale()]);
 
         try {
             $apiResponse = $this->plutu->confirm($booking->total_price, $invoiceNo, $returnUrl, null, app()->getLocale());
@@ -170,6 +171,7 @@ class PlutuPaymentController extends Controller
         $payment = Payment::firstOrCreate(
             ['booking_id' => $booking->id, 'status' => 'pending'],
             [
+                'user_id' => $booking->user_id,
                 'amount' => $booking->total_price,
                 'status' => 'pending',
                 'payment_type' => 'local_bank_cards',
@@ -181,7 +183,7 @@ class PlutuPaymentController extends Controller
         }
 
         $invoiceNo = 'INV-' . str_pad($booking->id, 5, '0', STR_PAD_LEFT);
-        $returnUrl = route('plutu.callback', ['booking' => $booking->id]);
+        $returnUrl = route('plutu.callback', ['booking' => $booking->id, 'lang' => app()->getLocale()]);
 
         try {
             $apiResponse = $this->plutu->confirm($booking->total_price, $invoiceNo, $returnUrl, null, app()->getLocale());

@@ -6,6 +6,7 @@ trait SearchableProperty
 {
     /**
      * Match a search term against known property type keywords.
+     * Supports exact match and partial match (search term contains keyword).
      */
     public function matchPropertyType(string $search): ?string
     {
@@ -22,7 +23,8 @@ trait SearchableProperty
 
         foreach ($typeKeywords as $type => $keywords) {
             foreach ($keywords as $keyword) {
-                if ($searchLower === mb_strtolower($keyword)) {
+                $keywordLower = mb_strtolower($keyword);
+                if ($searchLower === $keywordLower || str_contains($searchLower, $keywordLower)) {
                     return $type;
                 }
             }
@@ -33,6 +35,7 @@ trait SearchableProperty
 
     /**
      * Match a search term against known Libyan city names.
+     * Supports exact match and partial match (search term contains city name).
      */
     public function matchCity(string $search): ?string
     {
@@ -40,7 +43,8 @@ trait SearchableProperty
         $searchLower = mb_strtolower(trim($search));
 
         foreach ($cities as $city) {
-            if (mb_strtolower($city) === $searchLower) {
+            $cityLower = mb_strtolower($city);
+            if ($searchLower === $cityLower || str_contains($searchLower, $cityLower)) {
                 return $city;
             }
         }

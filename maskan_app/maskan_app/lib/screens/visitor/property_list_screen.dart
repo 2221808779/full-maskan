@@ -10,6 +10,7 @@ import '../../core/widgets/property_card.dart';
 import '../../core/widgets/maskan_scaffold.dart';
 import '../../providers/property_provider.dart';
 import '../../models/property.dart';
+import '../../core/utils/helpers.dart';
 import '../../l10n/app_localizations.dart';
 
 /// شاشة عرض قائمة عقارات قابلة للبحث والتصفية مع ترتيب اختياري حسب الموقع
@@ -27,6 +28,7 @@ class PropertyListScreen extends StatefulWidget {
 class _PropertyListScreenState extends State<PropertyListScreen> {
   List<Property> _results = [];
   bool _isSearching = false;
+  bool _hasSearchResults = false; // true بعد تنفيذ بحث محلي (مش ازاى جينا من برا)
   String _activeFilter = '';
   final _searchController = TextEditingController();
 
@@ -72,10 +74,18 @@ class _PropertyListScreenState extends State<PropertyListScreen> {
 
   /// Searches properties by the query text and prompts for location.
   Future<void> _performSearch() async {
+    final query = _searchController.text.trim();
+    if (query.isEmpty) return;
+
     setState(() => _isSearching = true);
     _results = await context.read<PropertyProvider>().searchProperties(
-      query: _searchController.text,
+      query: query,
     );
+    setState(() => _hasSearchResults = true);
+    if (_results.isEmpty && mounted) {
+      final loc = AppLocalizations.of(context);
+      Helpers.showSnackBar(context, loc.noResultsFound, isError: false);
+    }
     if (!_locationAsked) {
       _locationAsked = true;
       if (mounted) await _showLocationDialog();
@@ -189,7 +199,7 @@ class _PropertyListScreenState extends State<PropertyListScreen> {
     final provider = context.watch<PropertyProvider>();
     final loc = AppLocalizations.of(context);
     final isLoading = provider.isLoading || _isSearching;
-    final rawProps = widget.searchQuery != null ? _results : provider.properties;
+    final rawProps = widget.searchQuery != null || _hasSearchResults ? _results : provider.properties;
     final props = _getDisplayedProperties(rawProps);
 
     final isDark = Theme.of(context).brightness == Brightness.dark;
@@ -241,6 +251,12 @@ class _PropertyListScreenState extends State<PropertyListScreen> {
                             enabledBorder: InputBorder.none,
                             focusedBorder: InputBorder.none,
                             prefixIcon: Icon(Icons.search, color: mutedCol, size: 20),
+                            suffixIcon: IconButton(
+                              icon: Icon(Icons.search, color: MaskanColors.kBlue, size: 22),
+                              onPressed: _performSearch,
+                              padding: EdgeInsets.zero,
+                              splashRadius: 20,
+                            ),
                             contentPadding: EdgeInsets.zero,
                           ),
                           onSubmitted: (_) => _performSearch(),

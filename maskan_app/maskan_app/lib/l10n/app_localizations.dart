@@ -562,6 +562,8 @@ class AppLocalizations {
   String get taskClosed => tr('تم إغلاق الطلب', 'Task closed');
   String get taskCloseFailed => tr('فشل إغلاق الطلب', 'Failed to close task');
 
+  String get noResultsFound => tr('لم يتم العثور على نتائج', 'No results found');
+
   // --- Edit Profile ---
   String get changePhoto => tr('تغيير الصورة', 'Change Photo');
   String get camera => tr('الكاميرا', 'Camera');

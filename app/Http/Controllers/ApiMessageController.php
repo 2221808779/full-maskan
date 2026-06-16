@@ -184,8 +184,10 @@ class ApiMessageController extends Controller
         }
 
         $deletedFor = $message->deleted_for ?? [];
-        if (!in_array($request->user()->id, $deletedFor)) {
-            $deletedFor[] = $request->user()->id;
+        foreach ([$message->sender_id, $message->receiver_id] as $uid) {
+            if (!in_array($uid, $deletedFor)) {
+                $deletedFor[] = $uid;
+            }
         }
         $message->update(['deleted_for' => $deletedFor]);
 
@@ -214,12 +216,14 @@ class ApiMessageController extends Controller
                     $sub->where('sender_id', $otherId)->where('receiver_id', $userId);
                 });
             })
-            ->each(function ($message) use ($userId) {
+            ->each(function ($message) use ($userId, $otherId) {
                 $deletedFor = $message->deleted_for ?? [];
-                if (!in_array($userId, $deletedFor)) {
-                    $deletedFor[] = $userId;
-                    $message->update(['deleted_for' => $deletedFor]);
+                foreach ([$userId, $otherId] as $uid) {
+                    if (!in_array($uid, $deletedFor)) {
+                        $deletedFor[] = $uid;
+                    }
                 }
+                $message->update(['deleted_for' => $deletedFor]);
             });
 
         return response()->json(['message' => __('Conversation deleted')]);

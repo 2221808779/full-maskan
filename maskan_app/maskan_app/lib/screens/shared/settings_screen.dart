@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/theme/app_colors.dart';
 import '../../core/widgets/glass_card.dart';
+import '../../providers/auth_provider.dart';
 import '../../providers/theme_provider.dart';
 import '../../providers/locale_provider.dart';
 import '../../config/routes.dart';
@@ -119,19 +120,21 @@ class SettingsScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                _sectionHeader(loc.supportSection, isDark: isDark),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: GlassCard(
-                    borderRadius: 14,
-                    padding: EdgeInsets.zero,
-                    child: Column(
-                      children: [
-                        _menuTile(isDark, Icons.report_problem_outlined, loc.complaints, onTap: () => context.push(AppRoutes.complaintForm)),
-                      ],
+                if (!context.read<AuthProvider>().isTechnician) ...[
+                  _sectionHeader(loc.supportSection, isDark: isDark),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: GlassCard(
+                      borderRadius: 14,
+                      padding: EdgeInsets.zero,
+                      child: Column(
+                        children: [
+                          _menuTile(isDark, Icons.report_problem_outlined, loc.complaints, onTap: () => context.push(AppRoutes.complaintForm)),
+                        ],
+                      ),
                     ),
                   ),
-                ),
+                ],
                 _sectionHeader(loc.aboutSection, isDark: isDark),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),

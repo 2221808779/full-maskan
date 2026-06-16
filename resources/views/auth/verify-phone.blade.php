@@ -41,6 +41,27 @@ if (!phone) {
     window.location.href = '{{ route('login') }}';
 }
 
+// Auto-send OTP on page load
+(async function() {
+    try {
+        const res = await fetch('{{ url('/api/auth/send-otp') }}', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+            body: JSON.stringify({ phone })
+        });
+        const data = await res.json();
+        @if(app()->environment() !== 'production')
+        if (data.otp) {
+            const div = document.createElement('div');
+            div.className = 'alert alert-warning py-1 small text-center mt-2';
+            div.style.fontSize = '0.8rem';
+            div.innerHTML = 'OTP للتطوير: <strong>' + data.otp + '</strong>';
+            document.getElementById('verifyForm').querySelector('.text-center').after(div);
+        }
+        @endif
+    } catch (e) {}
+})();
+
 startResendTimer();
 
 document.getElementById('verifyForm').addEventListener('submit', async function(e) {
@@ -85,11 +106,17 @@ document.getElementById('resendBtn').addEventListener('click', async function() 
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> {{ __("Sending...") }}';
 
     try {
-        await fetch('{{ url('/api/auth/send-otp') }}', {
+        const res = await fetch('{{ url('/api/auth/send-otp') }}', {
             method: 'POST',
             headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
             body: JSON.stringify({ phone })
         });
+        const data = await res.json();
+        @if(app()->environment() !== 'production')
+        if (data.otp) {
+            alert('OTP: ' + data.otp);
+        }
+        @endif
         startResendTimer();
     } catch (err) {}
 
