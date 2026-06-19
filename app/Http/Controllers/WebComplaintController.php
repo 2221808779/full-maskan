@@ -32,7 +32,7 @@ class WebComplaintController extends Controller
             $complaints = $complaints->where('sender_id', $user->id);
         }
 
-        $complaints = $complaints->latest('sent_at')->paginate(20);
+        $complaints = $complaints->latest('sent_at')->paginate(5);
         return view('complaints.index', compact('complaints'));
     }
 
