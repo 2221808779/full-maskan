@@ -6,6 +6,7 @@
 @section('content')
 <div class="page-header">
     <h1>{{ $property->title }}</h1>
+    @auth
     @if(auth()->user()->id === $property->owner_id || auth()->user()->user_type === 'admin')
     <div class="d-flex gap-2 flex-wrap">
         @if(auth()->user()->id === $property->owner_id)
@@ -28,6 +29,7 @@
         </a>
     </div>
     @endif
+    @endauth
 </div>
 
 <div class="row g-4">
@@ -166,7 +168,7 @@
             </div>
         </div>
 
-        @if($property->bookings->count() > 0 && (auth()->user()->id === $property->owner_id || auth()->user()->user_type === 'admin'))
+        @if($property->bookings->count() > 0 && auth()->check() && (auth()->user()->id === $property->owner_id || auth()->user()->user_type === 'admin'))
         <div class="maskan-card">
             <div class="table-toolbar" style="border-bottom-color: var(--blue-soft);">
                 <span class="table-title"><i class="fas fa-calendar gold-text ms-1"></i> {{ __('Bookings') }} ({{ $property->bookings->count() }})</span>
@@ -185,7 +187,7 @@
         </div>
         @endif
 
-        @if($property->activePrediction && (auth()->user()->id === $property->owner_id || auth()->user()->user_type === 'admin'))
+        @if($property->activePrediction && auth()->check() && (auth()->user()->id === $property->owner_id || auth()->user()->user_type === 'admin'))
         <div class="maskan-card mt-4">
             <div class="table-toolbar" style="border-bottom-color: var(--gold-pale);">
                 <span class="table-title"><i class="fas fa-robot gold-text ms-1"></i> {{ __('Predictive Maintenance') }}</span>

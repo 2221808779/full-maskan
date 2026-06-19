@@ -33,24 +33,28 @@ class ComprehensiveTest extends TestCase
             'user_type' => 'admin',
             'phone_verified_at' => now(),
             'status' => 'active',
+            'phone' => '0910000001',
         ]);
 
         $this->owner = User::factory()->create([
             'user_type' => 'owner',
             'phone_verified_at' => now(),
             'status' => 'active',
+            'phone' => '0910000002',
         ]);
 
         $this->tenant = User::factory()->create([
             'user_type' => 'tenant',
             'phone_verified_at' => now(),
             'status' => 'active',
+            'phone' => '0910000003',
         ]);
 
         $this->technician = User::factory()->create([
             'user_type' => 'technician',
             'phone_verified_at' => now(),
             'status' => 'active',
+            'phone' => '0910000004',
         ]);
 
         $this->property = Property::factory()->create([
@@ -189,7 +193,7 @@ class ComprehensiveTest extends TestCase
                 'price_per_night' => 1000,
                 'rooms_count' => 3,
                 'bathrooms_count' => 2,
-                'city' => 'Riyadh',
+                'city' => 'طرابلس',
                 'latitude' => 24.7136,
                 'longitude' => 46.6753,
                 'area_sqm' => 350,
@@ -218,7 +222,7 @@ class ComprehensiveTest extends TestCase
                 'price_per_night' => 500,
                 'rooms_count' => 2,
                 'bathrooms_count' => 1,
-                'city' => 'Jeddah',
+                'city' => 'بنغازي',
             ]);
 
         $response->assertSessionHasNoErrors();
@@ -241,7 +245,7 @@ class ComprehensiveTest extends TestCase
                 'price_per_night' => 1500,
                 'rooms_count' => 4,
                 'bathrooms_count' => 3,
-                'city' => 'Mecca',
+                'city' => 'طرابلس',
             ]);
 
         $response->assertSessionHasNoErrors();
@@ -259,7 +263,7 @@ class ComprehensiveTest extends TestCase
                 'price' => 2000,
                 'rooms_count' => 3,
                 'bathrooms_count' => 2,
-                'location' => 'Riyadh',
+                'location' => 'طرابلس',
             ]);
 
         $response->assertStatus(201);
@@ -347,6 +351,8 @@ class ComprehensiveTest extends TestCase
             'property_id' => $this->property->id,
             'user_id' => $this->tenant->id,
             'status' => 'pending',
+            'start_date' => now()->subDay(),
+            'end_date' => now()->addDays(5),
         ]);
 
         $this->actingAs($this->owner)

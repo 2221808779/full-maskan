@@ -17,6 +17,7 @@ class ApiEndpointsTest extends TestCase
     protected User $user;
     protected User $admin;
     protected User $technician;
+    protected User $tenant;
     protected Property $property;
 
     protected function setUp(): void
@@ -27,18 +28,28 @@ class ApiEndpointsTest extends TestCase
             'user_type' => 'admin',
             'phone_verified_at' => now(),
             'status' => 'active',
+            'phone' => '0910000001',
         ]);
 
         $this->user = User::factory()->create([
             'user_type' => 'owner',
             'phone_verified_at' => now(),
             'status' => 'active',
+            'phone' => '0910000002',
         ]);
 
         $this->technician = User::factory()->create([
             'user_type' => 'technician',
             'phone_verified_at' => now(),
             'status' => 'active',
+            'phone' => '0910000003',
+        ]);
+
+        $this->tenant = User::factory()->create([
+            'user_type' => 'tenant',
+            'phone_verified_at' => now(),
+            'status' => 'active',
+            'phone' => '0910000004',
         ]);
 
         $this->property = Property::factory()->create([
@@ -67,7 +78,7 @@ class ApiEndpointsTest extends TestCase
     public function test_login(): void
     {
         $response = $this->postJson('/api/auth/login', [
-            'phone' => $this->user->phone,
+            'phone' => $this->tenant->phone,
             'password' => 'password',
         ]);
 
@@ -78,7 +89,7 @@ class ApiEndpointsTest extends TestCase
     public function test_login_wrong_credentials(): void
     {
         $response = $this->postJson('/api/auth/login', [
-            'phone' => $this->user->phone,
+            'phone' => $this->tenant->phone,
             'password' => 'wrongpassword',
         ]);
 
