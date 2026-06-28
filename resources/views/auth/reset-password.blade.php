@@ -20,11 +20,6 @@
             <p style="color:rgba(255,255,255,0.6); font-size:0.85rem;">
                 {{ __('A verification code has been sent to') }} <strong style="color:var(--gold);">{{ $phone }}</strong>
             </p>
-            @if(session('dev_otp'))
-                <div class="alert alert-warning py-1 small" style="font-size:0.8rem;">
-                    OTP للتطوير: <strong>{{ session('dev_otp') }}</strong>
-                </div>
-            @endif
         </div>
 
         <div class="mb-3">

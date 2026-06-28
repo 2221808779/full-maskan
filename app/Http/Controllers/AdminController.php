@@ -12,6 +12,7 @@ use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 
 /**
  * تحكم لوحة التحكم — إدارة العقارات والمستخدمين وطلبات الصيانة وإحصائيات النظام عبر API
@@ -81,6 +82,8 @@ class AdminController extends Controller
 
         $user->update($updateData);
 
+        DB::table('sessions')->where('user_id', $user->id)->delete();
+
         $details = $request->input('details', '');
         $content = __('Your account has been banned. Reason: :reason', ['reason' => $reason ?: __('No reason provided')]);
         if ($details) {
@@ -109,7 +112,12 @@ class AdminController extends Controller
      */
     public function unbanUser(User $user): JsonResponse
     {
-        $user->update(['status' => 'active']);
+        $user->update([
+            'status' => 'active',
+            'ban_reason' => null,
+            'banned_at' => null,
+            'banned_until' => null,
+        ]);
 
         return response()->json([
             'message' => __('User unbanned successfully'),

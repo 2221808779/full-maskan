@@ -50,15 +50,6 @@ if (!phone) {
             body: JSON.stringify({ phone })
         });
         const data = await res.json();
-        @if(app()->environment() !== 'production')
-        if (data.otp) {
-            const div = document.createElement('div');
-            div.className = 'alert alert-warning py-1 small text-center mt-2';
-            div.style.fontSize = '0.8rem';
-            div.innerHTML = 'OTP للتطوير: <strong>' + data.otp + '</strong>';
-            document.getElementById('verifyForm').querySelector('.text-center').after(div);
-        }
-        @endif
     } catch (e) {}
 })();
 

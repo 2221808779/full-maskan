@@ -229,20 +229,12 @@ class WebAuthController extends Controller
             if (!empty(config('services.whatsapp.token'))) {
                 $sent = $service->sendOtp($validated['phone'], $otp);
             }
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             Log::error('OTP send failed', ['phone' => $validated['phone'], 'error' => $e->getMessage()]);
-        }
-
-        if (config('app.env') !== 'production') {
-            Log::info('Password reset OTP for ' . $validated['phone'] . ': ' . $otp);
         }
 
         $redirect = redirect()->route('password.reset', ['phone' => $validated['phone']])
             ->with('success', __('OTP sent successfully'));
-
-        if (config('app.env') !== 'production') {
-            $redirect->with('dev_otp', $otp);
-        }
 
         return $redirect;
     }

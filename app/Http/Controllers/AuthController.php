@@ -286,10 +286,6 @@ class AuthController extends Controller
             'message' => __('OTP sent successfully'),
         ];
 
-        if (config('app.env') !== 'production') {
-            $response['otp'] = $otp;
-        }
-
         return response()->json($response);
     }
 
@@ -471,12 +467,8 @@ class AuthController extends Controller
             if (!empty(config('services.whatsapp.token'))) {
                 $sent = $service->sendOtp($phone, $otp);
             }
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             Log::error('OTP send failed', ['phone' => $phone, 'error' => $e->getMessage()]);
-        }
-
-        if (config('app.env') !== 'production') {
-            Log::info('OTP for ' . $phone . ': ' . $otp);
         }
 
         return $otp;

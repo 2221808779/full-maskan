@@ -58,16 +58,16 @@ Route::get('/plutu/callback/{booking}', [App\Http\Controllers\PlutuPaymentContro
 
 Route::controller(WebPropertyController::class)->prefix('properties')->name('properties.')->group(function () {
     Route::get('/', 'index')->name('index');
-    Route::get('/create', 'create')->name('create')->middleware('auth');
-    Route::post('/', 'store')->name('store')->middleware('auth');
+    Route::get('/create', 'create')->name('create')->middleware(['auth', 'check.banned']);
+    Route::post('/', 'store')->name('store')->middleware(['auth', 'check.banned']);
     Route::get('/{property}', 'show')->name('show');
-    Route::get('/{property}/edit', 'edit')->name('edit')->middleware('auth');
-    Route::put('/{property}', 'update')->name('update')->middleware('auth');
-    Route::delete('/{property}', 'destroy')->name('destroy')->middleware('auth');
+    Route::get('/{property}/edit', 'edit')->name('edit')->middleware(['auth', 'check.banned']);
+    Route::put('/{property}', 'update')->name('update')->middleware(['auth', 'check.banned']);
+    Route::delete('/{property}', 'destroy')->name('destroy')->middleware(['auth', 'check.banned']);
 });
 
 // Test notifications (admin only)
-Route::middleware(['auth', 'role:admin'])->get('/test-notification', function () {
+Route::middleware(['auth', 'check.banned', 'role:admin'])->get('/test-notification', function () {
     $userId = (int) request('user_id');
     if ($userId < 1) return 'Please add ?user_id=ID (e.g. ?user_id=3) to the URL';
     $notification = \App\Models\Notification::create([
@@ -80,7 +80,7 @@ Route::middleware(['auth', 'role:admin'])->get('/test-notification', function ()
     return 'Notification sent to user ' . $userId;
 });
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'check.banned'])->group(function () {
     Route::post('/logout', [WebAuthController::class, 'logout'])->name('logout');
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');

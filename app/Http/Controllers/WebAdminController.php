@@ -12,6 +12,7 @@ use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
 /**
@@ -212,6 +213,8 @@ class WebAdminController extends Controller
 
         $user->update($updateData);
 
+        DB::table('sessions')->where('user_id', $user->id)->delete();
+
         $details = $request->input('details', '');
         $content = __('Your account has been banned. Reason: :reason', ['reason' => $reason]);
         if ($details) {
@@ -240,6 +243,7 @@ class WebAdminController extends Controller
             'status' => 'active',
             'ban_reason' => null,
             'banned_at' => null,
+            'banned_until' => null,
         ]);
 
         Notification::create([

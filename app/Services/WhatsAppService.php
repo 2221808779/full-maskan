@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Log;
  */
 class WhatsAppService
 {
-    protected string $token;
-    protected string $phoneNumberId;
+    protected ?string $token = null;
+    protected ?string $phoneNumberId = null;
     protected string $apiVersion;
 
     /**
@@ -62,7 +62,7 @@ class WhatsAppService
             ]);
 
             return false;
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             Log::error('WhatsApp exception', [
                 'phone' => $phone,
                 'error' => $e->getMessage(),
