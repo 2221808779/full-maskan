@@ -416,8 +416,8 @@
     "Location": "الموقع",
     "Logged in successfully": "تم تسجيل الدخول بنجاح",
     "Logged out successfully": "تم تسجيل الخروج بنجاح",
-    "Login": "تسجيل الدخول",
-    "Login - Maskan": "تسجيل الدخول - مسكن",
+    "Login": "دخول",
+    "Login - Maskan": "دخول - مسكن",
     "Logout": "تسجيل الخروج",
     "Longitude": "خط الطول",
     "Low": "منخفضة",
@@ -1003,5 +1003,6 @@
     "Reason": "السبب",
     "Verify now": "تأكيد الآن",
     "Update Review": "تحديث التقييم",
-    "Submit Review": "إرسال التقييم"
+    "Submit Review": "إرسال التقييم",
+    "Select City": "اختر المدينة"
 }

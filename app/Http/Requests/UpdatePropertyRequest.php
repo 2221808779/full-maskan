@@ -39,7 +39,7 @@ class UpdatePropertyRequest extends FormRequest
             'rooms_count' => 'sometimes|required|integer|min:0',
             'bathrooms_count' => 'sometimes|required|integer|min:0',
             'area_sqm' => 'nullable|integer|min:0',
-            'city' => ['sometimes', 'required', 'string', 'max:255', Rule::in($this->libyanCities())],
+            'city' => ['sometimes', 'required', 'string', 'max:255', Rule::in(config('cities.cities', []))],
             'latitude' => 'nullable|numeric|between:-90,90',
             'longitude' => 'nullable|numeric|between:-180,180',
             'amenities' => 'nullable|string',
@@ -51,24 +51,4 @@ class UpdatePropertyRequest extends FormRequest
         ];
     }
 
-    /**
-     * Get the list of valid Libyan city names.
-     */
-    public function libyanCities(): array
-    {
-        return [
-            'طرابلس', 'بنغازي', 'مصراتة', 'الخمس', 'زليتن',
-            'صبراتة', 'صرمان', 'العجيلات', 'الجميل', 'ركدالين',
-            'الزاوية', 'غريان', 'يفرن', 'الأصابعة', 'ككلة',
-            'الرجبان', 'الحشان', 'مزدة', 'نالوت', 'غدامس',
-            'تاجوراء', 'جنزور', 'قصر بن غشير', 'درنة', 'طبرق',
-            'البيضاء', 'شحات', 'المرج', 'القبة', 'الكفرة',
-            'أجدابيا', 'سرت', 'رأس لانوف', 'سبها', 'مرزق',
-            'أوباري', 'غات', 'ترهونة', 'بني وليد', 'زوارة',
-            'العزيزية', 'هون', 'مردوم', 'تازربو', 'الجغبوب',
-            'أوجلة', 'السائح', 'وادي الآجال', 'القطرون', 'الوشكة',
-            'سلطان', 'التميمي', 'إمساعد', 'جخرة', 'البريقة',
-            'توكرة', 'سوسة', 'الأبرق', 'وادي الشاطئ', 'السدرة',
-        ];
-    }
 }

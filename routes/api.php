@@ -46,6 +46,10 @@ Route::get('/specialties', function () {
 Route::get('/properties', [PropertyController::class, 'index']);
 Route::get('/properties/{property}', [PropertyController::class, 'show']);
 
+Route::get('/cities', function () {
+    return response()->json(config('cities.cities', []));
+});
+
 // Authenticated routes
 Route::middleware(['auth', 'check.banned'])->group(function () {
     // Auth

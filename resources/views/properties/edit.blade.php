@@ -52,8 +52,12 @@
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label class="form-label">{{ __('City') }} <span class="text-danger">*</span></label>
-                    <input type="text" name="city" class="form-control @error('city') is-invalid @enderror"
-                           value="{{ old('city', $property->location ?? '') }}" required>
+                    <select name="city" class="form-select @error('city') is-invalid @enderror" required>
+                        <option value="">{{ __('Select City') }}</option>
+                        @foreach(config('cities.cities', []) as $city)
+                            <option value="{{ $city }}" {{ old('city', $property->location ?? '') == $city ? 'selected' : '' }}>{{ $city }}</option>
+                        @endforeach
+                    </select>
                     @error('city') <div class="invalid-feedback">{{ $message }}</div> @enderror
                 </div>
             </div>

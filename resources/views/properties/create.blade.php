@@ -54,8 +54,12 @@
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label class="form-label">{{ __('City') }} <span class="text-danger">*</span></label>
-                    <input type="text" name="city" class="form-control @error('city') is-invalid @enderror"
-                           placeholder="{{ __('Tripoli') }}" value="{{ old('city') }}" required>
+                    <select name="city" class="form-select @error('city') is-invalid @enderror" required>
+                        <option value="">{{ __('Select City') }}</option>
+                        @foreach(config('cities.cities', []) as $city)
+                            <option value="{{ $city }}" {{ old('city') == $city ? 'selected' : '' }}>{{ $city }}</option>
+                        @endforeach
+                    </select>
                     @error('city') <div class="invalid-feedback">{{ $message }}</div> @enderror
                 </div>
             </div>

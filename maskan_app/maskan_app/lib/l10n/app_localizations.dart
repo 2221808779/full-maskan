@@ -37,7 +37,7 @@ class AppLocalizations {
   String get all => tr('الكل', 'All');
 
   // --- Auth ---
-  String get login => tr('تسجيل الدخول', 'Login');
+  String get login => tr('دخول', 'Login');
   String get register => tr('إنشاء حساب', 'Create Account');
   String get registerNewAccount => tr('إنشاء الحساب', 'Create Account');
   String get phoneNumber => tr('رقم الهاتف', 'Phone Number');
