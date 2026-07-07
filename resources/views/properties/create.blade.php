@@ -126,28 +126,16 @@
                 });
 
                 document.getElementById('locateBtn').addEventListener('click', function() {
+                    var pickerUrl = '{{ route("location.picker") }}?lat=' + currentLat + '&lng=' + currentLng;
                     if (!navigator.geolocation) {
-                        window.open('{{ route("location.picker") }}?lat=' + currentLat + '&lng=' + currentLng, 'picker', 'width=900,height=700');
+                        window.open(pickerUrl, 'picker', 'width=900,height=700');
                         return;
                     }
-                    var tryGeo = function() {
-                        navigator.geolocation.getCurrentPosition(
-                            function(pos) { setLocation(pos.coords.latitude.toFixed(6), pos.coords.longitude.toFixed(6)); },
-                            function() { window.open('{{ route("location.picker") }}?lat=' + currentLat + '&lng=' + currentLng, 'picker', 'width=900,height=700'); },
-                            { enableHighAccuracy: true }
-                        );
-                    };
-                    if (navigator.permissions) {
-                        navigator.permissions.query({name: 'geolocation'}).then(function(p) {
-                            if (p.state === 'denied') {
-                                window.open('{{ route("location.picker") }}?lat=' + currentLat + '&lng=' + currentLng, 'picker', 'width=900,height=700');
-                            } else {
-                                tryGeo();
-                            }
-                        }).catch(function() { tryGeo(); });
-                    } else {
-                        tryGeo();
-                    }
+                    navigator.geolocation.getCurrentPosition(
+                        function(pos) { setLocation(pos.coords.latitude.toFixed(6), pos.coords.longitude.toFixed(6)); },
+                        function() { window.open(pickerUrl, 'picker', 'width=900,height=700'); },
+                        { enableHighAccuracy: true, timeout: 10000 }
+                    );
                 });
             </script>
             @endpush

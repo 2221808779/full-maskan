@@ -368,6 +368,7 @@ return array (
   'Select Priority' => 'اختر الأولوية',
   'Select Technician' => 'اختر الفني',
   'Select City' => 'اختر المدينة',
+  'Could not get your location. Would you like to select it on the map?' => 'تعذر الحصول على موقعك. هل تريد تحديده على الخريطة؟',
   'Select Type' => 'اختر النوع',
   'Send Request' => 'إرسال الطلب',
   'Send verification code' => 'إرسال رمز التحقق',

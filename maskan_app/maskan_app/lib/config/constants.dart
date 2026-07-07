@@ -12,12 +12,13 @@ class AppConstants {
   static const String appName = 'مسكن';
 
   /// رابط API الخلفي (Laravel) — يستخدمه Dio لجميع الطلبات
+  /// في المحاكي 10.0.2.2 = جهازك المحلي
   static String get baseUrl =>
-      kIsWeb ? 'http://127.0.0.1:8000/api/' : 'http://192.168.1.111:8000/api/';
+      kIsWeb ? 'http://localhost/maskan/public/api/' : 'http://10.0.2.2/maskan/public/api/';
 
   /// رابط تخزين الصور (Storage) — لتحميل صور العقارات والملفات الشخصية
   static String get imageBaseUrl =>
-      kIsWeb ? 'http://127.0.0.1:8000/storage' : 'http://192.168.1.111:8000/storage';
+      kIsWeb ? 'http://localhost/maskan/public/storage' : 'http://10.0.2.2/maskan/public/storage';
 
   /// مهلة الاتصال بالخادم (بالثواني)
   static const Duration timeout = Duration(seconds: 30);
@@ -34,7 +35,7 @@ class AppConstants {
   static const String reverbAppKey = 'zcl7catxuajlvjbringa';
 
   /// مضيف WebSocket Reverb — يجب أن يكون نفس IP الخادم للاتصال من الجهاز
-  static String get reverbHost => kIsWeb ? '127.0.0.1' : '192.168.1.111';
+  static String get reverbHost => kIsWeb ? '127.0.0.1' : '10.0.2.2';
 
   /// منفذ WebSocket Reverb
   static const int reverbPort = 8080;
@@ -45,6 +46,6 @@ class AppConstants {
   /// رابط مصادقة القنوات الخاصة (Broadcasting Auth)
   /// للـ web يكون المسار نسبي لأن الملفات تُخدم من نفس Laravel
   static String get authEndpoint =>
-      kIsWeb ? '/broadcasting/auth' : 'http://192.168.1.111:8000/broadcasting/auth';
+      kIsWeb ? '/broadcasting/auth' : 'http://10.0.2.2/maskan/public/broadcasting/auth';
 
 }

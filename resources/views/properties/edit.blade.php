@@ -129,14 +129,15 @@
                 });
 
                 document.getElementById('locateBtn').addEventListener('click', function() {
+                    var pickerUrl = '{{ route("location.picker") }}?lat=' + currentLat + '&lng=' + currentLng;
                     if (!navigator.geolocation) {
-                        window.open('{{ route("location.picker") }}?lat=' + currentLat + '&lng=' + currentLng, 'picker', 'width=900,height=700');
+                        window.open(pickerUrl, 'picker', 'width=900,height=700');
                         return;
                     }
                     navigator.geolocation.getCurrentPosition(
                         function(pos) { setLocation(pos.coords.latitude.toFixed(6), pos.coords.longitude.toFixed(6)); },
-                        function() { window.open('{{ route("location.picker") }}?lat=' + currentLat + '&lng=' + currentLng, 'picker', 'width=900,height=700'); },
-                        { enableHighAccuracy: true }
+                        function() { window.open(pickerUrl, 'picker', 'width=900,height=700'); },
+                        { enableHighAccuracy: true, timeout: 10000 }
                     );
                 });
             </script>

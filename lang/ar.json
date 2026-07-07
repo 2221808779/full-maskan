@@ -1004,5 +1004,6 @@
     "Verify now": "تأكيد الآن",
     "Update Review": "تحديث التقييم",
     "Submit Review": "إرسال التقييم",
-    "Select City": "اختر المدينة"
+    "Select City": "اختر المدينة",
+    "Could not get your location. Would you like to select it on the map?": "تعذر الحصول على موقعك. هل تريد تحديده على الخريطة؟"
 }
