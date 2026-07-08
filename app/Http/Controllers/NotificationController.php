@@ -12,12 +12,7 @@ use Illuminate\Http\Request;
 class NotificationController extends Controller
 {
     /**
-     * List the authenticated user's notifications.
-     *
-     * GET /api/notifications
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * قائمة الإشعارات — عرض إشعارات المستخدم المسجل عبر API
      */
     public function index(Request $request): JsonResponse
     {
@@ -29,13 +24,7 @@ class NotificationController extends Controller
     }
 
     /**
-     * Mark a single notification as read.
-     *
-     * POST /api/notifications/{notification}/read
-     *
-     * @param Request $request
-     * @param Notification $notification
-     * @return JsonResponse
+     * تحديد إشعار مقروء — تعيين إشعار واحد كمقروء عبر API
      */
     public function markAsRead(Request $request, Notification $notification): JsonResponse
     {
@@ -52,12 +41,7 @@ class NotificationController extends Controller
     }
 
     /**
-     * Mark all of the authenticated user's notifications as read.
-     *
-     * POST /api/notifications/read-all
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * تحديد الكل مقروء — تعيين جميع الإشعارات كمقروءة عبر API
      */
     public function markAllAsRead(Request $request): JsonResponse
     {
@@ -72,12 +56,7 @@ class NotificationController extends Controller
     }
 
     /**
-     * Get the count of unread notifications for the authenticated user.
-     *
-     * GET /api/notifications/unread-count
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * عدد غير المقروء — إرجاع عدد الإشعارات غير المقروءة
      */
     public function unreadCount(Request $request): JsonResponse
     {

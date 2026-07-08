@@ -19,11 +19,7 @@ use Illuminate\View\View;
 class OwnerController extends Controller
 {
     /**
-     * Display the owner dashboard with property stats, booking trends, and revenue chart data.
-     *
-     * GET /owner/dashboard
-     *
-     * @return View
+     * لوحة التحكم — عرض إحصائيات العقارات والحجوزات والإيرادات مع رسم بياني
      */
     public function dashboard()
     {
@@ -89,11 +85,7 @@ class OwnerController extends Controller
     }
 
     /**
-     * Calculate the percentage change between two values.
-     *
-     * @param float|int $current
-     * @param float|int $previous
-     * @return array
+     * حساب الفارق — حساب نسبة التغير بين قيمتين (الشهر الحالي مقابل السابق)
      */
     private function calcDelta($current, $previous)
     {
@@ -105,11 +97,7 @@ class OwnerController extends Controller
     }
 
     /**
-     * List the authenticated owner's properties.
-     *
-     * GET /owner/properties
-     *
-     * @return View
+     * قائمة العقارات — عرض عقارات المالك مع عدد الحجوزات لكل عقار
      */
     public function properties()
     {
@@ -122,13 +110,7 @@ class OwnerController extends Controller
     }
 
     /**
-     * Toggle a property between available and unavailable. Only the owner can toggle.
-     *
-     * POST /owner/properties/{property}/toggle-status
-     *
-     * @param Request $request
-     * @param Property $property
-     * @return RedirectResponse
+     * تبديل حالة العقار — تغيير حالة العقار بين متاح وغير متاح (فقط المالك)
      */
     public function togglePropertyStatus(Request $request, Property $property): RedirectResponse
     {
@@ -152,12 +134,7 @@ class OwnerController extends Controller
     }
 
     /**
-     * Show the availability calendar for a property with booked and blocked dates.
-     *
-     * GET /owner/properties/{property}/availability
-     *
-     * @param Property $property
-     * @return View
+     * تقويم التوفر — عرض تقويم التوفر لعقار مع التواريخ المحجوزة والمحظورة
      */
     public function availability(Property $property): View
     {
@@ -193,13 +170,7 @@ class OwnerController extends Controller
     }
 
     /**
-     * Store blocked/blackout dates for a property.
-     *
-     * POST /owner/properties/{property}/availability
-     *
-     * @param Request $request
-     * @param Property $property
-     * @return RedirectResponse
+     * حفظ التواريخ المحظورة — إضافة تواريخ غير متاحة لعقار المالك
      */
     public function storeAvailability(Request $request, Property $property): RedirectResponse
     {
@@ -224,13 +195,7 @@ class OwnerController extends Controller
     }
 
     /**
-     * Remove a blocked date from a property's availability.
-     *
-     * DELETE /owner/properties/{property}/availability
-     *
-     * @param Request $request
-     * @param Property $property
-     * @return RedirectResponse
+     * إزالة تاريخ محظور — إلغاء حظر تاريخ معين لعقار المالك
      */
     public function removeAvailability(Request $request, Property $property): RedirectResponse
     {
@@ -247,11 +212,7 @@ class OwnerController extends Controller
     }
 
     /**
-     * List bookings for the authenticated owner's properties, with optional status filter.
-     *
-     * GET /owner/bookings
-     *
-     * @return View
+     * قائمة الحجوزات — عرض حجوزات عقارات المالك مع فلترة حسب الحالة
      */
     public function bookings()
     {
@@ -268,12 +229,7 @@ class OwnerController extends Controller
     }
 
     /**
-     * Show details of a single booking for the owner, including reviews.
-     *
-     * GET /owner/bookings/{booking}
-     *
-     * @param Booking $booking
-     * @return View
+     * عرض الحجز — تفاصيل حجز محدد للمالك مع التقييمات
      */
     public function showBooking(Booking $booking)
     {
@@ -289,11 +245,7 @@ class OwnerController extends Controller
     }
 
     /**
-     * List maintenance requests for the owner's properties, with AI predictions.
-     *
-     * GET /owner/maintenance
-     *
-     * @return View
+     * قائمة الصيانة — عرض طلبات الصيانة لعقارات المالك مع تنبؤات AI
      */
     public function maintenance()
     {
@@ -320,12 +272,7 @@ class OwnerController extends Controller
     }
 
     /**
-     * Show details of a single maintenance request with suggested technicians.
-     *
-     * GET /owner/maintenance/{id}
-     *
-     * @param int $id
-     * @return View
+     * عرض طلب الصيانة — تفاصيل طلب صيانة مع اقتراح الفنيين المناسبين
      */
     public function showMaintenance($id)
     {
@@ -358,11 +305,7 @@ class OwnerController extends Controller
     }
 
     /**
-     * Show a timeline view of bookings across the owner's properties.
-     *
-     * GET /owner/timeline
-     *
-     * @return View
+     * خط زمني — عرض جدول زمني للحجوزات عبر عقارات المالك
      */
     public function timeline()
     {
@@ -378,11 +321,7 @@ class OwnerController extends Controller
     }
 
     /**
-     * Show financial reports for the owner including revenue, monthly trends, and payment history.
-     *
-     * GET /owner/reports
-     *
-     * @return View
+     * التقارير المالية — عرض الإيرادات والاتجاهات الشهرية وتاريخ المدفوعات
      */
     public function reports()
     {
@@ -426,11 +365,7 @@ class OwnerController extends Controller
     }
 
     /**
-     * List completed bookings with invoices for the owner's properties.
-     *
-     * GET /owner/invoices
-     *
-     * @return View
+     * الفواتير — عرض الحجوزات المكتملة مع الفواتير للمالك
      */
     public function invoices()
     {
@@ -444,12 +379,7 @@ class OwnerController extends Controller
     }
 
     /**
-     * Generate and download a PDF invoice for a completed booking.
-     *
-     * POST /owner/invoices/create
-     *
-     * @param Request $request
-     * @return mixed
+     * إنشاء فاتورة PDF — توليد وتحميل فاتورة لحجز مكتمل
      */
     public function createInvoice(Request $request)
     {

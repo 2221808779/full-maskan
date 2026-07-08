@@ -13,11 +13,7 @@ use Illuminate\View\View;
 class WebFavoriteController extends Controller
 {
     /**
-     * Display a paginated list of favorite properties for the authenticated user.
-     * GET /favorites
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
+     * قائمة المفضلة — عرض العقارات المفضلة للمستخدم
      */
     public function index(Request $request): View
     {
@@ -30,11 +26,7 @@ class WebFavoriteController extends Controller
     }
 
     /**
-     * Toggle a property as favorite (add or remove).
-     * POST /favorites/toggle
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * تبديل المفضلة — إضافة أو إزالة عقار من المفضلة
      */
     public function toggle(Request $request): RedirectResponse
     {
@@ -61,12 +53,7 @@ class WebFavoriteController extends Controller
     }
 
     /**
-     * Remove a specific property from favorites.
-     * DELETE /favorites/{favorite}
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Favorite  $favorite
-     * @return \Illuminate\Http\RedirectResponse
+     * حذف من المفضلة — إزالة عقار من المفضلة
      */
     public function destroy(Request $request, Favorite $favorite): RedirectResponse
     {

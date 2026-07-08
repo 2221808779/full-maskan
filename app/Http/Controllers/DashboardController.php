@@ -15,11 +15,7 @@ use Illuminate\Support\Facades\Auth;
 class DashboardController extends Controller
 {
     /**
-     * Display the main dashboard with role-based statistics, trends, and chart data.
-     *
-     * GET /dashboard
-     *
-     * @return View
+     * لوحة التحكم الرئيسية — عرض إحصائيات ورسوم بيانية حسب دور المستخدم
      */
     public function index()
     {
@@ -161,11 +157,7 @@ class DashboardController extends Controller
     }
 
     /**
-     * Calculate the percentage change between two values.
-     *
-     * @param float|int $current
-     * @param float|int $previous
-     * @return array
+     * حساب الفارق — حساب نسبة التغير بين قيمتين (الاتجاهات الشهرية)
      */
     private function calcDelta($current, $previous)
     {

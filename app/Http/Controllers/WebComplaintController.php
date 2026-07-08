@@ -15,11 +15,7 @@ use Illuminate\Http\RedirectResponse;
 class WebComplaintController extends Controller
 {
     /**
-     * Display a paginated list of complaints for the user or all for admin.
-     * GET /complaints
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
+     * قائمة الشكاوى — عرض شكاوى المستخدم أو جميع الشكاوى للمشرف
      */
     public function index(Request $request): View
     {
@@ -37,10 +33,7 @@ class WebComplaintController extends Controller
     }
 
     /**
-     * Show the form for submitting a new complaint.
-     * GET /complaints/create
-     *
-     * @return \Illuminate\View\View
+     * نموذج الشكوى — عرض صفحة تقديم شكوى جديدة
      */
     public function create(): View
     {
@@ -48,11 +41,7 @@ class WebComplaintController extends Controller
     }
 
     /**
-     * Store a newly submitted complaint.
-     * POST /complaints
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * حفظ الشكوى — إرسال شكوى جديدة إلى المشرف
      */
     public function store(Request $request): RedirectResponse
     {
@@ -75,11 +64,7 @@ class WebComplaintController extends Controller
     }
 
     /**
-     * Display a single complaint's details.
-     * GET /complaints/{complaint}
-     *
-     * @param  \App\Models\Message  $complaint
-     * @return \Illuminate\View\View
+     * عرض الشكوى — تفاصيل شكوى محددة
      */
     public function show(Message $complaint): View
     {
@@ -91,12 +76,7 @@ class WebComplaintController extends Controller
     }
 
     /**
-     * Respond to a complaint with an admin reply (admin only).
-     * POST /complaints/{complaint}/respond
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Message  $complaint
-     * @return \Illuminate\Http\RedirectResponse
+     * الرد على الشكوى — رد المشرف على شكوى المستخدم (فقط المشرف)
      */
     public function respond(Request $request, Message $complaint): RedirectResponse
     {
@@ -131,12 +111,7 @@ class WebComplaintController extends Controller
     }
 
     /**
-     * Update the status of a complaint (admin only).
-     * POST /complaints/{complaint}/status
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Message  $complaint
-     * @return \Illuminate\Http\RedirectResponse
+     * تحديث حالة الشكوى — تغيير حالة الشكوى (فقط المشرف)
      */
     public function status(Request $request, Message $complaint): RedirectResponse
     {

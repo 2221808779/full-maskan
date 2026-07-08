@@ -21,9 +21,7 @@ class TechnicianProfile extends Model
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * تحويل الأنواع — تحويل الحقول إلى أنواعها المناسبة عند القراءة
      */
     protected function casts(): array
     {
@@ -33,9 +31,7 @@ class TechnicianProfile extends Model
     }
 
     /**
-     * Get the user associated with the technician profile.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * المستخدم — المستخدم المرتبط بهذا الملف الفني
      */
     public function user()
     {
@@ -43,9 +39,7 @@ class TechnicianProfile extends Model
     }
 
     /**
-     * Get the specializations for the technician.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * التخصصات — تخصصات الفني (علاقة متعدد إلى متعدد)
      */
     public function specializations()
     {
@@ -53,9 +47,7 @@ class TechnicianProfile extends Model
     }
 
     /**
-     * Get the average rating for the technician.
-     *
-     * @return float
+     * متوسط التقييم — حساب متوسط تقييمات الفني
      */
     public function getAvgRatingAttribute(): float
     {
@@ -64,9 +56,7 @@ class TechnicianProfile extends Model
     }
 
     /**
-     * Get the total number of reviews for the technician.
-     *
-     * @return int
+     * عدد التقييمات — إجمالي عدد تقييمات الفني
      */
     public function getReviewsCountAttribute(): int
     {

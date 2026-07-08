@@ -23,9 +23,7 @@ class Review extends Model
     ];
 
     /**
-     * Get the user who wrote the review.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * المستخدم — المستخدم الذي كتب التقييم
      */
     public function user()
     {
@@ -33,9 +31,7 @@ class Review extends Model
     }
 
     /**
-     * Get the property being reviewed.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * العقار — العقار الذي تم تقييمه
      */
     public function property()
     {
@@ -43,9 +39,7 @@ class Review extends Model
     }
 
     /**
-     * Get the technician being reviewed.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * الفني — الفني الذي تم تقييمه
      */
     public function technician()
     {
@@ -53,9 +47,7 @@ class Review extends Model
     }
 
     /**
-     * Get the property owner being reviewed.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * المالك — مالك العقار الذي تم تقييمه
      */
     public function owner()
     {

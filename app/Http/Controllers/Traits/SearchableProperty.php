@@ -5,8 +5,7 @@ namespace App\Http\Controllers\Traits;
 trait SearchableProperty
 {
     /**
-     * Match a search term against known property type keywords.
-     * Supports exact match and partial match (search term contains keyword).
+     * مطابقة نوع العقار — يبحث عن كلمة مفتاحية تطابق نوع العقار (دعم العربية والإنجليزية)
      */
     public function matchPropertyType(string $search): ?string
     {
@@ -34,8 +33,7 @@ trait SearchableProperty
     }
 
     /**
-     * Match a search term against known Libyan city names.
-     * Supports exact match and partial match (search term contains city name).
+     * مطابقة المدينة — يبحث عن اسم مدينة ليبية ضمن نص البحث
      */
     public function matchCity(string $search): ?string
     {

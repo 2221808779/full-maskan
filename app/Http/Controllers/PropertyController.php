@@ -18,12 +18,7 @@ class PropertyController extends Controller
     use SearchableProperty;
 
     /**
-     * List properties with optional filters.
-     *
-     * GET /api/properties
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * قائمة العقارات — عرض العقارات مع فلترة اختيارية (حسب الحالة، النوع، السعر، الموقع، البحث النصي)
      */
     public function index(Request $request): JsonResponse
     {
@@ -84,10 +79,7 @@ class PropertyController extends Controller
     }
 
     /**
-     * Get details of a single property.
-     *
-     * @param  Property  $property
-     * @return JsonResponse
+     * عرض عقار — إرجاع تفاصيل عقار مع الصور والتقييمات والحجوزات
      */
     public function show(Property $property): JsonResponse
     {
@@ -100,12 +92,7 @@ class PropertyController extends Controller
     }
 
     /**
-     * Create a new property listing.
-     *
-     * POST /api/properties
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * إضافة عقار — إنشاء عقار جديد (يتطلب التوثيق)
      */
     public function store(Request $request): JsonResponse
     {
@@ -137,13 +124,7 @@ class PropertyController extends Controller
     }
 
     /**
-     * Update an existing property listing. Only the owner can update.
-     *
-     * PUT /api/properties/{property}
-     *
-     * @param Request $request
-     * @param Property $property
-     * @return JsonResponse
+     * تحديث عقار — تعديل بيانات عقار (فقط المالك يمكنه التحديث)
      */
     public function update(Request $request, Property $property): JsonResponse
     {
@@ -176,13 +157,7 @@ class PropertyController extends Controller
     }
 
     /**
-     * Delete a property listing. Only the owner or admin can delete.
-     *
-     * DELETE /api/properties/{property}
-     *
-     * @param Request $request
-     * @param Property $property
-     * @return JsonResponse
+     * حذف عقار — حذف عقار (فقط المالك أو المشرف يمكنه الحذف)
      */
     public function destroy(Request $request, Property $property): JsonResponse
     {
@@ -198,12 +173,7 @@ class PropertyController extends Controller
     }
 
     /**
-     * Get the authenticated user's own properties.
-     *
-     * GET /api/my-properties
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * عقاراتي — عرض عقارات المستخدم المسجل الدخول
      */
     public function myProperties(Request $request): JsonResponse
     {
@@ -216,13 +186,7 @@ class PropertyController extends Controller
     }
 
     /**
-     * Toggle the availability status of a property. Only the owner can update.
-     *
-     * PATCH /api/properties/{property}/status
-     *
-     * @param Request $request
-     * @param Property $property
-     * @return JsonResponse
+     * تبديل الحالة — تغيير حالة العقار (متاح/محجوز/صيانة/غير متاح)
      */
     public function toggleStatus(Request $request, Property $property): JsonResponse
     {
@@ -245,12 +209,7 @@ class PropertyController extends Controller
     }
 
     /**
-     * Get the availability calendar for a property, including booked dates and blackout dates.
-     *
-     * GET /api/properties/{property}/availability
-     *
-     * @param Property $property
-     * @return JsonResponse
+     * التوفر — عرض تقويم التوفر لعقار (تواريخ محجوزة + تواريخ محظورة)
      */
     public function availability(Property $property): JsonResponse
     {

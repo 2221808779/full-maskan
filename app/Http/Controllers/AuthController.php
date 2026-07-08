@@ -18,12 +18,7 @@ use Illuminate\Validation\ValidationException;
 class AuthController extends Controller
 {
     /**
-     * Register a new user via API.
-     *
-     * POST /api/register
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * تسجيل API — تسجيل مستخدم جديد (مستأجر أو فني) عبر الواجهة البرمجية
      */
     public function register(Request $request): JsonResponse
     {
@@ -71,12 +66,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Register a new user via web.
-     *
-     * POST /register
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * تسجيل ويب — تسجيل مستخدم جديد (مالك) عبر الواجهة البصرية
      */
     public function registerWeb(Request $request): JsonResponse
     {
@@ -127,12 +117,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Log in a user with phone and password.
-     *
-     * POST /api/login
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * تسجيل الدخول — تسجيل دخول المستخدم برقم الهاتف وكلمة المرور
      */
     public function login(Request $request): JsonResponse
     {
@@ -211,12 +196,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Log out the current user.
-     *
-     * POST /api/logout
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * تسجيل الخروج — تسجيل خروج المستخدم وإلغاء الجلسة
      */
     public function logout(Request $request): JsonResponse
     {
@@ -228,12 +208,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Get the authenticated user's profile.
-     *
-     * GET /api/profile
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * الملف الشخصي — عرض بيانات المستخدم المسجل مع عقاراته
      */
     public function profile(Request $request): JsonResponse
     {
@@ -241,12 +216,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Update the authenticated user's profile.
-     *
-     * PUT /api/profile
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * تحديث الملف — تعديل بيانات المستخدم الشخصية
      */
     public function updateProfile(Request $request): JsonResponse
     {
@@ -267,12 +237,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Send an OTP code to the given phone number.
-     *
-     * POST /api/send-otp
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * إرسال OTP — إرسال رمز التحقق إلى رقم الهاتف
      */
     public function sendOtp(Request $request): JsonResponse
     {
@@ -290,12 +255,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Verify an OTP code and activate the user's phone.
-     *
-     * POST /api/verify-otp
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * تحقق OTP — التحقق من رمز OTP وتفعيل هاتف المستخدم
      */
     public function verifyOtp(Request $request): JsonResponse
     {
@@ -335,12 +295,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Reset the user's password using phone and OTP.
-     *
-     * POST /api/reset-password
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * إعادة تعيين كلمة المرور — استخدام الهاتف و OTP لإعادة تعيين كلمة المرور
      */
     public function resetPassword(Request $request): JsonResponse
     {
@@ -365,12 +320,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Upload a profile photo for the authenticated user.
-     *
-     * POST /api/profile/photo
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * رفع صورة شخصية — رفع صورة الملف الشخصي للمستخدم
      */
     public function uploadPhoto(Request $request): JsonResponse
     {
@@ -392,12 +342,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Delete the authenticated user's profile photo.
-     *
-     * DELETE /api/profile/photo
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * حذف الصورة الشخصية — إزالة صورة الملف الشخصي
      */
     public function deletePhoto(Request $request): JsonResponse
     {
@@ -411,12 +356,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Deactivate (suspend) the authenticated user's account.
-     *
-     * POST /api/deactivate
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * إلغاء تنشيط الحساب — تعليق حساب المستخدم
      */
     public function deactivate(Request $request): JsonResponse
     {
@@ -431,12 +371,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Permanently delete the authenticated user's account.
-     *
-     * DELETE /api/account
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * حذف الحساب — حذف حساب المستخدم بشكل نهائي
      */
     public function deleteAccount(Request $request): JsonResponse
     {
@@ -450,10 +385,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Generate and send an OTP code to the given phone number via WhatsApp.
-     *
-     * @param string $phone
-     * @return void
+     * إرسال OTP — توليد وإرسال رمز تحقق عبر واتساب
      */
     private function sendOtpToPhone(string $phone): string
     {

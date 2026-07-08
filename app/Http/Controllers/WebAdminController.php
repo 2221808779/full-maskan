@@ -21,11 +21,7 @@ use Illuminate\View\View;
 class WebAdminController extends Controller
 {
     /**
-     * Display a paginated list of users with optional filtering.
-     * GET /admin/users
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
+     * قائمة المستخدمين — عرض المستخدمين مع فلترة حسب النوع والحالة والبحث
      */
     public function users(Request $request): View
     {
@@ -51,11 +47,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Display details of a specific user.
-     * GET /admin/users/{user}
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\View\View
+     * عرض مستخدم — تفاصيل مستخدم محدد مع عقاراته وحجوزاته
      */
     public function showUser(User $user): View
     {
@@ -64,10 +56,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Show the form for creating a new user.
-     * GET /admin/users/create
-     *
-     * @return \Illuminate\View\View
+     * نموذج إنشاء مستخدم — عرض صفحة إضافة مستخدم جديد
      */
     public function createUser(): View
     {
@@ -76,11 +65,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Store a newly created user.
-     * POST /admin/users
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * حفظ المستخدم — إنشاء مستخدم جديد وحفظه في قاعدة البيانات
      */
     public function storeUser(Request $request): RedirectResponse
     {
@@ -115,11 +100,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Show the form for editing a user.
-     * GET /admin/users/{user}/edit
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\View\View
+     * نموذج تعديل مستخدم — عرض صفحة تعديل بيانات المستخدم
      */
     public function editUser(User $user): View
     {
@@ -128,12 +109,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Update a user's profile data.
-     * PUT /admin/users/{user}
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\RedirectResponse
+     * تحديث مستخدم — تعديل بيانات مستخدم مع إشعاره بالتحديث
      */
     public function updateUser(Request $request, User $user): RedirectResponse
     {
@@ -179,12 +155,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Ban (suspend) a user account with an optional reason and duration.
-     * POST /admin/users/{user}/ban
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\RedirectResponse
+     * حظر مستخدم — تعليق حساب المستخدم مع سبب و مدة اختيارية
      */
     public function banUser(Request $request, User $user): RedirectResponse
     {
@@ -231,11 +202,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Unban a previously suspended user account.
-     * POST /admin/users/{user}/unban
-     *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\RedirectResponse
+     * إلغاء الحظر — إعادة تفعيل حساب المستخدم المحظور
      */
     public function unbanUser(User $user): RedirectResponse
     {
@@ -256,12 +223,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Permanently delete a user and all associated data.
-     * DELETE /admin/users/{user}
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\RedirectResponse
+     * حذف مستخدم — حذف حساب المستخدم وجميع بياناته المرتبطة
      */
     public function destroyUser(Request $request, User $user): RedirectResponse
     {
@@ -300,11 +262,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Display a paginated list of all properties with optional filtering.
-     * GET /admin/properties
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
+     * قائمة العقارات — عرض العقارات مع فلترة حسب الحالة والنوع للمشرف
      */
     public function properties(Request $request): View
     {
@@ -323,11 +281,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Display properties sorted by review status (pending first).
-     * GET /admin/properties/pending
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
+     * العقارات المعلقة — عرض العقارات التي تنتظر مراجعة المشرف
      */
     public function pendingProperties(Request $request): View
     {
@@ -340,11 +294,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Show a single property for admin review.
-     * GET /admin/properties/{property}/review
-     *
-     * @param  \App\Models\Property  $property
-     * @return \Illuminate\View\View
+     * مراجعة عقار — عرض تفاصيل عقار لمراجعته من قبل المشرف
      */
     public function reviewProperty(Property $property): View
     {
@@ -353,11 +303,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Send a property to admin for approval (set status to pending).
-     * POST /admin/properties/{property}/request-approval
-     *
-     * @param  \App\Models\Property  $property
-     * @return \Illuminate\Http\RedirectResponse
+     * طلب مراجعة — إرسال العقار للمشرف للموافقة
      */
     public function requestApproval(Property $property): RedirectResponse
     {
@@ -373,12 +319,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Approve a property and set it as available.
-     * POST /admin/properties/{property}/approve
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Property  $property
-     * @return \Illuminate\Http\RedirectResponse
+     * الموافقة على عقار — تغيير حالة العقار إلى متاح ونشره
      */
     public function approveProperty(Request $request, Property $property): RedirectResponse
     {
@@ -394,12 +335,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Reject a property and mark it as unavailable.
-     * POST /admin/properties/{property}/reject
-     *
-     * @param  \App\Http\Requests\RejectPropertyRequest  $request
-     * @param  \App\Models\Property  $property
-     * @return \Illuminate\Http\RedirectResponse
+     * رفض عقار — رفض العقار وإعلام المالك بسبب الرفض
      */
     public function rejectProperty(\App\Http\Requests\RejectPropertyRequest $request, Property $property): RedirectResponse
     {
@@ -417,11 +353,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Deactivate a property and set it as unavailable.
-     * POST /admin/properties/{property}/deactivate
-     *
-     * @param  \App\Models\Property  $property
-     * @return \Illuminate\Http\RedirectResponse
+     * إلغاء تنشيط عقار — تعيين العقار كغير متاح
      */
     public function deactivateProperty(Property $property): RedirectResponse
     {
@@ -431,11 +363,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Display a paginated list of all bookings with optional filtering.
-     * GET /admin/bookings
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
+     * قائمة الحجوزات — عرض الحجوزات مع فلترة حسب الحالة للمشرف
      */
     public function bookings(Request $request): View
     {
@@ -451,11 +379,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Display a paginated list of maintenance requests with optional filtering.
-     * GET /admin/maintenance
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
+     * قائمة الصيانة — عرض طلبات الصيانة مع فلترة للمشرف
      */
     public function maintenanceRequests(Request $request): View
     {
@@ -471,10 +395,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Show the admin dashboard with aggregated statistics and reports.
-     * GET /admin/reports
-     *
-     * @return \Illuminate\View\View
+     * التقارير — عرض إحصائيات النظام والإيرادات والرسوم البيانية للمشرف
      */
     public function reports(): View
     {
@@ -520,10 +441,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Show the admin settings page.
-     * GET /admin/settings
-     *
-     * @return \Illuminate\View\View
+     * الإعدادات — عرض صفحة إعدادات الموقع
      */
     public function settings(): View
     {
@@ -533,11 +451,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Update the admin settings (contact info, terms).
-     * POST /admin/settings
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * حفظ الإعدادات — تحديث إعدادات الموقع (معلومات الاتصال والشروط)
      */
     public function updateSettings(Request $request): RedirectResponse
     {
@@ -554,10 +468,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Persist the settings array to the config file.
-     *
-     * @param  array  $settings
-     * @return void
+     * كتابة الإعدادات — حفظ الإعدادات في ملف config/settings.php
      */
     private function writeSettingsConfig(array $settings): void
     {
@@ -577,11 +488,7 @@ class WebAdminController extends Controller
     // ========================
 
     /**
-     * Display archived (completed + old) bookings.
-     * GET /admin/archive
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
+     * الأرشيف — عرض الحجوزات المؤرشفة (المكتملة + القديمة)
      */
     public function archive(Request $request): View
     {
@@ -594,11 +501,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Archive completed bookings older than 6 months.
-     * POST /admin/archive
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * تشغيل الأرشفة — أرشفة الحجوزات المكتملة الأقدم من 6 أشهر
      */
     public function runArchive(Request $request): RedirectResponse
     {
@@ -613,11 +516,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Restore an archived booking back to normal state.
-     * POST /admin/archive/{booking}/restore
-     *
-     * @param  \App\Models\Booking  $booking
-     * @return \Illuminate\Http\RedirectResponse
+     * استعادة من الأرشيف — إعادة الحجز المؤرشف إلى حالته الطبيعية
      */
     public function restoreArchive(Booking $booking): RedirectResponse
     {
@@ -630,10 +529,7 @@ class WebAdminController extends Controller
     // ========================
 
     /**
-     * Show the broadcast notification form.
-     * GET /admin/notifications/broadcast
-     *
-     * @return \Illuminate\View\View
+     * نموذج البث — صفحة إرسال إشعار جماعي لجميع المستخدمين
      */
     public function broadcastForm(): View
     {
@@ -641,11 +537,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Send a broadcast notification to all users except the admin.
-     * POST /admin/notifications/broadcast
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * إرسال البث — إرسال إشعار لجميع المستخدمين عدا المشرف
      */
     public function sendBroadcast(Request $request): RedirectResponse
     {
@@ -672,10 +564,7 @@ class WebAdminController extends Controller
     // ========================
 
     /**
-     * Display the cities management page.
-     * GET /admin/cities
-     *
-     * @return \Illuminate\View\View
+     * إدارة المدن — عرض صفحة إدارة المدن الليبية
      */
     public function cities(): View
     {
@@ -684,11 +573,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Add a new city to the cities config.
-     * POST /admin/cities
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * إضافة مدينة — إضافة مدينة ليبية جديدة لقائمة المدن مع التحقق من صحتها
      */
     public function storeCity(Request $request): RedirectResponse
     {
@@ -737,11 +622,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Remove a city from the cities config.
-     * DELETE /admin/cities/{city}
-     *
-     * @param  string  $city
-     * @return \Illuminate\Http\RedirectResponse
+     * حذف مدينة — إزالة مدينة من قائمة المدن
      */
     public function destroyCity(string $city): RedirectResponse
     {
@@ -765,10 +646,7 @@ class WebAdminController extends Controller
     }
 
     /**
-     * Persist the cities array to the config file.
-     *
-     * @param  array  $cities
-     * @return void
+     * كتابة المدن — حفظ قائمة المدن في ملف config/cities.php
      */
     private function writeCitiesConfig(array $cities): void
     {

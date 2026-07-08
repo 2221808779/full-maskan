@@ -19,14 +19,7 @@ use Illuminate\Support\Facades\Log;
 class MaintenanceController extends Controller
 {
     /**
-     * List maintenance requests scoped to the authenticated user's role.
-     *
-     * Technicians see their assigned requests, owners see their property requests, tenants see their own.
-     *
-     * GET /api/maintenance
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * قائمة الصيانة — عرض طلبات الصيانة حسب دور المستخدم عبر API
      */
     public function index(Request $request): JsonResponse
     {
@@ -49,13 +42,7 @@ class MaintenanceController extends Controller
     }
 
     /**
-     * Submit a new maintenance request with AI-based category classification.
-     *
-     * POST /api/maintenance
-     *
-     * @param Request $request
-     * @param MaintenanceAIService $ai
-     * @return JsonResponse
+     * إنشاء طلب صيانة — تقديم طلب صيانة جديد مع تصنيف AI عبر API
      */
     public function store(Request $request, MaintenanceAIService $ai): JsonResponse
     {
@@ -127,12 +114,7 @@ class MaintenanceController extends Controller
     }
 
     /**
-     * Get details of a single maintenance request.
-     *
-     * GET /api/maintenance/{maintenance_request}
-     *
-     * @param MaintenanceRequest $maintenanceRequest
-     * @return JsonResponse
+     * عرض طلب صيانة — تفاصيل طلب صيانة محدد عبر API
      */
     public function show(MaintenanceRequest $maintenanceRequest): JsonResponse
     {
@@ -142,13 +124,7 @@ class MaintenanceController extends Controller
     }
 
     /**
-     * Assign a technician to a maintenance request. Only the property owner can assign.
-     *
-     * POST /api/maintenance/{maintenance_request}/assign
-     *
-     * @param Request $request
-     * @param MaintenanceRequest $maintenanceRequest
-     * @return JsonResponse
+     * تعيين فني — إسناد طلب صيانة إلى فني (فقط المالك) عبر API
      */
     public function assignTechnician(Request $request, MaintenanceRequest $maintenanceRequest): JsonResponse
     {
@@ -192,13 +168,7 @@ class MaintenanceController extends Controller
     }
 
     /**
-     * Reject an assigned maintenance request. Only the assigned technician can reject.
-     *
-     * POST /api/maintenance/{maintenance_request}/reject
-     *
-     * @param Request $request
-     * @param MaintenanceRequest $maintenanceRequest
-     * @return JsonResponse
+     * رفض طلب صيانة — رفض طلب صيانة مسند (فقط الفني) عبر API
      */
     public function rejectRequest(Request $request, MaintenanceRequest $maintenanceRequest): JsonResponse
     {
@@ -235,13 +205,7 @@ class MaintenanceController extends Controller
     }
 
     /**
-     * Update the status of a maintenance request. Only the assigned technician can update status.
-     *
-     * PATCH /api/maintenance/{maintenance_request}/status
-     *
-     * @param Request $request
-     * @param MaintenanceRequest $maintenanceRequest
-     * @return JsonResponse
+     * تحديث حالة الصيانة — تغيير حالة طلب الصيانة (فقط الفني) عبر API
      */
     public function updateStatus(Request $request, MaintenanceRequest $maintenanceRequest): JsonResponse
     {
@@ -327,12 +291,7 @@ class MaintenanceController extends Controller
     }
 
     /**
-     * List all pending (unassigned) maintenance requests.
-     *
-     * GET /api/maintenance/pending
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * الطلبات المعلقة — عرض طلبات الصيانة غير المسندة
      */
     public function pendingRequests(Request $request): JsonResponse
     {
@@ -345,13 +304,7 @@ class MaintenanceController extends Controller
     }
 
     /**
-     * Claim a pending maintenance request by a technician.
-     *
-     * POST /api/maintenance/{maintenance_request}/claim
-     *
-     * @param Request $request
-     * @param MaintenanceRequest $maintenanceRequest
-     * @return JsonResponse
+     * قبول طلب صيانة — قبول طلب صيانة معلق من قبل الفني
      */
     public function claimRequest(Request $request, MaintenanceRequest $maintenanceRequest): JsonResponse
     {
@@ -392,10 +345,7 @@ class MaintenanceController extends Controller
     }
 
     /**
-     * Infer the priority level of a maintenance request based on keyword analysis.
-     *
-     * @param string $text
-     * @return string
+     * استنتاج الأولوية — تحليل النص لتحديد مستوى أولوية طلب الصيانة
      */
     protected function inferPriority(string $text): string
     {
@@ -417,13 +367,7 @@ class MaintenanceController extends Controller
     }
 
     /**
-     * Get AI-suggested technicians for a maintenance request based on category.
-     *
-     * GET /api/maintenance/{maintenance_request}/suggestions
-     *
-     * @param Request $request
-     * @param MaintenanceRequest $maintenanceRequest
-     * @return JsonResponse
+     * اقتراحات AI — عرض الفنيين المقترحين حسب تصنيف طلب الصيانة
      */
     public function getAiSuggestions(Request $request, MaintenanceRequest $maintenanceRequest): JsonResponse
     {
@@ -461,13 +405,7 @@ class MaintenanceController extends Controller
     }
 
     /**
-     * Submit feedback on the AI category classification for a maintenance request.
-     *
-     * POST /api/maintenance/{maintenance_request}/ai-feedback
-     *
-     * @param Request $request
-     * @param MaintenanceRequest $maintenanceRequest
-     * @return JsonResponse
+     * تغذية راجعة AI — إرسال تصحيح لتصنيف AI لطلب الصيانة
      */
     public function aiFeedback(Request $request, MaintenanceRequest $maintenanceRequest): JsonResponse
     {
@@ -490,12 +428,7 @@ class MaintenanceController extends Controller
     }
 
     /**
-     * List maintenance requests assigned to the authenticated technician.
-     *
-     * GET /api/maintenance/technician
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * طلبات الفني — عرض طلبات الصيانة المسندة للفني المسجل
      */
     public function technicianRequests(Request $request): JsonResponse
     {

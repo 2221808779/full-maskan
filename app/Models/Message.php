@@ -24,9 +24,7 @@ class Message extends Model
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * تحويل الأنواع — تحويل الحقول إلى أنواعها المناسبة عند القراءة
      */
     protected function casts(): array
     {
@@ -40,9 +38,7 @@ class Message extends Model
     }
 
     /**
-     * Get the user who sent the message.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * المرسل — المستخدم الذي أرسل الرسالة
      */
     public function sender()
     {
@@ -50,9 +46,7 @@ class Message extends Model
     }
 
     /**
-     * Get the user who received the message.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * المستقبل — المستخدم الذي استلم الرسالة
      */
     public function receiver()
     {
@@ -60,9 +54,7 @@ class Message extends Model
     }
 
     /**
-     * Get the admin user who responded to the message.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * المستجيب — المسؤول الذي رد على هذه الرسالة (للشكاوى)
      */
     public function responder()
     {

@@ -12,12 +12,7 @@ use Illuminate\Http\Request;
 class FavoriteController extends Controller
 {
     /**
-     * List the authenticated user's favorite properties.
-     *
-     * GET /api/favorites
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * قائمة المفضلة — عرض العقارات المفضلة للمستخدم
      */
     public function index(Request $request): JsonResponse
     {
@@ -30,12 +25,7 @@ class FavoriteController extends Controller
     }
 
     /**
-     * Toggle a property as favorite (add or remove).
-     *
-     * POST /api/favorites/toggle
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * تبديل المفضلة — إضافة أو إزالة عقار من المفضلة
      */
     public function toggle(Request $request): JsonResponse
     {
@@ -69,12 +59,7 @@ class FavoriteController extends Controller
     }
 
     /**
-     * Remove a specific favorite entry. Only the user who added it can remove.
-     *
-     * DELETE /api/favorites/{favorite}
-     *
-     * @param Favorite $favorite
-     * @return JsonResponse
+     * حذف مفضلة — إزالة عقار من المفضلة (فقط المستخدم صاحبها)
      */
     public function destroy(Favorite $favorite): JsonResponse
     {
@@ -88,12 +73,7 @@ class FavoriteController extends Controller
     }
 
     /**
-     * Check if a property is in the authenticated user's favorites.
-     *
-     * POST /api/favorites/check
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * التحقق من المفضلة — معرفة ما إذا كان العقار في مفضلة المستخدم
      */
     public function check(Request $request): JsonResponse
     {

@@ -20,12 +20,7 @@ use Illuminate\Support\Facades\DB;
 class AdminController extends Controller
 {
     /**
-     * List all users with optional filters (user_type, status, search).
-     *
-     * GET /api/admin/users
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * قائمة المستخدمين — عرض جميع المستخدمين مع فلترة اختيارية
      */
     public function users(Request $request): JsonResponse
     {
@@ -51,13 +46,7 @@ class AdminController extends Controller
     }
 
     /**
-     * Ban a user (suspend account). Admins cannot be banned.
-     *
-     * POST /api/admin/users/{user}/ban
-     *
-     * @param Request $request
-     * @param User $user
-     * @return JsonResponse
+     * حظر مستخدم — تعليق حساب مستخدم (لا يمكن حظر المشرفين)
      */
     public function banUser(Request $request, User $user): JsonResponse
     {
@@ -103,12 +92,7 @@ class AdminController extends Controller
     }
 
     /**
-     * Unban a user (reactivate account).
-     *
-     * POST /api/admin/users/{user}/unban
-     *
-     * @param User $user
-     * @return JsonResponse
+     * إلغاء الحظر — إعادة تفعيل حساب المستخدم المحظور
      */
     public function unbanUser(User $user): JsonResponse
     {
@@ -126,12 +110,7 @@ class AdminController extends Controller
     }
 
     /**
-     * Create a new user by an admin.
-     *
-     * POST /api/admin/users
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * إنشاء مستخدم — إنشاء مستخدم جديد بواسطة المشرف
      */
     public function createUser(Request $request): JsonResponse
     {
@@ -167,13 +146,7 @@ class AdminController extends Controller
     }
 
     /**
-     * Update a user's details by an admin.
-     *
-     * PUT /api/admin/users/{user}
-     *
-     * @param Request $request
-     * @param User $user
-     * @return JsonResponse
+     * تحديث مستخدم — تعديل بيانات مستخدم بواسطة المشرف
      */
     public function updateUser(Request $request, User $user): JsonResponse
     {
@@ -210,12 +183,7 @@ class AdminController extends Controller
     }
 
     /**
-     * List all properties with optional filters (status, type, owner_id).
-     *
-     * GET /api/admin/properties
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * قائمة العقارات — عرض جميع العقارات مع فلترة اختيارية للمشرف
      */
     public function properties(Request $request): JsonResponse
     {
@@ -237,12 +205,7 @@ class AdminController extends Controller
     }
 
     /**
-     * Approve a pending property listing.
-     *
-     * POST /api/admin/properties/{property}/approve
-     *
-     * @param Property $property
-     * @return JsonResponse
+     * الموافقة على عقار — تغيير حالة العقار من معلق إلى متاح
      */
     public function approveProperty(Property $property): JsonResponse
     {
@@ -255,12 +218,7 @@ class AdminController extends Controller
     }
 
     /**
-     * Reject a pending property listing.
-     *
-     * POST /api/admin/properties/{property}/reject
-     *
-     * @param Property $property
-     * @return JsonResponse
+     * رفض عقار — تغيير حالة العقار من معلق إلى غير متاح
      */
     public function rejectProperty(Property $property): JsonResponse
     {
@@ -273,11 +231,7 @@ class AdminController extends Controller
     }
 
     /**
-     * List all bookings.
-     *
-     * GET /api/admin/bookings
-     *
-     * @return JsonResponse
+     * قائمة الحجوزات — عرض جميع الحجوزات للمشرف
      */
     public function bookings(): JsonResponse
     {
@@ -289,11 +243,7 @@ class AdminController extends Controller
     }
 
     /**
-     * List all maintenance requests.
-     *
-     * GET /api/admin/maintenance
-     *
-     * @return JsonResponse
+     * قائمة الصيانة — عرض جميع طلبات الصيانة للمشرف
      */
     public function maintenanceRequests(): JsonResponse
     {
@@ -305,11 +255,7 @@ class AdminController extends Controller
     }
 
     /**
-     * Get admin dashboard reports with aggregated statistics (users, properties, bookings).
-     *
-     * GET /api/admin/reports
-     *
-     * @return JsonResponse
+     * التقارير — إحصائيات لوحة التحكم (المستخدمين، العقارات، الحجوزات)
      */
     public function reports(): JsonResponse
     {

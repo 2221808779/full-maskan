@@ -20,7 +20,7 @@ class PlutuPaymentController extends Controller
     protected PlutuLocalBankCards $plutu;
 
     /**
-     * Initialize the Plutu payment gateway with configured credentials.
+     * تهيئة بوابة Plutu — ضبط بيانات الاعتماد من الإعدادات
      */
     public function __construct()
     {
@@ -33,12 +33,7 @@ class PlutuPaymentController extends Controller
     }
 
     /**
-     * Initiate payment for a booking via the Plutu gateway (web redirect).
-     *
-     * GET /plutu/pay/{booking}
-     *
-     * @param Booking $booking
-     * @return RedirectResponse
+     * بدء الدفع — تحويل المستخدم إلى بوابة Plutu للدفع (ويب)
      */
     public function pay(Booking $booking): RedirectResponse
     {
@@ -91,12 +86,7 @@ class PlutuPaymentController extends Controller
     }
 
     /**
-     * Handle the callback from the Plutu payment gateway.
-     *
-     * GET /plutu/callback
-     *
-     * @param Request $request
-     * @return View|RedirectResponse
+     * رد الدفع — معالجة رد بوابة Plutu بعد الدفع
      */
     public function callback(Request $request): View|RedirectResponse
     {
@@ -148,12 +138,7 @@ class PlutuPaymentController extends Controller
     }
 
     /**
-     * Initiate payment via API (returns a redirect URL to the Plutu gateway).
-     *
-     * POST /api/plutu/initiate
-     *
-     * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
+     * بدء الدفع عبر API — إرجاع رابط تحويل إلى بوابة Plutu
      */
     public function apiInitiate(Request $request): \Illuminate\Http\JsonResponse
     {
@@ -209,12 +194,7 @@ class PlutuPaymentController extends Controller
     }
 
     /**
-     * Check the payment status for a booking via API.
-     *
-     * GET /api/plutu/check
-     *
-     * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
+     * التحقق من الدفع — الاستعلام عن حالة الدفع لحجز عبر API
      */
     public function apiCheck(Request $request): \Illuminate\Http\JsonResponse
     {
@@ -228,10 +208,7 @@ class PlutuPaymentController extends Controller
     }
 
     /**
-     * Handle a failed payment callback from the Plutu gateway.
-     *
-     * @param Booking $booking
-     * @return View
+     * معالجة الفشل — عرض صفحة إلغاء الدفع عند فشل عملية الدفع
      */
     private function handleFailedCallback(Booking $booking): View
     {

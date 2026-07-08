@@ -16,12 +16,7 @@ use Illuminate\Support\Facades\DB;
 class BookingController extends Controller
 {
     /**
-     * List the authenticated user's bookings.
-     *
-     * GET /api/bookings
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * قائمة الحجوزات — عرض حجوزات المستخدم المسجل
      */
     public function index(Request $request): JsonResponse
     {
@@ -34,12 +29,7 @@ class BookingController extends Controller
     }
 
     /**
-     * Create a new booking request.
-     *
-     * POST /api/bookings
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * إنشاء حجز — تقديم طلب حجز جديد مع التحقق من التوفر
      */
     public function store(Request $request): JsonResponse
     {
@@ -84,12 +74,7 @@ class BookingController extends Controller
     }
 
     /**
-     * Get details of a single booking.
-     *
-     * GET /api/bookings/{booking}
-     *
-     * @param Booking $booking
-     * @return JsonResponse
+     * عرض حجز — تفاصيل حجز محدد مع العقار والدفع
      */
     public function show(Booking $booking): JsonResponse
     {
@@ -99,13 +84,7 @@ class BookingController extends Controller
     }
 
     /**
-     * Cancel a booking. Only the tenant who made the booking can cancel.
-     *
-     * POST /api/bookings/{booking}/cancel
-     *
-     * @param Request $request
-     * @param Booking $booking
-     * @return JsonResponse
+     * إلغاء حجز — إلغاء حجز (فقط المستأجر صاحب الحجز يمكنه الإلغاء)
      */
     public function cancel(Request $request, Booking $booking): JsonResponse
     {
@@ -134,13 +113,7 @@ class BookingController extends Controller
     }
 
     /**
-     * Confirm a pending booking. Only the property owner can confirm.
-     *
-     * POST /api/bookings/{booking}/confirm
-     *
-     * @param Request $request
-     * @param Booking $booking
-     * @return JsonResponse
+     * تأكيد حجز — تأكيد حجز معلق (فقط مالك العقار يمكنه التأكيد)
      */
     public function confirm(Request $request, Booking $booking): JsonResponse
     {
@@ -172,13 +145,7 @@ class BookingController extends Controller
     }
 
     /**
-     * Mark a confirmed booking as completed. Only the property owner can complete.
-     *
-     * POST /api/bookings/{booking}/complete
-     *
-     * @param Request $request
-     * @param Booking $booking
-     * @return JsonResponse
+     * إكمال حجز — إنهاء حجز مؤكد (فقط المالك يمكنه الإكمال)
      */
     public function complete(Request $request, Booking $booking): JsonResponse
     {
@@ -213,12 +180,7 @@ class BookingController extends Controller
     }
 
     /**
-     * List bookings for the authenticated owner's properties.
-     *
-     * GET /api/property-bookings
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * حجوزات العقارات — عرض حجوزات عقارات المالك المسجل
      */
     public function propertyBookings(Request $request): JsonResponse
     {

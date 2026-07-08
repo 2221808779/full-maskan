@@ -35,9 +35,7 @@ class MaintenanceRequest extends Model
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * تحويل الأنواع — تحويل الحقول إلى أنواعها المناسبة عند القراءة
      */
     protected function casts(): array
     {
@@ -48,9 +46,7 @@ class MaintenanceRequest extends Model
     }
 
     /**
-     * Get the property associated with the maintenance request.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * العقار — العقار المرتبط بطلب الصيانة
      */
     public function property()
     {
@@ -58,9 +54,7 @@ class MaintenanceRequest extends Model
     }
 
     /**
-     * Get the tenant who submitted the maintenance request.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * المستأجر — المستخدم الذي قدم طلب الصيانة
      */
     public function tenant()
     {
@@ -68,9 +62,7 @@ class MaintenanceRequest extends Model
     }
 
     /**
-     * Get the technician assigned to the maintenance request.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * الفني — الفني المسند إليه طلب الصيانة
      */
     public function technician()
     {
@@ -78,9 +70,7 @@ class MaintenanceRequest extends Model
     }
 
     /**
-     * Get the full name of the assigned technician.
-     *
-     * @return string|null
+     * اسم الفني — إرجاع الاسم الكامل للفني المسند
      */
     public function getTechnicianNameAttribute(): ?string
     {
@@ -88,9 +78,7 @@ class MaintenanceRequest extends Model
     }
 
     /**
-     * Get the phone number of the assigned technician.
-     *
-     * @return string|null
+     * هاتف الفني — إرجاع رقم هاتف الفني المسند
      */
     public function getTechnicianPhoneAttribute(): ?string
     {
@@ -98,9 +86,7 @@ class MaintenanceRequest extends Model
     }
 
     /**
-     * Get the title of the associated property.
-     *
-     * @return string|null
+     * عنوان العقار — إرجاع عنوان العقار المرتبط بطلب الصيانة
      */
     public function getPropertyTitleAttribute(): ?string
     {
@@ -108,9 +94,7 @@ class MaintenanceRequest extends Model
     }
 
     /**
-     * Get the full name of the tenant.
-     *
-     * @return string|null
+     * اسم المستأجر — إرجاع الاسم الكامل لمقدم طلب الصيانة
      */
     public function getTenantNameAttribute(): ?string
     {

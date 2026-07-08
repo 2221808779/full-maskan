@@ -36,9 +36,7 @@ class Property extends Model
     ];
 
     /**
-     * Get the owner (user) of the property.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * المالك — المستخدم الذي يملك هذا العقار
      */
     public function owner()
     {
@@ -46,9 +44,7 @@ class Property extends Model
     }
 
     /**
-     * Get the bookings for the property.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * الحجوزات — جميع حجوزات هذا العقار
      */
     public function bookings()
     {
@@ -56,9 +52,7 @@ class Property extends Model
     }
 
     /**
-     * Get the maintenance requests for the property.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * طلبات الصيانة — جميع طلبات الصيانة الخاصة بهذا العقار
      */
     public function maintenanceRequests()
     {
@@ -66,9 +60,7 @@ class Property extends Model
     }
 
     /**
-     * Get the reviews for the property.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * التقييمات — جميع تقييمات هذا العقار
      */
     public function reviews()
     {
@@ -76,9 +68,7 @@ class Property extends Model
     }
 
     /**
-     * Get the users who favorited the property.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * المفضلة — المستخدمون الذين أضافوا هذا العقار إلى مفضلتهم
      */
     public function favorites()
     {
@@ -86,9 +76,7 @@ class Property extends Model
     }
 
     /**
-     * Get the images for the property.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * الصور — جميع صور هذا العقار
      */
     public function images()
     {
@@ -96,9 +84,7 @@ class Property extends Model
     }
 
     /**
-     * Get the active maintenance prediction for the property.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * التنبؤ النشط — أحدث تنبؤ صيانة نشط لهذا العقار
      */
     public function activePrediction()
     {
@@ -106,10 +92,7 @@ class Property extends Model
     }
 
     /**
-     * Serialize a date for the model.
-     *
-     * @param  \DateTimeInterface  $date
-     * @return string
+     * تنسيق التاريخ — تحويل التاريخ إلى نص قبل التخزين
      */
     protected function serializeDate(\DateTimeInterface $date)
     {
@@ -117,9 +100,7 @@ class Property extends Model
     }
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * تحويل الأنواع — تحويل الحقول إلى أنواعها المناسبة عند القراءة
      */
     protected function casts(): array
     {
@@ -133,9 +114,7 @@ class Property extends Model
     }
 
     /**
-     * Convert the model instance to an array with loaded images.
-     *
-     * @return array
+     * تحويل إلى مصفوفة — إرجاع بيانات العقار مع الصور المحملة
      */
     public function toArray()
     {

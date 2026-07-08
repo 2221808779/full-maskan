@@ -22,9 +22,7 @@ class Payment extends Model
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * تحويل الأنواع — تحويل الحقول إلى أنواعها المناسبة عند القراءة
      */
     protected function casts(): array
     {
@@ -35,15 +33,16 @@ class Payment extends Model
     }
 
     /**
-     * Get the booking associated with the payment.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * الحجز — الحجز المرتبط بعملية الدفع
      */
     public function booking()
     {
         return $this->belongsTo(Booking::class);
     }
 
+    /**
+     * المستخدم — المستخدم الذي قام بعملية الدفع
+     */
     public function user()
     {
         return $this->belongsTo(User::class);

@@ -12,12 +12,7 @@ use Illuminate\Support\Facades\Session;
 class LanguageController extends Controller
 {
     /**
-     * Switch the application locale between Arabic (ar) and English (en).
-     *
-     * GET /language/{locale}
-     *
-     * @param string $locale
-     * @return \Illuminate\Http\RedirectResponse
+     * تبديل اللغة — التبديل بين العربية والإنجليزية وحفظ التفضيل في الجلسة والكوكي
      */
     public function switch($locale)
     {

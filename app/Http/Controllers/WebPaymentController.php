@@ -13,11 +13,7 @@ use Illuminate\View\View;
 class WebPaymentController extends Controller
 {
     /**
-     * Display a paginated list of payments for the authenticated user.
-     * GET /payments
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
+     * قائمة المدفوعات — عرض سجل المدفوعات حسب دور المستخدم
      */
     public function index(Request $request): View
     {

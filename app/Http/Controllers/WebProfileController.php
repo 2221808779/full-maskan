@@ -18,10 +18,7 @@ use Illuminate\View\View;
 class WebProfileController extends Controller
 {
     /**
-     * Show the authenticated user's profile page.
-     * GET /profile
-     *
-     * @return \Illuminate\View\View
+     * عرض الملف الشخصي — صفحة عرض وتعديل بيانات المستخدم
      */
     public function index(): View
     {
@@ -30,11 +27,7 @@ class WebProfileController extends Controller
     }
 
     /**
-     * Update the authenticated user's profile data.
-     * POST /profile
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * تحديث الملف الشخصي — تعديل بيانات المستخدم (الاسم، الهاتف، الصورة، التخصصات)
      */
     public function update(Request $request): RedirectResponse
     {
@@ -81,11 +74,7 @@ class WebProfileController extends Controller
     }
 
     /**
-     * Update the authenticated user's password.
-     * POST /profile/password
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * تغيير كلمة المرور — تحديث كلمة المرور بعد التحقق من القديمة
      */
     public function password(Request $request): RedirectResponse
     {
@@ -100,11 +89,7 @@ class WebProfileController extends Controller
     }
 
     /**
-     * Deactivate the authenticated user's account after confirming password.
-     * POST /profile/deactivate
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * إلغاء تنشيط الحساب — تعليق الحساب بعد التحقق من وجود حجوزات نشطة
      */
     public function deactivate(Request $request): RedirectResponse
     {
@@ -149,11 +134,7 @@ class WebProfileController extends Controller
     }
 
     /**
-     * Permanently delete the authenticated user's account after confirming password.
-     * POST /profile/delete
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * حذف الحساب — حذف الحساب بشكل دائم بعد التحقق من كلمة المرور
      */
     public function destroyAccount(Request $request): RedirectResponse
     {

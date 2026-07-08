@@ -18,9 +18,7 @@ class BlackoutDate extends Model
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * تحويل الأنواع — تحويل الحقول إلى أنواعها المناسبة عند القراءة
      */
     protected function casts(): array
     {
@@ -30,9 +28,7 @@ class BlackoutDate extends Model
     }
 
     /**
-     * Get the property associated with the blackout date.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * العقار — العقار المرتبط بتاريخ الحظر
      */
     public function property()
     {

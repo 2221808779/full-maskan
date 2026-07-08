@@ -20,11 +20,7 @@ use Illuminate\View\View;
 class WebMaintenanceController extends Controller
 {
     /**
-     * Display a paginated list of maintenance requests for the authenticated user.
-     * GET /maintenance
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
+     * قائمة الصيانة — عرض طلبات الصيانة حسب دور المستخدم
      */
     public function index(Request $request): View
     {
@@ -48,10 +44,7 @@ class WebMaintenanceController extends Controller
     }
 
     /**
-     * Show the form for creating a new maintenance request.
-     * GET /maintenance/create
-     *
-     * @return \Illuminate\View\View
+     * نموذج طلب صيانة — عرض صفحة تقديم طلب صيانة جديد
      */
     public function create(): View
     {
@@ -68,12 +61,7 @@ class WebMaintenanceController extends Controller
     }
 
     /**
-     * Store a new maintenance request with AI classification.
-     * POST /maintenance
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Services\MaintenanceAIService  $ai
-     * @return \Illuminate\Http\RedirectResponse
+     * حفظ طلب الصيانة — تخزين طلب صيانة مع تصنيف AI تلقائي
      */
     public function store(Request $request, MaintenanceAIService $ai): RedirectResponse
     {
@@ -115,11 +103,7 @@ class WebMaintenanceController extends Controller
     }
 
     /**
-     * Display the details of a maintenance request including technicians and reviews.
-     * GET /maintenance/{maintenanceRequest}
-     *
-     * @param  \App\Models\MaintenanceRequest  $maintenanceRequest
-     * @return \Illuminate\View\View
+     * عرض طلب الصيانة — تفاصيل طلب الصيانة مع الفنيين المناسبين والتقييمات
      */
     public function show(MaintenanceRequest $maintenanceRequest): View
     {
@@ -150,12 +134,7 @@ class WebMaintenanceController extends Controller
     }
 
     /**
-     * Assign a technician to a maintenance request (owner or admin only).
-     * POST /maintenance/{maintenanceRequest}/assign
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\MaintenanceRequest  $maintenanceRequest
-     * @return \Illuminate\Http\RedirectResponse
+     * تعيين فني — إسناد طلب صيانة إلى فني (فقط المالك أو المشرف)
      */
     public function assign(Request $request, MaintenanceRequest $maintenanceRequest): RedirectResponse
     {
@@ -192,12 +171,7 @@ class WebMaintenanceController extends Controller
     }
 
     /**
-     * Reject an assigned maintenance request (technician only).
-     * POST /maintenance/{maintenanceRequest}/reject
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\MaintenanceRequest  $maintenanceRequest
-     * @return \Illuminate\Http\RedirectResponse
+     * رفض طلب صيانة — رفض طلب صيانة مسند (فقط الفني)
      */
     public function reject(Request $request, MaintenanceRequest $maintenanceRequest): RedirectResponse
     {
@@ -239,12 +213,7 @@ class WebMaintenanceController extends Controller
     }
 
     /**
-     * Update the status of a maintenance request (all authorized roles).
-     * POST /maintenance/{maintenanceRequest}/status
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\MaintenanceRequest  $maintenanceRequest
-     * @return \Illuminate\Http\RedirectResponse
+     * تحديث حالة الصيانة — تغيير حالة طلب الصيانة (جميع الأدوار المصرح لها)
      */
     public function status(Request $request, MaintenanceRequest $maintenanceRequest): RedirectResponse
     {
@@ -309,10 +278,7 @@ class WebMaintenanceController extends Controller
     }
 
     /**
-     * Infer the priority level of a maintenance request from the description text.
-     *
-     * @param  string  $text
-     * @return string
+     * استنتاج الأولوية — تحليل النص لتحديد مستوى أولوية طلب الصيانة
      */
     protected function inferPriority(string $text): string
     {
@@ -329,12 +295,7 @@ class WebMaintenanceController extends Controller
     }
 
     /**
-     * Rate a completed maintenance request (tenant or owner).
-     * POST /maintenance/{maintenanceRequest}/rate
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\MaintenanceRequest  $maintenanceRequest
-     * @return \Illuminate\Http\RedirectResponse
+     * تقييم الصيانة — تقييم عمل الفني بعد إكمال طلب الصيانة
      */
     public function rate(Request $request, MaintenanceRequest $maintenanceRequest): RedirectResponse
     {

@@ -16,11 +16,7 @@ use Illuminate\View\View;
 class WebChatController extends Controller
 {
     /**
-     * Display a list of conversations for the authenticated user.
-     * GET /messages
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
+     * قائمة المحادثات — عرض المحادثات النشطة للمستخدم
      */
     public function index(Request $request): View
     {
@@ -55,12 +51,7 @@ class WebChatController extends Controller
     }
 
     /**
-     * Display the conversation with a specific user, marking messages as read.
-     * GET /messages/{userId}
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $userId
-     * @return \Illuminate\View\View
+     * عرض المحادثة — عرض الرسائل مع مستخدم معين وتحديدها كمقروءة
      */
     public function show(Request $request, $userId): View
     {
@@ -92,11 +83,7 @@ class WebChatController extends Controller
     }
 
     /**
-     * Send a new message to another user.
-     * POST /messages
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * إرسال رسالة — إرسال رسالة جديدة لمستخدم آخر
      */
     public function store(Request $request): RedirectResponse
     {
@@ -123,12 +110,7 @@ class WebChatController extends Controller
     }
 
     /**
-     * Edit a previously sent message.
-     * POST /messages/{message}/edit
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Message  $message
-     * @return \Illuminate\Http\RedirectResponse
+     * تعديل رسالة — تعديل نص رسالة مرسلة (فقط المرسل)
      */
     public function editMessage(Request $request, Message $message): RedirectResponse
     {
@@ -150,12 +132,7 @@ class WebChatController extends Controller
     }
 
     /**
-     * Soft-delete an entire conversation for the authenticated user.
-     * POST /messages/delete-conversation/{userId}
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $userId
-     * @return \Illuminate\Http\RedirectResponse
+     * حذف المحادثة — حذف المحادثة بالكامل للمستخدم
      */
     public function deleteConversation(Request $request, $userId): RedirectResponse
     {
@@ -177,12 +154,7 @@ class WebChatController extends Controller
     }
 
     /**
-     * Soft-delete a single message for the user or for everyone (sender only).
-     * POST /messages/{message}/delete
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Message  $message
-     * @return \Illuminate\Http\RedirectResponse
+     * حذف رسالة — حذف رسالة واحدة للمستخدم أو للجميع
      */
     public function deleteMessage(Request $request, Message $message): RedirectResponse
     {

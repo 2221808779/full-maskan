@@ -22,6 +22,9 @@ class WebPropertyController extends Controller
 {
     use SearchableProperty;
 
+    /**
+     * قائمة العقارات — عرض العقارات مع فلترة حسب نوع العقار والحالة والبحث
+     */
     public function index(Request $request): View
     {
         $user = $request->user();
@@ -62,11 +65,17 @@ class WebPropertyController extends Controller
         return view('properties.index', compact('properties'));
     }
 
+    /**
+     * نموذج الإضافة — عرض صفحة إضافة عقار جديد
+     */
     public function create(): View
     {
         return view('properties.create');
     }
 
+    /**
+     * حفظ العقار — تخزين عقار جديد مع الصور وإشعار المشرف
+     */
     public function store(StorePropertyRequest $request): RedirectResponse
     {
         $validated = $request->validated();
@@ -116,6 +125,9 @@ class WebPropertyController extends Controller
             ->with('success', __('Property added successfully'));
     }
 
+    /**
+     * عرض عقار — تفاصيل عقار مع الصور والحجوزات والتقييمات
+     */
     public function show(Property $property): View
     {
         $property->load('images', 'owner', 'bookings.user', 'reviews.user', 'activePrediction');
@@ -123,11 +135,17 @@ class WebPropertyController extends Controller
         return view('properties.show', compact('property'));
     }
 
+    /**
+     * نموذج التعديل — عرض صفحة تعديل بيانات العقار
+     */
     public function edit(Property $property): View
     {
         return view('properties.edit', compact('property'));
     }
 
+    /**
+     * تحديث العقار — تعديل بيانات العقار وإدارة الصور المحذوفة والجديدة
+     */
     public function update(UpdatePropertyRequest $request, Property $property): RedirectResponse
     {
         $validated = $request->validated();
@@ -189,6 +207,9 @@ class WebPropertyController extends Controller
             ->with('success', __('Property updated successfully'));
     }
 
+    /**
+     * معالجة الصورة — تغيير حجم الصورة وتحويلها إلى WebP وحفظها
+     */
     private function processAndStoreImage($image): string
     {
         $img = \Intervention\Image\ImageManager::gd()->read($image);
@@ -202,6 +223,9 @@ class WebPropertyController extends Controller
         return 'storage/' . $path;
     }
 
+    /**
+     * حذف العقار — حذف عقار (فقط المالك أو المشرف)
+     */
     public function destroy(Request $request, Property $property): RedirectResponse
     {
         $user = $request->user();

@@ -11,9 +11,7 @@ use Illuminate\Validation\Rule;
 class StorePropertyRequest extends FormRequest
 {
     /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
+     * التفويض — السماح للجميع بإضافة عقار (يمكن للمستخدمين فقط عبر middleware)
      */
     public function authorize(): bool
     {
@@ -21,9 +19,7 @@ class StorePropertyRequest extends FormRequest
     }
 
     /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, mixed>
+     * قواعد التحقق — قواعد التحقق من صحة بيانات العقار الجديد
      */
     public function rules(): array
     {
@@ -49,9 +45,7 @@ class StorePropertyRequest extends FormRequest
     }
 
     /**
-     * Get the custom validation messages.
-     *
-     * @return array<string, string>
+     * الرسائل — رسائل الخطأ المخصصة لقواعد التحقق
      */
     public function messages(): array
     {

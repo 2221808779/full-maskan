@@ -11,9 +11,7 @@ use Illuminate\Validation\Rule;
 class UpdatePropertyRequest extends FormRequest
 {
     /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
+     * التفويض — فقط مالك العقار يمكنه تعديله
      */
     public function authorize(): bool
     {
@@ -22,9 +20,7 @@ class UpdatePropertyRequest extends FormRequest
     }
 
     /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, mixed>
+     * قواعد التحقق — قواعد التحقق من صحة بيانات تحديث العقار
      */
     public function rules(): array
     {

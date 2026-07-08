@@ -14,14 +14,7 @@ use Illuminate\Http\Request;
 class ReviewController extends Controller
 {
     /**
-     * List reviews with optional filters (by property, technician, or the authenticated user).
-     *
-     * Admins see all reviews.
-     *
-     * GET /api/reviews
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * قائمة التقييمات — عرض التقييمات مع فلترة حسب العقار أو الفني أو المستخدم
      */
     public function index(Request $request): JsonResponse
     {
@@ -48,12 +41,7 @@ class ReviewController extends Controller
     }
 
     /**
-     * Get details of a single review.
-     *
-     * GET /api/reviews/{review}
-     *
-     * @param Review $review
-     * @return JsonResponse
+     * عرض تقييم — تفاصيل تقييم محدد
      */
     public function show(Review $review): JsonResponse
     {
@@ -63,12 +51,7 @@ class ReviewController extends Controller
     }
 
     /**
-     * Create a new review for a property, technician, or owner.
-     *
-     * POST /api/reviews
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * إنشاء تقييم — تقديم تقييم لعقار أو فني أو مالك
      */
     public function store(Request $request): JsonResponse
     {
@@ -137,13 +120,7 @@ class ReviewController extends Controller
     }
 
     /**
-     * Update a review. Only the review author can update.
-     *
-     * PUT /api/reviews/{review}
-     *
-     * @param Request $request
-     * @param Review $review
-     * @return JsonResponse
+     * تحديث تقييم — تعديل تقييم (فقط الكاتب يمكنه التحديث)
      */
     public function update(Request $request, Review $review): JsonResponse
     {
@@ -173,13 +150,7 @@ class ReviewController extends Controller
     }
 
     /**
-     * Delete a review. Only the review author or an admin can delete.
-     *
-     * DELETE /api/reviews/{review}
-     *
-     * @param Request $request
-     * @param Review $review
-     * @return JsonResponse
+     * حذف تقييم — حذف تقييم (فقط الكاتب أو المشرف يمكنه الحذف)
      */
     public function destroy(Request $request, Review $review): JsonResponse
     {
@@ -196,12 +167,7 @@ class ReviewController extends Controller
     }
 
     /**
-     * List all reviews for a specific property.
-     *
-     * GET /api/properties/{property}/reviews
-     *
-     * @param Property $property
-     * @return JsonResponse
+     * تقييمات العقار — عرض جميع تقييمات عقار محدد
      */
     public function propertyReviews(Property $property): JsonResponse
     {
@@ -214,10 +180,7 @@ class ReviewController extends Controller
     }
 
     /**
-     * Recalculate and update the average rating and review count for a property.
-     *
-     * @param int $propertyId
-     * @return void
+     * تحديث التقييم — إعادة حساب متوسط التقييمات وعددها لعقار
      */
     private function updatePropertyRating(int $propertyId): void
     {

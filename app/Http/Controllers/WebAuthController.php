@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Log;
 class WebAuthController extends Controller
 {
     /**
-     * Redirect the authenticated user to their role-based dashboard.
-     *
-     * @return \Illuminate\Http\RedirectResponse
+     * تحويل حسب الدور — إعادة توجيه المستخدم إلى لوحة التحكم الخاصة بدوره
      */
     protected function redirectByRole()
     {
@@ -36,10 +34,7 @@ class WebAuthController extends Controller
     }
 
     /**
-     * Show the login form.
-     * GET /login
-     *
-     * @return \Illuminate\View\View|\Illuminate\Http\RedirectResponse
+     * عرض تسجيل الدخول — صفحة إدخال بيانات تسجيل الدخول
      */
     public function showLogin()
     {
@@ -51,11 +46,7 @@ class WebAuthController extends Controller
     }
 
     /**
-     * Handle an authentication attempt.
-     * POST /login
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * معالجة تسجيل الدخول — التحقق من بيانات الدخول وتوجيه المستخدم
      */
     public function login(Request $request): RedirectResponse
     {
@@ -123,10 +114,7 @@ class WebAuthController extends Controller
     }
 
     /**
-     * Show the registration form.
-     * GET /register
-     *
-     * @return \Illuminate\View\View|\Illuminate\Http\RedirectResponse
+     * عرض التسجيل — صفحة إنشاء حساب جديد
      */
     public function showRegister()
     {
@@ -138,11 +126,7 @@ class WebAuthController extends Controller
     }
 
     /**
-     * Handle a registration request.
-     * POST /register
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\JsonResponse
+     * معالجة التسجيل — إنشاء حساب جديد وتوجيه المستخدم
      */
     public function register(Request $request)
     {
@@ -178,11 +162,7 @@ class WebAuthController extends Controller
     }
 
     /**
-     * Log the user out and invalidate the session.
-     * POST /logout
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * تسجيل الخروج — إنهاء الجلسة والعودة لصفحة الدخول
      */
     public function logout(Request $request): RedirectResponse
     {
@@ -194,10 +174,7 @@ class WebAuthController extends Controller
     }
 
     /**
-     * Show the forgot password form.
-     * GET /forgot-password
-     *
-     * @return \Illuminate\View\View|\Illuminate\Http\RedirectResponse
+     * عرض نسيت كلمة المرور — صفحة إدخال رقم الهاتف لإعادة التعيين
      */
     public function showForgotForm()
     {
@@ -208,11 +185,7 @@ class WebAuthController extends Controller
     }
 
     /**
-     * Send an OTP for password reset to the user's phone.
-     * POST /forgot-password
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * إرسال OTP لإعادة تعيين كلمة المرور عبر واتساب
      */
     public function sendResetOtp(Request $request): RedirectResponse
     {
@@ -240,11 +213,7 @@ class WebAuthController extends Controller
     }
 
     /**
-     * Show the password reset form with the given phone number.
-     * GET /reset-password
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View|\Illuminate\Http\RedirectResponse
+     * عرض إعادة تعيين كلمة المرور — صفحة إدخال OTP وكلمة المرور الجديدة
      */
     public function showResetForm(Request $request)
     {
@@ -261,11 +230,7 @@ class WebAuthController extends Controller
     }
 
     /**
-     * Reset the user's password after OTP verification.
-     * POST /reset-password
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * إعادة تعيين كلمة المرور — التحقق من OTP وتحديث كلمة المرور
      */
     public function resetPassword(Request $request): RedirectResponse
     {

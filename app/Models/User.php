@@ -37,9 +37,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * تحويل الأنواع — تحويل الحقول إلى أنواعها المناسبة عند القراءة
      */
     protected function casts(): array
     {
@@ -53,9 +51,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the properties owned by the user.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * العقارات — جميع العقارات التي يملكها المستخدم
      */
     public function properties()
     {
@@ -63,9 +59,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the bookings made by the user.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * الحجوزات — جميع حجوزات المستخدم
      */
     public function bookings()
     {
@@ -73,9 +67,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the maintenance requests assigned to the user as a technician.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * طلبات الصيانة — طلبات الصيانة المسندة لهذا الفني
      */
     public function maintenanceRequests()
     {
@@ -83,9 +75,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the reviews written by the user.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * التقييمات — جميع التقييمات التي كتبها المستخدم
      */
     public function reviews()
     {
@@ -93,9 +83,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the user's favorite properties.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * المفضلة — العقارات التي أضافها المستخدم إلى مفضلته
      */
     public function favorites()
     {
@@ -103,9 +91,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the notifications for the user.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * الإشعارات — جميع الإشعارات المرسلة للمستخدم
      */
     public function notifications()
     {
@@ -113,9 +99,7 @@ class User extends Authenticatable
     }
 
     /**
-     * Get the technician profile associated with the user.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * الملف الفني — الملف الشخصي للفني المرتبط بهذا المستخدم
      */
     public function technicianProfile()
     {

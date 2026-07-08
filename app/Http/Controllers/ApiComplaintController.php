@@ -13,12 +13,7 @@ use Illuminate\Http\Request;
 class ApiComplaintController extends Controller
 {
     /**
-     * List complaints. Admins see all complaints; users see only their own.
-     *
-     * GET /api/complaints
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * قائمة الشكاوى — المشرف يرى الكل، المستخدم يرى شكاواه فقط
      */
     public function index(Request $request): JsonResponse
     {
@@ -43,12 +38,7 @@ class ApiComplaintController extends Controller
     }
 
     /**
-     * Get details of a single complaint.
-     *
-     * GET /api/complaints/{complaint}
-     *
-     * @param Message $complaint
-     * @return JsonResponse
+     * عرض شكوى — تفاصيل شكوى محددة عبر API
      */
     public function show(Message $complaint): JsonResponse
     {
@@ -62,12 +52,7 @@ class ApiComplaintController extends Controller
     }
 
     /**
-     * Submit a new complaint. The complaint is sent to the admin.
-     *
-     * POST /api/complaints
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * إرسال شكوى — تقديم شكوى جديدة إلى المشرف عبر API
      */
     public function store(Request $request): JsonResponse
     {

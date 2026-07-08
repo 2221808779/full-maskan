@@ -20,9 +20,7 @@ class Notification extends Model
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * تحويل الأنواع — تحويل الحقول إلى أنواعها المناسبة عند القراءة
      */
     protected function casts(): array
     {
@@ -32,9 +30,7 @@ class Notification extends Model
     }
 
     /**
-     * Boot the model and register event listeners.
-     *
-     * @return void
+     * بوت النموذج — تسجيل مستمعي الأحداث (بث الإشعار عند الإنشاء)
      */
     protected static function booted(): void
     {
@@ -44,9 +40,7 @@ class Notification extends Model
     }
 
     /**
-     * Get the user who owns the notification.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * المستخدم — المستخدم المستهدف بهذا الإشعار
      */
     public function user()
     {
@@ -54,10 +48,7 @@ class Notification extends Model
     }
 
     /**
-     * Get the translated title attribute.
-     *
-     * @param  string|null  $value
-     * @return string|null
+     * عنوان مترجم — ترجمة عنوان الإشعار تلقائياً حسب لغة المستخدم
      */
     public function getTitleAttribute(?string $value): ?string
     {
@@ -69,10 +60,7 @@ class Notification extends Model
     }
 
     /**
-     * Get the translated content attribute.
-     *
-     * @param  string|null  $value
-     * @return string|null
+     * محتوى مترجم — ترجمة محتوى الإشعار تلقائياً حسب لغة المستخدم
      */
     public function getContentAttribute(?string $value): ?string
     {
@@ -81,11 +69,7 @@ class Notification extends Model
     }
 
     /**
-     * Store the original English text so __() can translate it on read.
-     * We keep the English text in DB to allow dynamic per-user-locale translation.
-     *
-     * @param  string|null  $value
-     * @return void
+     * تخزين العنوان — يُخزن النص الإنجليزي الأصلي ليُترجم عند القراءة حسب لغة كل مستخدم
      */
     public function setTitleAttribute(?string $value): void
     {
@@ -94,10 +78,7 @@ class Notification extends Model
     }
 
     /**
-     * Set the content attribute.
-     *
-     * @param  string|null  $value
-     * @return void
+     * تخزين المحتوى — يُخزن نص المحتوى الأصلي ليُترجم عند القراءة
      */
     public function setContentAttribute(?string $value): void
     {

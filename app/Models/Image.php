@@ -33,9 +33,7 @@ class Image extends Model
     }
 
     /**
-     * Get the property that owns the image.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * العقار — العقار المرتبط بهذه الصورة
      */
     public function property()
     {

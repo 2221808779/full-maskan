@@ -21,9 +21,7 @@ class MaintenancePrediction extends Model
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * تحويل الأنواع — تحويل الحقول إلى أنواعها المناسبة عند القراءة
      */
     protected function casts(): array
     {
@@ -35,9 +33,7 @@ class MaintenancePrediction extends Model
     }
 
     /**
-     * Get the property associated with the prediction.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * العقار — العقار المرتبط بهذا التنبؤ
      */
     public function property()
     {

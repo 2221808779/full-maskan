@@ -13,11 +13,7 @@ use Illuminate\View\View;
 class WebNotificationController extends Controller
 {
     /**
-     * Display a paginated list of notifications for the authenticated user.
-     * GET /notifications
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
+     * قائمة الإشعارات — عرض إشعارات المستخدم المسجل
      */
     public function index(Request $request): View
     {
@@ -29,12 +25,7 @@ class WebNotificationController extends Controller
     }
 
     /**
-     * Mark a single notification as read.
-     * POST /notifications/{notification}/read
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Notification  $notification
-     * @return \Illuminate\Http\RedirectResponse
+     * تحديد كمقروء — تعيين إشعار واحد كمقروء
      */
     public function markAsRead(Request $request, Notification $notification): RedirectResponse
     {
@@ -48,11 +39,7 @@ class WebNotificationController extends Controller
     }
 
     /**
-     * Mark all unread notifications as read for the authenticated user.
-     * POST /notifications/read-all
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\RedirectResponse
+     * تحديد الكل مقروء — تعيين جميع الإشعارات غير المقروءة كمقروءة
      */
     public function markAllAsRead(Request $request): RedirectResponse
     {
@@ -64,12 +51,7 @@ class WebNotificationController extends Controller
     }
 
     /**
-     * Delete a single notification.
-     * DELETE /notifications/{notification}
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Notification  $notification
-     * @return \Illuminate\Http\RedirectResponse
+     * حذف إشعار — حذف إشعار واحد (فقط صاحب الإشعار)
      */
     public function destroy(Request $request, Notification $notification): RedirectResponse
     {

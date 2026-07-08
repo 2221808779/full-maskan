@@ -36,7 +36,6 @@
                 <th>{{ __('Tenant') }}</th>
                 <th>{{ __('Owner') }}</th>
                 <th>{{ __('Property') }}</th>
-                <th>{{ __('Amount') }}</th>
                 <th>{{ __('Status') }}</th>
                 <th>{{ __('Date') }}</th>
             </tr>
@@ -52,13 +51,12 @@
                         {{ $booking->property->title ?? '—' }}
                     </a>
                 </td>
-                <td class="fw-bold" style="color: var(--gold);">{{ number_format($booking->total_price, 2) }} {{ __('LYD') }}</td>
                 <td><span class="badge badge-{{ $booking->status }}">{{ __($booking->status) }}</span></td>
                 <td>{{ $booking->created_at->format('Y-m-d') }}</td>
             </tr>
             @empty
             <tr>
-                <td colspan="7" class="text-center text-muted py-5">
+                <td colspan="6" class="text-center text-muted py-5">
                     <i class="fas fa-calendar-times fa-3x mb-3 d-block"></i>
                     {{ __('No bookings to show') }}
                 </td>

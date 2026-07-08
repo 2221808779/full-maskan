@@ -16,11 +16,7 @@ use Illuminate\View\View;
 class WebBookingController extends Controller
 {
     /**
-     * Display a paginated list of bookings for the authenticated user.
-     * GET /bookings
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\View\View
+     * قائمة الحجوزات — عرض حجوزات المستخدم مع فلترة حسب الحالة
      */
     public function index(Request $request): View
     {
@@ -42,12 +38,7 @@ class WebBookingController extends Controller
     }
 
     /**
-     * Display the details of a specific booking.
-     * GET /bookings/{booking}
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Booking  $booking
-     * @return \Illuminate\View\View
+     * عرض الحجز — تفاصيل حجز محدد مع التقييم
      */
     public function show(Request $request, Booking $booking): View
     {
@@ -66,11 +57,7 @@ class WebBookingController extends Controller
     }
 
     /**
-     * Confirm a pending booking (owner only).
-     * POST /bookings/{booking}/confirm
-     *
-     * @param  \App\Models\Booking  $booking
-     * @return \Illuminate\Http\RedirectResponse
+     * تأكيد الحجز — تأكيد حجز معلق (فقط المالك)
      */
     public function confirm(Booking $booking): RedirectResponse
     {
@@ -91,11 +78,7 @@ class WebBookingController extends Controller
     }
 
     /**
-     * Start the stay for a confirmed booking (owner only).
-     * POST /bookings/{booking}/checkin
-     *
-     * @param  \App\Models\Booking  $booking
-     * @return \Illuminate\Http\RedirectResponse
+     * بدء الإقامة — بدء فترة الإقامة لحجز مؤكد (فقط المالك)
      */
     public function checkin(Booking $booking): RedirectResponse
     {
@@ -123,11 +106,7 @@ class WebBookingController extends Controller
     }
 
     /**
-     * Complete a booking and release the property (owner only).
-     * POST /bookings/{booking}/complete
-     *
-     * @param  \App\Models\Booking  $booking
-     * @return \Illuminate\Http\RedirectResponse
+     * إكمال الحجز — إنهاء الحجز وتحرير العقار (فقط المالك)
      */
     public function complete(Booking $booking): RedirectResponse
     {
@@ -152,12 +131,7 @@ class WebBookingController extends Controller
     }
 
     /**
-     * Cancel a booking (tenant or owner).
-     * POST /bookings/{booking}/cancel
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Booking  $booking
-     * @return \Illuminate\Http\RedirectResponse
+     * إلغاء الحجز — إلغاء حجز (المستأجر أو المالك)
      */
     public function cancel(Request $request, Booking $booking): RedirectResponse
     {
@@ -190,9 +164,7 @@ class WebBookingController extends Controller
     }
 
     /**
-     * Store or update a review for the booked property (tenant only).
-     * يستخدم updateOrCreate لربط تقييم واحد لكل مستخدم لكل عقار
-     * POST /bookings/{booking}/review
+     * تقييم الحجز — إنشاء أو تحديث تقييم للعقار (مستأجر فقط)
      */
     public function storeReview(Request $request, Booking $booking): RedirectResponse
     {

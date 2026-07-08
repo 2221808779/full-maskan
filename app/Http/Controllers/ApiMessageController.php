@@ -14,12 +14,7 @@ use Illuminate\Support\Facades\DB;
 class ApiMessageController extends Controller
 {
     /**
-     * List the authenticated user's conversations (unique chat partners with last message).
-     *
-     * GET /api/messages/conversations
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * قائمة المحادثات — عرض المحادثات مع آخر رسالة وعدد غير المقروء
      */
     public function conversations(Request $request): JsonResponse
     {
@@ -72,13 +67,7 @@ class ApiMessageController extends Controller
     }
 
     /**
-     * Get paginated messages between the authenticated user and another user.
-     *
-     * GET /api/messages/{user}
-     *
-     * @param Request $request
-     * @param User $user
-     * @return JsonResponse
+     * عرض الرسائل — عرض الرسائل المتبادلة مع مستخدم محدد
      */
     public function messages(Request $request, User $user): JsonResponse
     {
@@ -110,12 +99,7 @@ class ApiMessageController extends Controller
     }
 
     /**
-     * Send a new message to another user.
-     *
-     * POST /api/messages
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * إرسال رسالة — إرسال رسالة جديدة لمستخدم آخر عبر API
      */
     public function send(Request $request): JsonResponse
     {
@@ -140,13 +124,7 @@ class ApiMessageController extends Controller
     }
 
     /**
-     * Edit a message. Only the sender can edit.
-     *
-     * PUT /api/messages/{message}
-     *
-     * @param Request $request
-     * @param Message $message
-     * @return JsonResponse
+     * تعديل رسالة — تعديل رسالة مرسلة (فقط المرسل)
      */
     public function edit(Request $request, Message $message): JsonResponse
     {
@@ -169,13 +147,7 @@ class ApiMessageController extends Controller
     }
 
     /**
-     * Soft-delete a message for the authenticated user (marks as deleted_for).
-     *
-     * DELETE /api/messages/{message}
-     *
-     * @param Request $request
-     * @param Message $message
-     * @return JsonResponse
+     * حذف رسالة — حذف رسالة للمستخدم (حذف ناعم)
      */
     public function destroy(Request $request, Message $message): JsonResponse
     {
@@ -195,13 +167,7 @@ class ApiMessageController extends Controller
     }
 
     /**
-     * Soft-delete an entire conversation (all messages with a user) for the authenticated user.
-     *
-     * DELETE /api/messages/conversation/{user}
-     *
-     * @param Request $request
-     * @param User $user
-     * @return JsonResponse
+     * حذف المحادثة — حذف جميع الرسائل مع مستخدم محدد
      */
     public function deleteConversation(Request $request, User $user): JsonResponse
     {
@@ -230,13 +196,7 @@ class ApiMessageController extends Controller
     }
 
     /**
-     * Mark all messages from a specific user as read.
-     *
-     * POST /api/messages/{user}/read
-     *
-     * @param Request $request
-     * @param User $user
-     * @return JsonResponse
+     * تحديد كمقروء — تعيين جميع رسائل المستخدم كمقروءة
      */
     public function markAsRead(Request $request, User $user): JsonResponse
     {
@@ -250,11 +210,7 @@ class ApiMessageController extends Controller
     }
 
     /**
-     * Format a message for JSON response.
-     *
-     * @param Message $message
-     * @param int $currentUserId
-     * @return array
+     * تنسيق الرسالة — تحويل الرسالة إلى مصفوفة JSON للرد
      */
     private function formatMessage(Message $message, int $currentUserId): array
     {

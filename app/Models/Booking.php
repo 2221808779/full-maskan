@@ -26,9 +26,7 @@ class Booking extends Model
     ];
 
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
+     * تحويل الأنواع — تحويل الحقول إلى أنواعها المناسبة عند القراءة
      */
     protected function casts(): array
     {
@@ -42,9 +40,7 @@ class Booking extends Model
     }
 
     /**
-     * Get the user who made the booking.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * المستخدم — المستأجر الذي قام بالحجز
      */
     public function user()
     {
@@ -52,9 +48,7 @@ class Booking extends Model
     }
 
     /**
-     * Get the property being booked.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * العقار — العقار المرتبط بهذا الحجز
      */
     public function property()
     {
@@ -62,9 +56,7 @@ class Booking extends Model
     }
 
     /**
-     * Get the payment associated with the booking.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * الدفع — عملية الدفع المرتبطة بهذا الحجز
      */
     public function payment()
     {

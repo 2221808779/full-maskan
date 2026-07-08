@@ -15,9 +15,7 @@ class Favorite extends Model
     ];
 
     /**
-     * Get the user who favorited the property.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * المستخدم — المستخدم الذي أضاف العقار للمفضلة
      */
     public function user()
     {
@@ -25,9 +23,7 @@ class Favorite extends Model
     }
 
     /**
-     * Get the favorited property.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * العقار — العقار المضاف للمفضلة
      */
     public function property()
     {

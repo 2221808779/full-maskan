@@ -14,12 +14,7 @@ use Illuminate\Support\Facades\DB;
 class PaymentController extends Controller
 {
     /**
-     * List the authenticated user's payments.
-     *
-     * GET /api/payments
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * قائمة المدفوعات — عرض مدفوعات المستخدم المسجل
      */
     public function index(Request $request): JsonResponse
     {
@@ -32,12 +27,7 @@ class PaymentController extends Controller
     }
 
     /**
-     * Create a new payment record.
-     *
-     * POST /api/payments
-     *
-     * @param Request $request
-     * @return JsonResponse
+     * إنشاء دفعة — تسجيل عملية دفع جديدة
      */
     public function store(Request $request): JsonResponse
     {
@@ -70,13 +60,7 @@ class PaymentController extends Controller
     }
 
     /**
-     * Get details of a payment. Only the payment owner can view.
-     *
-     * GET /api/payments/{payment}
-     *
-     * @param Request $request
-     * @param Payment $payment
-     * @return JsonResponse
+     * عرض دفعة — تفاصيل عملية دفع محددة (فقط صاحب الدفعة)
      */
     public function show(Request $request, Payment $payment): JsonResponse
     {
@@ -90,13 +74,7 @@ class PaymentController extends Controller
     }
 
     /**
-     * Mark a payment as completed.
-     *
-     * POST /api/payments/{payment}/complete
-     *
-     * @param Request $request
-     * @param Payment $payment
-     * @return JsonResponse
+     * إكمال الدفع — تعيين حالة الدفع إلى مكتمل
      */
     public function complete(Request $request, Payment $payment): JsonResponse
     {
