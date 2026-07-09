@@ -22,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final _passwordController = TextEditingController();
   bool _obscurePassword = true;
 
-  /// Disposes the text editing controllers.
+  /// يتخلص من وحدات التحكم في تحرير النص.
   @override
   void dispose() {
     _phoneController.dispose();
@@ -30,8 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
-  /// Attempts to log the user in via [AuthProvider] and navigates to the
-  /// appropriate home screen on success.
+  /// يحاول تسجيل دخول المستخدم عبر [AuthProvider] وينتقل إلى الشاشة الرئيسية المناسبة عند النجاح.
   Future<void> _login() async {
     final phone = _phoneController.text.trim();
     if (!RegExp(r'^09[12348]\d{7}$').hasMatch(phone)) {
@@ -68,8 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
-  /// Builds the login form with phone/password fields, login button,
-  /// and links to registration and password recovery.
+  /// يبني نموذج تسجيل الدخول مع حقول الهاتف/كلمة المرور، زر الدخول، وروابط التسجيل واستعادة كلمة المرور.
   @override
   Widget build(BuildContext context) {
     final loc = AppLocalizations.of(context);
@@ -267,7 +265,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  /// Builds a styled text input field with an icon and optional password visibility toggle.
+  /// يبني حقل إدخال نص منسق مع أيقونة وزر إظهار/إخفاء كلمة المرور اختيارياً.
   Widget _buildInput({
     required TextEditingController controller,
     required String hint,

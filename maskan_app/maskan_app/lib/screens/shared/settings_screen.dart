@@ -169,7 +169,7 @@ class SettingsScreen extends StatelessWidget {
   }
 
 
-  /// Builds a section header label with styling.
+  /// يُنشئ تسمية رأس قسم مع تنسيق.
   Widget _sectionHeader(String title, {bool isDark = true}) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(24, 24, 24, 8),
@@ -181,7 +181,7 @@ class SettingsScreen extends StatelessWidget {
     );
   }
 
-  /// Builds a menu list tile with icon, title, optional subtitle, and trailing chevron.
+  /// يُنشئ عنصر قائمة بأيقونة وعنوان ونص فرعي اختياري وسهم توجيه.
   Widget _menuTile(bool isDark, IconData icon, String title, {String? subtitle, VoidCallback? onTap}) {
     return ListTile(
       leading: Icon(icon, size: 18, color: isDark ? AppColors.darkTextSecondary : AppColors.lightTextSecondary),

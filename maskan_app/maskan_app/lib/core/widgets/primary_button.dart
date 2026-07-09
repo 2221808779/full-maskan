@@ -3,28 +3,28 @@ import '../../config/colors.dart';
 
 /// زر إجراء رئيسي منمّق مع حالة تحميل وأيقونة اختيارية وألوان وأبعاد قابلة للتخصيص
 class PrimaryButton extends StatelessWidget {
-  /// The button label text.
+  /// نص تسمية الزر.
   final String label;
 
-  /// Called when the button is pressed (disabled during loading).
+  /// يُستدعى عند ضغط الزر (معطل أثناء التحميل).
   final VoidCallback? onPressed;
 
-  /// If true, shows a circular progress indicator instead of the label.
+  /// إذا كان true، يعرض مؤشر تقدم بدلاً من النص.
   final bool isLoading;
 
-  /// Background color (defaults to [MaskanColors.kBlue]).
+  /// لون الخلفية (الافتراضي [MaskanColors.kBlue]).
   final Color? backgroundColor;
 
-  /// Foreground (text/icon) color.
+  /// لون المقدمة (النص/الأيقونة).
   final Color? foregroundColor;
 
-  /// Button height (default 52).
+  /// ارتفاع الزر (الافتراضي 52).
   final double height;
 
-  /// Button width (defaults to full width).
+  /// عرض الزر (الافتراضي العرض الكامل).
   final double? width;
 
-  /// Optional icon shown alongside the label.
+  /// أيقونة اختيارية تظهر بجانب النص.
   final IconData? icon;
 
   const PrimaryButton({

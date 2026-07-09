@@ -35,10 +35,10 @@ class _PaymentScreenState extends State<PaymentScreen> {
   /// طريقة الدفع المختارة: 'plutu' أو 'cash'
   String _selectedMethod = 'plutu';
 
-  /// Whether a payment request is currently being processed.
+  /// ما إذا كان طلب الدفع قيد المعالجة حالياً.
   bool _isProcessing = false;
 
-  /// The booking associated with this payment.
+  /// الحجز المرتبط بهذه الدفعة.
   Booking? _booking;
 
   @override
@@ -47,7 +47,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
     _loadBooking();
   }
 
-  /// Loads the booking details from [BookingProvider] matching [widget.bookingId].
+  /// يحمّل تفاصيل الحجز من [BookingProvider] المطابق لـ [widget.bookingId].
   void _loadBooking() {
     final provider = context.read<BookingProvider>();
     final bookings = provider.bookings;
@@ -60,8 +60,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
     }
   }
 
-  /// Initiates the payment flow: launches Plutu gateway for online payment
-  /// or confirms booking with cash-on-delivery.
+  /// يبدأ عملية الدفع: يفتح بوابة Plutu للدفع الإلكتروني
+  /// أو يؤكد الحجز بالدفع عند الاستلام.
   Future<void> _processPayment() async {
     setState(() => _isProcessing = true);
     try {
@@ -209,7 +209,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
     );
   }
 
-  /// Builds a single info row with an icon, label, and value for booking details.
+  /// يبني صف معلومات واحد مع أيقونة وتسمية وقيمة لتفاصيل الحجز.
   Widget _buildInfoRow(IconData icon, String label, String value, {Color textColor = MaskanColors.kTextSecondary}) {
     return Row(
       children: [
@@ -221,8 +221,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
     );
   }
 
-  /// Builds a selectable payment-method card (Plutu or Cash) with icon, title,
-  /// subtitle, and a radio-style indicator.
+  /// يبني بطاقة اختيار طريقة دفع (Plutu أو نقدي) مع أيقونة وعنوان
+  /// ونص فرعي ومؤشر بنمط راديو.
   Widget _buildPaymentMethod({
     required IconData icon,
     required String title,

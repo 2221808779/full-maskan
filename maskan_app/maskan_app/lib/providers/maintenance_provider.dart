@@ -14,16 +14,16 @@ class MaintenanceProvider extends ChangeNotifier {
   bool _isLoading = false;
   String? _error;
 
-  /// The list of maintenance requests for the current user.
+  /// قائمة طلبات الصيانة للمستخدم الحالي.
   List<MaintenanceRequest> get requests => _requests;
-  /// The list of pending (unclaimed) maintenance requests available for technicians.
+  /// قائمة طلبات الصيانة المعلقة (غير المطالب بها) المتاحة للفنيين.
   List<MaintenanceRequest> get pendingRequests => _pendingRequests;
-  /// Whether a network request is in progress.
+  /// ما إذا كان طلب الشبكة قيد التنفيذ.
   bool get isLoading => _isLoading;
-  /// The last error message, or null.
+  /// آخر رسالة خطأ، أو null.
   String? get error => _error;
 
-  /// Loads all maintenance requests for the current user from the API.
+  /// يحمّل جميع طلبات الصيانة للمستخدم الحالي من API.
   Future<void> loadRequests() async {
     _isLoading = true;
     _error = null;
@@ -41,7 +41,7 @@ class MaintenanceProvider extends ChangeNotifier {
     }
   }
 
-  /// Loads pending (unclaimed) maintenance requests available for technicians.
+  /// يحمّل طلبات الصيانة المعلقة (غير المطالب بها) المتاحة للفنيين.
   Future<void> loadPendingRequests() async {
     _isLoading = true;
     _error = null;
@@ -59,7 +59,7 @@ class MaintenanceProvider extends ChangeNotifier {
     }
   }
 
-  /// Creates a new maintenance request for a [propertyId] with [type], [description], and optional [photos].
+  /// ينشئ طلب صيانة جديد لعقار [propertyId] بـ [type] و [description] و [photos] اختيارياً.
   Future<bool> createRequest({
     required int propertyId,
     required String type,
@@ -87,7 +87,7 @@ class MaintenanceProvider extends ChangeNotifier {
     }
   }
 
-  /// Rejects a pending maintenance request with an optional [reason].
+  /// يرفض طلب صيانة معلق مع إمكانية إضافة سبب [reason].
   Future<bool> rejectRequest(int id, {String? reason}) async {
     try {
       final data = <String, dynamic>{};
@@ -100,7 +100,7 @@ class MaintenanceProvider extends ChangeNotifier {
     }
   }
 
-  /// Claims a pending maintenance request by its [id] (for technicians).
+  /// يطالب بطلب صيانة معلق بواسطة [id] (للفنيين).
   Future<bool> claimRequest(int id) async {
     try {
       await _api.put(ApiEndpoints.claimMaintenance(id));
@@ -112,7 +112,7 @@ class MaintenanceProvider extends ChangeNotifier {
     }
   }
 
-  /// Updates the status of a maintenance request identified by [id].
+  /// يحدّث حالة طلب صيانة محدّد بـ [id].
   Future<bool> updateStatus(int id, String status) async {
     try {
       await _api.put(ApiEndpoints.updateMaintenanceStatus(id), data: {
@@ -125,7 +125,7 @@ class MaintenanceProvider extends ChangeNotifier {
     }
   }
 
-  /// Closes a maintenance request with optional [notes] and [photos].
+  /// يُغلِق طلب صيانة مع إمكانية إضافة [notes] و [photos].
   Future<bool> closeRequest(int id, {String? notes, List<String>? photos}) async {
     try {
       final data = <String, dynamic>{};

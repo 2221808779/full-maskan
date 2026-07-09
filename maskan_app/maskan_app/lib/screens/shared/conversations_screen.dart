@@ -27,7 +27,7 @@ class _ConversationsScreenState extends State<ConversationsScreen> {
     });
   }
 
-  /// Shows a confirmation dialog and deletes the conversation if confirmed.
+  /// يعرض مربع حوار تأكيد ويحذف المحادثة إذا تم التأكيد.
   Future<void> _deleteConversation(BuildContext context, int conversationId, String otherUserName) async {
     final loc = AppLocalizations.of(context);
     final isDark = Theme.of(context).brightness == Brightness.dark;
@@ -60,7 +60,7 @@ class _ConversationsScreenState extends State<ConversationsScreen> {
     }
   }
 
-  /// Formats a date string into a human-readable relative time (Arabic).
+  /// تنسيق سلسلة تاريخ إلى وقت نسبي قابل للقراءة (بالعربية).
   String _formatTime(String? dateStr) {
     if (dateStr == null) return '';
     try {

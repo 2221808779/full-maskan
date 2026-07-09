@@ -7,6 +7,7 @@ client = TestClient(app)
 
 
 def test_health():
+    """اختبار نقطة نهاية /health للتأكد من حالة الخدمة"""
     response = client.get("/health")
     assert response.status_code == 200
     data = response.json()
@@ -17,6 +18,7 @@ def test_health():
 
 
 def test_classify_arabic_electricity():
+    """اختبار تصنيف وصف عطل كهربائي بالعربية"""
     response = client.post("/classify", json={"text": "المقبس لا يعمل في الغرفة"})
     assert response.status_code == 200
     data = response.json()
@@ -27,30 +29,34 @@ def test_classify_arabic_electricity():
 
 
 def test_classify_arabic_plumbing():
+    """اختبار تصنيف وصف عطل سباكة بالعربية"""
     response = client.post("/classify", json={"text": "تسريب مياه من الصنبور"})
     assert response.status_code == 200
     assert response.json()["category"] == "plumbing"
 
 
 def test_classify_english_ac():
-    # Arabic-only model may classify English as other
+    # النموذج المدرب على العربية قد يصنف النص الإنجليزي كـ "other"
     response = client.post("/classify", json={"text": "AC is not cooling the room"})
     assert response.status_code == 200
     assert response.json()["category"] in ("air_conditioning", "other")
 
 
 def test_classify_empty_text():
+    """اختبار رفض النص القصير جداً (أقل من 3 أحرف)"""
     response = client.post("/classify", json={"text": "ab"})
     assert response.status_code == 422
 
 
 def test_classify_returns_valid_category_id():
+    """اختبار أن معرّف الفئة المعاد يقع ضمن النطاق الصحيح 1-6"""
     response = client.post("/classify", json={"text": "الباب لا يغلق"})
     data = response.json()
     assert data["category_id"] in [1, 2, 3, 4, 5, 6]
 
 
 def test_predict_insufficient_history():
+    """اختبار رفض طلب التنبؤ بعدد غير كافٍ من سجلات الصيانة"""
     response = client.post("/predict", json={
         "property_id": 5,
         "history": [{"days_ago": 10, "category_id": 2}]

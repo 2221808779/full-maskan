@@ -24,7 +24,7 @@ class VisitorHomeScreen extends StatefulWidget {
 class _VisitorHomeScreenState extends State<VisitorHomeScreen> {
   final _searchController = TextEditingController();
 
-  /// Loads properties and notification count on initialization.
+  /// يحمّل العقارات وعدد الإشعارات عند التهيئة.
   @override
   void initState() {
     super.initState();
@@ -33,15 +33,15 @@ class _VisitorHomeScreenState extends State<VisitorHomeScreen> {
     });
   }
 
-  /// Disposes the search controller.
+  /// يتخلص من وحدة تحكم البحث.
   @override
   void dispose() {
     _searchController.dispose();
     super.dispose();
   }
 
-  /// Builds the visitor home screen with header, search bar, property lists,
-  /// and a bottom call-to-action bar.
+  /// يبني شاشة الزائر الرئيسية مع العنوان وشريط البحث وقوائم العقارات
+  /// وشريط الدعوة لاتخاذ إجراء في الأسفل.
   @override
   Widget build(BuildContext context) {
     final provider = context.watch<PropertyProvider>();
@@ -141,7 +141,7 @@ class _VisitorHomeScreenState extends State<VisitorHomeScreen> {
     );
   }
 
-  /// Builds the header with a welcome message, app logo, and notification bell.
+  /// يبني العنوان مع رسالة ترحيب وشعار التطبيق وجرس الإشعارات.
   Widget _buildHeader() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -196,7 +196,7 @@ class _VisitorHomeScreenState extends State<VisitorHomeScreen> {
     );
   }
 
-  /// Builds the search bar with a filter button inside a glass card.
+  /// يبني شريط البحث مع زر تصفية داخل بطاقة زجاجية.
   Widget _buildSearchBar() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -261,7 +261,7 @@ class _VisitorHomeScreenState extends State<VisitorHomeScreen> {
     );
   }
 
-  /// Builds a section header with an optional "View All" action.
+  /// يبني رأس قسم مع إجراء اختياري "عرض الكل".
   Widget _buildSectionHeader({
     required String title,
     bool showAll = false,
@@ -294,7 +294,7 @@ class _VisitorHomeScreenState extends State<VisitorHomeScreen> {
     );
   }
 
-  /// Builds the bottom call-to-action bar with login and create account buttons.
+  /// يبني شريط الدعوة السفلي مع أزرار تسجيل الدخول وإنشاء حساب.
   Widget _buildBottomBar() {
     return Container(
       padding: const EdgeInsets.fromLTRB(20, 16, 20, 16),

@@ -12,7 +12,7 @@ import '../../l10n/app_localizations.dart';
 
 /// شاشة تفاصيل مهمة صيانة واحدة مسندة إلى فني — عرض معلومات المهمة والمطالبة بها وتحديث الحالة وإغلاقها
 class TaskDetailScreen extends StatefulWidget {
-  /// The ID of the task to display and manage.
+  /// معرّف المهمة المراد عرضها وإدارتها.
   final int taskId;
   const TaskDetailScreen({super.key, required this.taskId});
 
@@ -31,7 +31,7 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
     super.dispose();
   }
 
-  /// Finds the task by [widget.taskId] from the provider's request lists.
+  /// يبحث عن المهمة عبر [widget.taskId] من قوائم الطلبات في المزوّد.
   MaintenanceRequest? _findTask(MaintenanceProvider provider) {
     try {
       return provider.requests.firstWhere((r) => r.id == widget.taskId);
@@ -44,7 +44,7 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
     }
   }
 
-  /// Claims the task (assigns the current technician to the request).
+  /// يطالب بالمهمة (تعيين الفني الحالي للطلب).
   Future<void> _claimTask() async {
     setState(() => _isProcessing = true);
     final success = await context.read<MaintenanceProvider>().claimRequest(widget.taskId);
@@ -59,7 +59,7 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
     }
   }
 
-  /// Updates the task status (e.g. from 'assigned' to 'in_progress').
+  /// يحدّث حالة المهمة (مثلاً من 'assigned' إلى 'in_progress').
   Future<void> _updateStatus(String status) async {
     final provider = context.read<MaintenanceProvider>();
     setState(() => _isProcessing = true);
@@ -76,7 +76,7 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
     }
   }
 
-  /// Rejects the assigned task with an optional reason.
+  /// يرفض المهمة المسندة مع سبب اختياري.
   Future<void> _rejectTask() async {
     final ctl = TextEditingController();
     final reason = await showDialog<String>(
@@ -115,7 +115,7 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
     }
   }
 
-  /// Closes the task with closure notes (requires non-empty notes).
+  /// يُغلق المهمة مع ملاحظات الإغلاق (يتطلب ملاحظات غير فارغة).
   Future<void> _closeTask() async {
     if (_notesController.text.trim().isEmpty) {
       Helpers.showSnackBar(context, AppLocalizations.of(context)!.pleaseEnterClosureNotes, isError: true);
@@ -320,7 +320,7 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
     );
   }
 
-  /// Builds a label-value row for request information display.
+  /// يبني صفاً من تسمية وقيمة لعرض معلومات الطلب.
   Widget _infoRow(String label, String value) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4),
@@ -334,7 +334,7 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
     );
   }
 
-  /// Returns a color associated with the maintenance category.
+  /// يُرجع لوناً مرتبطاً بفئة الصيانة.
   Color _typeColor(String type) {
     switch (type) {
       case 'كهرباء':
@@ -352,7 +352,7 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
     }
   }
 
-  /// Returns an icon associated with the maintenance category.
+  /// يُرجع أيقونة مرتبطة بفئة الصيانة.
   IconData _typeIcon(String type) {
     switch (type) {
       case 'كهرباء':
@@ -370,7 +370,7 @@ class _TaskDetailScreenState extends State<TaskDetailScreen> {
     }
   }
 
-  /// Returns a color representing the task status.
+  /// يُرجع لوناً يُمثّل حالة المهمة.
   Color _statusColor(String status) {
     switch (status) {
       case 'pending': return Colors.grey;

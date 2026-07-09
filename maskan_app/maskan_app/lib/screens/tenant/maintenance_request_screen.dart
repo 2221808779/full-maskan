@@ -63,11 +63,11 @@ class _MaintenanceRequestScreenState extends State<MaintenanceRequestScreen> {
     );
   }
 
-  /// Navigates to the maintenance form screen to create a new request.
+  /// ينتقل إلى شاشة نموذج الصيانة لإنشاء طلب جديد.
   void _onCreateRequest() => context.push(AppRoutes.maintenanceForm.replaceAll(':propertyId', '0'));
 
-  /// Builds a card for a single [MaintenanceRequest] showing category,
-  /// description, status badge, and assigned technician.
+  /// يبني بطاقة لطلب صيانة [MaintenanceRequest] واحد تعرض الفئة،
+  /// الوصف، شارة الحالة، والفني المسند.
   Widget _requestCard(MaintenanceRequest req) {
     return GlassCard(
       padding: const EdgeInsets.all(12),
@@ -126,7 +126,7 @@ class _MaintenanceRequestScreenState extends State<MaintenanceRequestScreen> {
     );
   }
 
-  /// Returns a color associated with the maintenance category type.
+  /// يُرجع لوناً مرتبطاً بنوع فئة الصيانة.
   Color _typeColor(String type) {
     switch (type) {
       case 'كهرباء':
@@ -144,7 +144,7 @@ class _MaintenanceRequestScreenState extends State<MaintenanceRequestScreen> {
     }
   }
 
-  /// Returns an icon associated with the maintenance category type.
+  /// يُرجع أيقونة مرتبطة بنوع فئة الصيانة.
   IconData _typeIcon(String type) {
     switch (type) {
       case 'كهرباء':
@@ -162,7 +162,7 @@ class _MaintenanceRequestScreenState extends State<MaintenanceRequestScreen> {
     }
   }
 
-  /// Returns a color representing the request status.
+  /// يُرجع لوناً يُمثّل حالة الطلب.
   Color _statusColor(String status) {
     switch (status) {
       case 'assigned': return Colors.blue;

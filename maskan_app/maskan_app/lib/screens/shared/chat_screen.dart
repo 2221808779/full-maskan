@@ -11,7 +11,7 @@ import '../../l10n/app_localizations.dart';
 /// تدعم إرسال الرسائل في الوقت الفعلي مع إشعارات القراءة والتعديل/الحذف بالضغط المطول
 /// والتمرير التلقائي إلى آخر رسالة
 class ChatScreen extends StatefulWidget {
-  /// The ID of the conversation to open.
+  /// معرف المحادثة المراد فتحها.
   final int conversationId;
   const ChatScreen({super.key, required this.conversationId});
 
@@ -43,7 +43,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
   int? _editingMessageId;
 
-  /// Sends the current text as a new message or saves an edited message.
+  /// يرسل النص الحالي كرسالة جديدة أو يحفظ رسالة معدلة.
   Future<void> _send() async {
     final text = _controller.text.trim();
     if (text.isEmpty) return;
@@ -65,7 +65,7 @@ class _ChatScreenState extends State<ChatScreen> {
     });
   }
 
-  /// Populates the text field with [msg] content for editing.
+  /// يملأ حقل النص بمحتوى [msg] للتعديل.
   void _startEdit(Message msg) {
     _editingMessageId = msg.id;
     _controller.text = msg.messageText;
@@ -73,7 +73,7 @@ class _ChatScreenState extends State<ChatScreen> {
     setState(() {});
   }
 
-  /// Shows a confirmation dialog and deletes the message if confirmed.
+  /// يعرض مربع حوار تأكيد ويحذف الرسالة إذا تم التأكيد.
   void _deleteMessage(int messageId) async {
     final loc = AppLocalizations.of(context);
     final isDark = Theme.of(context).brightness == Brightness.dark;
@@ -106,7 +106,7 @@ class _ChatScreenState extends State<ChatScreen> {
     }
   }
 
-  /// Formats a UTC date string into HH:mm display time.
+  /// تنسيق سلسلة تاريخ UTC إلى وقت عرض HH:mm.
   String _formatTime(String? createdAt) {
     if (createdAt == null) return '';
     try {
@@ -386,7 +386,7 @@ class _ChatBubble extends StatelessWidget {
     );
   }
 
-  /// Shows a bottom sheet with Edit/Delete options for own messages.
+  /// يعرض لوحة سفلية بخيارات التعديل/الحذف للرسائل الخاصة.
   void _showMenu(BuildContext context) {
     final loc = AppLocalizations.of(context);
     showModalBottomSheet(

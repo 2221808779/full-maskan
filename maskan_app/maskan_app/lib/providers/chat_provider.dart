@@ -15,16 +15,16 @@ class ChatProvider extends ChangeNotifier {
   bool _isLoading = false;
   String? _error;
 
-  /// The list of conversations for the current user.
+  /// قائمة المحادثات للمستخدم الحالي.
   List<Conversation> get conversations => _conversations;
-  /// The list of messages in the currently active conversation.
+  /// قائمة الرسائل في المحادثة النشطة حالياً.
   List<Message> get messages => _messages;
-  /// Whether a network request is in progress.
+  /// ما إذا كان طلب الشبكة قيد التنفيذ.
   bool get isLoading => _isLoading;
-  /// The last error message, or null.
+  /// آخر رسالة خطأ، أو null.
   String? get error => _error;
 
-  /// Loads the list of conversations from the API.
+  /// يحمّل قائمة المحادثات من API.
   Future<void> loadConversations() async {
     _isLoading = true;
     notifyListeners();
@@ -40,7 +40,7 @@ class ChatProvider extends ChangeNotifier {
     }
   }
 
-  /// Loads messages for the specified [conversationId].
+  /// يحمّل الرسائل لـ [conversationId] المحدد.
   Future<void> loadMessages(int conversationId) async {
     _isLoading = true;
     notifyListeners();
@@ -56,7 +56,7 @@ class ChatProvider extends ChangeNotifier {
     }
   }
 
-  /// Sends a message with [content] to the specified [conversationId].
+  /// يرسل رسالة بمحتوى [content] إلى [conversationId] المحدد.
   Future<bool> sendMessage(int conversationId, String content) async {
     try {
       final response = await _api.post(ApiEndpoints.messages, data: {
@@ -72,7 +72,7 @@ class ChatProvider extends ChangeNotifier {
     }
   }
 
-  /// Edits an existing message identified by [messageId] with new [content].
+  /// يعدّل رسالة موجودة محددة بـ [messageId] بمحتوى [content] جديد.
   Future<bool> editMessage(int messageId, String content) async {
     try {
       await _api.put(ApiEndpoints.editMessage(messageId), data: {
@@ -96,7 +96,7 @@ class ChatProvider extends ChangeNotifier {
     }
   }
 
-  /// Deletes a message by its [messageId]. If [forEveryone] is true, deletes for all participants.
+  /// يحذف رسالة بواسطة [messageId]. إذا كان [forEveryone] true، يُحذف للجميع.
   Future<bool> deleteMessage(int messageId, {bool forEveryone = false}) async {
     try {
       await _api.delete(ApiEndpoints.deleteMessage(messageId));
@@ -108,7 +108,7 @@ class ChatProvider extends ChangeNotifier {
     }
   }
 
-  /// Deletes an entire conversation and all its messages by [conversationId].
+  /// يحذف محادثة كاملة وجميع رسائلها بواسطة [conversationId].
   Future<bool> deleteConversation(int conversationId) async {
     try {
       await _api.delete(ApiEndpoints.deleteConversation(conversationId));
@@ -120,7 +120,7 @@ class ChatProvider extends ChangeNotifier {
     }
   }
 
-  /// Marks all messages from [otherUserId] as read.
+  /// يعلّم جميع الرسائل من [otherUserId] كمقروءة.
   Future<void> markAsRead(int otherUserId) async {
     try {
       await _api.post(ApiEndpoints.markAsRead(otherUserId));

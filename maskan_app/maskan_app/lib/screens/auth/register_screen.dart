@@ -19,7 +19,7 @@ class RegisterScreen extends StatefulWidget {
 }
 
 /// حالة [RegisterScreen] — إدارة نموذج التسجيل متعدد الخطوات
-/// user type selection, specialties picker, and OTP verification.
+/// اختيار نوع المستخدم، منتقي التخصصات، والتحقق عبر OTP.
 class _RegisterScreenState extends State<RegisterScreen> {
   final _formKey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
@@ -38,7 +38,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Set<int> _selectedSpecialties = {};
   bool _loadingSpecialties = false;
 
-  /// Disposes all text editing controllers.
+  /// يتخلص من جميع وحدات التحكم في تحرير النص.
   @override
   void dispose() {
     _nameController.dispose();
@@ -50,7 +50,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     super.dispose();
   }
 
-  /// Computes a password strength score from 0 (empty) to 4 (strong).
+  /// يحسب درجة قوة كلمة المرور من 0 (فارغة) إلى 4 (قوية).
   int get _passwordStrength {
     final p = _passwordController.text;
     if (p.isEmpty) return 0;
@@ -62,7 +62,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return s;
   }
 
-  /// Loads the list of available technician specialties from the API.
+  /// يحمّل قائمة التخصصات المتاحة للفنيين من API.
   Future<void> _loadSpecialties() async {
     if (_specialties.isNotEmpty) return;
     setState(() => _loadingSpecialties = true);
@@ -75,8 +75,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     });
   }
 
-  /// Validates the form and submits registration data via [AuthProvider].
-  /// On success, switches to the OTP verification step.
+  /// يتحقق من صحة النموذج ويرسل بيانات التسجيل عبر [AuthProvider]. عند النجاح، ينتقل إلى خطوة التحقق عبر OTP.
   Future<void> _register() async {
     if (!_formKey.currentState!.validate()) return;
     if (_selectedType == 'technician' && _selectedSpecialties.isEmpty) {
@@ -122,7 +121,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     }
   }
 
-  /// Verifies the OTP code entered by the user and navigates to the home screen.
+  /// يتحقق من رمز OTP الذي أدخله المستخدم وينتقل إلى الشاشة الرئيسية.
   Future<void> _verifyOtp() async {
     final auth = context.read<AuthProvider>();
     final success = await auth.verifyOtp(
@@ -143,8 +142,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     }
   }
 
-  /// Builds the registration screen with either the registration form
-  /// or the OTP verification form based on [state].
+  /// يبني شاشة التسجيل إما مع نموذج التسجيل أو نموذج التحقق عبر OTP حسب [state].
   @override
   Widget build(BuildContext context) {
     final loc = AppLocalizations.of(context);
@@ -230,8 +228,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  /// Builds the registration form with role selection, personal info fields,
-  /// password strength indicator, and terms agreement checkbox.
+  /// يبني نموذج التسجيل مع اختيار الدور، حقول المعلومات الشخصية، مؤشر قوة كلمة المرور، وخانة الموافقة على الشروط.
   Widget _buildRegisterForm(AppLocalizations loc, bool isLoading) {
     return Form(
       key: _formKey,
@@ -450,7 +447,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  /// Builds the OTP verification form shown after successful registration.
+  /// يبني نموذج التحقق عبر OTP الذي يظهر بعد التسجيل الناجح.
   Widget _buildOtpForm(AppLocalizations loc, bool isLoading) {
     return Column(
       children: [
@@ -534,7 +531,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  /// Builds a wrap of filter chips for selecting technician specialties.
+  /// يبني التفافاً من شرائط التصفية لاختيار تخصصات الفني.
   Widget _buildSpecializationsPicker() {
     if (_loadingSpecialties) {
       return const Center(child: Padding(
@@ -587,7 +584,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  /// Builds a selectable role button for tenant or technician.
+  /// يبني زر دور قابل للاختيار للمستأجر أو الفني.
   Widget _buildRoleBtn(String label, String type) {
     final selected = _selectedType == type;
     return GestureDetector(
@@ -622,7 +619,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  /// Builds a right-aligned label text for form fields.
+  /// يبني نص تسمية محاذياً لليمين لحقول النموذج.
   Widget _buildLabel(String text) {
     return Align(
       alignment: Alignment.centerRight,
@@ -633,8 +630,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  /// Builds a styled text form field with icon, optional prefix/suffix,
-  /// and validation support.
+  /// يبني حقل نص منسق مع أيقونة، بادئة/لاحقة اختيارية، ودعم التحقق من الصحة.
   Widget _buildTextField({
     required TextEditingController controller,
     required String hint,
@@ -691,7 +687,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
   }
 
-  /// Returns a color corresponding to the current password strength.
+  /// يعيد لوناً يتوافق مع قوة كلمة المرور الحالية.
   Color get _strengthColor {
     final s = _passwordStrength;
     if (s <= 1) return const Color(0xFFC0392B);

@@ -9,14 +9,14 @@ class LocaleProvider extends ChangeNotifier {
   final StorageService _storage = StorageService();
   bool _loaded = false;
 
-  /// The current locale.
+  /// اللغة الحالية.
   Locale get locale => _locale;
-  /// Whether the current locale is Arabic.
+  /// ما إذا كانت اللغة الحالية هي العربية.
   bool get isArabic => _locale.languageCode == 'ar';
-  /// Whether the locale has been loaded from storage.
+  /// ما إذا تم تحميل اللغة من التخزين.
   bool get loaded => _loaded;
 
-  /// Loads the saved locale from local storage.
+  /// يحمّل اللغة المحفوظة من التخزين المحلي.
   Future<void> loadLocale() async {
     final saved = await _storage.getLocale();
     _locale = saved == 'en' ? const Locale('en') : const Locale('ar');
@@ -24,14 +24,14 @@ class LocaleProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Sets a new [locale] and persists the choice.
+  /// يعيّن لغة جديدة [locale] ويحفظ الاختيار.
   Future<void> setLocale(Locale locale) async {
     _locale = locale;
     await _storage.saveLocale(locale.languageCode);
     notifyListeners();
   }
 
-  /// Toggles between Arabic and English.
+  /// يبدّل بين العربية والإنجليزية.
   void toggleLanguage() {
     setLocale(isArabic ? const Locale('en') : const Locale('ar'));
   }

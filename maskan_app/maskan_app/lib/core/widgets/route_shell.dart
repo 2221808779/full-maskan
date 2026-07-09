@@ -8,11 +8,11 @@ import 'maskan_curved_nav.dart';
 
 /// غلاف الشاشات بشريط تنقل سفلي مناسب لدور المستخدم — تحديد التبويب النشط حسب المسار الحالي
 class RouteShell extends StatelessWidget {
-  /// The screen content to display above the bottom navigation bar.
+  /// محتوى الشاشة المعروض فوق شريط التنقل السفلي.
   final Widget child;
   const RouteShell({super.key, required this.child});
 
-  /// Maps a route location string to a bottom-nav tab index.
+  /// يربط مسار الموقع برقم فهرس التبويب في شريط التنقل السفلي.
   int _indexForLocation(String loc) {
     if (loc.startsWith(AppRoutes.propertyList) || loc.startsWith(AppRoutes.favorites)) { return 1; }
     if (loc.startsWith(AppRoutes.bookings) || loc.startsWith(AppRoutes.bookingForm.replaceAll(':propertyId', '')) || loc.startsWith(AppRoutes.payment.replaceAll(':bookingId', '')) || loc.startsWith(AppRoutes.bookingDetail.replaceAll(':bookingId', ''))) { return 2; }

@@ -17,18 +17,17 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final _controller = PageController();
   int _current = 0;
 
-  /// Whether the currently displayed page is the last one.
+  /// ما إذا كانت الصفحة المعروضة حالياً هي الأخيرة.
   bool get isLast => _current == 2;
 
-  /// Disposes the page controller.
+  /// يتخلص من وحدة التحكم في الصفحات.
   @override
   void dispose() {
     _controller.dispose();
     super.dispose();
   }
 
-  /// Builds the onboarding screen with a gradient background, page view,
-  /// dot indicators, and navigation buttons.
+  /// يبني شاشة التعريف مع خلفية متدرجة، عرض الصفحات، مؤشرات النقاط، وأزرار التنقل.
   @override
   Widget build(BuildContext context) {
     final loc = AppLocalizations.of(context)!;
@@ -118,7 +117,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  /// Builds a single onboarding page with an image, title, and body text.
+  /// يبني صفحة تعريفية واحدة مع صورة وعنوان ونص.
   Widget _buildPage(_PageData page) {
     final screenHeight = MediaQuery.of(context).size.height;
     final isShort = screenHeight < 700;
@@ -224,8 +223,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  /// Builds the bottom action bar with "Next", "Login", or "Register" buttons
-  /// depending on the current page.
+  /// يبني شريط الإجراءات السفلي بأزرار "التالي" أو "تسجيل الدخول" أو "إنشاء حساب" حسب الصفحة الحالية.
   Widget _buildBottom(AppLocalizations loc) {
     final screenHeight = MediaQuery.of(context).size.height;
     final isShort = screenHeight < 700;
@@ -339,7 +337,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  /// Builds a row of animated page indicator dots.
+  /// يبني صفاً من نقاط مؤشر الصفحات المتحركة.
   Widget _buildDots(int count) {
     return Row(
       mainAxisSize: MainAxisSize.min,

@@ -8,10 +8,10 @@ import '../../providers/notification_provider.dart';
 /// زر أيقونة يعرض عدد الإشعارات غير المقروءة كشارة
 /// عند الضغط ينتقل إلى شاشة الإشعارات
 class NotificationBell extends StatelessWidget {
-  /// Color of the bell icon.
+  /// لون أيقونة الجرس.
   final Color iconColor;
 
-  /// Size of the bell icon.
+  /// حجم أيقونة الجرس.
   final double iconSize;
 
   const NotificationBell({

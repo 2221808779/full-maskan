@@ -9,7 +9,7 @@ import '../../l10n/app_localizations.dart';
 
 /// شاشة تقديم طلب صيانة جديد — اختيار فئة المشكلة وكتابة وصف تفصيلي وإرسال الطلب
 class MaintenanceFormScreen extends StatefulWidget {
-  /// The ID of the property for which maintenance is requested.
+  /// معرّف العقار المطلوب له الصيانة.
   final int propertyId;
   const MaintenanceFormScreen({super.key, required this.propertyId});
 
@@ -32,7 +32,7 @@ class _MaintenanceFormScreenState extends State<MaintenanceFormScreen> {
     super.dispose();
   }
 
-  /// Validates the form and submits the maintenance request to the provider.
+  /// يتحقق من صحة النموذج ويُرسل طلب الصيانة إلى المزوّد.
   Future<void> _submit() async {
     if (!_formKey.currentState!.validate()) return;
     setState(() => _isSubmitting = true);

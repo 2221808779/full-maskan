@@ -25,13 +25,13 @@ class PaymentCallbackScreen extends StatefulWidget {
 
 /// منطق حالة [PaymentCallbackScreen] — التحقق من حالة الدفع عبر API Plutu وعرض واجهة النجاح/الفشل
 class _PaymentCallbackScreenState extends State<PaymentCallbackScreen> {
-  /// Whether the payment status is still being verified.
+  /// ما إذا كانت حالة الدفع لا تزال قيد التحقق.
   bool _isChecking = true;
 
-  /// Whether the payment was confirmed successfully.
+  /// ما إذا تم تأكيد الدفع بنجاح.
   bool _isSuccess = false;
 
-  /// The booking ID extracted from the deep-link query parameters.
+  /// معرّف الحجز المستخرج من معاملات استعلام الرابط العميق.
   int? _bookingId;
 
   @override
@@ -40,8 +40,8 @@ class _PaymentCallbackScreenState extends State<PaymentCallbackScreen> {
     _handleCallback();
   }
 
-  /// Handles the deep-link callback: cancels immediately for cancel type,
-  /// otherwise extracts [bookingId] and verifies payment via Plutu check API.
+  /// يتعامل مع رد الرابط العميق: يُلغي فوراً لنوع الإلغاء،
+  /// وإلا يستخرج [bookingId] ويتحقق من الدفع عبر API فحص Plutu.
   Future<void> _handleCallback() async {
     if (widget.type == 'cancel') {
       setState(() { _isChecking = false; _isSuccess = false; });

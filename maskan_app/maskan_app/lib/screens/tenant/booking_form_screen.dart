@@ -23,19 +23,19 @@ class BookingFormScreen extends StatefulWidget {
 }
 
 /// حالة [BookingFormScreen] — إدارة اختيار التواريخ والتواريخ المحجوزة
-/// guest count, and booking submission.
+  /// عدد الضيوف، وإرسال الحجز.
 class _BookingFormScreenState extends State<BookingFormScreen> {
   DateTime? _startDate;
   DateTime? _endDate;
   int _guests = 1;
   bool _isSubmitting = false;
-  /// The month currently displayed in the calendar.
+  /// الشهر المعروض حالياً في التقويم.
   DateTime _viewMonth = DateTime(DateTime.now().year, DateTime.now().month);
-  /// List of dates that are already booked or blocked.
+  /// قائمة التواريخ المحجوزة أو الممنوعة.
   List<DateTime> _blockedDates = [];
   bool _loadingBlocked = true;
 
-  /// Loads property details and blocked dates on initialization.
+  /// يحمّل تفاصيل العقار والتواريخ الممنوعة عند التهيئة.
   @override
   void initState() {
     super.initState();
@@ -46,7 +46,7 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
     });
   }
 
-  /// Fetches blocked/blackout dates for the property from the API.
+  /// يجلب التواريخ الممنوعة للعقار من API.
   Future<void> _loadBlockedDates() async {
     setState(() => _loadingBlocked = true);
     try {
@@ -60,20 +60,20 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
     }
   }
 
-  /// Whether the given date is in the blocked dates list.
+  /// ما إذا كان التاريخ المُعطى في قائمة التواريخ الممنوعة.
   bool _isDateBlocked(DateTime date) {
     return _blockedDates.any((b) =>
       b.year == date.year && b.month == date.month && b.day == date.day);
   }
 
-  /// Whether the given date falls within the selected start-end range.
+  /// ما إذا كان التاريخ المُعطى ضمن نطاق البداية-النهاية المحدد.
   bool _isInRange(DateTime date) {
     if (_startDate == null || _endDate == null) return false;
     return date.isAfter(_startDate!.subtract(const Duration(days: 1))) &&
            date.isBefore(_endDate!.add(const Duration(days: 1)));
   }
 
-  /// Whether the given date is the range start or end date.
+  /// ما إذا كان التاريخ المُعطى هو تاريخ بداية أو نهاية النطاق.
   bool _isRangeStartOrEnd(DateTime date) {
     if (_startDate != null &&
         date.year == _startDate!.year &&
@@ -90,20 +90,20 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
     return false;
   }
 
-  /// Whether the given date is before today (in the past).
+  /// ما إذا كان التاريخ المُعطى قبل اليوم (في الماضي).
   bool _isPast(DateTime date) {
     final today = DateTime.now();
     return date.isBefore(DateTime(today.year, today.month, today.day));
   }
 
-  /// Returns the number of nights between the selected dates.
+  /// يُرجع عدد الليالي بين التواريخ المحددة.
   int _nightsCount() {
     if (_startDate == null || _endDate == null) return 0;
     return _endDate!.difference(_startDate!).inDays;
   }
 
-  /// Handles a day tap on the calendar, setting start/end dates and
-  /// checking for blocked dates in the selected range.
+  /// يتعامل مع النقر على يوم في التقويم، وتعيين تاريخي البداية/النهاية
+  /// والتحقق من التواريخ الممنوعة في النطاق المحدد.
   void _onDayTap(DateTime date) {
     if (_isDateBlocked(date) || _isPast(date)) return;
     if (_startDate == null || (_endDate != null)) {
@@ -126,7 +126,7 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
     }
   }
 
-  /// Generates a list of all dates between start and end (inclusive).
+  /// يُولّد قائمة بجميع التواريخ بين البداية والنهاية (ضمناً).
   List<DateTime> _generateDateRange(DateTime start, DateTime end) {
     final days = <DateTime>[];
     var current = DateTime(start.year, start.month, start.day);
@@ -138,7 +138,7 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
     return days;
   }
 
-  /// Returns the localized name of a month given its index (1-12).
+  /// يُرجع الاسم المحلّي للشهر بناءً على رقمه (1-12).
   String _monthName(int month) {
     final loc = AppLocalizations.of(context);
     return [
@@ -147,7 +147,7 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
     ][month - 1];
   }
 
-  /// Submits the booking request to the server and navigates to payment.
+  /// يُرسل طلب الحجز إلى الخادم وينتقل إلى الدفع.
   Future<void> _submit() async {
     if (_startDate == null || _endDate == null) {
       Helpers.showSnackBar(context, AppLocalizations.of(context)!.pleaseSelectDate, isError: true);
@@ -171,8 +171,8 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
     }
   }
 
-  /// Builds the booking form screen with property info, calendar, guest count,
-  /// price summary, and submit button.
+  /// يبني شاشة نموذج الحجز مع معلومات العقار، التقويم، عدد الضيوف،
+  /// ملخص السعر، وزر الإرسال.
   @override
   Widget build(BuildContext context) {
     final propertyProvider = context.watch<PropertyProvider>();
@@ -331,8 +331,8 @@ class _BookingFormScreenState extends State<BookingFormScreen> {
     );
   }
 
-  /// Builds the interactive monthly calendar with blocked dates, selection
-  /// highlighting, and date range labels.
+  /// يبني التقويم الشهري التفاعلي مع التواريخ الممنوعة، تمييز التحديد،
+  /// وتسميات نطاق التاريخ.
   Widget _buildCalendar(Property? property, bool isDark, Color textColor, Color mutedColor) {
     final today = DateTime.now();
     final daysInMonth = DateTime(_viewMonth.year, _viewMonth.month + 1, 0).day;

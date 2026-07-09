@@ -111,7 +111,7 @@ class _TechnicianHomeScreenState extends State<TechnicianHomeScreen> {
     );
   }
 
-  /// Builds a statistics card showing a count and label with a tint color.
+  /// يبني بطاقة إحصائية تعرض عدداً وتسمية مع لون مميز.
   Widget _statCard(String label, int count, Color color) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     return Container(
@@ -144,8 +144,8 @@ class _TechnicianHomeScreenState extends State<TechnicianHomeScreen> {
     );
   }
 
-  /// Builds a task card for a [MaintenanceRequest] with property title,
-  /// description, status badge, date, and category.
+  /// يبني بطاقة مهمة لـ [MaintenanceRequest] مع عنوان العقار،
+  /// الوصف، شارة الحالة، التاريخ، والفئة.
   Widget _taskCard(MaintenanceRequest req) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final tint = _statusColor(req.status);
@@ -230,7 +230,7 @@ class _TechnicianHomeScreenState extends State<TechnicianHomeScreen> {
     );
   }
 
-  /// Returns a localized label for the maintenance category.
+  /// يُرجع تسمية محلّية لفئة الصيانة.
   String _categoryLabel(String? category) {
     switch (category) {
       case 'كهرباء':
@@ -248,7 +248,7 @@ class _TechnicianHomeScreenState extends State<TechnicianHomeScreen> {
     }
   }
 
-  /// Returns a color representing the task status.
+  /// يُرجع لوناً يُمثّل حالة المهمة.
   Color _statusColor(String status) {
     switch (status) {
       case 'pending': return Colors.grey;

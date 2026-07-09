@@ -11,14 +11,14 @@ class ComplaintProvider extends ChangeNotifier {
   bool _isLoading = false;
   String? _error;
 
-  /// The list of user complaints as raw JSON maps.
+  /// قائمة شكاوى المستخدم كخرائط JSON أولية.
   List<Map<String, dynamic>> get complaints => _complaints;
-  /// Whether a network request is in progress.
+  /// ما إذا كان طلب الشبكة قيد التنفيذ.
   bool get isLoading => _isLoading;
-  /// The last error message, or null.
+  /// آخر رسالة خطأ، أو null.
   String? get error => _error;
 
-  /// Loads all complaints for the current user from the API.
+  /// يحمّل جميع الشكاوى للمستخدم الحالي من API.
   Future<void> loadComplaints() async {
     _isLoading = true;
     notifyListeners();
@@ -34,7 +34,7 @@ class ComplaintProvider extends ChangeNotifier {
     }
   }
 
-  /// Submits a new complaint with [title], [description], and optional [photos].
+  /// يقدّم شكوى جديدة بـ [title] و [description] و [photos] اختيارياً.
   Future<bool> submitComplaint(String title, String description, {List<String>? photos}) async {
     _isLoading = true;
     notifyListeners();

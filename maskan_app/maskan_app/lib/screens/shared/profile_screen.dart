@@ -14,7 +14,7 @@ import '../../core/widgets/maskan_scaffold.dart';
 import '../../l10n/app_localizations.dart';
 
 /// شاشة الملف الشخصي — معلومات المستخدم والإحصائيات (الحجوزات والمفضلات والتقييمات)
-/// account management options, and navigation to settings.
+/// خيارات إدارة الحساب والتنقل إلى الإعدادات.
 ///
 /// تكييف المحتوى حسب نوع المستخدم (مستأجر أو فني)
 class ProfileScreen extends StatefulWidget {
@@ -25,7 +25,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 /// منطق حالة [ProfileScreen] — تحميل بيانات الملف الشخصي
-/// account actions (deactivate, delete, logout), and builds menu groups.
+/// إجراءات الحساب (إلغاء التنشيط، حذف، تسجيل خروج)، وبناء مجموعات القوائم.
 class _ProfileScreenState extends State<ProfileScreen> {
   @override
   void initState() {
@@ -154,7 +154,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  /// Builds a grouped menu section inside a [GlassCard] with a title and tappable items.
+  /// يُنشئ قسم قائمة مجمّع داخل [GlassCard] بعنوان وعناصر قابلة للنقر.
   Widget _buildMenuGroup(BuildContext context, String title, List<_MenuItemData> items) {
     return GlassCard(
       margin: const EdgeInsets.symmetric(horizontal: 16),
@@ -192,7 +192,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  /// Shows a confirmation dialog for deactivating the account.
+  /// يعرض مربع حوار تأكيد لإلغاء تنشيط الحساب.
   void _showDeactivateDialog(BuildContext context) {
     final loc = AppLocalizations.of(context);
     final isDark = Theme.of(context).brightness == Brightness.dark;
@@ -220,7 +220,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  /// Shows a confirmation dialog for permanently deleting the account.
+  /// يعرض مربع حوار تأكيد لحذف الحساب نهائياً.
   void _showDeleteDialog(BuildContext context) {
     final loc = AppLocalizations.of(context);
     final isDark = Theme.of(context).brightness == Brightness.dark;
@@ -248,7 +248,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  /// Shows a confirmation dialog for logging out the current user.
+  /// يعرض مربع حوار تأكيد لتسجيل خروج المستخدم الحالي.
   void _logout(BuildContext context) {
     final loc = AppLocalizations.of(context);
     final isDark = Theme.of(context).brightness == Brightness.dark;
@@ -280,16 +280,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
 /// فئة بيانات داخلية تمثل عنصر قائمة واحد في قوائم الملف الشخصي
 class _MenuItemData {
-  /// Icon displayed on the left of the menu item.
+  /// الأيقونة المعروضة على يسار عنصر القائمة.
   final IconData icon;
 
-  /// Label text for the menu item.
+  /// نص التسمية لعنصر القائمة.
   final String label;
 
-  /// Optional callback invoked when the item is tapped.
+  /// رد اتصال اختياري يُستدعى عند النقر على العنصر.
   final VoidCallback? onTap;
 
-  /// Optional tint color for the icon and label.
+  /// لون تلوين اختياري للأيقونة والتسمية.
   final Color? color;
 
   const _MenuItemData(this.icon, this.label, this.onTap, {this.color});

@@ -13,12 +13,12 @@ class FavoriteProvider extends ChangeNotifier {
   Set<int> _favoriteIds = {};
   bool _isLoading = false;
 
-  /// The list of favorite items.
+  /// قائمة العناصر المفضلة.
   List<Favorite> get favorites => _favorites;
-  /// Whether a network request is in progress.
+  /// ما إذا كان طلب الشبكة قيد التنفيذ.
   bool get isLoading => _isLoading;
 
-  /// Loads all favorites from the API and updates the ID lookup set.
+  /// يحمّل جميع المفضلات من API ويحدّث مجموعة البحث بالمعرفات.
   Future<void> loadFavorites() async {
     _isLoading = true;
     notifyListeners();
@@ -35,7 +35,7 @@ class FavoriteProvider extends ChangeNotifier {
     }
   }
 
-  /// Toggles the favorite status of a property identified by [propertyId].
+  /// يبدّل حالة الإعجاب لعقار محدّد بـ [propertyId].
   Future<bool> toggleFavorite(int propertyId) async {
     try {
       await _api.post(ApiEndpoints.toggleFavorite, data: {
@@ -56,7 +56,7 @@ class FavoriteProvider extends ChangeNotifier {
     }
   }
 
-  /// Checks with the API whether a property is favorited, and returns the result.
+  /// يتحقق عبر API ما إذا كان العقار مفضّلاً، ويعيد النتيجة.
   Future<bool> check(int propertyId) async {
     try {
       final response = await _api.post(ApiEndpoints.checkFavorite, data: {
@@ -75,6 +75,6 @@ class FavoriteProvider extends ChangeNotifier {
     }
   }
 
-  /// Returns whether a property is currently favorited (based on local state).
+  /// يُرجِع ما إذا كان العقار مُفضّلاً حالياً (بناءً على الحالة المحلية).
   bool isFavorite(int propertyId) => _favoriteIds.contains(propertyId);
 }

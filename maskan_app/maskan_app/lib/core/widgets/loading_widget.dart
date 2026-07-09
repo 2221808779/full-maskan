@@ -4,10 +4,10 @@ import '../../config/colors.dart';
 
 // مؤشر تحميل Shimmer مع عدد قابل للتعديل من العناصر الشبيهة بالبطاقات
 class LoadingWidget extends StatelessWidget {
-  /// Height of each shimmer placeholder card.
+  /// ارتفاع كل بطاقة Shimmer placeholder.
   final double height;
 
-  /// Number of shimmer items to display.
+  /// عدد عناصر Shimmer المعروضة.
   final int itemCount;
 
   const LoadingWidget({super.key, this.height = 120, this.itemCount = 3});

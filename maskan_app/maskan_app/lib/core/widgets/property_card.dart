@@ -9,22 +9,22 @@ import '../design/design_tokens.dart';
 /// بطاقة عقار تعرض الصورة والعنوان والموقع والسعر والنوع والتقييم مع إمكانية إضافة المفضلة
 /// تدعم وضعين للعرض: كامل (مع تفاصيل الغرف والحمامات) ومضغوط
 class PropertyCard extends StatelessWidget {
-  /// The property data to display.
+  /// بيانات العقار المعروضة.
   final Property property;
 
-  /// Called when the card is tapped.
+  /// يُستدعى عند النقر على البطاقة.
   final VoidCallback? onTap;
 
-  /// Whether to show the favorite toggle button.
+  /// ما إذا كان زر التفضيل سيظهر.
   final bool showFavorite;
 
-  /// Whether the property is currently favorited.
+  /// ما إذا كان العقار مفضّلاً حالياً.
   final bool isFavorite;
 
-  /// Called when the favorite toggle is tapped.
+  /// يُستدعى عند النقر على زر التفضيل.
   final VoidCallback? onFavoriteTap;
 
-  /// If true, renders a compact version of the card.
+  /// إذا كان true، يعرض نسخة مضغوطة من البطاقة.
   final bool compact;
 
   const PropertyCard({

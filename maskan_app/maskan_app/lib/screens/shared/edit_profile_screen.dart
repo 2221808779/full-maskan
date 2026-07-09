@@ -30,7 +30,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   String? _imagePath;
   bool _uploadingPhoto = false;
 
-  /// Opens the camera to capture a new profile photo.
+  /// يفتح الكاميرا لالتقاط صورة شخصية جديدة.
   Future<void> _pickFromCamera() async {
     final file = await _picker.pickImage(source: ImageSource.camera, maxWidth: 1024);
     if (file != null) {
@@ -39,7 +39,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     }
   }
 
-  /// Opens the gallery to select a new profile photo.
+  /// يفتح المعرض لاختيار صورة شخصية جديدة.
   Future<void> _pickFromGallery() async {
     final file = await _picker.pickImage(source: ImageSource.gallery, maxWidth: 1024);
     if (file != null) {
@@ -48,7 +48,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     }
   }
 
-  /// Deletes the current profile photo via [AuthProvider.deletePhoto].
+  /// يحذف الصورة الشخصية الحالية عبر [AuthProvider.deletePhoto].
   Future<void> _deletePhoto() async {
     final auth = context.read<AuthProvider>();
     final success = await auth.deletePhoto();
@@ -73,7 +73,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     }
   }
 
-  /// Uploads the selected photo file via [AuthProvider.uploadPhoto].
+  /// يرفع ملف الصورة المحدد عبر [AuthProvider.uploadPhoto].
   Future<void> _uploadPhoto() async {
     if (_imagePath == null) return;
     setState(() => _uploadingPhoto = true);
@@ -115,7 +115,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     super.dispose();
   }
 
-  /// Validates the form and saves the name/phone changes via [AuthProvider.updateProfile].
+  /// يتحقق من صحة النموذج ويحفظ تغييرات الاسم/الهاتف عبر [AuthProvider.updateProfile].
   Future<void> _save() async {
     if (!_formKey.currentState!.validate()) return;
     setState(() => _isLoading = true);

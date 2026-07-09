@@ -20,15 +20,14 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   final _phoneController = TextEditingController();
   bool _isLoading = false;
 
-  /// Disposes the phone text controller.
+  /// يتخلص من وحدة التحكم في نص الهاتف.
   @override
   void dispose() {
     _phoneController.dispose();
     super.dispose();
   }
 
-  /// Sends an OTP to the entered phone number and navigates to the
-  /// reset password screen on success.
+  /// يرسل رمز OTP إلى رقم الهاتف الذي تم إدخاله وينتقل إلى شاشة إعادة تعيين كلمة المرور عند النجاح.
   Future<void> _sendOtp() async {
     final phone = _phoneController.text.trim();
     if (phone.isEmpty) return;
@@ -64,7 +63,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
     }
   }
 
-  /// Builds the forgot password screen with phone input and send code button.
+  /// يبني شاشة نسيت كلمة المرور مع إدخال الهاتف وزر إرسال الرمز.
   @override
   Widget build(BuildContext context) {
     final loc = AppLocalizations.of(context)!;

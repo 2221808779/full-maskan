@@ -4,23 +4,23 @@ import '../../config/colors.dart';
 
 /// عنصر واحد في شريط التنقل المنحني
 class MaskanCurvedNavItem {
-  /// Icon displayed for the nav item.
+  /// الأيقونة المعروضة لعنصر التنقل.
   final IconData icon;
 
-  /// Label displayed for the nav item.
+  /// النص المعروض لعنصر التنقل.
   final String label;
   const MaskanCurvedNavItem({required this.icon, required this.label});
 }
 
 /// شريط تنقل سفلي منحني يلتف حول [CurvedNavigationBar] مع دعم الثيم الداكن/الفاتح
 class MaskanCurvedNav extends StatelessWidget {
-  /// The index of the currently selected tab.
+  /// فهرس التبويب المحدد حالياً.
   final int currentIndex;
 
-  /// List of navigation items to display.
+  /// قائمة عناصر التنقل المعروضة.
   final List<MaskanCurvedNavItem> items;
 
-  /// Called when a tab is tapped, providing the new index.
+  /// يُستدعى عند النقر على تبويب، مع توفير الفهرس الجديد.
   final ValueChanged<int> onTap;
 
   const MaskanCurvedNav({

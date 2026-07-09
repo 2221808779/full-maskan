@@ -23,7 +23,7 @@ class _TermsScreenState extends State<TermsScreen> {
   String? _remoteTerms;
   bool _loadingTerms = true;
 
-  /// Initializes scroll listener and starts fetching terms from the API.
+  /// يهيئ مستمع التمرير ويبدأ جلب الشروط من API.
   @override
   void initState() {
     super.initState();
@@ -31,7 +31,7 @@ class _TermsScreenState extends State<TermsScreen> {
     _fetchTerms();
   }
 
-  /// Removes scroll listener and disposes the scroll controller.
+  /// يزيل مستمع التمرير ويتخلص من وحدة تحكم التمرير.
   @override
   void dispose() {
     _scrollController.removeListener(_onScroll);
@@ -39,7 +39,7 @@ class _TermsScreenState extends State<TermsScreen> {
     super.dispose();
   }
 
-  /// Fetches the terms and conditions text from the server API.
+  /// يجلب نص الشروط والأحكام من خادم API.
   Future<void> _fetchTerms() async {
     try {
       final res = await ApiClient().get('/settings/public');
@@ -59,7 +59,7 @@ class _TermsScreenState extends State<TermsScreen> {
     }
   }
 
-  /// Listens to scroll position and marks terms as read when scrolled to bottom.
+  /// يستمع إلى موضع التمرير ويضع علامة على أن الشروط قد قُرئت عند التمرير إلى الأسفل.
   void _onScroll() {
     if (!_scrollController.hasClients) return;
     final maxScroll = _scrollController.position.maxScrollExtent;
@@ -69,14 +69,13 @@ class _TermsScreenState extends State<TermsScreen> {
     }
   }
 
-  /// Pops the screen with `true` if the user has accepted the terms.
+  /// يغلق الشاشة بقيمة `true` إذا قبل المستخدم الشروط.
   void _agree() {
     if (!_accepted) return;
     context.pop(true);
   }
 
-  /// Builds the terms screen with a scrollable terms text, accept checkbox,
-  /// and agree button.
+  /// يبني شاشة الشروط مع نص قابل للتمرير، خانة الموافقة، وزر القبول.
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
@@ -267,7 +266,7 @@ class _TermsScreenState extends State<TermsScreen> {
     );
   }
 
-  /// Builds a section of the terms with a title and bullet-pointed paragraphs.
+  /// يبني قسماً من الشروط مع عنوان وفقرات منقطة.
   Widget _section(String title, List<String> paragraphs) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final textColor = isDark ? MaskanColors.kTextPrimary : MaskanColors.lTextPrimary;

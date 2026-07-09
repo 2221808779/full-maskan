@@ -30,12 +30,12 @@ class BookingDetailScreen extends StatefulWidget {
 }
 
 /// حالة [BookingDetailScreen] — تحميل تفاصيل الحجز وطلبات الصيانة
-/// requests, and reviews.
+/// والمراجعات.
 class _BookingDetailScreenState extends State<BookingDetailScreen> {
   Booking? _booking;
   bool _loading = true;
 
-  /// Triggers data loading on initialization.
+  /// يُشغّل تحميل البيانات عند التهيئة.
   @override
   void initState() {
     super.initState();
@@ -44,7 +44,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     });
   }
 
-  /// Loads booking details, maintenance requests, and property reviews.
+  /// يحمّل تفاصيل الحجز وطلبات الصيانة وتقييمات العقار.
   Future<void> _load() async {
     final bp = context.read<BookingProvider>();
     final mp = context.read<MaintenanceProvider>();
@@ -66,7 +66,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     });
   }
 
-  /// Builds the booking detail screen showing loading, error, or full content.
+  /// يبني شاشة تفاصيل الحجز مع عرض التحميل أو الخطأ أو المحتوى الكامل.
   @override
   Widget build(BuildContext context) {
     if (_loading) {
@@ -84,7 +84,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     return _buildScreen();
   }
 
-  /// Builds the main content screen once booking data is loaded.
+  /// يبني شاشة المحتوى الرئيسي بعد تحميل بيانات الحجز.
   Widget _buildScreen() {
     final booking = _booking!;
     final loc = AppLocalizations.of(context);
@@ -159,7 +159,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     );
   }
 
-  /// Builds the header image section for the booking with a gradient overlay.
+  /// يبني قسم صورة العنوان للحجز مع تراكب تدرّجي.
   Widget _buildImageHeader(Booking booking) {
     final hasImage = booking.propertyImage != null && booking.propertyImage!.isNotEmpty;
     return SizedBox(
@@ -210,7 +210,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     );
   }
 
-  /// Builds a placeholder gradient widget when the header image is missing.
+  /// يبني عنصراً نائباً بتدرّج عند عدم وجود صورة العنوان.
   Widget _buildHeaderPlaceholder() {
     return Container(
       width: double.infinity, height: 220,
@@ -224,7 +224,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     );
   }
 
-  /// Builds a status banner showing the booking's current state with an icon.
+  /// يبني شريط حالة يُظهر الحالة الحالية للحجز مع أيقونة.
   Widget _buildStatusBanner(Booking booking) {
     final color = _statusColor(booking.status);
     return Container(
@@ -275,7 +275,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     );
   }
 
-  /// Builds a card with booking details: dates, nights, total amount, payment method.
+  /// يبني بطاقة بتفاصيل الحجز: التواريخ، الليالي، المبلغ الإجمالي، طريقة الدفع.
   Widget _buildDetailsCard(Booking booking) {
     final loc = AppLocalizations.of(context);
     return GlassCard(
@@ -308,7 +308,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     );
   }
 
-  /// Builds the maintenance requests section with a list and a "New Request" button.
+  /// يبني قسم طلبات الصيانة مع قائمة وزر "طلب جديد".
   Widget _buildMaintenanceSection(Booking booking, List<MaintenanceRequest> requests) {
     final loc = AppLocalizations.of(context);
     return GlassCard(
@@ -364,7 +364,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     );
   }
 
-  /// Builds a card showing an existing review with rating and comment.
+  /// يبني بطاقة تعرض تقييماً حالياً مع التقييم والتعليق.
   Widget _buildExistingReviewCard(Review review) {
     final loc = AppLocalizations.of(context);
     return GlassCard(
@@ -400,7 +400,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     );
   }
 
-  /// Builds a compact card showing only the star rating without a comment.
+  /// يبني بطاقة مضغوطة تعرض فقط تقييم النجوم بدون تعليق.
   Widget _buildStarsOnlyCard(Review review) {
     return GlassCard(
       softMode: true,
@@ -420,7 +420,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     );
   }
 
-  /// Builds a button to navigate to the review form for rating the property.
+  /// يبني زراً للانتقال إلى نموذج التقييم لتقييم العقار.
   Widget _buildRatePropertyButton(Booking booking) {
     final loc = AppLocalizations.of(context);
     return SizedBox(
@@ -444,7 +444,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     );
   }
 
-  /// Builds a card for a single maintenance request with status and rating option.
+  /// يبني بطاقة لطلب صيانة واحد مع الحالة وخيار التقييم.
   Widget _buildMaintenanceItem(MaintenanceRequest r) {
     final color = _maintenanceColor(r.status);
     final canRate = r.status == 'completed' && r.technicianId != null;
@@ -560,7 +560,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     );
   }
 
-  /// Builds a cancel booking button with a confirmation dialog.
+  /// يبني زر إلغاء الحجز مع حوار تأكيد.
   Widget _buildCancelButton(int bookingId) {
     final loc = AppLocalizations.of(context);
     return SizedBox(
@@ -579,7 +579,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     );
   }
 
-  /// Builds a row with a label and value for booking detail display.
+  /// يبني صفاً مع تسمية وقيمة لعرض تفاصيل الحجز.
   Widget _detailRow(String label, String value, {TextStyle? valueStyle}) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -595,7 +595,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     );
   }
 
-  /// Formats a [DateTime] as a `yyyy-MM-dd` string.
+  /// يُنسّق [DateTime] كنص بالصيغة `yyyy-MM-dd`.
   String _formatDate(DateTime dt) {
     final y = dt.year.toString();
     final m = dt.month.toString().padLeft(2, '0');
@@ -603,7 +603,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     return '$y-$m-$d';
   }
 
-  /// Returns a color corresponding to the given booking status.
+  /// يُرجع لوناً يتوافق مع حالة الحجز المُعطاة.
   Color _statusColor(String status) {
     switch (status) {
       case 'confirmed': return MaskanColors.kSuccess;
@@ -614,7 +614,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     }
   }
 
-  /// Returns an icon corresponding to the given booking status.
+  /// يُرجع أيقونة تتوافق مع حالة الحجز المُعطاة.
   IconData _statusIcon(String status) {
     switch (status) {
       case 'confirmed': return Icons.check_circle_rounded;
@@ -625,7 +625,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     }
   }
 
-  /// Returns a color corresponding to the given maintenance request status.
+  /// يُرجع لوناً يتوافق مع حالة طلب الصيانة المُعطى.
   Color _maintenanceColor(String status) {
     switch (status) {
       case 'completed': return MaskanColors.kSuccess;
@@ -636,7 +636,7 @@ class _BookingDetailScreenState extends State<BookingDetailScreen> {
     }
   }
 
-  /// Shows a confirmation dialog and cancels the booking if confirmed.
+  /// يُظهر حوار تأكيد ويلغي الحجز إذا تم التأكيد.
   void _confirmCancel(int bookingId) {
     final loc = AppLocalizations.of(context);
     final isDark = Theme.of(context).brightness == Brightness.dark;

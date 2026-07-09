@@ -26,24 +26,24 @@ class AuthProvider extends ChangeNotifier {
   String? _error;
   String? _pendingPhone;
 
-  /// The currently authenticated user, or null if not logged in.
+  /// المستخدم المُصدَّق حالياً، أو null إذا لم يسجل الدخول.
   User? get user => _user;
-  /// Whether a network request is in progress.
+  /// ما إذا كان طلب الشبكة قيد التنفيذ.
   bool get isLoading => _isLoading;
-  /// Whether the user needs to complete OTP verification.
+  /// ما إذا كان المستخدم بحاجة لإكمال التحقق عبر OTP.
   bool get needsOtp => _needsOtp;
-  /// The last error message, or null if no error occurred.
+  /// آخر رسالة خطأ، أو null إذا لم يحدث خطأ.
   String? get error => _error;
-  /// The phone number awaiting OTP verification.
+  /// رقم الهاتف بانتظار التحقق عبر OTP.
   String? get pendingPhone => _pendingPhone;
-  /// Whether a user is currently logged in.
+  /// ما إذا كان المستخدم مسجل الدخول حالياً.
   bool get isLoggedIn => _user != null;
-  /// Whether the logged-in user is a tenant.
+  /// ما إذا كان المستخدم المسجل مستأجراً.
   bool get isTenant => _user?.isTenant ?? false;
-  /// Whether the logged-in user is a technician.
+  /// ما إذا كان المستخدم المسجل فنياً.
   bool get isTechnician => _user?.isTechnician ?? false;
 
-  /// Loads the user from local storage and validates the session with the API.
+  /// يحمّل المستخدم من التخزين المحلي ويتحقق من صحة الجلسة مع API.
   Future<void> loadUser() async {
     _user = await _storage.getUser();
     notifyListeners();
@@ -56,7 +56,7 @@ class AuthProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Authenticates the user with [phone] and [password]. Returns true on success.
+  /// يُوثّق المستخدم باستخدام [phone] و [password]. يُرجِع true عند النجاح.
   Future<bool> login(String phone, String password) async {
     _isLoading = true;
     _error = null;
@@ -105,7 +105,7 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  /// Creates a new user account. May require OTP activation depending on the role.
+  /// ينشئ حساب مستخدم جديد. قد يتطلب تفعيل OTP حسب الدور.
   Future<bool> register({
     required String name,
     required String phone,
@@ -165,7 +165,7 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  /// Fetches the list of available specialties (for technicians).
+  /// يجلب قائمة التخصصات المتاحة (للفنيين).
   Future<List<Map<String, dynamic>>> getSpecialties() async {
     try {
       final response = await _api.get(ApiEndpoints.specialties);
@@ -176,11 +176,11 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  /// The last OTP returned by the server (only in non-production mode).
+  /// آخر OTP أعاده الخادم (فقط في وضع غير الإنتاج).
   String? _lastOtp;
   String? get lastOtp => _lastOtp;
 
-  /// Sends an OTP verification code to the given [phone] number.
+  /// يرسل رمز التحقق OTP إلى رقم [phone] المحدد.
   Future<bool> sendOtp(String phone) async {
     _isLoading = true;
     _error = null;
@@ -221,7 +221,7 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  /// Confirms the OTP code to activate the account or complete login.
+  /// يؤكّد رمز OTP لتفعيل الحساب أو إكمال تسجيل الدخول.
   Future<bool> verifyOtp(String phone, String otp) async {
     _isLoading = true;
     _error = null;
@@ -249,7 +249,7 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  /// Resets the user's password using OTP verification.
+  /// يعيد تعيين كلمة مرور المستخدم باستخدام التحقق عبر OTP.
   Future<bool> resetPassword(String phone, String otp, String password) async {
     _isLoading = true;
     _error = null;
@@ -272,7 +272,7 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  /// Logs the user out by clearing the session and local data.
+  /// يسجّل خروج المستخدم بمسح الجلسة والبيانات المحلية.
   Future<void> logout() async {
     try {
       await _api.post(ApiEndpoints.logout);
@@ -284,7 +284,7 @@ class AuthProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Updates the user's profile (name and optional phone number).
+  /// يحدّث الملف الشخصي للمستخدم (الاسم ورقم الهاتف اختيارياً).
   Future<bool> updateProfile(String name, String? phone) async {
     _isLoading = true;
     _error = null;
@@ -306,7 +306,7 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  /// Uploads a profile photo from the given file [path].
+  /// يرفع صورة شخصية من مسار الملف [path] المحدد.
   Future<bool> uploadPhoto(String path) async {
     _isLoading = true;
     _error = null;
@@ -330,7 +330,7 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  /// Deletes the user's profile photo.
+  /// يحذف الصورة الشخصية للمستخدم.
   Future<bool> deletePhoto() async {
     _isLoading = true;
     _error = null;
@@ -350,7 +350,7 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  /// Temporarily deactivates the user account.
+  /// يُعطّل حساب المستخدم بشكل مؤقت.
   Future<bool> deactivateAccount() async {
     try {
       await _api.post(ApiEndpoints.deactivateAccount);
@@ -363,7 +363,7 @@ class AuthProvider extends ChangeNotifier {
     }
   }
 
-  /// Permanently deletes the user account.
+  /// يحذف حساب المستخدم نهائياً.
   Future<bool> deleteAccount() async {
     try {
       await _api.post(ApiEndpoints.deleteAccount);

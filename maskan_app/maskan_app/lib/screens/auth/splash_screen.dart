@@ -21,8 +21,7 @@ class _SplashScreenState extends State<SplashScreen>
   late final Animation<double> _fadeIn;
   late final Animation<double> _scale;
 
-  /// Initializes animation controllers and starts the splash animation.
-  /// After a delay, navigates to the next screen.
+  /// يهيئ وحدات تحكم الحركة ويبدأ حركة شاشة البداية. بعد تأخير، ينتقل إلى الشاشة التالية.
   @override
   void initState() {
     super.initState();
@@ -38,14 +37,14 @@ class _SplashScreenState extends State<SplashScreen>
     Future.delayed(const Duration(milliseconds: 2200), _navigate);
   }
 
-  /// Disposes the animation controller.
+  /// يتخلص من وحدة تحكم الحركة.
   @override
   void dispose() {
     _controller.dispose();
     super.dispose();
   }
 
-  /// Checks authentication state and navigates to the home or onboarding screen.
+  /// يتحقق من حالة المصادقة وينتقل إلى الشاشة الرئيسية أو شاشة التعريف.
   Future<void> _navigate() async {
     if (!mounted) return;
     final auth = context.read<AuthProvider>();
@@ -60,7 +59,7 @@ class _SplashScreenState extends State<SplashScreen>
     }
   }
 
-  /// Builds the splash screen with a fade-in and scale animation on the app icon.
+  /// يبني شاشة البداية مع حركة التلاشي والتكبير على أيقونة التطبيق.
   @override
   Widget build(BuildContext context) {
     return Container(

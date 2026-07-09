@@ -81,6 +81,6 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     );
   }
 
-  /// Navigates to the property list screen when no favorites exist.
+  /// ينتقل إلى شاشة قائمة العقارات عند عدم وجود مفضّلات.
   void _navigateToProperties() => context.push(AppRoutes.propertyList);
 }

@@ -32,12 +32,12 @@ class PropertyDetailScreen extends StatefulWidget {
 }
 
 /// حالة [PropertyDetailScreen] — إدارة معرض الصور والوصف
-/// expansion, and login-required dialogs.
+  /// التوسّع، وحوارات تسجيل الدخول المطلوبة.
 class _PropertyDetailScreenState extends State<PropertyDetailScreen> {
   bool _showFullDescription = false;
   int _imagePageIndex = 0;
 
-  /// Shows a dialog prompting the user to log in for a specific action.
+  /// يُظهر حواراً يطلب من المستخدم تسجيل الدخول لإجراء معيّن.
   void _requireLogin({String? action, bool goBackOnCancel = false}) {
     if (context.read<AuthProvider>().isLoggedIn) return;
     final isDark = Theme.of(context).brightness == Brightness.dark;
@@ -75,7 +75,7 @@ class _PropertyDetailScreenState extends State<PropertyDetailScreen> {
     );
   }
 
-  /// Loads property detail, reviews, and favorite status on initialization.
+  /// يحمّل تفاصيل العقار والتقييمات وحالة المفضّلة عند التهيئة.
   @override
   void initState() {
     super.initState();
@@ -92,7 +92,7 @@ class _PropertyDetailScreenState extends State<PropertyDetailScreen> {
     });
   }
 
-  /// Returns a localized label for the given property type.
+  /// يُرجع تسمية محلّية لنوع العقار المُعطى.
   String _typeLabel(BuildContext context, String? type) {
     final loc = AppLocalizations.of(context);
     switch (type) {
@@ -107,8 +107,8 @@ class _PropertyDetailScreenState extends State<PropertyDetailScreen> {
     }
   }
 
-  /// Builds the full property detail screen with image gallery, details,
-  /// map, reviews, owner info, and bottom action bar.
+  /// يبني شاشة تفاصيل العقار الكاملة مع معرض الصور والتفاصيل
+  /// والخريطة والتقييمات ومعلومات المالك وشريط الإجراءات السفلي.
   @override
   Widget build(BuildContext context) {
     final provider = context.watch<PropertyProvider>();
@@ -616,7 +616,7 @@ class _PropertyDetailScreenState extends State<PropertyDetailScreen> {
     );
   }
 
-  /// Builds a chip for displaying a property spec (e.g., rooms, bathrooms).
+  /// يبني شريحة لعرض مواصفات العقار (مثال: غرف، حمامات).
   Widget _specChip(IconData icon, String label) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final chipBg = isDark ? const Color(0x1AFFFFFF) : const Color(0x1A2D5F8A);
@@ -639,7 +639,7 @@ class _PropertyDetailScreenState extends State<PropertyDetailScreen> {
     );
   }
 
-  /// Builds a chip for displaying an amenity with an icon and label.
+  /// يبني شريحة لعرض وسيلة راحة مع أيقونة وتسمية.
   Widget _amenityChip(IconData icon, String label) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final chipBg = isDark ? const Color(0x1AFFFFFF) : const Color(0x1A2D5F8A);
@@ -663,7 +663,7 @@ class _PropertyDetailScreenState extends State<PropertyDetailScreen> {
     );
   }
 
-  /// Builds a card displaying a single review with reviewer info, rating, and comment.
+  /// يبني بطاقة تعرض تقييماً واحداً مع معلومات المقيّم والتقييم والتعليق.
   Widget _reviewCard(Review review) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final cardBg = isDark ? const Color(0x1AFFFFFF) : const Color(0x1A2D5F8A);

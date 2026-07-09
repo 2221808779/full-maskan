@@ -3,19 +3,19 @@ import '../theme/app_colors.dart';
 
 /// الغلاف الأساسي لشاشات مسكن — خلفية متدرجة مع دوائر زخرفية ومعالجة اختيارية للمنطقة الآمنة
 class MaskanScaffold extends StatelessWidget {
-  /// The main body content of the screen.
+  /// محتوى الجسم الرئيسي للشاشة.
   final Widget body;
 
-  /// Optional app bar displayed at the top.
+  /// شريط علوي اختياري يظهر في الأعلى.
   final PreferredSizeWidget? appBar;
 
-  /// Optional bottom navigation bar.
+  /// شريط تنقل سفلي اختياري.
   final Widget? bottomNavigationBar;
 
-  /// Optional floating action button.
+  /// زر إجراء عائم اختياري.
   final Widget? floatingActionButton;
 
-  /// If true, the body will not be wrapped in a [SafeArea].
+  /// إذا كان true، لن يُلف الجسم في [SafeArea].
   final bool noSafeArea;
 
   const MaskanScaffold({
@@ -68,10 +68,10 @@ class MaskanScaffold extends StatelessWidget {
 
 /// عنصر خلفية فقط بنفس التدرج والدوائر — للتخطيطات المخصصة التي تحتاج المظهر بدون الهيكل الكامل
 class MaskanBackground extends StatelessWidget {
-  /// The content to display on top of the background.
+  /// المحتوى المعروض فوق الخلفية.
   final Widget child;
 
-  /// If true, the child will not be wrapped in a [SafeArea].
+  /// إذا كان true، لن يُلف المحتوى في [SafeArea].
   final bool noSafeArea;
 
   const MaskanBackground({super.key, required this.child, this.noSafeArea = false});

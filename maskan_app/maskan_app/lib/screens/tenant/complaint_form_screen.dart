@@ -28,7 +28,7 @@ class _ComplaintFormScreenState extends State<ComplaintFormScreen> {
     super.dispose();
   }
 
-  /// Validates the form and submits the complaint via [ComplaintProvider].
+  /// يتحقق من صحة النموذج ويُرسل الشكوى عبر [ComplaintProvider].
   Future<void> _submit() async {
     if (!_formKey.currentState!.validate()) return;
     setState(() => _isSubmitting = true);

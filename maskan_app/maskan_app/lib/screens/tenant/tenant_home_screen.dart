@@ -36,7 +36,7 @@ class _TenantHomeScreenState extends State<TenantHomeScreen> {
     });
   }
 
-  /// Builds the tenant home screen with search, property list, and favorites.
+  /// يبني الشاشة الرئيسية للمستأجر مع البحث وقائمة العقارات والمفضّلات.
   @override
   Widget build(BuildContext context) {
     final loc = AppLocalizations.of(context);

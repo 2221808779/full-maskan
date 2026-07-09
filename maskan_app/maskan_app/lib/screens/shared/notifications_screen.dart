@@ -25,7 +25,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
     });
   }
 
-  /// Returns an icon appropriate for the notification type.
+  /// يُرجع أيقونة مناسبة لنوع الإشعار.
   IconData _iconForType(String type) {
     switch (type) {
       case 'booking': return Icons.calendar_today;
@@ -36,7 +36,7 @@ class _NotificationsScreenState extends State<NotificationsScreen> {
     }
   }
 
-  /// Returns a color associated with the notification type.
+  /// يُرجع لوناً مرتبطاً بنوع الإشعار.
   Color _colorForType(String type) {
     switch (type) {
       case 'booking': return MaskanColors.kBlue;

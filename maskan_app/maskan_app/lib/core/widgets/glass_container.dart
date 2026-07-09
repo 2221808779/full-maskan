@@ -4,34 +4,34 @@ import '../../config/colors.dart';
 
 /// حاوية زجاجية (Frosted Glass) مع تأثير ضبابي للخلفية قابلة للتخصيص — الحدود، الحواف، الهوامش، واللون
 class GlassContainer extends StatelessWidget {
-  /// The widget to display inside the glass container.
+  /// المحتوى المعروض داخل الحاوية الزجاجية.
   final Widget child;
 
-  /// Border radius of the container (default 16).
+  /// نصف قطر زوايا الحاوية (الافتراضي 16).
   final double borderRadius;
 
-  /// Inner padding.
+  /// الحشوة الداخلية.
   final EdgeInsetsGeometry? padding;
 
-  /// Outer margin.
+  /// الهامش الخارجي.
   final EdgeInsetsGeometry? margin;
 
-  /// Sigma value for the backdrop blur filter (default 12).
+  /// قيمة سيجما لفلتر التمويه الخلفي (الافتراضي 12).
   final double blur;
 
-  /// Background tint color applied to the frosted layer.
+  /// لون الصبغة الخلفية المطبق على الطبقة الزجاجية.
   final Color tint;
 
-  /// Optional custom border color (defaults to [MaskanColors.kGlassBorder]).
+  /// لون حدود مخصص اختياري (الافتراضي [MaskanColors.kGlassBorder]).
   final Color? borderColor;
 
-  /// Border width (default 0.5).
+  /// عرض الحدود (الافتراضي 0.5).
   final double borderWidth;
 
-  /// Optional fixed height.
+  /// ارتفاع ثابت اختياري.
   final double? height;
 
-  /// Optional fixed width.
+  /// عرض ثابت اختياري.
   final double? width;
 
   const GlassContainer({
@@ -79,10 +79,10 @@ class GlassContainer extends StatelessWidget {
 
 /// شارة ذهبية تعرض تصنيفاً (مثل نوع المستخدم)
 class GoldBadge extends StatelessWidget {
-  /// The text to display inside the badge.
+  /// النص المعروض داخل الشارة.
   final String label;
 
-  /// Font size of the label (default 12).
+  /// حجم خط النص (الافتراضي 12).
   final double fontSize;
 
   const GoldBadge({super.key, required this.label, this.fontSize = 12});
@@ -111,10 +111,10 @@ class GoldBadge extends StatelessWidget {
 
 /// شريحة صغيرة تعرض أيقونة ونصاً لمواصفات العقار
 class SpecChip extends StatelessWidget {
-  /// Icon representing the specification.
+  /// الأيقونة التي تمثل المواصفة.
   final IconData icon;
 
-  /// Label describing the specification.
+  /// النص الذي يصف المواصفة.
   final String label;
 
   const SpecChip({super.key, required this.icon, required this.label});
@@ -143,10 +143,10 @@ class SpecChip extends StatelessWidget {
 
 /// شارة ملونة لعرض تسميات الحالة (مثل حالة الحجز)
 class StatusBadge extends StatelessWidget {
-  /// The status text to display.
+  /// نص الحالة المعروض.
   final String label;
 
-  /// The tint color for the badge background and text.
+  /// لون صبغة خلفية الشارة ونصها.
   final Color color;
 
   const StatusBadge({super.key, required this.label, required this.color});

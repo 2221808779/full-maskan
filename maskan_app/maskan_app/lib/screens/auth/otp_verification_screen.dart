@@ -10,7 +10,7 @@ import '../../core/widgets/maskan_scaffold.dart';
 
 /// شاشة إدخال رمز التحقق OTP المرسل إلى هاتف المستخدم
 class OtpVerificationScreen extends StatefulWidget {
-  /// The phone number to which the OTP was sent.
+  /// رقم الهاتف الذي أرسل إليه رمز OTP.
   final String phone;
   const OtpVerificationScreen({super.key, required this.phone});
 
@@ -32,7 +32,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen>
   bool _canResend = false;
   bool _isLoading = false;
 
-  /// Initializes the shake animation controller and starts the resend timer.
+  /// يهيئ وحدة تحكم حركة الاهتزاز ويبدأ مؤقت إعادة الإرسال.
   @override
   void initState() {
     super.initState();
@@ -49,7 +49,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen>
     _startTimer();
   }
 
-  /// Disposes controllers, focus nodes, and the shake controller.
+  /// يتخلص من وحدات التحكم وعقد التركيز ووحدة تحكم الاهتزاز.
   @override
   void dispose() {
     for (final c in _controllers) {
@@ -62,7 +62,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen>
     super.dispose();
   }
 
-  /// Starts a 59-second countdown timer before the user can resend the code.
+  /// يبدأ مؤقتاً تنازلياً لمدة 59 ثانية قبل أن يتمكن المستخدم من إعادة إرسال الرمز.
   void _startTimer() {
     _canResend = false;
     _timerSeconds = 59;
@@ -78,14 +78,13 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen>
     });
   }
 
-  /// Returns the concatenated OTP digits from all input fields.
+  /// يعيد أرقام OTP المتسلسلة من جميع حقول الإدخال.
   String get _otp => _controllers.map((c) => c.text).join();
 
-  /// Whether all 6 OTP digits have been entered.
+  /// ما إذا تم إدخال جميع أرقام OTP الستة.
   bool get _isComplete => _otp.length == 6;
 
-  /// Handles text changes in OTP fields, auto-advancing focus or
-  /// handling paste of a full code.
+  /// يعالج تغييرات النص في حقول OTP، مع تقدم تلقائي في التركيز أو معالجة لصق رمز كامل.
   void _onChanged(int i, String v) {
     if (v.length > 1) {
       final digits = v
@@ -116,7 +115,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen>
     setState(() {});
   }
 
-  /// Verifies the OTP code with the server and navigates to the home screen.
+  /// يتحقق من رمز OTP مع الخادم وينتقل إلى الشاشة الرئيسية.
   Future<void> _verify() async {
     if (!_isComplete) return;
     setState(() => _isLoading = true);
@@ -152,7 +151,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen>
     }
   }
 
-  /// Resends the OTP code to the user's phone and restarts the timer.
+  /// يعيد إرسال رمز OTP إلى هاتف المستخدم ويعيد تشغيل المؤقت.
   Future<void> _resend() async {
     final auth = context.read<AuthProvider>();
     final success = await auth.sendOtp(widget.phone);
@@ -173,7 +172,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen>
     }
   }
 
-  /// Formats the phone number with a masked middle section for display.
+  /// ينسق رقم الهاتف مع إخفاء الأرقام الوسطى للعرض.
   String get _formattedPhone {
     final p = widget.phone;
     if (p.length >= 10) {
@@ -182,8 +181,7 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen>
     return '+218 $p';
   }
 
-  /// Builds the OTP verification screen with a code input, resend timer,
-  /// and verification button.
+  /// يبني شاشة التحقق من OTP مع إدخال الرمز ومؤقت إعادة الإرسال وزر التحقق.
   @override
   Widget build(BuildContext context) {
     return MaskanScaffold(

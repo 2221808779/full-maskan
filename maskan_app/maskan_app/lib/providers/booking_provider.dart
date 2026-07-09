@@ -14,16 +14,16 @@ class BookingProvider extends ChangeNotifier {
   bool _isLoading = false;
   String? _error;
 
-  /// The list of bookings for the current user.
+  /// قائمة الحجوزات للمستخدم الحالي.
   List<Booking> get bookings => _bookings;
-  /// Whether a network request is in progress.
+  /// ما إذا كان طلب الشبكة قيد التنفيذ.
   bool get isLoading => _isLoading;
-  /// The last error message, or null.
+  /// آخر رسالة خطأ، أو null.
   String? get error => _error;
 
-  /// Fetches blocked/blackout dates for a given [propertyId] to display in the booking calendar.
+  /// يجلب التواريخ المحجوزة/المظللة لعقار [propertyId] معين لعرضها في تقويم الحجز.
   ///
-  /// Returns a list of [DateTime] objects representing unavailable dates.
+  /// يُرجِع قائمة من كائنات [DateTime] تمثل التواريخ غير المتاحة.
   Future<List<DateTime>> fetchBlockedDates(int propertyId) async {
     try {
       final response = await _api.get(ApiEndpoints.propertyBlackoutDates(propertyId));
@@ -42,7 +42,7 @@ class BookingProvider extends ChangeNotifier {
     }
   }
 
-  /// Loads all bookings for the current user from the API.
+  /// يحمّل جميع الحجوزات للمستخدم الحالي من API.
   Future<void> loadBookings() async {
     _isLoading = true;
     _error = null;
@@ -61,10 +61,10 @@ class BookingProvider extends ChangeNotifier {
   }
 
   int? _lastCreatedBookingId;
-  /// The ID of the most recently created booking, or null.
+  /// معرف آخر حجز تم إنشاؤه، أو null.
   int? get lastCreatedBookingId => _lastCreatedBookingId;
 
-  /// Creates a new booking for a specified property.
+  /// ينشئ حجزاً جديداً لعقار محدد.
   Future<int?> createBooking({
     required int propertyId,
     required DateTime startDate,
@@ -119,7 +119,7 @@ class BookingProvider extends ChangeNotifier {
     }
   }
 
-  /// Cancels a booking by its [id].
+  /// يلغي حجزاً بواسطة [id].
   Future<bool> cancelBooking(int id) async {
     try {
       await _api.put(ApiEndpoints.cancelBooking(id));

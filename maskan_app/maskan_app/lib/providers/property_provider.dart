@@ -18,20 +18,20 @@ class PropertyProvider extends ChangeNotifier {
   int _lastPage = 1;
   bool _hasMore = true;
 
-  /// The paginated list of loaded properties.
+  /// القائمة المقسمة إلى صفحات من العقارات المحمّلة.
   List<Property> get properties => _properties;
-  /// The currently selected/detailed property.
+  /// العقار المحدد حالياً / التفصيلي.
   Property? get selectedProperty => _selectedProperty;
-  /// Whether a network request is in progress.
+  /// ما إذا كان طلب الشبكة قيد التنفيذ.
   bool get isLoading => _isLoading;
-  /// The last error message, or null.
+  /// آخر رسالة خطأ، أو null.
   String? get error => _error;
-  /// Whether there are more pages to load.
+  /// ما إذا كان هناك المزيد من الصفحات لتحميلها.
   bool get hasMore => _hasMore;
 
-  /// Loads a page of properties from the API.
+  /// يحمّل صفحة من العقارات من API.
   ///
-  /// If [refresh] is true, resets the pagination and reloads from page 1.
+  /// إذا كان [refresh] true، يُعيد تعيين التصفح ويُحمّل من الصفحة 1.
   Future<void> loadProperties({bool refresh = false}) async {
     if (_isLoading) {
       if (refresh) {
@@ -76,7 +76,7 @@ class PropertyProvider extends ChangeNotifier {
     }
   }
 
-  /// Loads the full detail of a single property by its [id].
+  /// يحمّل التفاصيل الكاملة لعقار واحد بواسطة [id].
   Future<void> loadPropertyDetail(int id) async {
     _isLoading = true;
     _error = null;
@@ -96,9 +96,9 @@ class PropertyProvider extends ChangeNotifier {
     }
   }
 
-  /// Searches properties matching the given [query], price range, [bedrooms], and [city].
+  /// يبحث عن عقارات تطابق [query] المحدد، نطاق السعر، [bedrooms]، و [city].
   ///
-  /// Returns the filtered list directly (does not modify the main properties list).
+  /// يُرجِع القائمة المصفاة مباشرة (لا يعدّل قائمة العقارات الرئيسية).
   Future<List<Property>> searchProperties({
     String? query,
     double? minPrice,

@@ -253,7 +253,7 @@ class AppRoutes {
   ///
   /// إذا لم يكن المستخدم مسجّلاً وكان المسار غير عام، يُعاد توجيهه إلى [login].
   /// إذا كان مسجّلاً وكان المسار من مسارات الزوار، يُعاد توجيهه حسب نوع المستخدم.
-  /// Checks if [path] starts with any of the given [prefixes].
+  /// يتحقق مما إذا كان [path] يبدأ بأي من [prefixes] المعطاة.
   static bool _pathStartsWith(String path, List<String> prefixes) {
     for (final p in prefixes) {
       if (path.startsWith(p)) return true;

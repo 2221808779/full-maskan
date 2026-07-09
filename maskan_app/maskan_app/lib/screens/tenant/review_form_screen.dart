@@ -10,16 +10,16 @@ import '../../l10n/app_localizations.dart';
 
 /// شاشة إرسال تقييم (تقييم بالنجوم + تعليق) لعقار أو مالك أو فني — باستخدام شريط التقييم
 class ReviewFormScreen extends StatefulWidget {
-  /// The type of entity being reviewed: 'property', 'owner', or 'technician'.
+  /// نوع الكيان الذي يتم تقييمه: 'property' أو 'owner' أو 'technician'.
   final String targetType;
 
-  /// The ID of the target entity being reviewed.
+  /// معرّف الكيان الهدف الذي يتم تقييمه.
   final int targetId;
 
-  /// Optional property ID for context (useful when reviewing an owner).
+  /// معرّف عقار اختياري للسياق (مفيد عند تقييم مالك).
   final int? propertyId;
 
-  /// Optional booking ID to associate the review with a specific booking.
+  /// معرّف حجز اختياري لربط التقييم بحجز معيّن.
   final int? bookingId;
   const ReviewFormScreen({
     super.key,
@@ -34,15 +34,15 @@ class ReviewFormScreen extends StatefulWidget {
 }
 
 /// منطق حالة [ReviewFormScreen] — إدارة اختيار التقييم
-/// comment input, and submission of the review.
+  /// إدخال التعليق، وإرسال التقييم.
 class _ReviewFormScreenState extends State<ReviewFormScreen> {
-  /// The current star rating (0–5, supports half-stars).
+  /// تقييم النجوم الحالي (0–5، يدعم نصف النجوم).
   double _rating = 0;
 
-  /// Controller for the review comment text field.
+  /// وحدة تحكم حقل نص تعليق التقييم.
   final _commentController = TextEditingController();
 
-  /// Whether the review is currently being submitted.
+  /// ما إذا كان التقييم قيد الإرسال حالياً.
   bool _isSubmitting = false;
 
   @override
@@ -51,7 +51,7 @@ class _ReviewFormScreenState extends State<ReviewFormScreen> {
     super.dispose();
   }
 
-  /// Validates the rating and submits the review via [ReviewProvider].
+  /// يتحقق من صحة التقييم ويُرسل المراجعة عبر [ReviewProvider].
   Future<void> _submit() async {
     if (_rating == 0) {
       Helpers.showSnackBar(context, AppLocalizations.of(context)!.pleaseSelectRating, isError: true);
@@ -77,7 +77,7 @@ class _ReviewFormScreenState extends State<ReviewFormScreen> {
     }
   }
 
-  /// Returns a localized label describing the entity being reviewed.
+  /// يُرجع تسمية محلّية تصف الكيان الذي يتم تقييمه.
   String get _targetLabel {
     switch (widget.targetType) {
       case 'property': return AppLocalizations.of(context)!.propertyTarget;

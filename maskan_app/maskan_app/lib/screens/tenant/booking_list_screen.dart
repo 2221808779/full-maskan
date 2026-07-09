@@ -23,7 +23,7 @@ class BookingListScreen extends StatefulWidget {
 
 /// حالة [BookingListScreen] — تحميل وعرض حجوزات المستخدم
 class _BookingListScreenState extends State<BookingListScreen> {
-  /// Loads bookings on initialization.
+  /// يحمّل الحجوزات عند التهيئة.
   @override
   void initState() {
     super.initState();
@@ -32,7 +32,7 @@ class _BookingListScreenState extends State<BookingListScreen> {
     });
   }
 
-  /// Builds the booking list screen with loading, empty, and populated states.
+  /// يبني شاشة قائمة الحجوزات مع حالات التحميل والفارغة والممتلئة.
   @override
   Widget build(BuildContext context) {
     final provider = context.watch<BookingProvider>();
@@ -63,10 +63,10 @@ class _BookingListScreenState extends State<BookingListScreen> {
     );
   }
 
-  /// Navigates to the property list screen.
+  /// ينتقل إلى شاشة قائمة العقارات.
   void _navigateToProperties() => context.push(AppRoutes.propertyList);
 
-  /// Builds a placeholder widget when the booking image is unavailable.
+  /// يبني عنصراً نائباً عند عدم توفر صورة الحجز.
   Widget _buildImagePlaceholder() {
     return Container(
       width: double.infinity, height: 200,
@@ -80,7 +80,7 @@ class _BookingListScreenState extends State<BookingListScreen> {
     );
   }
 
-  /// Builds a card widget for a single booking with image, status, dates, and price.
+  /// يبني عنصر بطاقة لحجز واحد مع الصورة والحالة والتواريخ والسعر.
   Widget _bookingCard(Booking booking) {
     final hasImage = booking.propertyImage != null && booking.propertyImage!.isNotEmpty;
     final loc = AppLocalizations.of(context);
@@ -196,12 +196,12 @@ class _BookingListScreenState extends State<BookingListScreen> {
     );
   }
 
-  /// Formats a [DateTime] as a `yyyy-MM-dd` string.
+  /// يُنسّق [DateTime] كنص بالصيغة `yyyy-MM-dd`.
   String _formatDate(DateTime dt) {
     return '${dt.year.toString()}-${dt.month.toString().padLeft(2, '0')}-${dt.day.toString().padLeft(2, '0')}';
   }
 
-  /// Returns a color corresponding to the booking status.
+  /// يُرجع لوناً يتوافق مع حالة الحجز.
   Color _statusColor(String status) {
     switch (status) {
       case 'confirmed': return MaskanColors.kSuccess;

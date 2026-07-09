@@ -9,7 +9,7 @@ import '../../providers/auth_provider.dart';
 
 /// شاشة إعادة تعيين كلمة المرور — يدخل المستخدم رمز OTP وكلمة مرور جديدة مع التأكيد
 class ResetPasswordScreen extends StatefulWidget {
-  /// The phone number used to request the password reset.
+  /// رقم الهاتف المستخدم لطلب إعادة تعيين كلمة المرور.
   final String phone;
   const ResetPasswordScreen({super.key, required this.phone});
 
@@ -30,7 +30,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
   bool _obscureConfirm = true;
   bool _isLoading = false;
 
-  /// Disposes all controllers and focus nodes.
+  /// يتخلص من جميع وحدات التحكم وعقد التركيز.
   @override
   void dispose() {
     for (final c in _otpControllers) {
@@ -44,13 +44,13 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
     super.dispose();
   }
 
-  /// Returns the concatenated OTP digits.
+  /// يعيد أرقام OTP المتسلسلة.
   String get _otp => _otpControllers.map((c) => c.text).join();
 
-  /// Whether all 6 OTP digits have been entered.
+  /// ما إذا تم إدخال جميع أرقام OTP الستة.
   bool get _otpComplete => _otp.length == 6;
 
-  /// Computes a password strength score from 0 to 4.
+  /// يحسب درجة قوة كلمة المرور من 0 إلى 4.
   int get _passwordStrength {
     final p = _passwordController.text;
     if (p.isEmpty) return 0;
@@ -62,7 +62,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
     return s;
   }
 
-  /// Returns a localized label for the current password strength.
+  /// يعيد تسمية محلية لقوة كلمة المرور الحالية.
   String _strengthLabel(BuildContext context) {
     final s = _passwordStrength;
     if (s <= 1) return AppLocalizations.of(context)!.weak;
@@ -71,7 +71,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
     return AppLocalizations.of(context)!.strong;
   }
 
-  /// Returns a color corresponding to the current password strength.
+  /// يعيد لوناً يتوافق مع قوة كلمة المرور الحالية.
   Color get _strengthColor {
     final s = _passwordStrength;
     if (s <= 1) return MaskanColors.kDanger;
@@ -80,8 +80,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
     return MaskanColors.kSuccess;
   }
 
-  /// Handles text changes in OTP fields, auto-advancing focus or
-  /// handling paste of a full code.
+  /// يعالج تغييرات النص في حقول OTP، مع تقدم تلقائي في التركيز أو معالجة لصق رمز كامل.
   void _onOtpChanged(int i, String v) {
     if (v.length > 1) {
       final digits = v
@@ -112,7 +111,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
     setState(() {});
   }
 
-  /// Validates inputs and submits the password reset request to the server.
+  /// يتحقق من صحة المدخلات ويرسل طلب إعادة تعيين كلمة المرور إلى الخادم.
   Future<void> _reset() async {
     if (!_otpComplete || _passwordController.text.length < 6) return;
     if (_passwordController.text != _confirmController.text) {
@@ -166,8 +165,7 @@ class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
     }
   }
 
-  /// Builds the reset password screen with OTP input, new password fields,
-  /// strength indicator, and update button.
+  /// يبني شاشة إعادة تعيين كلمة المرور مع إدخال OTP، حقول كلمة المرور الجديدة، مؤشر القوة، وزر التحديث.
   @override
   Widget build(BuildContext context) {
     final loc = AppLocalizations.of(context)!;

@@ -24,7 +24,7 @@ class PropertyListScreen extends StatefulWidget {
 }
 
 /// حالة [PropertyListScreen] — إدارة البحث وأزرار التصفية
-/// location permission, and Haversine distance calculations.
+  /// إذن الموقع، وحسابات مسافة هافرسين.
 class _PropertyListScreenState extends State<PropertyListScreen> {
   List<Property> _results = [];
   bool _isSearching = false;
@@ -46,7 +46,7 @@ class _PropertyListScreenState extends State<PropertyListScreen> {
   bool _locationAllowed = false;
   bool _locationAsked = false;
 
-  /// Initiates search or loads all properties based on [searchQuery].
+  /// يبدأ البحث أو يحمّل جميع العقارات بناءً على [searchQuery].
   @override
   void initState() {
     super.initState();
@@ -60,19 +60,19 @@ class _PropertyListScreenState extends State<PropertyListScreen> {
     });
   }
 
-  /// Disposes the search controller.
+  /// يتخلص من وحدة تحكم البحث.
   @override
   void dispose() {
     _searchController.dispose();
     super.dispose();
   }
 
-  /// Loads all properties from the provider.
+  /// يحمّل جميع العقارات من المزوّد.
   Future<void> _loadAll() async {
     await context.read<PropertyProvider>().loadProperties(refresh: true);
   }
 
-  /// Searches properties by the query text and prompts for location.
+  /// يبحث عن العقارات حسب نص الاستعلام ويطلب الموقع.
   Future<void> _performSearch() async {
     final query = _searchController.text.trim();
     if (query.isEmpty) return;
@@ -93,7 +93,7 @@ class _PropertyListScreenState extends State<PropertyListScreen> {
     if (mounted) setState(() => _isSearching = false);
   }
 
-  /// Shows a dialog asking the user to allow location access for nearby sorting.
+  /// يُظهر حواراً يطلب من المستخدم السماح بالوصول إلى الموقع للترتيب حسب القرب.
   Future<void> _showLocationDialog() async {
     final loc = AppLocalizations.of(context);
     final isDark = Theme.of(context).brightness == Brightness.dark;
@@ -131,7 +131,7 @@ class _PropertyListScreenState extends State<PropertyListScreen> {
     }
   }
 
-  /// Requests location permission and retrieves the current device position.
+  /// يطلب إذن الموقع ويسترجع موقع الجهاز الحالي.
   Future<void> _requestLocation() async {
     try {
       LocationPermission permission = await Geolocator.checkPermission();
@@ -152,8 +152,8 @@ class _PropertyListScreenState extends State<PropertyListScreen> {
     } catch (_) {}
   }
 
-  /// Filters properties by the active filter chip and sorts by distance if
-  /// location is available.
+  /// يصفّي العقارات حسب شريحة التصفية النشطة ويُرتّب حسب المسافة إذا
+  /// كان الموقع متاحاً.
   List<Property> _getDisplayedProperties(List<Property> props) {
     var filtered = props;
     if (_activeFilter.isNotEmpty) {
@@ -169,7 +169,7 @@ class _PropertyListScreenState extends State<PropertyListScreen> {
     return sorted;
   }
 
-  /// Calculates the Haversine distance from the current position to a property.
+  /// يحسب مسافة هافرسين من الموقع الحالي إلى العقار.
   double _distanceToProperty(Property p) {
     if (_currentPosition == null || p.latitude == null || p.longitude == null) return double.infinity;
     return _calculateDistance(
@@ -178,7 +178,7 @@ class _PropertyListScreenState extends State<PropertyListScreen> {
     );
   }
 
-  /// Implements the Haversine formula to calculate distance between two coordinates.
+  /// ينفّذ معادلة هافرسين لحساب المسافة بين إحداثيتين.
   double _calculateDistance(double lat1, double lon1, double lat2, double lon2) {
     const R = 6371.0;
     final dLat = _toRadians(lat2 - lat1);
@@ -189,11 +189,11 @@ class _PropertyListScreenState extends State<PropertyListScreen> {
     return R * c;
   }
 
-  /// Converts a degree value to radians.
+  /// يحوّل قيمة بالدرجات إلى راديان.
   double _toRadians(double degree) => degree * pi / 180.0;
 
-  /// Builds the property list screen with a sliver app bar, search field,
-  /// filter chips, and a scrollable list of property cards.
+  /// يبني شاشة قائمة العقارات مع شريط تطبيق sliver وحقل بحث
+  /// وشرائح تصفية وقائمة قابلة للتمرير لبطاقات العقارات.
   @override
   Widget build(BuildContext context) {
     final provider = context.watch<PropertyProvider>();

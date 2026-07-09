@@ -13,14 +13,14 @@ class ReviewProvider extends ChangeNotifier {
   List<Review> _technicianReviews = [];
   bool _isLoading = false;
 
-  /// The list of reviews for the currently viewed property.
+  /// قائمة التقييمات للعقار المعروض حالياً.
   List<Review> get reviews => _reviews;
-  /// The list of reviews for a specific technician.
+  /// قائمة التقييمات لفني معين.
   List<Review> get technicianReviews => _technicianReviews;
-  /// Whether a network request is in progress.
+  /// ما إذا كان طلب الشبكة قيد التنفيذ.
   bool get isLoading => _isLoading;
 
-  /// Loads all reviews for a given property by its [propertyId].
+  /// يحمّل جميع التقييمات لعقار معين بواسطة [propertyId].
   Future<void> loadPropertyReviews(int propertyId) async {
     _isLoading = true;
     notifyListeners();
@@ -36,7 +36,7 @@ class ReviewProvider extends ChangeNotifier {
     }
   }
 
-  /// Loads all reviews for a technician by their [technicianId].
+  /// تحميل جميع التقييمات لفني معين حسب معرفه [technicianId].
   Future<void> loadTechnicianReviews(int technicianId) async {
     _isLoading = true;
     notifyListeners();
@@ -54,11 +54,11 @@ class ReviewProvider extends ChangeNotifier {
     }
   }
 
-  /// Submits a review with a star rating and optional comment.
+  /// يُرسِل تقييماً بتصنيف نجوم وتعليق اختياري.
   ///
-  /// [targetId] and [targetType] identify the review target
-  /// ('property', 'technician', or 'owner'). Returns null on success
-  /// or an error message string on failure.
+  /// [targetId] و [targetType] يُحدّدان هدف التقييم
+  /// ('property' أو 'technician' أو 'owner'). يُرجِع null عند النجاح
+  /// أو رسالة خطأ نصية عند الفشل.
   Future<String?> submitReview({
     required int targetId,
     required String targetType,

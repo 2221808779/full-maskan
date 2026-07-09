@@ -21,7 +21,7 @@ class NotificationService {
       FlutterLocalNotificationsPlugin();
   /// عميل Pusher للإشعارات الفورية
   PusherChannelsFlutter? _pusher;
-  /// callback يتم استدعاؤه عند استقبال إشعار جديد من Pusher
+  /// دالة استرجاع تُستدعى عند استقبال إشعار جديد من Pusher
   Function(AppNotification)? onNotificationReceived;
 
   /// تهيئة خدمة الإشعارات — تفعيل الإشعارات المحلية والاتصال بـ Pusher

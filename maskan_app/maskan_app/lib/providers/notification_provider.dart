@@ -15,14 +15,14 @@ class NotificationProvider extends ChangeNotifier {
   int _unreadCount = 0;
   bool _isLoading = false;
 
-  /// The list of all notifications.
+  /// قائمة جميع الإشعارات.
   List<AppNotification> get notifications => _notifications;
-  /// The count of unread notifications.
+  /// عدد الإشعارات غير المقروءة.
   int get unreadCount => _unreadCount;
-  /// Whether a network request is in progress.
+  /// ما إذا كان طلب الشبكة قيد التنفيذ.
   bool get isLoading => _isLoading;
 
-  /// Sets up the real-time notification listener via [NotificationService].
+  /// يُعدّد مستمع الإشعارات الفورية عبر [NotificationService].
   NotificationProvider() {
     NotificationService().onNotificationReceived = (notification) {
       _notifications.insert(0, notification);
@@ -31,7 +31,7 @@ class NotificationProvider extends ChangeNotifier {
     };
   }
 
-  /// Loads all notifications from the API and updates the unread count.
+  /// يحمّل جميع الإشعارات من API ويحدّث العدد غير المقروء.
   Future<void> loadNotifications() async {
     _isLoading = true;
     notifyListeners();
@@ -48,7 +48,7 @@ class NotificationProvider extends ChangeNotifier {
     }
   }
 
-  /// Loads only the unread notification count from the API.
+  /// يحمّل عدد الإشعارات غير المقروءة فقط من API.
   Future<void> loadUnreadCount() async {
     try {
       final response = await _api.get(ApiEndpoints.unreadCount);
@@ -57,7 +57,7 @@ class NotificationProvider extends ChangeNotifier {
     } catch (_) {}
   }
 
-  /// Marks a single notification as read by its [id].
+  /// يعلّم إشعاراً واحداً كمقروء بواسطة [id].
   Future<void> markAsRead(int id) async {
     try {
       await _api.put(ApiEndpoints.markNotificationRead(id));
@@ -79,7 +79,7 @@ class NotificationProvider extends ChangeNotifier {
     } catch (_) {}
   }
 
-  /// Marks all notifications as read.
+  /// يعلّم جميع الإشعارات كمقروءة.
   Future<void> markAllAsRead() async {
     try {
       await _api.put(ApiEndpoints.markAllRead);
@@ -98,14 +98,14 @@ class NotificationProvider extends ChangeNotifier {
     } catch (_) {}
   }
 
-  /// Adds a new notification to the top of the list (e.g., from a push notification).
+  /// يضيف إشعاراً جديداً إلى أعلى القائمة (مثلاً من إشعار فوري).
   Future<void> addNotification(AppNotification n) async {
     _notifications.insert(0, n);
     _unreadCount++;
     notifyListeners();
   }
 
-  /// Removes a notification by its [id] from the local list.
+  /// يزيل إشعاراً بواسطة [id] من القائمة المحلية.
   void removeNotification(int id) {
     _notifications.removeWhere((n) => n.id == id);
     _unreadCount = _notifications.where((n) => !n.isRead).length;
