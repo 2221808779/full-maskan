@@ -195,6 +195,30 @@ Key groups:
 
 ---
 
+## Screenshots
+
+<div align="center">
+
+<img src="screenshots/photo_2026-08-16_13-54-30.jpg" width="250" />
+<img src="screenshots/photo_2026-08-16_13-54-49.jpg" width="250" />
+<img src="screenshots/photo_2026-08-16_13-55-03.jpg" width="250" />
+
+<img src="screenshots/photo_2026-08-16_13-55-10.jpg" width="250" />
+<img src="screenshots/photo_2026-08-16_13-55-15.jpg" width="250" />
+<img src="screenshots/photo_2026-08-16_13-55-50.jpg" width="250" />
+
+<img src="screenshots/photo_2026-08-16_13-56-04.jpg" width="250" />
+<img src="screenshots/photo_2026-08-16_13-56-42.jpg" width="250" />
+<img src="screenshots/photo_2026-08-16_13-56-47.jpg" width="250" />
+
+<img src="screenshots/photo_2026-08-16_13-56-53.jpg" width="250" />
+<img src="screenshots/photo_2026-08-16_13-56-59.jpg" width="250" />
+<img src="screenshots/photo_2026-08-16_13-57-04.jpg" width="250" />
+
+</div>
+
+---
+
 ## License
 
 This project is developed for academic and practical purposes. All rights reserved.
