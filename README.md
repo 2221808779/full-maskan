@@ -89,34 +89,6 @@ The system is built as a monorepo containing three components:
 
 ---
 
-## Project Structure
-
-```
-maskan/
-├── app/                  # Laravel application code
-│   ├── Http/Controllers/ # Web and API controllers
-│   ├── Models/           # Eloquent models
-│   └── ...
-├── routes/               # web.php, api.php, channels.php, console.php
-├── database/             # Migrations, factories, seeders
-├── config/               # Configuration (cities, settings)
-├── maskan_app/           # Flutter mobile application
-│   └── maskan_app/
-│       ├── lib/          # Dart source code
-│       └── pubspec.yaml  # Flutter dependencies
-├── maskan-ai/            # Python AI service
-│   ├── app/              # FastAPI application
-│   │   ├── classifier.py # Maintenance classification
-│   │   ├── predictor.py  # Prediction models
-│   │   └── main.py       # API entry point
-│   ├── models/           # Trained ML/DL models
-│   └── requirements.txt
-├── public/               # Public assets
-└── resources/            # Views and frontend assets
-```
-
----
-
 ## Getting Started
 
 ### Requirements
@@ -160,28 +132,6 @@ cd maskan-ai
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
-
----
-
-## API Overview
-
-The REST API is available under the `/api` prefix and uses token-based authentication. Public routes include registration, login, OTP, property listing, and city/specialty endpoints. Authenticated routes cover bookings, payments, maintenance, notifications, favorites, reviews, messages, complaints, and admin operations.
-
-Key groups:
-
-| Group | Description |
-| ----- | ----------- |
-| `/api/auth/*` | Registration, login, OTP, profile |
-| `/api/properties` | Property CRUD and availability |
-| `/api/bookings` | Booking lifecycle |
-| `/api/payments` | Payments and Plutu integration |
-| `/api/maintenance-requests` | Maintenance workflow + AI suggestions |
-| `/api/notifications` | Notification center |
-| `/api/favorites` | Favorites |
-| `/api/reviews` | Reviews and ratings |
-| `/api/conversations` | Real-time chat |
-| `/api/complaints` | Complaints |
-| `/api/admin/*` | Admin management and reports |
 
 ---
 
