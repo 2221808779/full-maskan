@@ -204,7 +204,6 @@ Key groups:
 <img src="screenshots/photo_2026-08-16_13-55-03.jpg" width="250" />
 
 <img src="screenshots/photo_2026-08-16_13-55-10.jpg" width="250" />
-<img src="screenshots/photo_2026-08-16_13-55-15.jpg" width="250" />
 <img src="screenshots/photo_2026-08-16_13-55-50.jpg" width="250" />
 
 <img src="screenshots/photo_2026-08-16_13-56-04.jpg" width="250" />
